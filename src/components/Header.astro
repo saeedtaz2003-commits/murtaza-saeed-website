@@ -1,0 +1,34 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  ['Home', '/'],
+  ['Business & Finance', '/business-finance'],
+  ['Reviews & Experiences', '/reviews-experiences'],
+  ['Technology', '/technology'],
+  ['Travel & Leisure', '/travel-leisure'],
+  ['About', '/about'],
+  ['Work With Me', '/work-with-me'],
+  ['Contact', '/contact']
+];
+---
+<header class="site-header">
+  <div class="topbar wrap">
+    <a class="brand" href="/" aria-label="Murtaza Saeed home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span><strong>Murtaza Saeed</strong><small>Perspective shaped by experience</small></span>
+    </a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main navigation">
+      {links.map(([label, href]) => <a class={path === href ? 'active' : ''} href={href}>{label}</a>)}
+    </nav>
+  </div>
+</header>
+<script>
+  const button = document.querySelector('.menu');
+  const nav = document.querySelector('#nav');
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('open');
+  });
+</script>
