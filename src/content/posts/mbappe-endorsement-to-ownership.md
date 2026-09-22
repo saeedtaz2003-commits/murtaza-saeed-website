@@ -4,7 +4,7 @@ slug: "mbappe-endorsement-to-ownership"
 date: 2026-09-22
 category: "Business & Finance"
 summary: "Mbappé’s reported move from Nike to On offers a sharp business lesson: the biggest cheque is not always the most valuable deal."
-image: "/images/mbappe-nike-to-on.png"
+image: "/images/mbappe-nike-to-on.jpg"
 imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
 draft: false
 ---
