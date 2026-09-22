@@ -41,6 +41,17 @@ Roger Federer is a retired Swiss tennis player and one of the sport’s best-kno
 
 Their sports are different, but the commercial comparison is relevant. Federer helped On move from running into tennis; Mbappé is now expected to help it enter football, a substantially larger but more competitive global market.
 
+<div class="article-photo-grid">
+  <figure class="article-photo portrait">
+    <img src="/images/kylian-mbappe-2026.jpg" alt="Kylian Mbappé playing for France during the 2026 FIFA World Cup" loading="lazy" />
+    <figcaption>Kylian Mbappé playing for France, 2026. Photo: <a href="https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg">Bryan Berlin/WikiPortraits</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized for the web.</figcaption>
+  </figure>
+  <figure class="article-photo">
+    <img src="/images/roger-federer-2019.jpg" alt="Roger Federer competing at Roland Garros in 2019" loading="lazy" />
+    <figcaption>Roger Federer at Roland Garros, 2019. Photo: <a href="https://commons.wikimedia.org/wiki/File:Roger_Federer_Roland_Garros_2019.jpg">Contribu92/Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized for the web.</figcaption>
+  </figure>
+</div>
+
 On announced the partnership on 18 September 2026 as the beginning of its move into football. Its official statement says Mbappé will be a global ambassador and will work directly with product teams to develop and test future footwear and apparel. Thierry Henry, who has been involved with On since late 2025, is serving as its Director of Football. The company has also brought in Swiss international Sydney Schertenleib as it develops the women’s side of its football plans.
 
 The official announcement does not disclose the financial terms. However, [Reuters reported](https://www.reuters.com/) that the agreement includes both cash and equity, while other reporting has described it as a long-term partnership. That distinction matters. Cash pays an athlete for the use of his profile today; equity may allow him to benefit from the value created tomorrow. It also introduces risk: shares can rise or fall, and a challenger entering a new category has much to prove.
@@ -97,6 +108,11 @@ Air Jordan grew from a shoe partnership into Jordan Brand, a major business with
 
 The lesson is that ownership of company shares is not the only route to long-term participation. Royalties, intellectual-property rights and control over a sub-brand can be equally important. For Mbappé, the strongest outcome may eventually depend not only on the value of his On shares but also on whether he develops a distinctive product identity that consumers continue to buy.
 
+<figure class="article-photo article-photo-wide portrait">
+  <img src="/images/michael-jordan.jpg" alt="Michael Jordan attending a basketball game in 2006" loading="lazy" />
+  <figcaption>Michael Jordan, whose Nike partnership became the benchmark for athlete-led brands. Photo: <a href="https://commons.wikimedia.org/wiki/File:Michael_Jordan.jpg">Joshua Massel; crop by Quadzilla99/Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized for the web.</figcaption>
+</figure>
+
 ### Stephen Curry and Under Armour: commercially important, but mixed
 
 Stephen Curry joined Under Armour in 2013 and helped give the company credibility in basketball. Curry Brand was launched inside Under Armour in 2020, and the relationship later included a long-term agreement with an equity component.
@@ -104,6 +120,11 @@ Stephen Curry joined Under Armour in 2013 and helped give the company credibilit
 It was influential, but it never achieved the cultural reach or commercial scale of Jordan Brand. In November 2025, [Reuters reported](https://www.reuters.com/business/under-armour-expands-restructuring-effort-plans-separate-curry-business-2025-11-13/) that Curry and Under Armour had agreed to separate, with Curry Brand becoming independent. That does not make the entire partnership a failure: it lasted more than a decade, sold products and helped establish both parties in basketball. But the eventual split shows that a famous athlete, equity incentives and a signature brand do not guarantee permanent strategic alignment.
 
 For On, this is an especially useful warning. Mbappé can create attention and authenticity, but the company still needs competitive products, distribution, marketing discipline and agreement over the long-term direction of its football business.
+
+<figure class="article-photo article-photo-wide">
+  <img src="/images/stephen-curry-2022.jpg" alt="Stephen Curry during the 2022 NBA All-Star Weekend" loading="lazy" />
+  <figcaption>Stephen Curry during the 2022 NBA All-Star Weekend. Photo: <a href="https://commons.wikimedia.org/wiki/File:Steph_Curry_(51916131953).jpg">Erik Drost/Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized for the web.</figcaption>
+</figure>
 
 ### David Beckham and Guild Esports: the downside of equity
 
@@ -155,21 +176,45 @@ First, On must produce a boot that elite players trust. Footballers are sensitiv
 
 It must also protect what made the brand distinctive. Chasing a mass market can dilute premium positioning, while remaining too exclusive can limit adoption in a sport whose culture is built on broad participation. The balance between aspiration and accessibility will matter.
 
-## A wider lesson for professionals
+## The final advice: turn today’s fame into tomorrow’s value
 
-Most people will never negotiate a global sportswear contract, but the underlying choice is familiar. A large organisation may offer security, resources and prestige. A smaller organisation may offer responsibility, visibility and a closer connection between personal effort and future value.
+Mbappé’s move is compelling because it brings together sport, brand strategy and finance. Nike offered the security and reach of an established leader. On offers the possibility of helping create something new—and sharing in the outcome if it succeeds.
 
-Neither is automatically better. The right choice depends on financial resilience, appetite for risk, confidence in the people and product, and the ability to influence the outcome. Equity should never be treated as cash, and a fashionable promise of “ownership” should be examined carefully. Terms, dilution, liquidity, tax and governance all matter.
+For elite performers in sport and entertainment who are approaching the later stages of their careers, four practical lessons emerge.
 
-The strongest lesson is to evaluate the whole package. Salary or fees are important, but so are learning, authority, reputation, optionality and participation in future value. Loyalty deserves respect, yet it should not prevent a clear-eyed review when circumstances change.
+### 1. Shift from renting your attention to owning the upside
+
+**The trap:** Traditional endorsements can pay enormous fees for today’s visibility, but those payments may end abruptly when peak performance fades, retirement arrives or younger talent takes over.
+
+**The advice:** Do not trade a valuable personal brand only for fixed marketing retainers. Where the opportunity is sound, negotiate a combination of **equity, revenue-sharing, royalties or a proprietary sub-brand**. As active-career income declines, value can then continue through dividends, royalties or appreciation in an enterprise the performer helped to build.
+
+### 2. Consider agile challengers, not only industry giants
+
+**The trap:** A legacy company offers prestige, financial strength and global distribution, but even a celebrated performer may remain one marquee name inside a crowded portfolio—and can be replaced as the next generation emerges.
+
+**The advice:** Consider challenger brands or emerging platforms that are trying to enter a new category or geography. In a smaller or scaling company, star power, product knowledge and direct input can carry disproportionate weight. The individual may become a cornerstone of expansion rather than simply another face in an advertising campaign.
+
+That does not mean smaller is automatically better. The challenger must still have credible leadership, capital, products and distribution. Greater influence is worthwhile only when attached to a business capable of using it.
+
+### 3. Progress from ambassador to product partner
+
+**The trap:** Wearing a product or appearing in an advertisement is largely transactional. Product development, intellectual property and long-term enterprise value remain in corporate hands.
+
+**The advice:** Seek a genuine role in product testing, design feedback and creative strategy—much as Federer worked with On on tennis and lifestyle lines, or Jordan’s identity became inseparable from a distinctive Nike product franchise. When reputation is tied to useful product innovation, the performer can become a business asset rather than merely a marketing expense. That gives the relationship a better chance of lasting beyond active competition.
+
+### 4. Guard against the real risks of equity
+
+**The reality check:** Equity is not guaranteed income. Shares can underperform, challenger brands can stumble and high-profile ventures can fail despite the celebrity attached to them. The mixed outcomes of Curry Brand and Guild Esports show why publicity should never be confused with durable business value.
+
+**The advice:** Evaluate the complete compensation package with financial discipline. Do not value uncertain equity as though it were cash. Retain sufficient guaranteed income and diversified capital, and examine the underlying business model, governance, dilution, liquidity, tax treatment and exit conditions. The company must remain sound after the excitement of the announcement has faded.
 
 ## The verdict
 
-Mbappé’s move is compelling because it brings together sport, brand strategy and finance. Nike offered the power of an established leader. On offers the possibility of helping create something new. If reports about equity are correct, Mbappé is placing part of his compensation behind that possibility.
+On still has to design excellent football products, manufacture them reliably and earn the trust of players at every level. Mbappé’s name can open the door; it cannot do all the work after that. The deal may succeed brilliantly, or the established brands may prove too difficult to dislodge.
 
-The deal may succeed brilliantly, or the established brands may prove too difficult to dislodge. On still has to design excellent products, manufacture them reliably and earn the trust of players at every level. Mbappé’s name can open the door; it cannot do all the work after that.
+Yet the strategic direction is persuasive. The most valuable person in a campaign need not remain satisfied with a fee for appearing in it. The better ambition is to gain a voice in the product and a stake in the value created.
 
-For now, the move illustrates a meaningful shift in athlete economics. The most valuable person in a campaign may no longer be satisfied with a fee for appearing in it. He may want a voice in the product and a stake in the outcome.
+**Do not merely negotiate a bigger cheque for today—secure a strategic share of tomorrow.**
 
 ### Sources and further reading
 
