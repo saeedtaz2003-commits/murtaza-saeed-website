@@ -69,6 +69,46 @@ The word “ownership” should still be used carefully. The size, conditions an
 
 This reflects a broader change in the economics of celebrity. Athletes, entertainers and creators increasingly ask whether they should be paid only for attention or should also share in the enterprise built with that attention. For a company, equity can conserve cash and encourage long-term commitment. For the individual, it can produce greater upside—but with less certainty.
 
+## What happened in comparable athlete deals?
+
+Mbappé is not the first athlete to exchange the simplicity of a conventional endorsement for a deeper commercial relationship. The results of earlier deals range from exceptional success to sharp losses. They also show that “ownership” can mean very different things: company shares, a royalty, a jointly developed brand or a mixture of cash and equity.
+
+### Roger Federer and On: the clearest success
+
+The most relevant precedent is already inside On. Roger Federer became an investor and product partner in 2019, after ending his long relationship with Nike. He did not merely appear in advertisements: he worked with On on tennis footwear and the Roger product line.
+
+When On floated in New York in 2021, the company was valued at more than $11 billion on its first day of trading. [Reuters reported](https://www.reuters.com/business/retail-consumer/federer-backed-shoemaker-valued-over-11-bln-nyse-debut-2021-09-15/) that the shares priced above their expected range. The exact size and cost of Federer’s investment were not officially disclosed, so widely quoted estimates of his personal gain should be treated cautiously. Nevertheless, the combination of rapid company growth, a successful flotation and an enduring product partnership makes this a strong example of athlete ownership creating value for both parties.
+
+Federer’s success is also the template On appears to be adapting for Mbappé. The important difference is that On already had a successful running business when Federer joined; in football, the company is entering a new and highly competitive category.
+
+### Michael Jordan and Nike: not equity, but the benchmark
+
+Michael Jordan’s Nike arrangement was not principally an ownership stake in Nike. It was a signature brand and royalty relationship. That distinction matters, but the economics illustrate the value of participating in sales rather than receiving only a fixed endorsement fee.
+
+Air Jordan grew from a shoe partnership into Jordan Brand, a major business within Nike. Nike reported approximately [$7.0 billion of Jordan Brand revenue in its 2026 financial year](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm). It remains the standard against which athlete-led sports brands are measured.
+
+The lesson is that ownership of company shares is not the only route to long-term participation. Royalties, intellectual-property rights and control over a sub-brand can be equally important. For Mbappé, the strongest outcome may eventually depend not only on the value of his On shares but also on whether he develops a distinctive product identity that consumers continue to buy.
+
+### Stephen Curry and Under Armour: commercially important, but mixed
+
+Stephen Curry joined Under Armour in 2013 and helped give the company credibility in basketball. Curry Brand was launched inside Under Armour in 2020, and the relationship later included a long-term agreement with an equity component.
+
+It was influential, but it never achieved the cultural reach or commercial scale of Jordan Brand. In November 2025, [Reuters reported](https://www.reuters.com/business/under-armour-expands-restructuring-effort-plans-separate-curry-business-2025-11-13/) that Curry and Under Armour had agreed to separate, with Curry Brand becoming independent. That does not make the entire partnership a failure: it lasted more than a decade, sold products and helped establish both parties in basketball. But the eventual split shows that a famous athlete, equity incentives and a signature brand do not guarantee permanent strategic alignment.
+
+For On, this is an especially useful warning. Mbappé can create attention and authenticity, but the company still needs competitive products, distribution, marketing discipline and agreement over the long-term direction of its football business.
+
+### David Beckham and Guild Esports: the downside of equity
+
+A more sobering example comes from outside footwear. David Beckham became an investor and ambassador for Guild Esports when it entered the public market in 2020. The association generated visibility, but the underlying business struggled. By 2024, [The Times reported](https://www.thetimes.com/business-money/companies/article/david-beckham-backed-guild-esports-group-battles-survival-cxl72235v) that Guild had lost about 98% of its stock-market value and was fighting for survival.
+
+This case is not directly comparable with On, which is an established international sportswear company with substantial sales. It does, however, demonstrate the central financial truth: celebrity can attract investors and customers, but it cannot repair a weak business model. Equity rewards success only when the company itself creates durable value.
+
+### The record is therefore mixed
+
+Federer and Jordan demonstrate the extraordinary upside possible when athlete credibility, strong products and capable management reinforce one another. Curry shows that a partnership may achieve meaningful results yet still fall short of becoming the next Jordan. Beckham’s Guild investment shows that a famous name offers no protection when the underlying economics fail.
+
+Mbappé’s arrangement should therefore be judged over years, not by the publicity surrounding its announcement. Early measures will include the quality of On’s first football boots, adoption by other players and retailers, and whether consumers associate the products with innovation rather than celebrity alone. The ultimate test will be whether football becomes a profitable, durable part of On’s business.
+
 ## Why Mbappé is unusually valuable to a challenger
 
 Mbappé brings several assets at once. He is an elite performer, captain of France and a global personality with particular appeal to younger audiences. His playing style—explosive acceleration, direct movement and decisive finishing—also gives a footwear company an obvious technical and visual story.
