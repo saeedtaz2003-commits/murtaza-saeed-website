@@ -33,6 +33,14 @@ Would you choose Nike’s security or ownership in On?
 
 The social-media version above captures the central business idea, but the deal deserves a closer look. Mbappé is not simply exchanging one boot supplier for another. He is joining a younger company at the moment it is entering football, and that changes the balance of the relationship.
 
+### Who are Mbappé and Federer?
+
+For readers who do not closely follow sport, Kylian Mbappé is a French footballer who plays as a forward for Real Madrid and captains the French national team. He helped France win the 2018 FIFA World Cup and has become one of the most recognisable athletes of his generation. His speed, goalscoring record and international profile make his choice of footwear commercially important far beyond France or Spain.
+
+Roger Federer is a retired Swiss tennis player and one of the sport’s best-known champions. He won 20 Grand Slam singles titles during a career noted not only for sporting success but also for unusually strong global appeal. After a long relationship with Nike, Federer invested in On and helped the Swiss company develop tennis and lifestyle products. His involvement demonstrated how an athlete could contribute capital, expertise and reputation rather than serving only as an advertising face.
+
+Their sports are different, but the commercial comparison is relevant. Federer helped On move from running into tennis; Mbappé is now expected to help it enter football, a substantially larger but more competitive global market.
+
 On announced the partnership on 18 September 2026 as the beginning of its move into football. Its official statement says Mbappé will be a global ambassador and will work directly with product teams to develop and test future footwear and apparel. Thierry Henry, who has been involved with On since late 2025, is serving as its Director of Football. The company has also brought in Swiss international Sydney Schertenleib as it develops the women’s side of its football plans.
 
 The official announcement does not disclose the financial terms. However, [Reuters reported](https://www.reuters.com/) that the agreement includes both cash and equity, while other reporting has described it as a long-term partnership. That distinction matters. Cash pays an athlete for the use of his profile today; equity may allow him to benefit from the value created tomorrow. It also introduces risk: shares can rise or fall, and a challenger entering a new category has much to prove.
