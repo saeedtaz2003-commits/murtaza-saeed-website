@@ -1,0 +1,12 @@
+---
+const { post, featured = false } = Astro.props;
+---
+<article class:list={['card', { featured }]}>
+  <a class="card-image" href={`/${post.data.slug}`}><img src={post.data.image} alt={post.data.imageAlt} loading={featured ? 'eager' : 'lazy'} /></a>
+  <div class="card-copy">
+    <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+    <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
+    <p>{post.data.summary}</p>
+    <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
+  </div>
+</article>
