@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const shareTitle = encodeURIComponent(post.data.title);
+const shareUrl = encodeURIComponent(pageUrl);
+---
+<Base title={`${post.data.title} | Murtaza Saeed`} description={post.data.summary} image={post.data.image} type="article">
+  <article class="article wrap">
+    <header class="article-header">
+      <p class="eyebrow"><a href={`/${post.data.category.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{post.data.category}</a> · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <h1>{post.data.title}</h1><p class="dek">{post.data.summary}</p>
+    </header>
+    <img class="article-image" src={post.data.image} alt={post.data.imageAlt} />
+    <div class="article-grid"><div class="share" aria-label="Share this article"><span>Share</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="copy-link">Copy link</button></div><div class="prose"><Content /><p class="author-note">Written by <strong>Murtaza Saeed</strong></p></div></div>
+  </article>
+  <script>document.querySelector('#copy-link')?.addEventListener('click', async (e) => { await navigator.clipboard.writeText(location.href); e.currentTarget.textContent = 'Copied'; });</script>
+</Base>
