@@ -7,7 +7,7 @@ const posts = defineCollection({
     title: z.string(),
     slug: z.string(),
     date: z.coerce.date(),
-    category: z.enum(['Business & Finance', 'Reviews & Experiences', 'Technology', 'Travel & Leisure']),
+    category: z.enum(['Business & Finance', 'Technology']),
     summary: z.string(),
     seoTitle: z.string().optional(),
     metaDescription: z.string().optional(),
