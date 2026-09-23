@@ -25,7 +25,7 @@ toc:
     id: "the-final-advice-turn-todays-fame-into-tomorrows-value"
   - label: "The verdict"
     id: "the-verdict"
-image: "/images/mbappe-nike-to-on.png"
+image: "/images/mbappe-nike-to-on-web.jpg"
 imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
 draft: false
 ---

@@ -47,7 +47,7 @@ const articleSchema = {
       {post.data.toc && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
         <div class="share share-end" aria-label="Share this article"><span>Share this article</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="native-share">Share…</button><button id="copy-link">Copy link</button></div>
-        <div class="author-note"><img src="/images/murtaza-saeed-profile.png" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
+        <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
       </div>
     </div>
   </article>
