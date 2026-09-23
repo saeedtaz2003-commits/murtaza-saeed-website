@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://murtaza-saeed.pages.dev/sitemap-index.xml
+Sitemap: https://murtazainsights.com/sitemap-index.xml
