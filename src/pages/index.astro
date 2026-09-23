@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 const posts = (await getCollection('posts')).filter(p => !p.data.draft).sort((a,b) => +b.data.date - +a.data.date);
 ---
-<Base title="Murtaza Saeed | Finance, Business & Life in Perspective">
+<Base title="Murtaza Saeed | Finance & Business Insights">
   <section class="hero">
     <div class="wrap hero-grid">
       <div>

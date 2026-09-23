@@ -1,37 +1,40 @@
 ---
-title: "Kylian Mbappé Leaves Nike for On: From Endorsement to Ownership"
+title: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
 slug: "mbappe-endorsement-to-ownership"
 date: 2026-09-22
 category: "Business & Finance"
-summary: "Mbappé’s move from Nike to On—and reports that the deal includes equity—shows how elite athletes are moving from endorsement towards ownership and influence."
-image: "/images/mbappe-nike-to-on.jpg"
+summary: "Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership."
+seoTitle: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
+metaDescription: "Explore why Kylian Mbappé left Nike for On—and what the reported equity deal teaches about athlete endorsements, ownership and long-term value."
+takeaways:
+  - "Mbappé’s Nike contract ended; there is no confirmed public quarrel behind the move."
+  - "His On agreement reportedly combines cash and equity with a role in developing football products."
+  - "The strategic lesson is to convert present-day influence into participation in future value—without ignoring the risks of equity."
+toc:
+  - label: "Why did Mbappé leave Nike?"
+    id: "why-did-kylian-mbappé-leave-nike-after-nearly-20-years"
+  - label: "What On is building"
+    id: "what-on-is-trying-to-build"
+  - label: "Endorsement vs ownership"
+    id: "endorsement-partnership-and-ownership"
+  - label: "Comparable athlete deals"
+    id: "what-happened-in-comparable-athlete-deals"
+  - label: "The finance perspective"
+    id: "the-deal-through-a-finance-lens"
+  - label: "Lessons for elite performers"
+    id: "the-final-advice-turn-todays-fame-into-tomorrows-value"
+  - label: "The verdict"
+    id: "the-verdict"
+image: "/images/mbappe-nike-to-on.png"
 imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
 draft: false
 ---
 
-After nearly 20 years with Nike, Kylian Mbappé is joining On—the Swiss sportswear company associated with Roger Federer. But this appears to be more than a change of logo.
+## Why did Kylian Mbappé leave Nike after nearly 20 years?
 
-Reports indicate that Mbappé’s agreement includes cash, equity and the opportunity to contribute ideas as On expands into football. At Nike, he was a highly paid ambassador among many global stars. At On, he could become a defining face of the brand, with greater influence and a share in the value he helps create.
+Mbappé’s Nike contract ended after a relationship dating back to childhood, and there is no confirmed public quarrel. He chose On because the reported agreement combines cash and equity with the chance to help develop a new football business—offering greater influence and potential long-term upside than a conventional endorsement.
 
-There is no confirmed quarrel with Nike; his contract simply ended. The more interesting story is the business logic behind the move.
-
-Three lessons stand out:
-
-1. Fees reward today; ownership can participate in tomorrow.
-2. Loyalty is valuable, but it should not become inertia.
-3. A challenger may offer more influence than an established giant.
-
-Equity carries risk, of course. On must keep growing for Mbappé’s stake to become truly valuable. Yet he appears to have chosen the possibility of long-term wealth over remaining merely an ambassador.
-
-Sometimes the smartest move is not negotiating a bigger cheque—it is securing a share of the future.
-
-Would you choose Nike’s security or ownership in On?
-
----
-
-## The bigger story behind the short story
-
-The social-media version above captures the central business idea, but the deal deserves a closer look. Mbappé is not simply exchanging one boot supplier for another. He is joining a younger company at the moment it is entering football, and that changes the balance of the relationship.
+That is the direct answer. The more interesting story is the business logic behind it. Mbappé is not simply exchanging one boot supplier for another; he is joining a younger company as it enters football, changing the balance of the relationship from ambassador towards product partner and shareholder.
 
 ### Who are Mbappé and Federer?
 
@@ -56,7 +59,7 @@ On announced the partnership on 18 September 2026 as the beginning of its move i
 
 The official announcement does not disclose the financial terms. However, [Reuters reported](https://www.reuters.com/) that the agreement includes both cash and equity, while other reporting has described it as a long-term partnership. That distinction matters. Cash pays an athlete for the use of his profile today; equity may allow him to benefit from the value created tomorrow. It also introduces risk: shares can rise or fall, and a challenger entering a new category has much to prove.
 
-## Why leaving Nike is significant
+## Why leaving Nike after 20 years is significant
 
 Mbappé’s association with Nike began when he was a child. By the time he became one of football’s defining players, Nike had built major campaigns around him and produced signature editions of its Mercurial boots. The relationship linked the world’s largest sportswear company with a player whose speed, confidence and global appeal fitted the brand naturally.
 

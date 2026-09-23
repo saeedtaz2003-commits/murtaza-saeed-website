@@ -10,15 +10,60 @@ const { Content } = await render(post);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const shareTitle = encodeURIComponent(post.data.title);
 const shareUrl = encodeURIComponent(pageUrl);
+const pageTitle = post.data.seoTitle ?? post.data.title;
+const pageDescription = post.data.metaDescription ?? post.data.summary;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: pageTitle,
+  description: pageDescription,
+  datePublished: post.data.date.toISOString(),
+  dateModified: '2026-09-23T00:00:00.000Z',
+  mainEntityOfPage: pageUrl,
+  image: new URL(post.data.image, Astro.site).toString(),
+  author: {
+    '@type': 'Person',
+    name: 'Murtaza Saeed',
+    url: new URL('/about', Astro.site).toString(),
+    description: 'Chartered Accountant, former CFM and independent finance and business commentator.'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Murtaza Saeed | Finance & Business Insights',
+    url: new URL('/', Astro.site).toString()
+  }
+};
 ---
-<Base title={`${post.data.title} | Murtaza Saeed`} description={post.data.summary} image={post.data.image} type="article">
+<Base title={`${pageTitle} | Murtaza Saeed`} description={pageDescription} image={post.data.image} type="article" jsonLd={articleSchema}>
   <article class="article wrap">
     <header class="article-header">
       <p class="eyebrow"><a href={`/${post.data.category.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{post.data.category}</a> · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
       <h1>{post.data.title}</h1><p class="dek">{post.data.summary}</p>
     </header>
     <img class="article-image" src={post.data.image} alt={post.data.imageAlt} />
-    <div class="article-grid"><div class="share" aria-label="Share this article"><span>Share</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="copy-link">Copy link</button></div><div class="prose"><Content /><p class="author-note">Written by <strong>Murtaza Saeed</strong></p></div></div>
+    {post.data.takeaways && <section class="at-a-glance" aria-labelledby="glance-title"><p class="eyebrow" id="glance-title">At a glance</p><ul>{post.data.takeaways.map(item => <li>{item}</li>)}</ul></section>}
+    {post.data.toc && <details class="mobile-toc"><summary>In this article</summary><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></details>}
+    <div class="article-grid">
+      {post.data.toc && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
+      <div class="prose"><Content />
+        <div class="share share-end" aria-label="Share this article"><span>Share this article</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="native-share">Share…</button><button id="copy-link">Copy link</button></div>
+        <div class="author-note"><img src="/images/murtaza-saeed-profile.png" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
+      </div>
+    </div>
   </article>
-  <script>document.querySelector('#copy-link')?.addEventListener('click', async (e) => { await navigator.clipboard.writeText(location.href); e.currentTarget.textContent = 'Copied'; });</script>
+  <script>
+    document.querySelector('#copy-link')?.addEventListener('click', async (e) => { await navigator.clipboard.writeText(location.href); e.currentTarget.textContent = 'Copied'; });
+    const nativeShare = document.querySelector('#native-share');
+    if (!navigator.share) nativeShare?.remove();
+    nativeShare?.addEventListener('click', () => navigator.share({ title: document.title, url: location.href }));
+    document.querySelectorAll('.mobile-toc a').forEach(link => link.addEventListener('click', () => link.closest('details')?.removeAttribute('open')));
+    const tocLinks = [...document.querySelectorAll('.article-toc a')];
+    const sections = tocLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      }
+    }), { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(section => observer.observe(section));
+  </script>
 </Base>
