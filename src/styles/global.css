@@ -280,7 +280,7 @@ h3 {
   color: var(--muted);
 }
 footer {
-  background: var(--navy);
+  background: #21143f;
   color: #d8deea;
   padding: 3.5rem 0;
 }
@@ -301,7 +301,7 @@ footer {
 }
 .fine {
   font-size: 0.75rem;
-  color: #9ba7bd;
+  color: #b8b0ca;
 }
 .page-head {
   padding: 6rem 0 3.5rem;
