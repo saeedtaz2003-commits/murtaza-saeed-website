@@ -76,10 +76,10 @@ a {
 .brand small {
   display: block;
   width: 100%;
-  color: #3f495b;
-  font-size: 0.74rem;
-  font-weight: 650;
-  letter-spacing: 0.035em;
+  color: #26344d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   padding-left: 0;
   text-align: center;
 }
@@ -247,7 +247,7 @@ h3 {
 }
 .topics {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -301,7 +301,112 @@ footer {
 }
 .fine {
   font-size: 0.75rem;
-  color: #b8b0ca;
+  color: #ded1f4;
+}
+.lighter-head {
+  text-align: center;
+}
+.lighter-head h1 {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+.lighter-head .lighter-subtitle {
+  max-width: none;
+  margin: 0 auto 1rem;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-style: italic;
+}
+.lighter-head p:last-child {
+  margin-inline: auto;
+  max-width: 820px;
+}
+.bunting,
+.festive-divider {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bunting {
+  margin: 2rem auto -0.2rem;
+  padding-top: 2px;
+  border-top: 2px solid var(--navy);
+  width: min(620px, 88vw);
+}
+.bunting i,
+.festive-divider i {
+  display: block;
+  width: clamp(18px, 3vw, 28px);
+  height: clamp(24px, 4vw, 38px);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: var(--purple);
+}
+.bunting i:nth-child(4n + 2),
+.festive-divider i:nth-of-type(4n + 2) { background: #9b70ed; }
+.bunting i:nth-child(4n + 3),
+.festive-divider i:nth-of-type(4n + 3) { background: var(--navy); }
+.bunting i:nth-child(4n),
+.festive-divider i:nth-of-type(4n) { background: #c99a32; }
+.festive-divider {
+  grid-column: 1 / -1;
+  gap: 0.18rem;
+  margin: -0.5rem 0;
+}
+.festive-divider span {
+  align-self: center;
+  height: 1px;
+  max-width: 190px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--purple));
+}
+.festive-divider span:last-child {
+  background: linear-gradient(90deg, var(--purple), transparent);
+}
+.lighter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.lighter-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  box-shadow: 0 16px 40px rgba(25, 18, 48, 0.12);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.lighter-card.tilt-left {
+  transform: rotate(-1deg);
+}
+.lighter-card.tilt-right {
+  transform: rotate(1deg);
+}
+.lighter-card:hover,
+.lighter-card:focus-within {
+  transform: rotate(0);
+  box-shadow: 0 20px 48px rgba(25, 18, 48, 0.17);
+}
+.lighter-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--wash);
+}
+.lighter-copy {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.lighter-copy h2 {
+  font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+.lighter-copy > p:last-child {
+  color: var(--muted);
+  margin-bottom: 0;
 }
 .page-head {
   padding: 6rem 0 3.5rem;
@@ -433,10 +538,10 @@ footer {
   letter-spacing: 0.12em;
   font-size: 0.7rem;
   font-weight: 800;
-  color: #465064;
+  color: #26344d;
 }
 .article-toc nav { display: flex; flex-direction: column; gap: 0.4rem; border-left: 1px solid var(--line); }
-.article-toc a { padding: 0.3rem 0 0.3rem 1rem; color: #4c5669; text-decoration: none; font-size: 0.82rem; line-height: 1.35; border-left: 2px solid transparent; margin-left: -1px; }
+.article-toc a { padding: 0.3rem 0 0.3rem 1rem; color: var(--navy); text-decoration: none; font-size: 0.82rem; font-weight: 650; line-height: 1.35; border-left: 2px solid transparent; margin-left: -1px; }
 .article-toc a:hover,
 .article-toc a.active { color: #5d2fc1; border-left-color: #5d2fc1; }
 .at-a-glance { max-width: 900px; margin: 2rem auto 0; padding: 1.5rem 1.75rem; background: var(--wash); border-top: 3px solid var(--purple); }
@@ -552,6 +657,17 @@ footer {
   .topics {
     grid-template-columns: 1fr 1fr;
   }
+  .lighter-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+  .lighter-card.tilt-left,
+  .lighter-card.tilt-right {
+    transform: none;
+  }
+  .festive-divider {
+    margin: -0.35rem 0;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -596,7 +712,8 @@ footer {
   }
   .brand small {
     display: block;
-    font-size: 0.64rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
   }
   .hero h1 {
     font-size: 3.25rem;

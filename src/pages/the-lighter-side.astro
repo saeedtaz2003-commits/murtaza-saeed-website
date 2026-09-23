@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+
+const items = [
+  {
+    category: 'Markets & Consumers',
+    title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
+    image: '/images/ozempic-victorias-secret-shares-meme.webp',
+    alt: 'Satirical cartoon linking the Ozempic weight-loss trend with rising expectations for Victoria’s Secret shares.',
+    copy: 'Could weight-loss drugs provide an unexpected lift for Victoria’s Secret? Slimmer customers may feel more confident, replace clothing that no longer fits and spend more on fashion. Whether that translates into sustained profits remains uncertain—but Wall Street rarely ignores a promising new consumer trend.'
+  },
+  {
+    category: 'Technology & Modern Life',
+    title: 'When the smartest feature is knowing when to switch off',
+    image: '/images/pulse-mindfulness-anti-smart-ring-meme.webp',
+    alt: 'Cartoon showing an overwhelmed gadget user being offered the Pulse Mindfulness Ring, which uses gentle vibrations to encourage screen-free pauses rather than tracking health data.',
+    copy: 'Technology has become so good at measuring everything that we can spend more time studying dashboards than actually living. The Pulse Ring collects no health data. It simply vibrates occasionally, reminding its wearer to stop checking devices, pause and breathe. At about $199, the irony is expensive—but the message is valuable: not every problem needs more data.'
+  },
+  {
+    category: 'Golf & Marriage',
+    title: 'She did it in one. I’m still improving the odds',
+    image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
+    alt: 'Goofing Golfer cartoon set at Nyali Golf & Country Club, showing a husband pursuing his first hole-in-one after his wife achieved hers.',
+    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
+  },
+  {
+    category: 'Golf & Management',
+    title: 'I have decided… that counts as a hole-in-one!',
+    image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
+    alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
+    copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
+  }
+];
+---
+<Base title="Funny Bizz | Murtaza Insights" description="Executive-friendly humour and observations from business, technology, golf and life beyond the boardroom.">
+  <section class="page-head wrap lighter-head">
+    <p class="eyebrow">The Lighter Side</p>
+    <h1>Funny Bizz</h1>
+    <p class="lighter-subtitle">The lighter side of business—and life</p>
+    <p>Serious decisions do not always require a serious expression. Here are a few cartoons and observations about markets, technology, executive life and the endlessly humbling game of golf.</p>
+    <div class="bunting" aria-hidden="true">
+      {Array.from({ length: 13 }).map(() => <i></i>)}
+    </div>
+  </section>
+  <section class="section wrap lighter-grid" aria-label="Cartoons and observations">
+    {items.map((item, index) => (
+      <>
+        <article class:list={['lighter-card', index % 2 ? 'tilt-right' : 'tilt-left']}>
+          <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+          <div class="lighter-copy">
+            <p class="eyebrow">{item.category}</p>
+            <h2>{item.title}</h2>
+            <p>{item.copy}</p>
+          </div>
+        </article>
+        {index === 1 && (
+          <div class="festive-divider" aria-hidden="true">
+            <span></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span></span>
+          </div>
+        )}
+      </>
+    ))}
+  </section>
+</Base>
