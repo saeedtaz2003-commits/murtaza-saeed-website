@@ -17,7 +17,7 @@ const posts = (await getCollection('posts')).filter(p => !p.data.draft).sort((a,
     </div>
   </section>
   <section id="latest" class="section wrap">
-    <div class="section-heading"><div><p class="eyebrow">Latest perspective</p><h2>Fresh thinking, without the noise</h2></div></div>
+    <div class="section-heading"><div><p class="eyebrow">Latest perspective</p><h2>Fresh thinking, without the noise</h2></div><a class="read" href="/articles">View all articles →</a></div>
     {posts[0] && <ArticleCard post={posts[0]} featured />}
   </section>
   <section class="section muted"><div class="wrap"><p class="eyebrow">Explore by subject</p><h2>What you’ll find here</h2><div class="topics">

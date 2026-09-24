@@ -23,7 +23,7 @@ toc:
     id: "how-a-kenyan-retail-investor-may-apply"
   - label: "My conclusion"
     id: "my-personal-conclusion"
-image: "/images/quickmart-ipo-share-price-kenya-investment-cartoon.png"
+image: "/images/quickmart-ipo-share-price-kenya-investment-cartoon.webp"
 imageAlt: "Quickmart IPO Kenya cartoon showing Quickmart shares on a supermarket shelf with an unknown KSh price as an investor considers buying shares in the NSE listing"
 draft: false
 ---
@@ -120,4 +120,3 @@ Quickmart shares may deserve a place in the investment basket—but only if the 
 - [Quickmart Investor Relations](https://corporate.quickmart.co.ke/investor-relations/)
 - [Business Daily: Quickmart to sell stake through the NSE](https://www.businessdailyafrica.com/bd/markets/capital-markets/quickmatt-to-sell-57pc-stake-at-nse-5606376)
 - [Capital Markets Authority: Equity markets and public offers](https://www.cma.or.ke/markets/)
-

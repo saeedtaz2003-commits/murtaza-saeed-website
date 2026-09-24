@@ -1,5 +1,5 @@
 ---
 import { getCollection } from 'astro:content'; import Base from '../layouts/Base.astro'; import ArticleCard from '../components/ArticleCard.astro';
-const posts=(await getCollection('posts')).filter(p=>!p.data.draft&&p.data.category==='Business & Finance');
+const posts=(await getCollection('posts')).filter(p=>!p.data.draft&&p.data.category==='Business & Finance').sort((a,b)=>+b.data.date-+a.data.date);
 ---
 <Base title="Business & Finance | Murtaza Saeed"><section class="page-head wrap"><p class="eyebrow">Business & Finance</p><h1>Beyond the headline numbers</h1><p>Commentary on markets, companies, strategy and the decisions that create—or destroy—value.</p></section><section class="section wrap listing">{posts.map(p=><ArticleCard post={p}/>)}</section></Base>

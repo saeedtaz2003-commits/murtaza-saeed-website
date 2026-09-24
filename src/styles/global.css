@@ -577,6 +577,18 @@ footer {
 .prose li {
   margin: 0.7rem 0;
 }
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.prose th,
+.prose td {
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
 .article-photo-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
