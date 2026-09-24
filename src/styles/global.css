@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
 :root {
   --navy: #101d38;
   --navy2: #1c2f55;
@@ -307,9 +309,11 @@ footer {
   text-align: center;
 }
 .lighter-head h1 {
+  font-family: "Jolly Lodger", fantasy;
+  font-weight: 400;
   margin-bottom: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.045em;
+  letter-spacing: 0.025em;
 }
 .lighter-head .lighter-subtitle {
   max-width: none;
