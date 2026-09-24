@@ -567,6 +567,8 @@ footer {
 .share-end { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 3rem; font-family: Inter, sans-serif; }
 .share-end span { width: 100%; }
 .prose {
+  min-width: 0;
+  max-width: 100%;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.18rem;
   line-height: 1.8;
@@ -580,7 +582,9 @@ footer {
 .prose table {
   display: block;
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
   white-space: nowrap;
 }
@@ -694,7 +698,8 @@ footer {
     grid-template-columns: 1fr;
   }
   .article-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
   }
   .article-toc { display: none; }
   .mobile-toc {
@@ -754,6 +759,9 @@ footer {
   }
   .article-image {
     width: calc(100% + 2rem);
+    max-width: none;
+    height: auto;
+    aspect-ratio: auto;
     margin-left: -1rem;
   }
   .article-photo-grid {
