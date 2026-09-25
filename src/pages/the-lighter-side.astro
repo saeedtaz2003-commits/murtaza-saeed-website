@@ -53,7 +53,8 @@ const items = [
     title: 'She did it in one. I’m still improving the odds',
     image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
     alt: 'Goofing Golfer cartoon set at Nyali Golf & Country Club, showing a husband pursuing his first hole-in-one after his wife achieved hers.',
-    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
+    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.',
+    evergreen: true
   },
   {
     id: 'missed-hole-in-one',
@@ -61,9 +62,14 @@ const items = [
     title: 'I have decided… that counts as a hole-in-one!',
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
     alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
-    copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
+    copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.',
+    evergreen: true
   }
 ];
+
+const carouselItems = [...items.filter((item) => item.pinned), ...items.slice(0, 4), ...items.filter((item) => item.evergreen)]
+  .filter((item, index, array) => array.findIndex((candidate) => candidate.id === item.id) === index)
+  .slice(0, 8);
 ---
 <Base title="Funny Bizz | Murtaza Insights" description="Executive-friendly humour and observations from business, technology, golf and life beyond the boardroom.">
   <section class="page-head wrap lighter-head">
@@ -79,34 +85,27 @@ const items = [
   <section class="section wrap funny-carousel-section" aria-label="Funny Bizz featured cartoons">
     <div class="funny-carousel" data-carousel>
       <div class="funny-slides">
-        {items.map((item, index) => (
-          <article id={item.id} class:list={['funny-slide', index === 0 && 'active']} data-slide aria-hidden={index === 0 ? 'false' : 'true'}>
-            <a href={'#' + item.id} class="meme-stage" style={`--meme-image: url('${item.image}')`} aria-label={`Open commentary: ${item.title}`}>
+        {carouselItems.map((item, index) => (
+          <article class:list={['funny-slide', index === 0 && 'active']} data-slide aria-hidden={index === 0 ? 'false' : 'true'}>
+            <a href={`#commentary-${item.id}`} class="meme-stage" style={`--meme-image: url('${item.image}')`} aria-label={`Open commentary: ${item.title}`}>
               <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
             </a>
             <div class="lighter-copy">
               <p class="eyebrow">{item.category}</p>
               <h2>{item.title}</h2>
               <p>{item.copy}</p>
-              {item.domains && (
-                <section class="domain-name-list" aria-labelledby="domain-list-title">
-                  <h3 id="domain-list-title">Unfortunate Domain Names</h3>
-                  <ul>
-                    {item.domains.map(([domain, meaning]) => (
-                      <li><strong>{domain}</strong> <span>({meaning})</span></li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-              {item.closing && <p>{item.closing}</p>}
+              <p class="funny-view-commentary"><a href={`#commentary-${item.id}`}>View commentary</a></p>
             </div>
           </article>
         ))}
       </div>
+
       <div class="funny-controls" aria-label="Carousel controls">
         <button class="funny-control" type="button" data-prev aria-label="Previous cartoon">← Previous</button>
         <div class="funny-dots" aria-label="Choose cartoon">
-          {items.map((item, index) => <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show cartoon ${index + 1}: ${item.title}`}></button>)}
+          {carouselItems.map((item, index) => (
+            <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show cartoon ${index + 1}: ${item.title}`}></button>
+          ))}
         </div>
         <button class="funny-control" type="button" data-next aria-label="Next cartoon">Next →</button>
       </div>
@@ -116,9 +115,30 @@ const items = [
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
     <p class="eyebrow">Archive</p>
     <h2 id="funny-archive-title">All Funny Bizz</h2>
-    <ul class="funny-archive-list">
-      {items.map((item) => <li><a href={'#' + item.id}>{item.title}</a></li>)}
-    </ul>
+    <div class="funny-archive-list">
+      {items.map((item) => (
+        <details id={`commentary-${item.id}`} class="funny-archive-item">
+          <summary>
+            <span>{item.title}</span>
+            <small>{item.category}</small>
+          </summary>
+          <div class="funny-archive-copy">
+            <p>{item.copy}</p>
+            {item.domains && (
+              <section class="domain-name-list" aria-label="Unfortunate domain names">
+                <h3>Unfortunate Domain Names</h3>
+                <ul>
+                  {item.domains.map(([domain, meaning]) => (
+                    <li><strong>{domain}</strong> <span>({meaning})</span></li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {item.closing && <p>{item.closing}</p>}
+          </div>
+        </details>
+      ))}
+    </div>
   </section>
 
   <script>
@@ -145,19 +165,22 @@ const items = [
       carousel.addEventListener('touchstart', (event) => {
         touchStartX = event.changedTouches[0]?.clientX ?? 0;
       }, { passive: true });
+
       carousel.addEventListener('touchend', (event) => {
         const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
         const distance = touchEndX - touchStartX;
         if (Math.abs(distance) > 45) show(current + (distance < 0 ? 1 : -1));
       }, { passive: true });
-
-      const showHashItem = () => {
-        const id = window.location.hash.slice(1);
-        const index = slides.findIndex((slide) => slide.id === id);
-        if (index >= 0) show(index);
-      };
-      window.addEventListener('hashchange', showHashItem);
-      showHashItem();
     }
+
+    const openCommentaryFromHash = () => {
+      const id = window.location.hash.slice(1);
+      if (!id.startsWith('commentary-')) return;
+      const target = document.getElementById(id);
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    };
+
+    window.addEventListener('hashchange', openCommentaryFromHash);
+    openCommentaryFromHash();
   </script>
 </Base>
