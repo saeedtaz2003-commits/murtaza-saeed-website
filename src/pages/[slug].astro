@@ -12,9 +12,12 @@ const shareTitle = encodeURIComponent(post.data.title);
 const shareUrl = encodeURIComponent(pageUrl);
 const pageTitle = post.data.seoTitle ?? post.data.title;
 const pageDescription = post.data.metaDescription ?? post.data.summary;
+const isAdvertorial = post.data.advertorial;
+const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/articles';
+const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View All Articles';
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
+  '@type': isAdvertorial ? 'AdvertiserContentArticle' : 'Article',
   headline: pageTitle,
   description: pageDescription,
   datePublished: post.data.date.toISOString(),
@@ -31,15 +34,31 @@ const articleSchema = {
     '@type': 'Organization',
     name: 'Murtaza Saeed | Finance & Business Insights',
     url: new URL('/', Astro.site).toString()
-  }
+  },
+  sponsor: isAdvertorial && post.data.sponsor ? {
+    '@type': 'Organization',
+    name: post.data.sponsor
+  } : undefined
 };
 ---
 <Base title={`${pageTitle} | Murtaza Saeed`} description={pageDescription} image={post.data.image} type="article" jsonLd={articleSchema}>
   <article class="article wrap">
     <header class="article-header">
-      <p class="eyebrow"><a href={`/${post.data.category.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{post.data.category}</a> · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <p class="eyebrow">
+        {isAdvertorial ? <><a href="/advertorials">ADVERTORIAL</a> · {post.data.category}</> : <a href={`/${post.data.category.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{post.data.category}</a>}
+        {' · '}{post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}
+      </p>
       <h1>{post.data.title}</h1><p class="dek">{post.data.summary}</p>
     </header>
+    {isAdvertorial && (
+      <aside class="article-advertorial-disclosure" aria-label="Advertorial disclosure">
+        <strong>ADVERTORIAL</strong>
+        <p>{post.data.sponsor
+          ? <>This advertorial was commissioned by {post.data.sponsor} and prepared in collaboration with the company. It is promotional content and is separate from the independent articles, analysis and commentary published on <em>Murtaza Insights</em>.</>
+          : <>This is promotional content and is separate from the independent articles, analysis and commentary published on <em>Murtaza Insights</em>.</>}
+        </p>
+      </aside>
+    )}
     <img class="article-image" src={post.data.image} alt={post.data.imageAlt} />
     {post.data.takeaways && <section class="at-a-glance" aria-labelledby="glance-title"><p class="eyebrow" id="glance-title">At a glance</p><ul>{post.data.takeaways.map(item => <li>{item}</li>)}</ul></section>}
     {post.data.toc && <details class="mobile-toc"><summary>In this article</summary><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></details>}
@@ -48,6 +67,7 @@ const articleSchema = {
       <div class="prose"><Content />
         <div class="share share-end" aria-label="Share this article"><span>Share this article</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="native-share">Share…</button><button id="copy-link">Copy link</button></div>
         <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
+        <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
       </div>
     </div>
   </article>
