@@ -1,0 +1,88 @@
+/* Mobile correction: keep the meme as the dominant full-width visual.
+   The mixed-slider stylesheet retained the desktop grid columns at mobile widths,
+   which squeezed the image into a thumbnail beside the commentary. */
+
+@media (max-width: 760px) {
+  .funny-viewer-grid {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    gap: 0.7rem;
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .funny-viewer-media {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto auto !important;
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .funny-viewer-media .funny-screen-frame {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+  }
+
+  .funny-viewer-media .funny-slides,
+  .funny-viewer-media .funny-slide-image,
+  .funny-viewer-media .funny-slide-image.active,
+  .funny-viewer-media .funny-slide-image .meme-stage {
+    width: 100%;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  .funny-viewer-media .funny-slide-image .meme-stage {
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .funny-viewer-media .funny-slide-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .funny-viewer-media .funny-controls,
+  .funny-share-row,
+  .funny-share-menu {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .funny-commentary-viewport {
+    width: 100%;
+    height: min(31dvh, 260px) !important;
+    min-height: 190px !important;
+    max-height: 260px !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+  .funny-carousel-section {
+    padding-inline: 0;
+  }
+
+  .funny-slider-note,
+  .funny-viewer-grid {
+    width: calc(100% - 1.25rem);
+    margin-inline: auto;
+  }
+
+  .funny-viewer-media .funny-screen-frame {
+    border-width: 6px;
+  }
+}
