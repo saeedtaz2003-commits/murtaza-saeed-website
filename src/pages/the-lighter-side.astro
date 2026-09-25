@@ -1,72 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-
-const items = [
-  {
-    id: 'kenya-power-profit',
-    category: 'Business & Everyday Life',
-    title: 'A bright result. A rather dim customer experience.',
-    image: '/images/kenya-power-sh25-billion-profit-outages-approved.webp',
-    alt: 'Kenya Power profits cartoon showing an executive celebrating Sh25 billion while a customer holds a candle during a power outage, highlighting electricity bills and power cuts in Kenya.',
-    copy: 'Investors are delighted by Kenya Power’s profits. Customers are still waiting for the lights to stay on—and for a bill that doesn’t come as a shock.'
-  },
-  {
-    id: 'domain-name-mistake',
-    category: 'Websites & Branding',
-    title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
-    titleHtml: 'When “<em>Murtaza Insights</em>” Nearly Became “Murtaza in Tights”',
-    image: '/images/murtaza-insights-domain-name-mistake.webp',
-    alt: 'Cartoon of Murtaza Saeed wearing a business jacket and tie with bright floral tights, surrounded by examples of unfortunately worded domain names.',
-    copyHtml: 'I nearly made a spelling error and could have ended up with “Murtaza in Tights” instead of “<em>Murtaza Insights</em>”. Other names have suffered the same problem:',
-    domains: [
-      ['expertsexchange', 'Experts Exchange'],
-      ['penisland', 'Pen Island'],
-      ['whorepresents', 'Who Represents'],
-      ['powergenitalia', 'Powergen Italia'],
-      ['molestationnursery', 'Mole Station Nursery'],
-      ['choosespain', 'Choose Spain'],
-      ['speedofart', 'Speed of Art'],
-      ['dicksonweb', 'Dickson Web'],
-      ['ipanywhere', 'IP Anywhere'],
-      ['childrenswear', 'Children’s Wear']
-    ],
-    closing: 'The lesson is simple: before registering a domain, write it in lowercase, remove all the spaces and ask someone else to read it aloud. A second pair of eyes could save your website from becoming memorable for entirely the wrong reason. Check your domain choice carefully.'
-  },
-  {
-    id: 'ozempic-victorias-secret',
-    category: 'Markets & Consumers',
-    title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
-    image: '/images/ozempic-victorias-secret-shares-meme.webp',
-    alt: 'Satirical cartoon linking the Ozempic weight-loss trend with rising expectations for Victoria’s Secret shares.',
-    copy: 'Could weight-loss drugs provide an unexpected lift for Victoria’s Secret? Slimmer customers may feel more confident, replace clothing that no longer fits and spend more on fashion. Whether that translates into sustained profits remains uncertain—but Wall Street rarely ignores a promising new consumer trend.'
-  },
-  {
-    id: 'pulse-ring',
-    category: 'Technology & Modern Life',
-    title: 'When the smartest feature is knowing when to switch off',
-    image: '/images/pulse-mindfulness-anti-smart-ring-meme.webp',
-    alt: 'Cartoon showing an overwhelmed gadget user being offered the Pulse Mindfulness Ring, which uses gentle vibrations to encourage screen-free pauses rather than tracking health data.',
-    copy: 'Technology has become so good at measuring everything that we can spend more time studying dashboards than actually living. The Pulse Ring collects no health data. It simply vibrates occasionally, reminding its wearer to stop checking devices, pause and breathe. At about $199, the irony is expensive—but the message is valuable: not every problem needs more data.'
-  },
-  {
-    id: 'chasing-wifey-hole-in-one',
-    category: 'Golf & Marriage',
-    title: 'She did it in one. I’m still improving the odds',
-    image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
-    alt: 'Goofing Golfer cartoon set at Nyali Golf & Country Club, showing a husband pursuing his first hole-in-one after his wife achieved hers.',
-    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
-  },
-  {
-    id: 'missed-hole-in-one',
-    category: 'Golf & Management',
-    title: 'I have decided… that counts as a hole-in-one!',
-    image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
-    alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
-    copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
-  }
-];
-
-const featuredItems = items.slice(0, 10);
+import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funnyBizzPermalink } from '../data/funny-bizz';
 ---
 <Base title="Funny Bizz | Murtaza Insights" description="Executive-friendly humour and observations from business, technology, golf and life beyond the boardroom.">
   <section class="page-head wrap lighter-head">
@@ -96,6 +30,9 @@ const featuredItems = items.slice(0, 10);
                   type="button"
                   data-slide
                   data-next-image
+                  data-item-id={item.id}
+                  data-permalink={funnyBizzPermalink(item.id)}
+                  data-share-title={item.title}
                   aria-hidden={index === 0 ? 'false' : 'true'}
                   aria-label={`Show next featured cartoon after ${item.title}`}
                 >
@@ -116,6 +53,20 @@ const featuredItems = items.slice(0, 10);
             </div>
             <button class="funny-control" type="button" data-next aria-label="Next featured cartoon">Next →</button>
           </div>
+
+          <div class="funny-share-row" aria-label="Share this meme">
+            <button class="funny-share-button" type="button" data-share>Share</button>
+            <button class="funny-share-button" type="button" data-copy-link>Copy link</button>
+            <span class="funny-copy-status" data-copy-status aria-live="polite"></span>
+          </div>
+
+          <div class="funny-share-menu" data-share-menu hidden>
+            <a data-share-facebook target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a data-share-whatsapp target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a data-share-linkedin target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a data-share-x target="_blank" rel="noopener noreferrer">X</a>
+            <a data-share-email>Email</a>
+          </div>
         </div>
 
         <div class="funny-commentary-viewport" aria-live="polite">
@@ -125,7 +76,7 @@ const featuredItems = items.slice(0, 10);
                 <p class="eyebrow">{item.category}</p>
                 <h2 set:html={item.titleHtml ?? item.title} />
                 <p set:html={item.copyHtml ?? item.copy} />
-                {item.domains && (
+                {'domains' in item && item.domains && (
                   <section class="domain-name-list" aria-label="Unfortunate domain names">
                     <h3>Unfortunate Domain Names</h3>
                     <ul>
@@ -135,7 +86,7 @@ const featuredItems = items.slice(0, 10);
                     </ul>
                   </section>
                 )}
-                {item.closing && <p>{item.closing}</p>}
+                {'closing' in item && item.closing && <p>{item.closing}</p>}
               </div>
             </article>
           ))}
@@ -154,6 +105,7 @@ const featuredItems = items.slice(0, 10);
           class:list={['funny-archive-selector', index === 0 && 'active']}
           type="button"
           data-archive-index={index}
+          data-item-id={item.id}
           aria-current={index === 0 ? 'true' : 'false'}
           aria-label={`Show ${item.title} in the Funny Bizz viewer`}
         >
@@ -178,10 +130,38 @@ const featuredItems = items.slice(0, 10);
       const commentaryViewport = carousel.querySelector('.funny-commentary-viewport');
       const screen = carousel.querySelector('.funny-screen-frame');
       const status = carousel.querySelector('[data-viewer-status]');
+      const shareButton = carousel.querySelector('[data-share]');
+      const copyButton = carousel.querySelector('[data-copy-link]');
+      const copyStatus = carousel.querySelector('[data-copy-status]');
+      const shareMenu = carousel.querySelector('[data-share-menu]');
       const featuredCount = dots.length;
       let current = 0;
       let touchStartX = 0;
       let ignoreNextClick = false;
+
+      const activeSlide = () => slides[current];
+
+      const activeShareData = () => {
+        const slide = activeSlide();
+        const path = slide?.getAttribute('data-permalink') ?? '/the-lighter-side';
+        const title = slide?.getAttribute('data-share-title') ?? 'Funny Bizz | Murtaza Insights';
+        return {
+          title,
+          url: new URL(path, window.location.origin).toString()
+        };
+      };
+
+      const refreshShareMenu = () => {
+        const { title, url } = activeShareData();
+        const encodedUrl = encodeURIComponent(url);
+        const encodedTitle = encodeURIComponent(title);
+        const setHref = (selector, href) => carousel.querySelector(selector)?.setAttribute('href', href);
+        setHref('[data-share-facebook]', `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`);
+        setHref('[data-share-whatsapp]', `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`);
+        setHref('[data-share-linkedin]', `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`);
+        setHref('[data-share-x]', `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`);
+        setHref('[data-share-email]', `mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`);
+      };
 
       const show = (index) => {
         if (!slides.length) return;
@@ -212,6 +192,9 @@ const featuredItems = items.slice(0, 10);
         }
 
         if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
+        if (shareMenu instanceof HTMLElement) shareMenu.hidden = true;
+        if (copyStatus) copyStatus.textContent = '';
+        refreshShareMenu();
       };
 
       const stepFeatured = (direction) => {
@@ -259,6 +242,40 @@ const featuredItems = items.slice(0, 10);
           document.getElementById('funny-slider')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
+
+      shareButton?.addEventListener('click', async () => {
+        const { title, url } = activeShareData();
+        if (navigator.share) {
+          try {
+            await navigator.share({ title, text: title, url });
+            return;
+          } catch (error) {
+            if (error instanceof DOMException && error.name === 'AbortError') return;
+          }
+        }
+        if (shareMenu instanceof HTMLElement) {
+          refreshShareMenu();
+          shareMenu.hidden = !shareMenu.hidden;
+        }
+      });
+
+      copyButton?.addEventListener('click', async () => {
+        const { url } = activeShareData();
+        try {
+          await navigator.clipboard.writeText(url);
+          if (copyStatus) copyStatus.textContent = 'Link copied';
+        } catch {
+          window.prompt('Copy this meme link:', url);
+        }
+      });
+
+      const requestedId = new URLSearchParams(window.location.search).get('meme');
+      if (requestedId) {
+        const requestedIndex = slides.findIndex((slide) => slide.getAttribute('data-item-id') === requestedId);
+        if (requestedIndex >= 0) show(requestedIndex);
+      } else {
+        refreshShareMenu();
+      }
     }
   </script>
 </Base>
