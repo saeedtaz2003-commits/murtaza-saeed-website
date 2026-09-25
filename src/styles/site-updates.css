@@ -1,0 +1,112 @@
+/* Refinements for the 25 September 2026 website update. */
+
+.funny-view-commentary {
+  margin-top: 1rem;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.funny-view-commentary a {
+  color: var(--purple);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.funny-view-commentary a:hover,
+.funny-view-commentary a:focus-visible {
+  text-decoration: underline;
+}
+
+.funny-archive-list {
+  display: block;
+  padding-bottom: 5rem;
+}
+
+.funny-archive-item {
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 105px;
+}
+
+.funny-archive-item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.funny-archive-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  color: var(--navy);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 750;
+}
+
+.funny-archive-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.funny-archive-item summary::after {
+  content: '+';
+  margin-left: auto;
+  color: var(--purple);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.funny-archive-item[open] summary::after {
+  content: '−';
+}
+
+.funny-archive-item summary span {
+  flex: 1;
+}
+
+.funny-archive-item summary small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.funny-archive-copy {
+  max-width: 760px;
+  padding: 0 0 1.4rem;
+  color: var(--muted);
+}
+
+.funny-archive-copy > p:first-child {
+  margin-top: 0;
+}
+
+.funny-archive-item:target {
+  background: #faf8ff;
+  outline: 4px solid #faf8ff;
+}
+
+@media (max-width: 600px) {
+  .funny-archive-item summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+    padding-right: 2rem;
+  }
+
+  .funny-archive-item summary::after {
+    position: absolute;
+    right: 0;
+    top: 1.05rem;
+  }
+
+  .funny-slide .meme-stage {
+    aspect-ratio: 1 / 1;
+  }
+
+  .advertorial-page .button {
+    width: 100%;
+    text-align: center;
+  }
+}
