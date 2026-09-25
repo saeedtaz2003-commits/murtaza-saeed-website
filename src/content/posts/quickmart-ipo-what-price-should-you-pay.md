@@ -48,12 +48,37 @@ There are reportedly four billion shares in total. Based on adjusted profit afte
 
 If 80% of that profit were distributed, the indicative dividend would be approximately **KSh0.34 per share**. That allows us to test possible offer prices—but these are illustrations, not forecasts or price targets.
 
-| Hypothetical IPO price | Approximate P/E ratio | Indicative dividend yield |
-| ---: | ---: | ---: |
-| KSh4 | 9.4 times | 8.5% |
-| KSh5 | 11.8 times | 6.8% |
-| KSh6 | 14.1 times | 5.7% |
-| KSh7 | 16.5 times | 4.9% |
+<table class="valuation-table">
+  <thead>
+    <tr>
+      <th>Hypothetical IPO price</th>
+      <th>Approximate P/E ratio</th>
+      <th>Indicative dividend yield</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="IPO price">KSh4</td>
+      <td data-label="P/E ratio">9.4 times</td>
+      <td data-label="Dividend yield">8.5%</td>
+    </tr>
+    <tr>
+      <td data-label="IPO price">KSh5</td>
+      <td data-label="P/E ratio">11.8 times</td>
+      <td data-label="Dividend yield">6.8%</td>
+    </tr>
+    <tr>
+      <td data-label="IPO price">KSh6</td>
+      <td data-label="P/E ratio">14.1 times</td>
+      <td data-label="Dividend yield">5.7%</td>
+    </tr>
+    <tr>
+      <td data-label="IPO price">KSh7</td>
+      <td data-label="P/E ratio">16.5 times</td>
+      <td data-label="Dividend yield">4.9%</td>
+    </tr>
+  </tbody>
+</table>
 
 On those limited figures, a price around **KSh4 to KSh5** could look attractive. Around **KSh6** may still be reasonable if the offer document confirms healthy cash generation, manageable debt and sustainable growth. At **KSh7 or more**, the valuation would become much less compelling unless Quickmart demonstrates strong prospects for increasing profit per share.
 
