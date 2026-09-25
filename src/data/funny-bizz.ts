@@ -1,6 +1,26 @@
-export const funnyBizzItems = [
+export type FunnyBizzSliderCategory = 'Funny' | 'Featured Article' | 'Advertorial';
+
+export type FunnyBizzItem = {
+  id: string;
+  sliderCategory: FunnyBizzSliderCategory;
+  category: string;
+  title: string;
+  titleHtml?: string;
+  image: string;
+  alt: string;
+  copy: string;
+  copyHtml?: string;
+  domains?: readonly (readonly [string, string])[];
+  closing?: string;
+  destinationUrl?: string;
+  ctaLabel?: string;
+  advertiser?: string;
+};
+
+export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
     id: 'kenya-power-profit',
+    sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
     title: 'A bright result. A rather dim customer experience.',
     image: '/images/kenya-power-sh25-billion-profit-outages-approved.webp',
@@ -9,6 +29,7 @@ export const funnyBizzItems = [
   },
   {
     id: 'domain-name-mistake',
+    sliderCategory: 'Funny',
     category: 'Websites & Branding',
     title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
     titleHtml: 'When “<em>Murtaza Insights</em>” Nearly Became “Murtaza in Tights”',
@@ -32,6 +53,7 @@ export const funnyBizzItems = [
   },
   {
     id: 'ozempic-victorias-secret',
+    sliderCategory: 'Funny',
     category: 'Markets & Consumers',
     title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
     image: '/images/ozempic-victorias-secret-shares-meme.webp',
@@ -40,6 +62,7 @@ export const funnyBizzItems = [
   },
   {
     id: 'pulse-ring',
+    sliderCategory: 'Funny',
     category: 'Technology & Modern Life',
     title: 'When the smartest feature is knowing when to switch off',
     image: '/images/pulse-mindfulness-anti-smart-ring-meme.webp',
@@ -48,6 +71,7 @@ export const funnyBizzItems = [
   },
   {
     id: 'chasing-wifey-hole-in-one',
+    sliderCategory: 'Funny',
     category: 'Golf & Marriage',
     title: 'She did it in one. I’m still improving the odds',
     image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
@@ -56,14 +80,35 @@ export const funnyBizzItems = [
   },
   {
     id: 'missed-hole-in-one',
+    sliderCategory: 'Funny',
     category: 'Golf & Management',
     title: 'I have decided… that counts as a hole-in-one!',
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
     alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
     copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
+  },
+  {
+    id: 'quickmart-ipo-featured',
+    sliderCategory: 'Featured Article',
+    category: 'Business & Finance',
+    title: 'Quickmart IPO: At What Price Should You Buy the Shares?',
+    image: '/images/quickmart-ipo-share-price-kenya-investment-cartoon.webp',
+    alt: 'Quickmart IPO Kenya cartoon showing Quickmart shares on a supermarket shelf with an unknown KSh price as an investor considers buying shares in the NSE listing',
+    copy: 'Quickmart is preparing to sell half its shares through the Nairobi Securities Exchange. The business looks promising—but whether the IPO is worth buying will depend principally on the offer price.',
+    destinationUrl: '/quickmart-ipo-what-price-should-you-pay',
+    ctaLabel: 'Read the full article →'
+  },
+  {
+    id: 'mbappe-endorsement-featured',
+    sliderCategory: 'Featured Article',
+    category: 'Business & Finance',
+    title: 'Why Kylian Mbappé Left Nike for On: The Shift to Equity',
+    image: '/images/mbappe-nike-to-on-web.jpg',
+    alt: 'Editorial cartoon showing Kylian Mbappé leaving Nike and joining On',
+    copy: 'Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership.',
+    destinationUrl: '/mbappe-endorsement-to-ownership',
+    ctaLabel: 'Read the full article →'
   }
-] as const;
-
-export const featuredFunnyBizzItems = funnyBizzItems.slice(0, 10);
+];
 
 export const funnyBizzPermalink = (id: string) => `/the-lighter-side/${id}`;
