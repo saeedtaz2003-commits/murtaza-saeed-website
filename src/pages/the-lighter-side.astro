@@ -7,7 +7,20 @@ const items = [
     title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
     image: '/images/murtaza-insights-domain-name-mistake.webp',
     alt: 'Cartoon of Murtaza Saeed wearing a business jacket and tie with bright floral tights, surrounded by examples of unfortunately worded domain names.',
-    copy: 'I nearly made a spelling error and could have ended up with “Murtaza in Tights” instead of “Murtaza Insights”. Other names have suffered the same problem: Experts Exchange, Pen Island, Who Represents, Powergen Italia, Mole Station Nursery, Choose Spain, Speed of Art, Dickson Web, IP Anywhere and Children’s Wear. The lesson is simple: before registering a domain, write it in lowercase, remove all the spaces and ask someone else to read it aloud. A second pair of eyes could save your website from becoming memorable for entirely the wrong reason. Check your domain choice carefully.'
+    copy: 'I nearly made a spelling error and could have ended up with “Murtaza in Tights” instead of “Murtaza Insights”. Other names have suffered the same problem:',
+    domains: [
+      ['expertsexchange', 'Experts Exchange'],
+      ['penisland', 'Pen Island'],
+      ['whorepresents', 'Who Represents'],
+      ['powergenitalia', 'Powergen Italia'],
+      ['molestationnursery', 'Mole Station Nursery'],
+      ['choosespain', 'Choose Spain'],
+      ['speedofart', 'Speed of Art'],
+      ['dicksonweb', 'Dickson Web'],
+      ['ipanywhere', 'IP Anywhere'],
+      ['childrenswear', 'Children’s Wear']
+    ],
+    closing: 'The lesson is simple: before registering a domain, write it in lowercase, remove all the spaces and ask someone else to read it aloud. A second pair of eyes could save your website from becoming memorable for entirely the wrong reason. Check your domain choice carefully.'
   },
   {
     category: 'Business & Everyday Life',
@@ -65,6 +78,17 @@ const items = [
             <p class="eyebrow">{item.category}</p>
             <h2>{item.title}</h2>
             <p>{item.copy}</p>
+            {item.domains && (
+              <section class="domain-name-list" aria-labelledby="domain-list-title">
+                <h3 id="domain-list-title">Unfortunate Domain Names</h3>
+                <ul>
+                  {item.domains.map(([domain, meaning]) => (
+                    <li><strong>{domain}</strong> <span>({meaning})</span></li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {item.closing && <p>{item.closing}</p>}
           </div>
         </article>
         {index === 1 && (
