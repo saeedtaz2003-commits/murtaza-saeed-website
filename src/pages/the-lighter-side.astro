@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 
 const items = [
   {
+    id: 'domain-name-mistake',
     category: 'Websites & Branding',
     title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
     image: '/images/murtaza-insights-domain-name-mistake.webp',
@@ -23,13 +24,15 @@ const items = [
     closing: 'The lesson is simple: before registering a domain, write it in lowercase, remove all the spaces and ask someone else to read it aloud. A second pair of eyes could save your website from becoming memorable for entirely the wrong reason. Check your domain choice carefully.'
   },
   {
+    id: 'kenya-power-profit',
     category: 'Business & Everyday Life',
     title: 'A bright result. A rather dim customer experience.',
-    image: '/images/kenya-power-sh25-billion-profit-outages-approved.webp',
-    alt: 'Kenya Power profits cartoon showing an executive celebrating Sh25 billion while a customer holds a candle during a power outage, highlighting electricity bills and power cuts in Kenya.',
+    image: '/images/kenya-power-sh25-billion-profit-power-cuts-cartoon.png',
+    alt: 'Kenya Power Sh25 billion profit cartoon contrasting strong financial results with power cuts, higher bills and unreliable electricity supply in Kenya.',
     copy: 'Investors are delighted by Kenya Power’s profits. Customers are still waiting for the lights to stay on—and for a bill that doesn’t come as a shock.'
   },
   {
+    id: 'ozempic-victorias-secret',
     category: 'Markets & Consumers',
     title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
     image: '/images/ozempic-victorias-secret-shares-meme.webp',
@@ -37,6 +40,7 @@ const items = [
     copy: 'Could weight-loss drugs provide an unexpected lift for Victoria’s Secret? Slimmer customers may feel more confident, replace clothing that no longer fits and spend more on fashion. Whether that translates into sustained profits remains uncertain—but Wall Street rarely ignores a promising new consumer trend.'
   },
   {
+    id: 'pulse-ring',
     category: 'Technology & Modern Life',
     title: 'When the smartest feature is knowing when to switch off',
     image: '/images/pulse-mindfulness-anti-smart-ring-meme.webp',
@@ -44,6 +48,7 @@ const items = [
     copy: 'Technology has become so good at measuring everything that we can spend more time studying dashboards than actually living. The Pulse Ring collects no health data. It simply vibrates occasionally, reminding its wearer to stop checking devices, pause and breathe. At about $199, the irony is expensive—but the message is valuable: not every problem needs more data.'
   },
   {
+    id: 'chasing-wifey-hole-in-one',
     category: 'Golf & Marriage',
     title: 'She did it in one. I’m still improving the odds',
     image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
@@ -51,6 +56,7 @@ const items = [
     copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
   },
   {
+    id: 'missed-hole-in-one',
     category: 'Golf & Management',
     title: 'I have decided… that counts as a hole-in-one!',
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
@@ -69,36 +75,89 @@ const items = [
       {Array.from({ length: 13 }).map(() => <i></i>)}
     </div>
   </section>
-  <section class="section wrap lighter-grid" aria-label="Cartoons and observations">
-    {items.map((item, index) => (
-      <>
-        <article class:list={['lighter-card', index % 2 ? 'tilt-right' : 'tilt-left']}>
-          <div class="meme-stage" style={`--meme-image: url('${item.image}')`}>
-            <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
-          </div>
-          <div class="lighter-copy">
-            <p class="eyebrow">{item.category}</p>
-            <h2>{item.title}</h2>
-            <p>{item.copy}</p>
-            {item.domains && (
-              <section class="domain-name-list" aria-labelledby="domain-list-title">
-                <h3 id="domain-list-title">Unfortunate Domain Names</h3>
-                <ul>
-                  {item.domains.map(([domain, meaning]) => (
-                    <li><strong>{domain}</strong> <span>({meaning})</span></li>
-                  ))}
-                </ul>
-              </section>
-            )}
-            {item.closing && <p>{item.closing}</p>}
-          </div>
-        </article>
-        {index === 1 && (
-          <div class="festive-divider" aria-hidden="true">
-            <span></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span></span>
-          </div>
-        )}
-      </>
-    ))}
+
+  <section class="section wrap funny-carousel-section" aria-label="Funny Bizz featured cartoons">
+    <div class="funny-carousel" data-carousel>
+      <div class="funny-slides">
+        {items.map((item, index) => (
+          <article id={item.id} class:list={['funny-slide', index === 0 && 'active']} data-slide aria-hidden={index === 0 ? 'false' : 'true'}>
+            <a href={'#' + item.id} class="meme-stage" style={`--meme-image: url('${item.image}')`} aria-label={`Open commentary: ${item.title}`}>
+              <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+            </a>
+            <div class="lighter-copy">
+              <p class="eyebrow">{item.category}</p>
+              <h2>{item.title}</h2>
+              <p>{item.copy}</p>
+              {item.domains && (
+                <section class="domain-name-list" aria-labelledby="domain-list-title">
+                  <h3 id="domain-list-title">Unfortunate Domain Names</h3>
+                  <ul>
+                    {item.domains.map(([domain, meaning]) => (
+                      <li><strong>{domain}</strong> <span>({meaning})</span></li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+              {item.closing && <p>{item.closing}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="funny-controls" aria-label="Carousel controls">
+        <button class="funny-control" type="button" data-prev aria-label="Previous cartoon">← Previous</button>
+        <div class="funny-dots" aria-label="Choose cartoon">
+          {items.map((item, index) => <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show cartoon ${index + 1}: ${item.title}`}></button>)}
+        </div>
+        <button class="funny-control" type="button" data-next aria-label="Next cartoon">Next →</button>
+      </div>
+    </div>
   </section>
+
+  <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
+    <p class="eyebrow">Archive</p>
+    <h2 id="funny-archive-title">All Funny Bizz</h2>
+    <ul class="funny-archive-list">
+      {items.map((item) => <li><a href={'#' + item.id}>{item.title}</a></li>)}
+    </ul>
+  </section>
+
+  <script>
+    const carousel = document.querySelector('[data-carousel]');
+    if (carousel) {
+      const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
+      const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+      let current = 0;
+      let touchStartX = 0;
+
+      const show = (index) => {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === current);
+          slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+        });
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+      };
+
+      carousel.querySelector('[data-prev]')?.addEventListener('click', () => show(current - 1));
+      carousel.querySelector('[data-next]')?.addEventListener('click', () => show(current + 1));
+      dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+
+      carousel.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0]?.clientX ?? 0;
+      }, { passive: true });
+      carousel.addEventListener('touchend', (event) => {
+        const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
+        const distance = touchEndX - touchStartX;
+        if (Math.abs(distance) > 45) show(current + (distance < 0 ? 1 : -1));
+      }, { passive: true });
+
+      const showHashItem = () => {
+        const id = window.location.hash.slice(1);
+        const index = slides.findIndex((slide) => slide.id === id);
+        if (index >= 0) show(index);
+      };
+      window.addEventListener('hashchange', showHashItem);
+      showHashItem();
+    }
+  </script>
 </Base>
