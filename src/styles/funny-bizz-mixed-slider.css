@@ -1,0 +1,179 @@
+/* Mixed-content Funny Bizz slider: category labels, teaser CTAs and mobile viewport stability. */
+
+.funny-carousel-section {
+  scroll-margin-top: 96px;
+}
+
+.funny-slide-image {
+  text-decoration: none;
+}
+
+.funny-content-badge {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.32rem 0.62rem;
+  border: 1px solid #d7c8ef;
+  border-radius: 999px;
+  background: #f5f0fc;
+  color: var(--purple);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.funny-content-badge.is-advertorial {
+  border-color: #d2b878;
+  background: #fff8e8;
+  color: #785916;
+}
+
+.funny-advertiser {
+  margin: -0.2rem 0 0.8rem;
+  color: var(--muted);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.funny-content-link {
+  margin: 1.2rem 0 0 !important;
+}
+
+.funny-content-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0.62rem 0.9rem;
+  border: 1px solid var(--purple);
+  border-radius: 999px;
+  color: var(--purple);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 850;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.funny-content-cta:hover,
+.funny-content-cta:focus-visible {
+  background: #f7f2ff;
+}
+
+.funny-commentary-viewport,
+.funny-commentary-viewport .lighter-copy,
+.funny-commentary-viewport h2,
+.funny-commentary-viewport p,
+.funny-commentary-viewport li {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .funny-carousel-section {
+    padding-top: 1.35rem;
+    scroll-margin-top: 86px;
+  }
+
+  .funny-slider-note {
+    margin-bottom: 0.55rem;
+    padding: 0.55rem 0.7rem;
+    line-height: 1.35;
+  }
+
+  .funny-viewer-grid {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(155px, 0.52fr);
+    gap: 0.55rem;
+    height: clamp(450px, calc(100dvh - 175px), 620px);
+    min-height: 0;
+  }
+
+  .funny-viewer-media {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto auto auto;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .funny-viewer-media .funny-screen-frame {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .funny-viewer-media .funny-slides,
+  .funny-viewer-media .funny-slide-image,
+  .funny-viewer-media .funny-slide-image.active,
+  .funny-viewer-media .funny-slide-image .meme-stage {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .funny-viewer-media .funny-slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .funny-viewer-media .funny-controls {
+    margin-top: 0.45rem;
+  }
+
+  .funny-share-row {
+    min-height: 36px;
+    margin-top: 0.35rem;
+  }
+
+  .funny-share-menu {
+    margin-top: 0.2rem;
+    padding: 0.4rem;
+  }
+
+  .funny-commentary-viewport {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .funny-commentary-viewport .lighter-copy {
+    padding: 0.85rem 0.9rem 1rem;
+  }
+
+  .funny-commentary-viewport .lighter-copy h2 {
+    margin-bottom: 0.6rem;
+    font-size: 1.22rem;
+    line-height: 1.2;
+  }
+
+  .funny-commentary-viewport .lighter-copy p {
+    margin-top: 0.55rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .funny-commentary-viewport .domain-name-list {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+  }
+
+  .funny-commentary-viewport .domain-name-list li {
+    padding: 0.42rem 0;
+    font-size: 0.93rem;
+  }
+
+  .funny-content-badge {
+    margin-bottom: 0.55rem;
+    font-size: 0.67rem;
+  }
+
+  .funny-content-cta {
+    min-height: 38px;
+    padding: 0.52rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}
