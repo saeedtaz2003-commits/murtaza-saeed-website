@@ -14,6 +14,7 @@ const items = [
     id: 'domain-name-mistake',
     category: 'Websites & Branding',
     title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
+    titleHtml: 'When “<em>Murtaza Insights</em>” Nearly Became “Murtaza in Tights”',
     image: '/images/murtaza-insights-domain-name-mistake.webp',
     alt: 'Cartoon of Murtaza Saeed wearing a business jacket and tie with bright floral tights, surrounded by examples of unfortunately worded domain names.',
     copyHtml: 'I nearly made a spelling error and could have ended up with “Murtaza in Tights” instead of “<em>Murtaza Insights</em>”. Other names have suffered the same problem:',
@@ -116,7 +117,7 @@ const carouselItems = items.slice(0, 10);
           <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
             <div class="lighter-copy">
               <p class="eyebrow">{item.category}</p>
-              <h2>{item.title}</h2>
+              <h2 set:html={item.titleHtml ?? item.title} />
               <p set:html={item.copyHtml ?? item.copy} />
               {item.domains && (
                 <section class="domain-name-list" aria-label="Unfortunate domain names">
@@ -146,7 +147,7 @@ const carouselItems = items.slice(0, 10);
           <summary>
             <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
             <span class="funny-archive-summary-text">
-              <span class="funny-archive-title">{item.title}</span>
+              <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
               <small>{item.category}</small>
             </span>
           </summary>
