@@ -928,3 +928,114 @@ footer {
     gap: 1rem;
   }
 }
+
+
+/* Advertorials */
+.advertorial-head p:last-child { max-width: 760px; }
+.advertorial-page { padding-top: 3.5rem; }
+.advertorial-page .prose { max-width: 820px; margin-inline: auto; }
+.advertorial-page h2 { margin-top: 3rem; }
+.advertorial-page h3 { margin-top: 2rem; font-size: 1.35rem; }
+.advertorial-banner {
+  display: block;
+  width: min(100%, 1100px);
+  height: auto;
+  margin: 1.25rem auto 2rem;
+  border-radius: 0.45rem;
+}
+.advertorial-disclosure {
+  margin: 1.25rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--wash);
+  border-left: 4px solid var(--purple);
+  font-family: Inter, Arial, sans-serif;
+}
+.advertorial-disclosure > strong { display: block; color: var(--navy); letter-spacing: 0.08em; }
+.advertorial-disclosure p { margin-bottom: 0; font-size: 1rem !important; }
+.advertorial-example {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.advertorial-example a { color: var(--purple); font-family: Inter, Arial, sans-serif; font-weight: 800; }
+
+/* Funny Bizz carousel + compact archive */
+.funny-carousel-section { padding-top: 3.25rem; padding-bottom: 2.5rem; }
+.funny-carousel {
+  max-width: 820px;
+  margin-inline: auto;
+  position: relative;
+}
+.funny-slides { position: relative; }
+.funny-slide {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(25, 18, 48, 0.12);
+}
+.funny-slide.active { display: block; }
+.funny-slide .meme-stage { aspect-ratio: 1 / 1; }
+.funny-slide .lighter-copy { min-height: 205px; }
+.funny-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.funny-control {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.funny-control:hover { border-color: var(--purple); color: var(--purple); }
+.funny-dots { display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; }
+.funny-dot {
+  width: 11px;
+  height: 11px;
+  border: 0;
+  border-radius: 50%;
+  background: #c9c3d4;
+  padding: 0;
+  cursor: pointer;
+}
+.funny-dot.active { background: var(--purple); }
+.funny-archive { padding-top: 2.5rem; }
+.funny-archive h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.funny-archive-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.funny-archive-list a {
+  display: block;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--navy);
+}
+.funny-archive-list a:hover { color: var(--purple); }
+
+@media (max-width: 600px) {
+  .advertorial-page { padding-top: 2.5rem; }
+  .advertorial-banner {
+    width: calc(100% + 2rem);
+    max-width: none;
+    margin-left: -1rem;
+    border-radius: 0;
+  }
+  .funny-carousel-section { padding-top: 2.5rem; }
+  .funny-slide .lighter-copy { min-height: 0; }
+  .funny-controls { gap: 0.55rem; }
+  .funny-control { padding: 0.55rem 0.75rem; font-size: 0.86rem; }
+  .funny-archive-list { grid-template-columns: 1fr; }
+}
