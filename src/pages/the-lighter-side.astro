@@ -66,7 +66,7 @@ const items = [
   }
 ];
 
-const carouselItems = items.slice(0, 10);
+const featuredItems = items.slice(0, 10);
 ---
 <Base title="Funny Bizz | Murtaza Insights" description="Executive-friendly humour and observations from business, technology, golf and life beyond the boardroom.">
   <section class="page-head wrap lighter-head">
@@ -81,59 +81,65 @@ const carouselItems = items.slice(0, 10);
 
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label="Funny Bizz slideshow">
     <div class="funny-carousel" data-carousel>
-      <div class="funny-screen-frame" aria-live="polite">
-        <div class="funny-slides">
-          {carouselItems.map((item, index) => (
-            <button
-              class:list={['funny-slide-image', index === 0 && 'active']}
-              type="button"
-              data-slide
-              data-next-image
-              aria-hidden={index === 0 ? 'false' : 'true'}
-              aria-label={`Show next cartoon after ${item.title}`}
-            >
-              <span class="meme-stage" style={`--meme-image: url('${item.image}')`}>
-                <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
+      <p class="funny-slider-note">
+        <strong>Funny Bizz Slideshow</strong> — tap the meme, swipe left or right, or use Previous/Next to browse.
+        <span class="funny-viewer-status" data-viewer-status>Featured 1 of {featuredItems.length}</span>
+      </p>
 
-      <div class="funny-controls" aria-label="Slideshow controls">
-        <button class="funny-control" type="button" data-prev aria-label="Previous cartoon">← Previous</button>
-        <div class="funny-dots" aria-label="Choose cartoon">
-          {carouselItems.map((item, index) => (
-            <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show cartoon ${index + 1}: ${item.title}`}></button>
-          ))}
-        </div>
-        <button class="funny-control" type="button" data-next aria-label="Next cartoon">Next →</button>
-      </div>
-
-      <p class="funny-slider-note">Slideshow — tap the meme, swipe left or right, or use Previous/Next to browse the cartoons.</p>
-
-      <div class="funny-commentaries">
-        {carouselItems.map((item, index) => (
-          <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
-            <div class="lighter-copy">
-              <p class="eyebrow">{item.category}</p>
-              <h2 set:html={item.titleHtml ?? item.title} />
-              <p set:html={item.copyHtml ?? item.copy} />
-              {item.domains && (
-                <section class="domain-name-list" aria-label="Unfortunate domain names">
-                  <h3>Unfortunate Domain Names</h3>
-                  <ul>
-                    {item.domains.map(([domain, meaning]) => (
-                      <li><strong>{domain}</strong> <span>({meaning})</span></li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-              {item.closing && <p>{item.closing}</p>}
-              <p class="funny-return"><a href="#funny-slider">↑ Return to Slider</a></p>
+      <div class="funny-viewer-grid">
+        <div class="funny-viewer-media">
+          <div class="funny-screen-frame" aria-live="polite">
+            <div class="funny-slides">
+              {items.map((item, index) => (
+                <button
+                  class:list={['funny-slide-image', index === 0 && 'active']}
+                  type="button"
+                  data-slide
+                  data-next-image
+                  aria-hidden={index === 0 ? 'false' : 'true'}
+                  aria-label={`Show next featured cartoon after ${item.title}`}
+                >
+                  <span class="meme-stage" style={`--meme-image: url('${item.image}')`}>
+                    <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+                  </span>
+                </button>
+              ))}
             </div>
-          </article>
-        ))}
+          </div>
+
+          <div class="funny-controls" aria-label="Slideshow controls">
+            <button class="funny-control" type="button" data-prev aria-label="Previous featured cartoon">← Previous</button>
+            <div class="funny-dots" aria-label="Choose featured cartoon">
+              {featuredItems.map((item, index) => (
+                <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show featured cartoon ${index + 1}: ${item.title}`}></button>
+              ))}
+            </div>
+            <button class="funny-control" type="button" data-next aria-label="Next featured cartoon">Next →</button>
+          </div>
+        </div>
+
+        <div class="funny-commentary-viewport" aria-live="polite">
+          {items.map((item, index) => (
+            <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
+              <div class="lighter-copy">
+                <p class="eyebrow">{item.category}</p>
+                <h2 set:html={item.titleHtml ?? item.title} />
+                <p set:html={item.copyHtml ?? item.copy} />
+                {item.domains && (
+                  <section class="domain-name-list" aria-label="Unfortunate domain names">
+                    <h3>Unfortunate Domain Names</h3>
+                    <ul>
+                      {item.domains.map(([domain, meaning]) => (
+                        <li><strong>{domain}</strong> <span>({meaning})</span></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+                {item.closing && <p>{item.closing}</p>}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -141,35 +147,23 @@ const carouselItems = items.slice(0, 10);
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
     <p class="eyebrow">Archive</p>
     <h2 id="funny-archive-title">All Funny Bizz</h2>
+    <p class="funny-archive-instruction">Select any meme to load it into the slideshow viewer above.</p>
     <div class="funny-archive-list">
-      {items.map((item) => (
-        <details id={`commentary-${item.id}`} class="funny-archive-item">
-          <summary>
-            <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
-            <span class="funny-archive-summary-text">
-              <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
-              <small>{item.category}</small>
-            </span>
-          </summary>
-          <div class="funny-archive-copy">
-            <img class="funny-archive-image" src={item.image} alt={item.alt} loading="lazy" />
-            <div class="funny-archive-commentary">
-              <p set:html={item.copyHtml ?? item.copy} />
-              {item.domains && (
-                <section class="domain-name-list" aria-label="Unfortunate domain names">
-                  <h3>Unfortunate Domain Names</h3>
-                  <ul>
-                    {item.domains.map(([domain, meaning]) => (
-                      <li><strong>{domain}</strong> <span>({meaning})</span></li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-              {item.closing && <p>{item.closing}</p>}
-              <p class="funny-return"><a href="#funny-slider">↑ Return to Slider</a></p>
-            </div>
-          </div>
-        </details>
+      {items.map((item, index) => (
+        <button
+          class:list={['funny-archive-selector', index === 0 && 'active']}
+          type="button"
+          data-archive-index={index}
+          aria-current={index === 0 ? 'true' : 'false'}
+          aria-label={`Show ${item.title} in the Funny Bizz viewer`}
+        >
+          <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
+          <span class="funny-archive-summary-text">
+            <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
+            <small>{item.category}</small>
+          </span>
+          <span class="funny-archive-open" aria-hidden="true">↗</span>
+        </button>
       ))}
     </div>
   </section>
@@ -180,34 +174,65 @@ const carouselItems = items.slice(0, 10);
       const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
       const panels = Array.from(carousel.querySelectorAll('[data-commentary-panel]'));
       const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+      const archiveButtons = Array.from(document.querySelectorAll('[data-archive-index]'));
+      const commentaryViewport = carousel.querySelector('.funny-commentary-viewport');
       const screen = carousel.querySelector('.funny-screen-frame');
+      const status = carousel.querySelector('[data-viewer-status]');
+      const featuredCount = dots.length;
       let current = 0;
       let touchStartX = 0;
       let ignoreNextClick = false;
 
       const show = (index) => {
+        if (!slides.length) return;
         current = (index + slides.length) % slides.length;
+
         slides.forEach((slide, i) => {
           slide.classList.toggle('active', i === current);
           slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
         });
+
         panels.forEach((panel, i) => {
           panel.classList.toggle('active', i === current);
           panel.setAttribute('aria-hidden', i === current ? 'false' : 'true');
         });
+
         dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+
+        archiveButtons.forEach((button, i) => {
+          const active = i === current;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+
+        if (status) {
+          status.textContent = current < featuredCount
+            ? `Featured ${current + 1} of ${featuredCount}`
+            : 'From the Archive';
+        }
+
+        if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
       };
 
-      carousel.querySelector('[data-prev]')?.addEventListener('click', () => show(current - 1));
-      carousel.querySelector('[data-next]')?.addEventListener('click', () => show(current + 1));
+      const stepFeatured = (direction) => {
+        if (!featuredCount) return;
+        const target = current < featuredCount
+          ? (current + direction + featuredCount) % featuredCount
+          : direction > 0 ? 0 : featuredCount - 1;
+        show(target);
+      };
+
+      carousel.querySelector('[data-prev]')?.addEventListener('click', () => stepFeatured(-1));
+      carousel.querySelector('[data-next]')?.addEventListener('click', () => stepFeatured(1));
       dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+
       carousel.querySelectorAll('[data-next-image]').forEach((button) => {
         button.addEventListener('click', (event) => {
           if (ignoreNextClick) {
             event.preventDefault();
             return;
           }
-          show(current + 1);
+          stepFeatured(1);
         });
       });
 
@@ -221,20 +246,19 @@ const carouselItems = items.slice(0, 10);
         const distance = touchEndX - touchStartX;
         if (Math.abs(distance) > 45) {
           ignoreNextClick = true;
-          show(current + (distance < 0 ? 1 : -1));
+          stepFeatured(distance < 0 ? 1 : -1);
           window.setTimeout(() => { ignoreNextClick = false; }, 350);
         }
       }, { passive: true });
+
+      archiveButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.getAttribute('data-archive-index'));
+          if (!Number.isFinite(index)) return;
+          show(index);
+          document.getElementById('funny-slider')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
     }
-
-    const openCommentaryFromHash = () => {
-      const id = window.location.hash.slice(1);
-      if (!id.startsWith('commentary-')) return;
-      const target = document.getElementById(id);
-      if (target instanceof HTMLDetailsElement) target.open = true;
-    };
-
-    window.addEventListener('hashchange', openCommentaryFromHash);
-    openCommentaryFromHash();
   </script>
 </Base>
