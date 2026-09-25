@@ -398,9 +398,6 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: var(--wash);
 }
 .lighter-copy {
   padding: clamp(1.25rem, 3vw, 2rem);
