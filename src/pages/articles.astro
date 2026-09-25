@@ -13,7 +13,7 @@ const posts = (await getCollection('posts'))
     <h1>All articles</h1>
     <p>Business, finance and technology commentary, with the newest article shown first.</p>
   </section>
-  <section class="section wrap listing" aria-label="All published articles">
-    {posts.map(post => <ArticleCard post={post} />)}
+  <section class="section wrap listing archive-list" aria-label="All published articles">
+    {posts.map(post => <ArticleCard post={post} compact />)}
   </section>
 </Base>
