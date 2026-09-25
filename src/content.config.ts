@@ -18,6 +18,8 @@ const posts = defineCollection({
     })).optional(),
     image: z.string(),
     imageAlt: z.string(),
+    advertorial: z.boolean().default(false),
+    sponsor: z.string().optional(),
     draft: z.boolean().default(false)
   })
 });
