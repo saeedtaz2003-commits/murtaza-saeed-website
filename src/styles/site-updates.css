@@ -1,5 +1,45 @@
 /* Refinements for the 25 September 2026 website update. */
 
+.advertorial-launch-offer {
+  margin: 2.5rem 0 2.75rem;
+  padding: 1.6rem 0;
+  border-top: 2px solid #b9a8dd;
+  border-bottom: 2px solid #b9a8dd;
+  text-align: center;
+}
+
+.advertorial-launch-offer h2 {
+  margin: 0 0 0.55rem;
+  color: var(--purple);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+}
+
+.advertorial-launch-lead {
+  margin: 0 auto 1rem;
+  color: var(--navy);
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(1.08rem, 2.3vw, 1.35rem) !important;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.advertorial-launch-offer > p:not(.advertorial-launch-lead) {
+  max-width: 720px;
+  margin: 0.7rem auto;
+  font-size: 1.06rem !important;
+}
+
+.advertorial-launch-contact {
+  margin-top: 1rem !important;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.advertorial-launch-contact a {
+  color: var(--purple);
+  font-weight: 800;
+}
+
 .funny-view-commentary {
   margin-top: 1rem;
   font-family: Inter, Arial, sans-serif;
@@ -87,6 +127,15 @@
 }
 
 @media (max-width: 600px) {
+  .advertorial-launch-offer {
+    margin-inline: 0;
+    padding: 1.35rem 0;
+  }
+
+  .advertorial-launch-offer > p:not(.advertorial-launch-lead) {
+    font-size: 1rem !important;
+  }
+
   .funny-archive-item summary {
     align-items: flex-start;
     flex-direction: column;
