@@ -1,5 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const advertorialPosts = (await getCollection('posts'))
+  .filter(post => !post.data.draft && post.data.advertorial)
+  .sort((a, b) => +b.data.date - +a.data.date);
 ---
 <Base
   title="Advertorials & Sponsored Content | Murtaza Insights"
@@ -89,6 +95,16 @@ import Base from '../layouts/Base.astro';
         <p>This advertorial was commissioned by [Company Name] and prepared in collaboration with the company. It is promotional content and is separate from the independent articles, analysis and commentary published on <em>Murtaza Insights</em>.</p>
       </aside>
       <p>All information and claims must be capable of reasonable verification.</p>
+
+      {advertorialPosts.length > 0 && (
+        <section id="published-advertorials" class="advertorial-published" aria-labelledby="published-advertorials-title">
+          <h2 id="published-advertorials-title">Published Advertorials</h2>
+          <p>Published advertorials are shown in the same compact format as the article archive, with a thumbnail, title and short description. Each remains clearly identified as promotional content.</p>
+          <div class="archive-list advertorial-archive-list">
+            {advertorialPosts.map(post => <ArticleCard post={post} compact />)}
+          </div>
+        </section>
+      )}
 
       <h2>Examples of Advertorials</h2>
       <p>Advertorials are already widely used by businesses in Kenya to communicate expertise, explain products and services and discuss issues relevant to potential customers.</p>
