@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-const posts = (await getCollection('posts')).filter(p => !p.data.draft).sort((a,b) => +b.data.date - +a.data.date);
+const posts = (await getCollection('posts'))
+  .filter(p => !p.data.draft && !p.data.advertorial)
+  .sort((a,b) => +b.data.date - +a.data.date);
 ---
 <Base title="Murtaza Saeed | Finance & Business Insights">
   <section class="hero">
@@ -27,5 +29,5 @@ const posts = (await getCollection('posts')).filter(p => !p.data.draft).sort((a,
     <a href="/advertorials"><span>03</span><h3>Advertorials</h3><p>Clearly identified sponsored content for businesses and organisations with a useful story to tell.</p></a>
     <a href="/the-lighter-side"><span>04</span><h3>The Lighter Side</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
   </div></div></section>
-  <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>A long view, with curiosity intact.</h2></div><div><p>I’m a retired Chartered Accountant and former finance executive based in Mombasa, Kenya. Murtaza Insights is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
+  <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>A long view, with curiosity intact.</h2></div><div><p>I’m a retired Chartered Accountant and former finance executive based in Mombasa, Kenya. <em>Murtaza Insights</em> is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
 </Base>
