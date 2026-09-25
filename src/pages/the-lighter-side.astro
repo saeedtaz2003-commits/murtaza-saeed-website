@@ -73,7 +73,9 @@ const items = [
     {items.map((item, index) => (
       <>
         <article class:list={['lighter-card', index % 2 ? 'tilt-right' : 'tilt-left']}>
-          <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+          <div class="meme-stage" style={`--meme-image: url('${item.image}')`}>
+            <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+          </div>
           <div class="lighter-copy">
             <p class="eyebrow">{item.category}</p>
             <h2>{item.title}</h2>

@@ -394,10 +394,31 @@ footer {
   transform: rotate(0);
   box-shadow: 0 20px 48px rgba(25, 18, 48, 0.17);
 }
-.lighter-card img {
+.meme-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--wash);
+}
+.meme-stage::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem;
+  background-image: linear-gradient(#ffffff66, #ffffff66), var(--meme-image);
+  background-position: center;
+  background-size: cover;
+  filter: blur(18px);
+  opacity: 0.42;
+}
+.meme-stage img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 .lighter-copy {
   padding: clamp(1.25rem, 3vw, 2rem);
@@ -452,6 +473,29 @@ footer {
 }
 .listing {
   padding-top: 3rem;
+}
+.article-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(2.5rem, 5vw, 4rem);
+}
+.article-divider::before,
+.article-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #bca4e5);
+}
+.article-divider::after {
+  background: linear-gradient(90deg, #bca4e5, transparent);
+}
+.article-divider span {
+  width: 8px;
+  height: 8px;
+  margin: 0 0.75rem;
+  background: var(--purple);
+  transform: rotate(45deg);
 }
 .empty {
   padding: 4rem 0 8rem;
