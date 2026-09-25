@@ -38,7 +38,7 @@
 
 .funny-viewer-media {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr) auto auto auto;
   min-width: 0;
   min-height: 0;
 }
@@ -63,6 +63,68 @@
 
 .funny-viewer-media .funny-controls {
   margin-top: 0.85rem;
+}
+
+.funny-share-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 42px;
+  margin-top: 0.65rem;
+}
+
+.funny-share-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--purple);
+  padding: 0.48rem 0.9rem;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.funny-share-button:hover,
+.funny-share-button:focus-visible {
+  border-color: var(--purple);
+  background: #faf8ff;
+}
+
+.funny-copy-status {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.funny-share-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+  padding: 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: #faf8ff;
+}
+
+.funny-share-menu[hidden] {
+  display: none;
+}
+
+.funny-share-menu a {
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-decoration: none;
+  padding: 0.25rem 0.45rem;
+}
+
+.funny-share-menu a:hover,
+.funny-share-menu a:focus-visible {
+  color: var(--purple);
+  text-decoration: underline;
 }
 
 .funny-commentary-viewport {
@@ -170,6 +232,27 @@
   font-weight: 800;
 }
 
+.funny-share-landing {
+  max-width: 760px;
+  text-align: center;
+}
+
+.funny-share-landing h1 {
+  margin-bottom: 1.25rem;
+}
+
+.funny-share-landing img {
+  display: block;
+  width: min(100%, 640px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  border: 1px solid var(--line);
+}
+
+.funny-share-landing > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
 @media (max-width: 760px) {
   .funny-carousel-section {
     padding-top: 2.25rem;
@@ -198,7 +281,7 @@
 
   .funny-viewer-media {
     display: grid;
-    grid-template-rows: minmax(260px, min(44dvh, 360px)) auto;
+    grid-template-rows: minmax(260px, min(44dvh, 360px)) auto auto auto;
     height: auto;
   }
 
@@ -227,6 +310,19 @@
   .funny-viewer-media .funny-dot {
     width: 9px;
     height: 9px;
+  }
+
+  .funny-share-row {
+    margin-top: 0.5rem;
+  }
+
+  .funny-share-button {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .funny-share-menu {
+    margin-top: 0.25rem;
   }
 
   .funny-commentary-viewport {
