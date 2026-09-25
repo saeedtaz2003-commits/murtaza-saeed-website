@@ -126,6 +126,84 @@
   outline: 4px solid #faf8ff;
 }
 
+/* Home-page follow-up */
+.home-view-all {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.home-topics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Compact All Articles archive */
+.archive-list {
+  display: block;
+}
+
+.archive-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 1.35rem;
+  align-items: center;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-card:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.archive-thumb {
+  display: block;
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--wash);
+  border: 1px solid var(--line);
+}
+
+.archive-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.archive-copy .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.archive-copy h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-weight: 800;
+}
+
+.archive-copy h2 a {
+  text-decoration: none;
+}
+
+.archive-copy h2 a:hover,
+.archive-copy h2 a:focus-visible {
+  color: var(--purple);
+}
+
+.archive-summary {
+  margin: 0.3rem 0 0.6rem;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .home-topics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
   .advertorial-launch-offer {
     margin-inline: 0;
@@ -157,5 +235,34 @@
   .advertorial-page .button {
     width: 100%;
     text-align: center;
+  }
+
+  .home-topics {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 0.9rem;
+    align-items: start;
+    padding: 1rem 0;
+  }
+
+  .archive-thumb {
+    width: 92px;
+  }
+
+  .archive-copy h2 {
+    font-size: 1.08rem;
+    line-height: 1.22;
+  }
+
+  .archive-summary {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .archive-copy .read {
+    font-size: 0.9rem;
   }
 }
