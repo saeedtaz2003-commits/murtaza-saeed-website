@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funnyBizzPermalink } from '../data/funny-bizz';
+import { funnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
 ---
 <Base title="Funny Bizz | Murtaza Insights" description="Executive-friendly humour and observations from business, technology, golf and life beyond the boardroom.">
   <section class="page-head wrap lighter-head">
@@ -16,8 +16,8 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label="Funny Bizz slideshow">
     <div class="funny-carousel" data-carousel>
       <p class="funny-slider-note">
-        <strong>Funny Bizz Slideshow</strong> — tap the meme, swipe left or right, or use Previous/Next to browse.
-        <span class="funny-viewer-status" data-viewer-status>Featured 1 of {featuredItems.length}</span>
+        <strong>Funny Bizz Slideshow</strong> — tap or swipe the meme, or use Previous/Next to browse.
+        <span class="funny-viewer-status" data-viewer-status>Loading slideshow…</span>
       </p>
 
       <div class="funny-viewer-grid">
@@ -25,36 +25,52 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           <div class="funny-screen-frame" aria-live="polite">
             <div class="funny-slides">
               {items.map((item, index) => (
-                <button
-                  class:list={['funny-slide-image', index === 0 && 'active']}
-                  type="button"
-                  data-slide
-                  data-next-image
-                  data-item-id={item.id}
-                  data-permalink={funnyBizzPermalink(item.id)}
-                  data-share-title={item.title}
-                  aria-hidden={index === 0 ? 'false' : 'true'}
-                  aria-label={`Show next featured cartoon after ${item.title}`}
-                >
-                  <span class="meme-stage" style={`--meme-image: url('${item.image}')`}>
-                    <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
-                  </span>
-                </button>
+                item.destinationUrl ? (
+                  <a
+                    class:list={['funny-slide-image', index === 0 && 'active']}
+                    href={item.destinationUrl}
+                    data-slide
+                    data-destination-link
+                    data-item-id={item.id}
+                    data-slider-category={item.sliderCategory}
+                    data-permalink={funnyBizzPermalink(item.id)}
+                    data-share-title={item.title}
+                    aria-hidden={index === 0 ? 'false' : 'true'}
+                    aria-label={`${item.sliderCategory}: ${item.title}. Open destination.`}
+                  >
+                    <span class="meme-stage" style={`--meme-image: url('${item.image}')`}>
+                      <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+                    </span>
+                  </a>
+                ) : (
+                  <button
+                    class:list={['funny-slide-image', index === 0 && 'active']}
+                    type="button"
+                    data-slide
+                    data-next-image
+                    data-item-id={item.id}
+                    data-slider-category={item.sliderCategory}
+                    data-permalink={funnyBizzPermalink(item.id)}
+                    data-share-title={item.title}
+                    aria-hidden={index === 0 ? 'false' : 'true'}
+                    aria-label={`Show next slideshow item after ${item.title}`}
+                  >
+                    <span class="meme-stage" style={`--meme-image: url('${item.image}')`}>
+                      <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+                    </span>
+                  </button>
+                )
               ))}
             </div>
           </div>
 
           <div class="funny-controls" aria-label="Slideshow controls">
-            <button class="funny-control" type="button" data-prev aria-label="Previous featured cartoon">← Previous</button>
-            <div class="funny-dots" aria-label="Choose featured cartoon">
-              {featuredItems.map((item, index) => (
-                <button class:list={['funny-dot', index === 0 && 'active']} type="button" data-dot={index} aria-label={`Show featured cartoon ${index + 1}: ${item.title}`}></button>
-              ))}
-            </div>
-            <button class="funny-control" type="button" data-next aria-label="Next featured cartoon">Next →</button>
+            <button class="funny-control" type="button" data-prev aria-label="Previous slideshow item">← Previous</button>
+            <div class="funny-dots" data-dots aria-label="Choose slideshow item"></div>
+            <button class="funny-control" type="button" data-next aria-label="Next slideshow item">Next →</button>
           </div>
 
-          <div class="funny-share-row" aria-label="Share this meme">
+          <div class="funny-share-row" aria-label="Share this item">
             <button class="funny-share-button" type="button" data-share>Share</button>
             <button class="funny-share-button" type="button" data-copy-link>Copy link</button>
             <span class="funny-copy-status" data-copy-status aria-live="polite"></span>
@@ -73,7 +89,13 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           {items.map((item, index) => (
             <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
               <div class="lighter-copy">
+                {item.sliderCategory !== 'Funny' && (
+                  <p class:list={['funny-content-badge', item.sliderCategory === 'Advertorial' && 'is-advertorial']}>
+                    {item.sliderCategory === 'Advertorial' ? 'Advertorial' : 'Featured Article'}
+                  </p>
+                )}
                 <p class="eyebrow">{item.category}</p>
+                {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
                 <h2 set:html={item.titleHtml ?? item.title} />
                 <p set:html={item.copyHtml ?? item.copy} />
                 {'domains' in item && item.domains && (
@@ -87,6 +109,11 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
                   </section>
                 )}
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
+                {item.destinationUrl && (
+                  <p class="funny-content-link">
+                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View advertorial →' : 'Read the full article →')}</a>
+                  </p>
+                )}
               </div>
             </article>
           ))}
@@ -98,7 +125,7 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
     <p class="eyebrow">Archive</p>
     <h2 id="funny-archive-title">All Funny Bizz</h2>
-    <p class="funny-archive-instruction">Select any meme to load it into the slideshow viewer above.</p>
+    <p class="funny-archive-instruction">Select any item to load it into the slideshow viewer above.</p>
     <div class="funny-archive-list">
       {items.map((item, index) => (
         <button
@@ -112,7 +139,7 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
             <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
-            <small>{item.category}</small>
+            <small>{item.sliderCategory === 'Funny' ? item.category : `${item.sliderCategory} · ${item.category}`}</small>
           </span>
           <span class="funny-archive-open" aria-hidden="true">↗</span>
         </button>
@@ -125,19 +152,86 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
     if (carousel) {
       const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
       const panels = Array.from(carousel.querySelectorAll('[data-commentary-panel]'));
-      const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
       const archiveButtons = Array.from(document.querySelectorAll('[data-archive-index]'));
       const commentaryViewport = carousel.querySelector('.funny-commentary-viewport');
       const screen = carousel.querySelector('.funny-screen-frame');
+      const dotsContainer = carousel.querySelector('[data-dots]');
       const status = carousel.querySelector('[data-viewer-status]');
       const shareButton = carousel.querySelector('[data-share]');
       const copyButton = carousel.querySelector('[data-copy-link]');
       const copyStatus = carousel.querySelector('[data-copy-status]');
       const shareMenu = carousel.querySelector('[data-share-menu]');
-      const featuredCount = dots.length;
+      let sequence = [];
+      let dotButtons = [];
       let current = 0;
       let touchStartX = 0;
       let ignoreNextClick = false;
+
+      const shuffle = (values) => {
+        const result = [...values];
+        for (let i = result.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [result[i], result[j]] = [result[j], result[i]];
+        }
+        return result;
+      };
+
+      const indicesFor = (category) => slides
+        .map((slide, index) => slide.getAttribute('data-slider-category') === category ? index : -1)
+        .filter((index) => index >= 0);
+
+      const buildSequence = () => {
+        const funnyPool = shuffle(indicesFor('Funny'));
+        const featuredPool = shuffle(indicesFor('Featured Article'));
+        const advertorialPool = shuffle(indicesFor('Advertorial'));
+        const maxSlides = Math.min(10, slides.length);
+        if (!maxSlides) return [];
+
+        // With a 10-item maximum, a single advertorial would occupy 10% of one sequence.
+        // We therefore include one only on some loads so its long-run exposure remains about 5% or less.
+        const advertorialChance = Math.min(0.5, maxSlides * 0.05);
+        const advertorialCount = advertorialPool.length > 0 && featuredPool.length > 0 && Math.random() < advertorialChance ? 1 : 0;
+        const baseFeaturedCount = featuredPool.length > 0 && maxSlides >= 5
+          ? Math.max(1, Math.round(maxSlides * 0.18))
+          : 0;
+        const featuredCount = Math.min(featuredPool.length, Math.max(0, baseFeaturedCount - advertorialCount));
+        const funnyCount = Math.min(funnyPool.length, Math.max(0, maxSlides - featuredCount - advertorialCount));
+
+        const funnySelection = funnyPool.slice(0, funnyCount);
+        const specials = shuffle([
+          ...featuredPool.slice(0, featuredCount),
+          ...advertorialPool.slice(0, advertorialCount)
+        ]);
+
+        // Insert special items into distinct gaps between Funny items so two specials never sit together.
+        const availableGaps = shuffle(Array.from({ length: funnySelection.length + 1 }, (_, index) => index));
+        const specialByGap = new Map();
+        specials.slice(0, availableGaps.length).forEach((itemIndex, index) => {
+          specialByGap.set(availableGaps[index], itemIndex);
+        });
+
+        const arranged = [];
+        for (let gap = 0; gap <= funnySelection.length; gap += 1) {
+          if (specialByGap.has(gap)) arranged.push(specialByGap.get(gap));
+          if (gap < funnySelection.length) arranged.push(funnySelection[gap]);
+        }
+        return arranged;
+      };
+
+      const rebuildDots = () => {
+        if (!(dotsContainer instanceof HTMLElement)) return;
+        dotsContainer.innerHTML = '';
+        dotButtons = sequence.map((itemIndex, position) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'funny-dot';
+          const title = slides[itemIndex]?.getAttribute('data-share-title') ?? `item ${position + 1}`;
+          dot.setAttribute('aria-label', `Show slideshow item ${position + 1}: ${title}`);
+          dot.addEventListener('click', () => show(itemIndex));
+          dotsContainer.appendChild(dot);
+          return dot;
+        });
+      };
 
       const activeSlide = () => slides[current];
 
@@ -164,8 +258,8 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
       };
 
       const show = (index) => {
-        if (!slides.length) return;
-        current = (index + slides.length) % slides.length;
+        if (!slides.length || index < 0 || index >= slides.length) return;
+        current = index;
 
         slides.forEach((slide, i) => {
           slide.classList.toggle('active', i === current);
@@ -177,17 +271,19 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           panel.setAttribute('aria-hidden', i === current ? 'false' : 'true');
         });
 
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+        const sequencePosition = sequence.indexOf(current);
+        dotButtons.forEach((dot, i) => dot.classList.toggle('active', i === sequencePosition));
 
-        archiveButtons.forEach((button, i) => {
-          const active = i === current;
+        archiveButtons.forEach((button) => {
+          const itemIndex = Number(button.getAttribute('data-archive-index'));
+          const active = itemIndex === current;
           button.classList.toggle('active', active);
           button.setAttribute('aria-current', active ? 'true' : 'false');
         });
 
         if (status) {
-          status.textContent = current < featuredCount
-            ? `Featured ${current + 1} of ${featuredCount}`
+          status.textContent = sequencePosition >= 0
+            ? `Slide ${sequencePosition + 1} of ${sequence.length}`
             : 'From the Archive';
         }
 
@@ -197,17 +293,29 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
         refreshShareMenu();
       };
 
-      const stepFeatured = (direction) => {
-        if (!featuredCount) return;
-        const target = current < featuredCount
-          ? (current + direction + featuredCount) % featuredCount
-          : direction > 0 ? 0 : featuredCount - 1;
-        show(target);
+      const stepSequence = (direction) => {
+        if (!sequence.length) return;
+        const position = sequence.indexOf(current);
+        const targetPosition = position >= 0
+          ? (position + direction + sequence.length) % sequence.length
+          : direction > 0 ? 0 : sequence.length - 1;
+        show(sequence[targetPosition]);
       };
 
-      carousel.querySelector('[data-prev]')?.addEventListener('click', () => stepFeatured(-1));
-      carousel.querySelector('[data-next]')?.addEventListener('click', () => stepFeatured(1));
-      dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+      const scrollViewerIntoView = () => {
+        const slider = document.getElementById('funny-slider');
+        if (!slider) return;
+        const header = document.querySelector('.topbar');
+        const headerHeight = header instanceof HTMLElement ? header.offsetHeight : 76;
+        const top = window.scrollY + slider.getBoundingClientRect().top - headerHeight - 8;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      };
+
+      sequence = buildSequence();
+      rebuildDots();
+
+      carousel.querySelector('[data-prev]')?.addEventListener('click', () => stepSequence(-1));
+      carousel.querySelector('[data-next]')?.addEventListener('click', () => stepSequence(1));
 
       carousel.querySelectorAll('[data-next-image]').forEach((button) => {
         button.addEventListener('click', (event) => {
@@ -215,7 +323,13 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
             event.preventDefault();
             return;
           }
-          stepFeatured(1);
+          stepSequence(1);
+        });
+      });
+
+      carousel.querySelectorAll('[data-destination-link]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          if (ignoreNextClick) event.preventDefault();
         });
       });
 
@@ -229,7 +343,7 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
         const distance = touchEndX - touchStartX;
         if (Math.abs(distance) > 45) {
           ignoreNextClick = true;
-          stepFeatured(distance < 0 ? 1 : -1);
+          stepSequence(distance < 0 ? 1 : -1);
           window.setTimeout(() => { ignoreNextClick = false; }, 350);
         }
       }, { passive: true });
@@ -239,7 +353,7 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           const index = Number(button.getAttribute('data-archive-index'));
           if (!Number.isFinite(index)) return;
           show(index);
-          document.getElementById('funny-slider')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrollViewerIntoView();
         });
       });
 
@@ -265,16 +379,25 @@ import { funnyBizzItems as items, featuredFunnyBizzItems as featuredItems, funny
           await navigator.clipboard.writeText(url);
           if (copyStatus) copyStatus.textContent = 'Link copied';
         } catch {
-          window.prompt('Copy this meme link:', url);
+          window.prompt('Copy this item link:', url);
         }
       });
 
       const requestedId = new URLSearchParams(window.location.search).get('meme');
-      if (requestedId) {
-        const requestedIndex = slides.findIndex((slide) => slide.getAttribute('data-item-id') === requestedId);
-        if (requestedIndex >= 0) show(requestedIndex);
+      const requestedIndex = requestedId
+        ? slides.findIndex((slide) => slide.getAttribute('data-item-id') === requestedId)
+        : -1;
+
+      if (requestedIndex >= 0) {
+        show(requestedIndex);
+      } else if (sequence.length) {
+        show(sequence[0]);
       } else {
         refreshShareMenu();
+      }
+
+      if (window.location.hash === '#funny-slider') {
+        window.requestAnimationFrame(() => scrollViewerIntoView());
       }
     }
   </script>
