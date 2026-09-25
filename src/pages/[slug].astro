@@ -15,6 +15,7 @@ const pageDescription = post.data.metaDescription ?? post.data.summary;
 const isAdvertorial = post.data.advertorial;
 const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/articles';
 const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View All Articles';
+const shareLabel = isAdvertorial ? 'Share this advertorial' : 'Share this article';
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': isAdvertorial ? 'AdvertiserContentArticle' : 'Article',
@@ -65,17 +66,67 @@ const articleSchema = {
     <div class="article-grid">
       {post.data.toc && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
-        <div class="share share-end" aria-label="Share this article"><span>Share this article</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a><a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a><a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a><button id="native-share">Share…</button><button id="copy-link">Copy link</button></div>
+        <div
+          class="share share-end article-share"
+          aria-label={shareLabel}
+          data-content-share
+          data-share-title={post.data.title}
+          data-share-url={pageUrl}
+        >
+          <span>{shareLabel}</span>
+          <button type="button" data-share-trigger>Share</button>
+          <button type="button" data-copy-link>Copy link</button>
+          <div class="article-share-fallback" data-share-fallback hidden aria-label="Share options">
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a>
+            <a href={`https://wa.me/?text=${shareTitle}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`} target="_blank" rel="noopener">LinkedIn</a>
+            <a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener">X</a>
+            <a href={`mailto:?subject=${shareTitle}&body=${shareUrl}`}>Email</a>
+          </div>
+          <small class="article-share-status" data-share-status aria-live="polite"></small>
+        </div>
         <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
         <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
       </div>
     </div>
   </article>
   <script>
-    document.querySelector('#copy-link')?.addEventListener('click', async (e) => { await navigator.clipboard.writeText(location.href); e.currentTarget.textContent = 'Copied'; });
-    const nativeShare = document.querySelector('#native-share');
-    if (!navigator.share) nativeShare?.remove();
-    nativeShare?.addEventListener('click', () => navigator.share({ title: document.title, url: location.href }));
+    document.querySelectorAll('[data-content-share]').forEach((container) => {
+      if (!(container instanceof HTMLElement)) return;
+      const shareButton = container.querySelector('[data-share-trigger]');
+      const copyButton = container.querySelector('[data-copy-link]');
+      const fallback = container.querySelector('[data-share-fallback]');
+      const status = container.querySelector('[data-share-status]');
+      const title = container.dataset.shareTitle || document.title;
+      const url = container.dataset.shareUrl || location.href;
+
+      shareButton?.addEventListener('click', async () => {
+        if (navigator.share) {
+          try {
+            await navigator.share({ title, url });
+            return;
+          } catch (error) {
+            if (error instanceof DOMException && error.name === 'AbortError') return;
+          }
+        }
+        if (fallback instanceof HTMLElement) fallback.hidden = !fallback.hidden;
+      });
+
+      copyButton?.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(url);
+          if (status) status.textContent = 'Link copied';
+          if (copyButton instanceof HTMLButtonElement) {
+            const original = copyButton.textContent;
+            copyButton.textContent = 'Copied';
+            window.setTimeout(() => { copyButton.textContent = original; }, 1600);
+          }
+        } catch {
+          if (status) status.textContent = 'Copy unavailable — use Share instead';
+        }
+      });
+    });
+
     document.querySelectorAll('.mobile-toc a').forEach(link => link.addEventListener('click', () => link.closest('details')?.removeAttribute('open')));
     const tocLinks = [...document.querySelectorAll('.article-toc a')];
     const sections = tocLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
@@ -86,4 +137,25 @@ const articleSchema = {
     }), { rootMargin: '-20% 0px -70% 0px' });
     sections.forEach(section => observer.observe(section));
   </script>
+  <style>
+    .article-share-fallback {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1rem;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 0.45rem;
+      background: var(--wash);
+    }
+    .article-share-fallback[hidden] {
+      display: none;
+    }
+    .article-share-status {
+      width: 100%;
+      min-height: 1.2em;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+  </style>
 </Base>
