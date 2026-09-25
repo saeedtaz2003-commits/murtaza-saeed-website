@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { funnyBizzItems, funnyBizzPermalink } from '../../data/funny-bizz';
+
+export function getStaticPaths() {
+  return funnyBizzItems.map((item) => ({
+    params: { slug: item.id },
+    props: { item }
+  }));
+}
+
+const { item } = Astro.props;
+const viewerUrl = `/the-lighter-side?meme=${encodeURIComponent(item.id)}#funny-slider`;
+const description = item.copy.length > 190 ? `${item.copy.slice(0, 187)}…` : item.copy;
+const pageTitle = `${item.title} | Funny Bizz | Murtaza Insights`;
+---
+<Base title={pageTitle} description={description} image={item.image} type="article">
+  <section class="section wrap funny-share-landing">
+    <p class="eyebrow">Funny Bizz</p>
+    <h1>{item.title}</h1>
+    <img src={item.image} alt={item.alt} />
+    <p>{item.copy}</p>
+    <p><a class="button" href={viewerUrl}>Open in Funny Bizz slideshow</a></p>
+  </section>
+  <script define:vars={{ viewerUrl }}>
+    window.location.replace(viewerUrl);
+  </script>
+</Base>
