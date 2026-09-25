@@ -1,26 +1,30 @@
 ---
 const { post, featured = false, compact = false } = Astro.props;
+const dateLabel = post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+const contentLabel = post.data.advertorial
+  ? `ADVERTORIAL${post.data.sponsor ? ` · Sponsored by ${post.data.sponsor}` : ''}`
+  : post.data.category;
 ---
 {compact ? (
-  <article class="archive-card">
+  <article class:list={['archive-card', { 'archive-card-advertorial': post.data.advertorial }]}>
     <a class="archive-thumb" href={`/${post.data.slug}`} aria-label={`Read ${post.data.title}`}>
       <img src={post.data.image} alt={post.data.imageAlt} loading="lazy" />
     </a>
     <div class="archive-copy">
-      <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <p class="eyebrow">{contentLabel} · {dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
       <p class="archive-summary">{post.data.summary}</p>
-      <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
+      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read advertorial' : 'Read article'} <span aria-hidden="true">→</span></a>
     </div>
   </article>
 ) : (
-  <article class:list={['card', { featured }]}>
+  <article class:list={['card', { featured, 'card-advertorial': post.data.advertorial }]}>
     <a class="card-image" href={`/${post.data.slug}`}><img src={post.data.image} alt={post.data.imageAlt} loading={featured ? 'eager' : 'lazy'} /></a>
     <div class="card-copy">
-      <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <p class="eyebrow">{contentLabel} · {dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
       <p>{post.data.summary}</p>
-      <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
+      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read advertorial' : 'Read article'} <span aria-hidden="true">→</span></a>
     </div>
   </article>
 )}
