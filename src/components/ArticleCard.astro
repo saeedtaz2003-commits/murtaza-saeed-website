@@ -1,12 +1,26 @@
 ---
-const { post, featured = false } = Astro.props;
+const { post, featured = false, compact = false } = Astro.props;
 ---
-<article class:list={['card', { featured }]}>
-  <a class="card-image" href={`/${post.data.slug}`}><img src={post.data.image} alt={post.data.imageAlt} loading={featured ? 'eager' : 'lazy'} /></a>
-  <div class="card-copy">
-    <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
-    <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
-    <p>{post.data.summary}</p>
-    <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
-  </div>
-</article>
+{compact ? (
+  <article class="archive-card">
+    <a class="archive-thumb" href={`/${post.data.slug}`} aria-label={`Read ${post.data.title}`}>
+      <img src={post.data.image} alt={post.data.imageAlt} loading="lazy" />
+    </a>
+    <div class="archive-copy">
+      <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
+      <p class="archive-summary">{post.data.summary}</p>
+      <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
+    </div>
+  </article>
+) : (
+  <article class:list={['card', { featured }]}>
+    <a class="card-image" href={`/${post.data.slug}`}><img src={post.data.image} alt={post.data.imageAlt} loading={featured ? 'eager' : 'lazy'} /></a>
+    <div class="card-copy">
+      <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}</p>
+      <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
+      <p>{post.data.summary}</p>
+      <a class="read" href={`/${post.data.slug}`}>Read article <span aria-hidden="true">→</span></a>
+    </div>
+  </article>
+)}
