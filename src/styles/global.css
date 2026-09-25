@@ -310,10 +310,11 @@ footer {
 }
 .lighter-head h1 {
   font-family: "Jolly Lodger", fantasy;
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
   font-weight: 400;
   margin-bottom: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.08em;
 }
 .lighter-head .lighter-subtitle {
   max-width: none;
