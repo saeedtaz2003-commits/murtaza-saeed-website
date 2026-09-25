@@ -17,13 +17,15 @@ const posts = (await getCollection('posts')).filter(p => !p.data.draft).sort((a,
     </div>
   </section>
   <section id="latest" class="section wrap">
-    <div class="section-heading"><div><p class="eyebrow">Latest perspective</p><h2>Fresh thinking, without the noise</h2></div><a class="read" href="/articles">View all articles →</a></div>
+    <div class="section-heading"><div><p class="eyebrow">Latest perspective</p><h2>Fresh thinking, without the noise</h2></div></div>
     {posts[0] && <ArticleCard post={posts[0]} featured />}
+    <div class="home-view-all"><a class="button" href="/articles">View All Articles</a></div>
   </section>
-  <section class="section muted"><div class="wrap"><p class="eyebrow">Explore by subject</p><h2>What you’ll find here</h2><div class="topics">
+  <section class="section muted"><div class="wrap"><p class="eyebrow">Explore by subject</p><h2>What you’ll find here</h2><div class="topics home-topics">
     <a href="/business-finance"><span>01</span><h3>Business & Finance</h3><p>Markets, companies and the decisions behind the numbers.</p></a>
     <a href="/technology"><span>02</span><h3>Technology</h3><p>Useful technology, responsible AI and their implications for business and society.</p></a>
-    <a href="/the-lighter-side"><span>03</span><h3>The Lighter Side</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
+    <a href="/advertorials"><span>03</span><h3>Advertorials</h3><p>Clearly identified sponsored content for businesses and organisations with a useful story to tell.</p></a>
+    <a href="/the-lighter-side"><span>04</span><h3>The Lighter Side</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
   </div></div></section>
   <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>A long view, with curiosity intact.</h2></div><div><p>I’m a retired Chartered Accountant and former finance executive based in Mombasa, Kenya. Murtaza Insights is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
 </Base>
