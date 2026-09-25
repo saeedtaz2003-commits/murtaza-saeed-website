@@ -148,6 +148,7 @@ const carouselItems = [...items.filter((item) => item.pinned), ...items.slice(0,
       const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
       let current = 0;
       let touchStartX = 0;
+      let swipeHandled = false;
 
       const show = (index) => {
         current = (index + slides.length) % slides.length;
@@ -164,20 +165,43 @@ const carouselItems = [...items.filter((item) => item.pinned), ...items.slice(0,
 
       carousel.addEventListener('touchstart', (event) => {
         touchStartX = event.changedTouches[0]?.clientX ?? 0;
+        swipeHandled = false;
       }, { passive: true });
 
       carousel.addEventListener('touchend', (event) => {
         const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
         const distance = touchEndX - touchStartX;
-        if (Math.abs(distance) > 45) show(current + (distance < 0 ? 1 : -1));
+        if (Math.abs(distance) > 45) {
+          swipeHandled = true;
+          show(current + (distance < 0 ? 1 : -1));
+        }
       }, { passive: true });
+
+      carousel.querySelectorAll('.meme-stage').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          if (swipeHandled) {
+            event.preventDefault();
+            swipeHandled = false;
+          }
+        });
+      });
     }
+
+    const openCommentary = (id) => {
+      const target = document.getElementById(id);
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    };
+
+    document.querySelectorAll('a[href^="#commentary-"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href')?.slice(1);
+        if (id) openCommentary(id);
+      });
+    });
 
     const openCommentaryFromHash = () => {
       const id = window.location.hash.slice(1);
-      if (!id.startsWith('commentary-')) return;
-      const target = document.getElementById(id);
-      if (target instanceof HTMLDetailsElement) target.open = true;
+      if (id.startsWith('commentary-')) openCommentary(id);
     };
 
     window.addEventListener('hashchange', openCommentaryFromHash);
