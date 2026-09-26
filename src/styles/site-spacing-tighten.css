@@ -1,0 +1,37 @@
+/* Reduce excessive vertical whitespace between internal page headers and their first content block. */
+
+.page-head {
+  padding-top: 4.75rem;
+  padding-bottom: 2.25rem;
+}
+
+.page-head + .section {
+  padding-top: 3rem;
+}
+
+.page-head + .content-page {
+  padding-top: 2.5rem;
+}
+
+.page-head + .contact-box {
+  margin-top: 2rem;
+}
+
+@media (max-width: 760px) {
+  .page-head {
+    padding-top: 3.25rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .page-head + .section {
+    padding-top: 2rem;
+  }
+
+  .page-head + .content-page {
+    padding-top: 2rem;
+  }
+
+  .page-head + .contact-box {
+    margin-top: 1.75rem;
+  }
+}
