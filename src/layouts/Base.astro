@@ -11,6 +11,7 @@ import '../styles/site-typography-rebalance.css';
 const { title = 'Murtaza Saeed | Finance & Business Insights', description = 'Independent business, finance and technology commentary by Murtaza Saeed, shaped by more than 35 years of professional experience.', image = '/images/mbappe-nike-to-on-web.jpg', type = 'website', jsonLd } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(image, Astro.site);
+const { imageAlt, imageWidth, imageHeight } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -25,10 +26,14 @@ const socialImage = new URL(image, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
+    {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    {imageWidth && <meta property="og:image:width" content={imageWidth} />}
+    {imageHeight && <meta property="og:image:height" content={imageHeight} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+    {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   </head>

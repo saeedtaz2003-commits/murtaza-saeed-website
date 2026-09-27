@@ -49,7 +49,32 @@
   touch-action: pan-y;
 }
 
-.funny-viewer-media .funny-slides,
+/* Keep the slide inside the frame's padding. Intrinsic image dimensions must
+   never enlarge the grid track and hide the bottom caption behind the frame. */
+.funny-viewer-media .funny-slides {
+  position: absolute;
+  inset: 8px;
+  width: auto;
+  height: auto;
+}
+
+.funny-viewer-media .funny-slide-image,
+.funny-viewer-media .funny-slide-image .meme-stage {
+  min-width: 0;
+  border-radius: 0;
+}
+
+.funny-viewer-media .funny-slide-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
 .funny-viewer-media .funny-slide-image,
 .funny-viewer-media .funny-slide-image.active,
 .funny-viewer-media .funny-slide-image .meme-stage {

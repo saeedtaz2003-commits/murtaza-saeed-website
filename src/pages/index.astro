@@ -6,7 +6,7 @@ const posts = (await getCollection('posts'))
   .filter(p => !p.data.draft && !p.data.advertorial)
   .sort((a,b) => +b.data.date - +a.data.date);
 ---
-<Base title="Murtaza Saeed | Finance & Business Insights">
+<Base title="Murtaza Saeed | Finance & Business Insights" image="/images/murtaza-insights-home-social.png" imageAlt="Murtaza Insights — Murtaza Saeed, Finance & Business Insights" imageWidth={1200} imageHeight={630}>
   <section class="hero">
     <div class="wrap hero-grid">
       <div>

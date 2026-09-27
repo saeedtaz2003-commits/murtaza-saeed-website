@@ -19,12 +19,21 @@ export type FunnyBizzItem = {
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
+    id: 'canada-swing-states-tariffs',
+    sliderCategory: 'Funny',
+    category: 'Trade & Politics',
+    title: 'Canada Plays the Swing States',
+    image: '/images/canada-plays-the-swing-states-tariff-cartoon.png',
+    alt: 'Cartoon showing Canada targeting politically sensitive U.S. swing states with retaliatory tariffs, highlighting trade strategy and electoral politics before the midterms.',
+    copy: 'This cartoon satirises the idea that retaliatory tariffs can be chosen for political as well as economic impact, with U.S. swing states in the spotlight.'
+  },
+  {
     id: 'kenya-power-profit',
     sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
     title: 'A bright result. A rather dim customer experience.',
-    image: '/images/kenya-power-sh25-billion-profit-outages-approved.webp',
-    alt: 'Kenya Power profits cartoon showing an executive celebrating Sh25 billion while a customer holds a candle during a power outage, highlighting electricity bills and power cuts in Kenya.',
+    image: '/images/kenya-power-sh25-billion-profit-power-cuts-cartoon.png',
+    alt: 'Kenya Power Sh25 billion profit cartoon contrasting strong financial results with power cuts, higher bills and unreliable electricity supply in Kenya.',
     copy: 'Investors are delighted by Kenya Power’s profits. Customers are still waiting for the lights to stay on—and for a bill that doesn’t come as a shock.'
   },
   {
