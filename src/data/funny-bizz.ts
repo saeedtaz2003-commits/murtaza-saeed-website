@@ -19,6 +19,17 @@ export type FunnyBizzItem = {
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
+    id: 'advertorial-launch-offer',
+    sliderCategory: 'Advertorial',
+    category: 'Launch Offer',
+    title: 'Free Advertorials — Launch Offer',
+    image: '/images/free-advertorial-launch-offer-murtaza-insights-business-promotion.png',
+    alt: 'Free advertorial launch offer from Murtaza Insights for selected businesses, promoting visibility, trust and growth through published business stories.',
+    copy: 'Five selected advertorials — no writing or publication charge.',
+    destinationUrl: '/advertorials',
+    ctaLabel: 'View the launch offer →'
+  },
+  {
     id: 'canada-swing-states-tariffs',
     sliderCategory: 'Funny',
     category: 'Trade & Politics',

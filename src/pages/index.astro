@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import ContentSlider from '../components/ContentSlider.astro';
 const posts = (await getCollection('posts'))
   .filter(p => !p.data.draft && !p.data.advertorial)
   .sort((a,b) => +b.data.date - +a.data.date);
@@ -23,11 +24,12 @@ const posts = (await getCollection('posts'))
     {posts[0] && <ArticleCard post={posts[0]} featured />}
     <div class="home-view-all"><a class="button" href="/articles">View All Articles</a></div>
   </section>
+  <ContentSlider homepage />
   <section class="section muted"><div class="wrap"><p class="eyebrow">Explore by subject</p><h2>What you’ll find here</h2><div class="topics home-topics">
     <a href="/business-finance"><span>01</span><h3>Business & Finance</h3><p>Markets, companies and the decisions behind the numbers.</p></a>
     <a href="/technology"><span>02</span><h3>Technology</h3><p>Useful technology, responsible AI and their implications for business and society.</p></a>
     <a href="/advertorials"><span>03</span><h3>Advertorials</h3><p>Clearly identified sponsored content for businesses and organisations with a useful story to tell.</p></a>
     <a href="/the-lighter-side"><span>04</span><h3>The Lighter Side</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
   </div></div></section>
-  <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>A long view, with curiosity intact.</h2></div><div><p>I’m a retired Chartered Accountant and former finance executive based in Mombasa, Kenya. <em>Murtaza Insights</em> is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
+  <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>Murtaza Saeed — Remote Finance &amp; Business Advisor</h2></div><div><p>Financial analysis, business reviews and project support, drawing on more than 35 years of finance, operations and management experience.</p><p><em>Murtaza Insights</em> is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
 </Base>

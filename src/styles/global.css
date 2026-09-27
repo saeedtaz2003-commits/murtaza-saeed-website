@@ -1039,3 +1039,8 @@ footer {
   .funny-control { padding: 0.55rem 0.75rem; font-size: 0.86rem; }
   .funny-archive-list { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 360px) {
+  .hero-grid > * { min-width: 0; }
+  .hero h1 { font-size: 2.5rem; }
+}
