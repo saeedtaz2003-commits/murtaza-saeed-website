@@ -12,6 +12,7 @@ const capabilities = [
 ];
 const timeline = [
   ['2026–Present', 'Remote Finance & Business Advisor'],
+  ['2021–2026', 'Retirement Break'],
   ['2012–2021', 'Lead Consultant – Digital Marketing & Business Promotion, Next Step Consulting'],
   ['2011–2012', 'Director – Value Chain Development, Pwani Oil Products Ltd'],
   ['2004–2011', 'Chief Finance Manager, Pwani Oil Products Ltd'],
@@ -20,17 +21,71 @@ const timeline = [
 ];
 const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: 'Murtaza Saeed', jobTitle: 'Remote Finance & Business Advisor', url: new URL('/in-depth-profile', Astro.site).href, sameAs: ['https://linkedin.com/in/murtaza-saeed'], description: 'Finance and business professional with more than 35 years of experience in financial management, business systems, operations and general management.' };
 ---
-<Base title="In-Depth Profile of Murtaza Saeed | Remote Finance & Business Advisor" description="Explore Murtaza Saeed’s career, capabilities and major projects across financial analysis, business reviews, ERP, manufacturing and general management." jsonLd={jsonLd}>
+<Base
+  title="In-Depth Profile of Murtaza Saeed | Remote Finance & Business Advisor"
+  description="Explore Murtaza Saeed’s career, capabilities and major projects across financial analysis, business reviews, ERP, manufacturing and general management."
+  image="/images/murtaza-saeed-in-depth-profile-social-preview.png"
+  imageAlt="Murtaza Saeed, Remote Finance & Business Advisor, with Murtaza Insights branding and service areas."
+  imageWidth="1200"
+  imageHeight="630"
+  jsonLd={jsonLd}
+>
   <section class="page-head wrap"><p class="eyebrow">Professional background</p><h1>In-Depth Profile of Murtaza Saeed</h1><h2>Remote Finance &amp; Business Advisor</h2><p>Financial Analysis • Business Reviews • Project Support</p></section>
   <section class="section wrap profile-layout">
-    <nav class="profile-nav" aria-label="In this profile"><strong>In this profile</strong>{capabilities.map(item => <a href={`#${item.id}`}>{item.title}</a>)}<a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav>
+    <nav class="profile-nav profile-nav-desktop" aria-label="In this profile"><strong>In this profile</strong>{capabilities.map(item => <a href={`#${item.id}`}>{item.title}</a>)}<a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav>
+    <details id="profile-contents" class="profile-nav-mobile">
+      <summary>In this profile</summary>
+      <nav aria-label="Profile contents">{capabilities.map(item => <a href={`#${item.id}`}>{item.title}</a>)}<a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav>
+    </details>
     <div class="prose">
       <p>My career has combined financial management with a practical understanding of systems, manufacturing, operations and business development. With more than 35 years of experience, I bring a broad perspective to the numbers and the decisions behind them.</p>
-      {capabilities.map(item => <section id={item.id} class="profile-capability"><h2>{item.title}</h2><p>{item.text}</p></section>)}
-      <section id="current-focus" class="profile-routes"><h2>Current Focus</h2><p>I provide selective remote finance and business support to organisations that need experienced input without a full-time senior finance appointment.</p><p>Based in Kenya, I am available for remote assignments with businesses in Kenya, the UK and other international markets. My focus is on work that can be delivered effectively remotely, with on-site involvement considered only where genuinely necessary and practical.</p><p>I also publish business, finance and technology commentary at <em>Murtaza Insights</em>.</p></section>
-      <section id="professional-background"><h2>Professional Background</h2><p>I qualified as a Chartered Accountant with ICAEW earlier in my career. My subsequent experience has extended across financial management, management reporting, business systems, operations and general management.</p><p>I have the legal right to work in both Kenya and the United Kingdom.</p></section>
-      <section id="career-timeline"><h2>Career Timeline</h2><ol class="career-timeline">{timeline.map(([dates, role]) => <li><strong>{dates}</strong><span>{role}</span></li>)}</ol></section>
+      {capabilities.map(item => <section id={item.id} class="profile-capability"><h2>{item.title}</h2><p>{item.text}</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>)}
+      <section id="current-focus" class="profile-routes"><h2>Current Focus</h2><p>I provide selective remote finance and business support to organisations that need experienced input without a full-time senior finance appointment.</p><p>Based in Kenya, I am available for remote assignments with businesses in Kenya, the UK and other international markets. My focus is on work that can be delivered effectively remotely, with on-site involvement considered only where genuinely necessary and practical.</p><p>I also publish business, finance and technology commentary at <em>Murtaza Insights</em>.</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
+      <section id="professional-background"><h2>Professional Background</h2><p>I qualified as a Chartered Accountant with ICAEW earlier in my career. My subsequent experience has extended across financial management, management reporting, business systems, operations and general management.</p><p>I have the legal right to work in both Kenya and the United Kingdom.</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
+      <section id="career-timeline"><h2>Career Timeline</h2><ol class="career-timeline">{timeline.map(([dates, role]) => <li><strong>{dates}</strong><span>{role}</span></li>)}</ol><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
       <section id="work-with-me" class="cta"><h2>Work With Me</h2><p>For financial analysis, a business review or project support, share your objective, expected timescale and the help you need.</p><div class="actions"><a class="button" href="/work-with-me">Explore how I can help</a><a class="read" href="https://linkedin.com/in/murtaza-saeed" target="_blank" rel="noopener noreferrer">View LinkedIn Profile ↗</a></div></section>
     </div>
   </section>
 </Base>
+
+<style>
+  .profile-nav-mobile { display: none; }
+  .profile-back-link { display: none; }
+
+  @media (max-width: 760px) {
+    .profile-nav-desktop { display: none; }
+    .profile-nav-mobile {
+      display: block;
+      position: sticky;
+      top: 84px;
+      z-index: 10;
+      grid-column: 1 / -1;
+      margin: 0 0 1.25rem;
+      border: 1px solid #ddd9e7;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(16,29,56,.08);
+    }
+    .profile-nav-mobile summary {
+      cursor: pointer;
+      padding: .8rem 1rem;
+      color: #101d38;
+      font-weight: 800;
+    }
+    .profile-nav-mobile nav {
+      display: grid;
+      gap: .15rem;
+      max-height: 58vh;
+      overflow: auto;
+      padding: 0 1rem 1rem;
+    }
+    .profile-nav-mobile nav a {
+      padding: .45rem 0;
+      color: #7447d7;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .profile-back-link { display: block; margin-top: 1rem; }
+    .profile-back-link a { color: #7447d7; font-weight: 750; text-decoration: none; }
+  }
+</style>
