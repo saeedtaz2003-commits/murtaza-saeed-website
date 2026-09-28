@@ -7,12 +7,13 @@ const posts = (await getCollection('posts'))
   .filter(p => !p.data.draft && !p.data.advertorial)
   .sort((a,b) => +b.data.date - +a.data.date);
 ---
-<Base title="Murtaza Saeed | Finance & Business Insights" image="/images/murtaza-insights-home-social.png" imageAlt="Murtaza Insights — Murtaza Saeed, Finance & Business Insights" imageWidth={1200} imageHeight={630}>
+<Base title="Murtaza Saeed | Finance & Business Insights" imageAlt="Murtaza Saeed at his laptop — Murtaza Insights">
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <p class="kicker">Finance · Business · Technology · Leadership</p>
-        <h1>Experience, examined.<br /><span>Ideas, clearly shared.</span></h1>
+        <h1>Remote Finance &amp; Business Advisor</h1>
+        <p class="advisor-service-line">Financial Analysis • Business Reviews • Project Support</p>
         <p class="lead">Independent financial and operational insight for business owners, executives, boards and investors navigating growth, governance and change.</p>
         <div class="actions"><a class="button" href="#latest">Read the latest</a><a class="text-link" href="/work-with-me">Work with me →</a></div>
       </div>
