@@ -1,0 +1,10 @@
+.copyright-notice {
+  margin-top: 1.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.copyright-notice a { color: var(--purple); font-weight: 700; }
