@@ -17,7 +17,12 @@
   display: none;
 }
 
-/* Keep the complete Funny Bizz viewer comfortably inside a normal desktop viewport. */
+/* Reduce dead space above the viewer and keep the complete Funny Bizz viewer
+   comfortably inside a normal 100% desktop viewport. */
+.funny-carousel-section {
+  padding-top: 1.25rem;
+}
+
 .funny-viewer-grid {
   height: clamp(430px, calc(100vh - 220px), 520px);
 }
@@ -55,8 +60,13 @@
     width: 150px;
   }
 
+  .funny-carousel-section {
+    padding-top: 1.1rem;
+  }
+
+  /* Preserve the established mobile viewport behaviour. */
   .funny-viewer-grid {
-    height: auto;
+    height: clamp(450px, calc(100dvh - 175px), 620px);
   }
 
   .funny-commentary-viewport > .funny-share-row {
