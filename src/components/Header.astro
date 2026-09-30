@@ -1,20 +1,16 @@
 ---
 const path = Astro.url.pathname;
 const links = [
-  ['Home', '/'],
-  ['Business & Finance', '/business-finance'],
-  ['Technology', '/technology'],
-  ['Advertorials', '/advertorials'],
-  ['The Lighter Side', '/the-lighter-side'],
-  ['About', '/about'],
-  ['Work With Me', '/work-with-me'],
-  ['Contact', '/contact']
+  ['Home', '/'], ['Business & Finance', '/business-finance'], ['Technology', '/technology'],
+  ['Advertorials', '/advertorials'], ['The Lighter Side', '/the-lighter-side'], ['About', '/about'],
+  ['Work With Me', '/work-with-me'], ['Contact', '/contact']
 ];
 ---
 <header class="site-header">
   <div class="topbar wrap">
     <a class="brand" href="/" aria-label="Murtaza Insights home">
       <img src="/images/murtaza-insights-full-logo.webp" alt="Murtaza Insights" width="480" height="180" />
+      <small>Finance &amp; Business Insights</small>
     </a>
     <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main navigation">
