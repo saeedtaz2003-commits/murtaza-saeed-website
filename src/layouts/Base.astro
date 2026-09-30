@@ -10,10 +10,19 @@ import '../styles/site-spacing-tighten.css';
 import '../styles/site-typography-rebalance.css';
 import '../styles/approved-completion.css';
 import '../styles/copyright.css';
+import '../styles/immediate-fixes.css';
 const { title = 'Murtaza Saeed | Finance & Business Insights', description = 'Independent business, finance and technology commentary by Murtaza Saeed, shaped by more than 35 years of professional experience.', image = '/images/murtaza-insights-default-social.png', type = 'website', jsonLd } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(image, Astro.site);
 const { imageAlt, imageWidth, imageHeight } = Astro.props;
+const socialPath = socialImage.pathname.toLowerCase();
+const socialImageType = socialPath.endsWith('.webp')
+  ? 'image/webp'
+  : socialPath.endsWith('.jpg') || socialPath.endsWith('.jpeg')
+    ? 'image/jpeg'
+    : socialPath.endsWith('.png')
+      ? 'image/png'
+      : undefined;
 ---
 <!doctype html>
 <html lang="en">
@@ -28,6 +37,8 @@ const { imageAlt, imageWidth, imageHeight } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
+    <meta property="og:image:secure_url" content={socialImage} />
+    {socialImageType && <meta property="og:image:type" content={socialImageType} />}
     {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
     {imageWidth && <meta property="og:image:width" content={imageWidth} />}
     {imageHeight && <meta property="og:image:height" content={imageHeight} />}
@@ -44,5 +55,23 @@ const { imageAlt, imageWidth, imageHeight } = Astro.props;
     <Header />
     <main id="content"><slot /></main>
     <Footer />
+    <script>
+      // Keep Share / Copy link directly after the active commentary's copyright
+      // line while preserving ContentSlider's existing event listeners.
+      document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+        const commentary = carousel.querySelector('.funny-commentary-viewport');
+        const shareRow = carousel.querySelector('.funny-share-row');
+        const shareMenu = carousel.querySelector('.funny-share-menu');
+        if (commentary && shareRow) commentary.appendChild(shareRow);
+        if (commentary && shareMenu) commentary.appendChild(shareMenu);
+
+        // Version newly copied/shared meme URLs so social crawlers re-fetch the
+        // updated Open Graph preview instead of serving an older cached result.
+        carousel.querySelectorAll('[data-permalink]').forEach((slide) => {
+          const path = slide.getAttribute('data-permalink');
+          if (path && !path.includes('?')) slide.setAttribute('data-permalink', `${path}?v=2`);
+        });
+      });
+    </script>
   </body>
 </html>
