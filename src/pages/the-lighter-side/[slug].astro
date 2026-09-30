@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { funnyBizzItems, funnyBizzPermalink } from '../../data/funny-bizz';
+import { funnyBizzItems } from '../../data/funny-bizz';
 import { commentsFormFor } from '../../data/comments';
 
 export function getStaticPaths() {
@@ -14,8 +14,26 @@ const { item } = Astro.props;
 const viewerUrl = `/the-lighter-side?meme=${encodeURIComponent(item.id)}#funny-slider`;
 const description = item.copy.length > 190 ? `${item.copy.slice(0, 187)}…` : item.copy;
 const pageTitle = `${item.title} | Funny Bizz | Murtaza Insights`;
+
+// Social platforms are more reliable with a lightweight, explicitly-sized image.
+// Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
+const socialImage = item.id === 'canada-swing-states-tariffs'
+  ? '/images/canada-plays-the-swing-states-social.jpg'
+  : item.id === 'kenya-power-profit'
+    ? '/images/kenya-power-sh25-billion-profit-outages-approved.webp'
+    : item.image;
+const socialImageWidth = item.id === 'canada-swing-states-tariffs' ? 300 : undefined;
+const socialImageHeight = item.id === 'canada-swing-states-tariffs' ? 300 : undefined;
 ---
-<Base title={pageTitle} description={description} image={item.image} type="article">
+<Base
+  title={pageTitle}
+  description={description}
+  image={socialImage}
+  imageAlt={item.alt}
+  imageWidth={socialImageWidth}
+  imageHeight={socialImageHeight}
+  type="article"
+>
   <section class="section wrap funny-share-landing">
     <p class="eyebrow">Funny Bizz</p>
     <h1>{item.title}</h1>
