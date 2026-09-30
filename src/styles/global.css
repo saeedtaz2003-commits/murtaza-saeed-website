@@ -72,8 +72,8 @@ a {
 }
 .brand img {
   display: block;
-  width: 210px;
-  height: auto;
+  width: auto;
+  height: 54px;
 }
 .brand small {
   display: block;
@@ -826,7 +826,8 @@ footer {
 }
 @media (max-width: 600px) {
   .brand img {
-    width: 180px;
+    width: auto;
+    height: 50px;
   }
   .brand small {
     display: block;

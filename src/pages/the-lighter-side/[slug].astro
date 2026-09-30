@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { funnyBizzItems, funnyBizzPermalink } from '../../data/funny-bizz';
+import { commentsFormFor } from '../../data/comments';
 
 export function getStaticPaths() {
   return funnyBizzItems.map((item) => ({
@@ -20,6 +21,7 @@ const pageTitle = `${item.title} | Funny Bizz | Murtaza Insights`;
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.alt} />
     <p>{item.copy}</p>
+    <p class="content-response-actions"><a href={commentsFormFor(item.title)} target="_blank" rel="noopener noreferrer">Send a Comment</a></p>
     <p class="copyright-notice">© 2026 Murtaza Insights — <a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
     <p><a class="button" href={viewerUrl}>Open in Funny Bizz slideshow</a></p>
   </section>

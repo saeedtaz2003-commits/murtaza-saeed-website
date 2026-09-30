@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { commentsFormFor } from '../data/comments';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
@@ -84,6 +85,9 @@ const articleSchema = {
             <a href={`mailto:?subject=${shareTitle}&body=${shareUrl}`}>Email</a>
           </div>
           <small class="article-share-status" data-share-status aria-live="polite"></small>
+        </div>
+        <div class="content-response-actions" aria-label="Article feedback">
+          <a href={commentsFormFor(post.data.title)} target="_blank" rel="noopener noreferrer">Send a Comment</a>
         </div>
         <p class="copyright-notice">© 2026 Murtaza Insights — <a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
         <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
