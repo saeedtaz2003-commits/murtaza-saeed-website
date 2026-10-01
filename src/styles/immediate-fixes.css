@@ -50,6 +50,7 @@
  .funny-carousel-section{padding-top:1.1rem;}
  .funny-viewer-grid{height:auto !important;}
  .funny-viewer-media{grid-template-rows:auto auto !important;}
+ .funny-viewer-media .funny-screen-frame{height:auto !important;max-height:none;aspect-ratio:1/1;}
  .content-engagement{margin-top:.8rem;padding-top:.65rem;}
  .engagement-share-row{gap:.45rem;}
  .engagement-share-row button{min-height:40px;}
