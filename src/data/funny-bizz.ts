@@ -23,9 +23,10 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     sliderCategory: 'Advertorial',
     category: 'Launch Offer',
     title: 'Free Advertorials — Launch Offer',
-    image: '/images/free-advertorial-launch-offer-murtaza-insights-business-promotion.png',
-    alt: 'Free advertorial launch offer from Murtaza Insights for selected businesses, promoting visibility, trust and growth through published business stories.',
-    copy: 'Five selected advertorials — no writing or publication charge.',
+    image: '/images/free-advertorial-launch-offer-murtaza-insights-business-promotion.png', // TEMP: replace with approved 1080x1080 artwork when binary upload is available
+    alt: 'Murtaza Insights Free Advertorials Launch Offer highlighting Be Seen, Be Trusted, Be Chosen and its finance and business services.',
+    copy: 'To mark the launch of Murtaza Insights, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
+    copyHtml: 'To mark the launch of <em>Murtaza Insights</em>, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
     destinationUrl: '/advertorials',
     ctaLabel: 'View the launch offer →'
   },
