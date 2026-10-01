@@ -1,21 +1,42 @@
-/* Immediate visual and sharing fixes — 30 Sep 2026 */
+/* Approved slider/header refinements — 1 Oct 2026 */
 .topbar { min-height: 98px; }
 .brand { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.1rem; }
 .brand img { display:block; width:190px; height:auto; max-height:none; object-fit:contain; }
 .brand small { display:block; margin:0; font-size:.69rem; line-height:1.1; font-weight:600; letter-spacing:.04em; color:#16345c; white-space:nowrap; }
-.funny-carousel-section { padding-top:1.25rem; }
-.funny-viewer-grid { height:clamp(430px,calc(100vh - 220px),520px); }
-.funny-viewer-media .funny-controls { margin-top:.55rem; }
-.funny-commentary-viewport > .funny-share-row { justify-content:flex-start; min-height:38px; margin-top:0; padding:0 clamp(1.25rem,2.5vw,2rem) 1.15rem; }
-.funny-commentary-viewport > .funny-share-menu { justify-content:flex-start; margin:-.65rem clamp(1.25rem,2.5vw,2rem) 1.15rem; }
+
+/* Desktop: keep the full active viewer, controls and commentary within a
+   conventional 100% zoom viewport while preserving every meme's aspect ratio. */
+.funny-carousel-section { padding-top:.8rem; }
+.funny-slider-note { margin-bottom:.55rem; padding:.55rem .8rem; }
+.funny-viewer-grid { height:clamp(400px,calc(100vh - 205px),500px); gap:1rem; }
+.funny-viewer-media .funny-controls { margin-top:.4rem; }
+.funny-viewer-media .funny-slide-image img { object-fit:contain; object-position:center; }
+
+/* Copyright/share group: three distinct rows in the approved order. */
+.copyright-share-block { margin-top:.8rem; padding-top:.7rem; border-top:1px solid var(--line); }
+.copyright-share-block .copyright-year,
+.copyright-share-block .copyright-policy { display:block; margin:.2rem 0 !important; line-height:1.35; }
+.copyright-share-block .funny-share-row { justify-content:flex-start; min-height:34px; margin:.25rem 0 0; padding:0; }
+.copyright-share-block .funny-share-menu { justify-content:flex-start; margin:.25rem 0 0; }
+
+/* Compatibility for the current DOM until the share row is moved into the
+   active copyright block by the slider script. */
+.funny-commentary-viewport > .funny-share-row { justify-content:flex-start; min-height:34px; margin-top:0; padding:0 clamp(1.25rem,2.5vw,2rem) 1rem; }
+.funny-commentary-viewport > .funny-share-menu { justify-content:flex-start; margin:-.4rem clamp(1.25rem,2.5vw,2rem) 1rem; }
+
 @media (max-width:900px){ .brand img{width:170px;} .brand small{font-size:.64rem;} }
+
 @media (max-width:760px){
  .topbar{min-height:84px;}
  .brand{align-items:flex-start;}
  .brand img{width:150px;}
  .brand small{font-size:.59rem;}
  .funny-carousel-section{padding-top:1.1rem;}
- .funny-viewer-grid{height:clamp(450px,calc(100dvh - 175px),620px);}
+ /* Preserve the approved mobile square media stage and internal commentary
+    scrolling; do not impose desktop dimensions on mobile. */
+ .funny-viewer-grid{height:auto !important;}
  .funny-commentary-viewport > .funny-share-row{padding:0 1rem 1rem;}
- .funny-commentary-viewport > .funny-share-menu{margin:-.55rem 1rem 1rem;}
+ .funny-commentary-viewport > .funny-share-menu{margin:-.3rem 1rem 1rem;}
+ .copyright-share-block .funny-share-row{padding:0;}
+ .copyright-share-block .funny-share-menu{margin:.25rem 0 0;}
 }
