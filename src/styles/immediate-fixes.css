@@ -8,8 +8,8 @@
    The image always uses contain, so no format is cropped or distorted. */
 .funny-carousel-section { padding-top:.8rem; }
 .funny-slider-note { margin-bottom:.55rem; padding:.55rem .8rem; }
-.funny-viewer-grid { height:clamp(400px,calc(100vh - 205px),500px); gap:1rem; }
-.funny-viewer-media { grid-template-rows:minmax(0,1fr) auto; }
+.funny-viewer-grid { height:clamp(400px,calc(100vh - 205px),500px); gap:1rem; align-items:stretch; }
+.funny-viewer-media { height:100%; grid-template-rows:minmax(0,1fr) auto; }
 .funny-viewer-media .funny-screen-frame { width:100%; height:100%; max-height:100%; aspect-ratio:auto; }
 .funny-viewer-media .funny-controls { margin-top:.4rem; }
 .funny-viewer-media .funny-slide-image img { object-fit:contain; object-position:center; }
