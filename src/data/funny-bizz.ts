@@ -111,10 +111,10 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     id: 'quickmart-ipo-featured',
     sliderCategory: 'Featured Article',
     category: 'Business & Finance',
-    title: 'Quickmart IPO: At What Price Should You Buy the Shares?',
+    title: 'Quickmart IPO: A Good Business — But What Is It Worth?',
     image: '/images/quickmart-ipo-share-price-kenya-investment-cartoon.webp',
     alt: 'Quickmart IPO Kenya cartoon showing Quickmart shares on a supermarket shelf with an unknown KSh price as an investor considers buying shares in the NSE listing',
-    copy: 'Quickmart is preparing to sell half its shares through the Nairobi Securities Exchange. The business looks promising—but whether the IPO is worth buying will depend principally on the offer price.',
+    copy: 'Quickmart may be one of Kenya’s more interesting IPO prospects—but investors are buying shares from the current owners, and the final offer price will determine whether a promising business is also a worthwhile investment.',
     destinationUrl: '/quickmart-ipo-what-price-should-you-pay',
     ctaLabel: 'Read the full article →'
   },

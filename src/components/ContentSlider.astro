@@ -1,6 +1,6 @@
 ---
 import { funnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
-import { commentsFormFor } from '../data/comments';
+import ContentEngagement from './ContentEngagement.astro';
 const { homepage = false } = Astro.props;
 ---
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Funny Bizz slideshow"}>
@@ -60,19 +60,6 @@ const { homepage = false } = Astro.props;
             <button class="funny-control" type="button" data-next aria-label="Next slideshow item">Next →</button>
           </div>
 
-          <div class="funny-share-row" aria-label="Share this item">
-            <button class="funny-share-button" type="button" data-share>Share</button>
-            <button class="funny-share-button" type="button" data-copy-link>Copy link</button>
-            <span class="funny-copy-status" data-copy-status aria-live="polite"></span>
-          </div>
-
-          <div class="funny-share-menu" data-share-menu hidden>
-            <a data-share-facebook target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a data-share-whatsapp target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a data-share-linkedin target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a data-share-x target="_blank" rel="noopener noreferrer">X</a>
-            <a data-share-email>Email</a>
-          </div>
         </div>
 
         <div class="funny-commentary-viewport" aria-live="polite">
@@ -104,10 +91,7 @@ const { homepage = false } = Astro.props;
                     <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View advertorial →' : 'Read the full article →')}</a>
                   </p>
                 )}
-                <p class="content-response-actions">
-                  <a href={commentsFormFor(item.title)} target="_blank" rel="noopener noreferrer">Send a Comment</a>
-                </p>
-                <p class="copyright-notice">© 2026 Murtaza Insights — <a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
+                <ContentEngagement title={item.title} commentTitle={item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" />
               </div>
             </article>
           ))}
@@ -153,10 +137,6 @@ const { homepage = false } = Astro.props;
       const screen = carousel.querySelector('.funny-screen-frame');
       const dotsContainer = carousel.querySelector('[data-dots]');
       const status = carousel.querySelector('[data-viewer-status]');
-      const shareButton = carousel.querySelector('[data-share]');
-      const copyButton = carousel.querySelector('[data-copy-link]');
-      const copyStatus = carousel.querySelector('[data-copy-status]');
-      const shareMenu = carousel.querySelector('[data-share-menu]');
       let sequence = [];
       let dotButtons = [];
       let current = 0;
@@ -230,30 +210,6 @@ const { homepage = false } = Astro.props;
         });
       };
 
-      const activeSlide = () => slides[current];
-
-      const activeShareData = () => {
-        const slide = activeSlide();
-        const path = slide?.getAttribute('data-permalink') ?? '/the-lighter-side';
-        const title = slide?.getAttribute('data-share-title') ?? 'Funny Bizz | Murtaza Insights';
-        return {
-          title,
-          url: new URL(path, window.location.origin).toString()
-        };
-      };
-
-      const refreshShareMenu = () => {
-        const { title, url } = activeShareData();
-        const encodedUrl = encodeURIComponent(url);
-        const encodedTitle = encodeURIComponent(title);
-        const setHref = (selector, href) => carousel.querySelector(selector)?.setAttribute('href', href);
-        setHref('[data-share-facebook]', `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`);
-        setHref('[data-share-whatsapp]', `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`);
-        setHref('[data-share-linkedin]', `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`);
-        setHref('[data-share-x]', `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`);
-        setHref('[data-share-email]', `mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`);
-      };
-
       const show = (index) => {
         if (!slides.length || index < 0 || index >= slides.length) return;
         current = index;
@@ -285,9 +241,6 @@ const { homepage = false } = Astro.props;
         }
 
         if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
-        if (shareMenu instanceof HTMLElement) shareMenu.hidden = true;
-        if (copyStatus) copyStatus.textContent = '';
-        refreshShareMenu();
       };
 
       const stepSequence = (direction) => {
@@ -354,32 +307,6 @@ const { homepage = false } = Astro.props;
         });
       });
 
-      shareButton?.addEventListener('click', async () => {
-        const { title, url } = activeShareData();
-        if (navigator.share) {
-          try {
-            await navigator.share({ title, text: title, url });
-            return;
-          } catch (error) {
-            if (error instanceof DOMException && error.name === 'AbortError') return;
-          }
-        }
-        if (shareMenu instanceof HTMLElement) {
-          refreshShareMenu();
-          shareMenu.hidden = !shareMenu.hidden;
-        }
-      });
-
-      copyButton?.addEventListener('click', async () => {
-        const { url } = activeShareData();
-        try {
-          await navigator.clipboard.writeText(url);
-          if (copyStatus) copyStatus.textContent = 'Link copied';
-        } catch {
-          window.prompt('Copy this item link:', url);
-        }
-      });
-
       const requestedId = new URLSearchParams(window.location.search).get('meme');
       const requestedIndex = requestedId
         ? slides.findIndex((slide) => slide.getAttribute('data-item-id') === requestedId)
@@ -389,8 +316,6 @@ const { homepage = false } = Astro.props;
         show(requestedIndex);
       } else if (sequence.length) {
         show(sequence[0]);
-      } else {
-        refreshShareMenu();
       }
 
       if (window.location.hash === '#funny-slider') {

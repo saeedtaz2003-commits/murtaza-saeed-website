@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { funnyBizzItems } from '../../data/funny-bizz';
-import { commentsFormFor } from '../../data/comments';
+import ContentEngagement from '../../components/ContentEngagement.astro';
 
 export function getStaticPaths() {
   return funnyBizzItems.map((item) => ({
@@ -17,21 +17,15 @@ const pageTitle = `${item.title} | Funny Bizz | Murtaza Insights`;
 
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
-const socialImage = item.id === 'canada-swing-states-tariffs'
-  ? '/images/canada-plays-the-swing-states-social.jpg'
-  : item.id === 'kenya-power-profit'
-    ? '/images/kenya-power-sh25-billion-profit-outages-approved.webp'
-    : item.image;
-const socialImageWidth = item.id === 'canada-swing-states-tariffs' ? 300 : undefined;
-const socialImageHeight = item.id === 'canada-swing-states-tariffs' ? 300 : undefined;
+const socialImage = `/images/social/${item.id}.jpg`;
 ---
 <Base
   title={pageTitle}
   description={description}
   image={socialImage}
   imageAlt={item.alt}
-  imageWidth={socialImageWidth}
-  imageHeight={socialImageHeight}
+  imageWidth={1200}
+  imageHeight={1200}
   type="article"
 >
   <section class="section wrap funny-share-landing">
@@ -39,9 +33,8 @@ const socialImageHeight = item.id === 'canada-swing-states-tariffs' ? 300 : unde
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.alt} />
     <p>{item.copy}</p>
-    <p class="content-response-actions"><a href={commentsFormFor(item.title)} target="_blank" rel="noopener noreferrer">Send a Comment</a></p>
-    <p class="copyright-notice">© 2026 Murtaza Insights — <a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
     <p><a class="button" href={viewerUrl}>Open in Funny Bizz slideshow</a></p>
+    <ContentEngagement title={item.title} commentTitle={item.title} url={`/the-lighter-side/${item.id}?v=3`} />
   </section>
   <script define:vars={{ viewerUrl }}>
     window.location.replace(viewerUrl);

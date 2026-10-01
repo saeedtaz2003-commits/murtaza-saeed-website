@@ -1,28 +1,42 @@
-/* Approved slider/header refinements — 1 Oct 2026 */
+/* Final coordinated refinements — 1 Oct 2026 */
 .topbar { min-height: 98px; }
 .brand { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.1rem; }
 .brand img { display:block; width:190px; height:auto; max-height:none; object-fit:contain; }
 .brand small { display:block; margin:0; font-size:.69rem; line-height:1.1; font-weight:600; letter-spacing:.04em; color:#16345c; white-space:nowrap; }
 
-/* Desktop: keep the full active viewer, controls and commentary within a
-   conventional 100% zoom viewport while preserving every meme's aspect ratio. */
+/* Desktop viewer: image and navigation remain visible together at 100% zoom.
+   The image always uses contain, so no format is cropped or distorted. */
 .funny-carousel-section { padding-top:.8rem; }
 .funny-slider-note { margin-bottom:.55rem; padding:.55rem .8rem; }
 .funny-viewer-grid { height:clamp(400px,calc(100vh - 205px),500px); gap:1rem; }
+.funny-viewer-media { grid-template-rows:minmax(0,1fr) auto; }
 .funny-viewer-media .funny-controls { margin-top:.4rem; }
 .funny-viewer-media .funny-slide-image img { object-fit:contain; object-position:center; }
+.funny-commentary-panel.active,
+.funny-commentary-panel.active .lighter-copy { min-height:100%; }
+.funny-commentary-panel.active .lighter-copy { display:flex; flex-direction:column; }
+.funny-engagement { margin-top:auto; }
 
-/* Copyright/share group: three distinct rows in the approved order. */
-.copyright-share-block { margin-top:.8rem; padding-top:.7rem; border-top:1px solid var(--line); }
-.copyright-share-block .copyright-year,
-.copyright-share-block .copyright-policy { display:block; margin:.2rem 0 !important; line-height:1.35; }
-.copyright-share-block .funny-share-row { justify-content:flex-start; min-height:34px; margin:.25rem 0 0; padding:0; }
-.copyright-share-block .funny-share-menu { justify-content:flex-start; margin:.25rem 0 0; }
+/* One reusable engagement pattern: comment, copyright, policy, share, copy. */
+.content-engagement { margin-top:1rem; padding-top:.75rem; border-top:1px solid var(--line); font-family:Inter,Arial,sans-serif; }
+.content-engagement .content-response-actions { margin:0 0 .7rem; }
+.engagement-copyright-year,
+.engagement-copyright-policy { display:block; margin:.18rem 0 !important; color:var(--muted); font-size:.875rem !important; line-height:1.4; }
+.engagement-copyright-policy a { color:var(--purple); font-weight:700; }
+.engagement-share-row { display:flex; align-items:center; flex-wrap:wrap; gap:.55rem; min-height:38px; margin-top:.35rem; }
+.engagement-share-row button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--purple); padding:.46rem .82rem; font:inherit; font-size:.84rem; font-weight:800; cursor:pointer; }
+.engagement-share-row button:hover,
+.engagement-share-row button:focus-visible { border-color:var(--purple); background:#faf8ff; }
+.engagement-share-row span { color:var(--muted); font-size:.78rem; }
+.engagement-share-menu { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.35rem; padding:.55rem; border:1px solid var(--line); border-radius:.55rem; background:#faf8ff; }
+.engagement-share-menu[hidden] { display:none; }
+.engagement-share-menu a { color:var(--navy); padding:.2rem .4rem; font-size:.82rem; font-weight:750; text-decoration:none; }
+.engagement-share-menu a:hover,
+.engagement-share-menu a:focus-visible { color:var(--purple); text-decoration:underline; }
 
-/* Compatibility for the current DOM until the share row is moved into the
-   active copyright block by the slider script. */
-.funny-commentary-viewport > .funny-share-row { justify-content:flex-start; min-height:34px; margin-top:0; padding:0 clamp(1.25rem,2.5vw,2rem) 1rem; }
-.funny-commentary-viewport > .funny-share-menu { justify-content:flex-start; margin:-.4rem clamp(1.25rem,2.5vw,2rem) 1rem; }
+.article-help-card { margin:2rem 0 0; padding:1.35rem 1.5rem; border:1px solid #d9cdec; border-left:5px solid var(--purple); border-radius:10px; background:#f7f2fc; box-shadow:0 8px 22px #3924540d; }
+.article-help-card h2 { margin-top:0; }
+.article-help-card .button { color:#fff; }
 
 @media (max-width:900px){ .brand img{width:170px;} .brand small{font-size:.64rem;} }
 
@@ -32,11 +46,9 @@
  .brand img{width:150px;}
  .brand small{font-size:.59rem;}
  .funny-carousel-section{padding-top:1.1rem;}
- /* Preserve the approved mobile square media stage and internal commentary
-    scrolling; do not impose desktop dimensions on mobile. */
  .funny-viewer-grid{height:auto !important;}
- .funny-commentary-viewport > .funny-share-row{padding:0 1rem 1rem;}
- .funny-commentary-viewport > .funny-share-menu{margin:-.3rem 1rem 1rem;}
- .copyright-share-block .funny-share-row{padding:0;}
- .copyright-share-block .funny-share-menu{margin:.25rem 0 0;}
+ .funny-viewer-media{grid-template-rows:auto auto !important;}
+ .content-engagement{margin-top:.8rem;padding-top:.65rem;}
+ .engagement-share-row{gap:.45rem;}
+ .engagement-share-row button{min-height:40px;}
 }

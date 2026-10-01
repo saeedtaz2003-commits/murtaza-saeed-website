@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import ContentEngagement from '../components/ContentEngagement.astro';
 
 const advertorialPosts = (await getCollection('posts'))
   .filter(post => !post.data.draft && post.data.advertorial)
@@ -146,6 +147,7 @@ const advertorialPosts = (await getCollection('posts'))
       <p>There will be no writing or publication charge for the five selected launch advertorials.</p>
       <p>Selected advertorials will remain published for a minimum of six months and may remain available for longer. However, <em>Murtaza Insights</em> reserves the right to amend or remove content if it becomes inaccurate, outdated, legally problematic or otherwise unsuitable.</p>
       <p class="advertorial-launch-contact"><a class="button" href="https://forms.gle/jYa3e7iRy8WewKDv8" target="_blank" rel="noopener noreferrer">Apply for the Launch Offer</a></p>
+      <ContentEngagement title="Advertorials & Sponsored Content | Murtaza Insights" commentTitle="Advertorials & Sponsored Content" url="/advertorials" class="advertorial-engagement" />
     </div>
   </section>
 </Base>
