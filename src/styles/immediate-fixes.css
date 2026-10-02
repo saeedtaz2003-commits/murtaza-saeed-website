@@ -55,3 +55,30 @@
  .engagement-share-row{gap:.45rem;}
  .engagement-share-row button{min-height:40px;}
 }
+
+/* Approved 2 Oct task: square viewer, compact actions, intact advisor artwork. */
+.advisor-art { width:min(100%, 410px); height:auto; max-height:none; object-fit:contain; }
+.funny-commentary-viewport .lighter-copy { box-sizing:border-box; padding:1.15rem 1.35rem; }
+.funny-commentary-viewport .lighter-copy h2 { font-size:1.65rem; line-height:1.2; margin:.4rem 0 .65rem; }
+.funny-commentary-viewport .lighter-copy > p { margin:.35rem 0 .6rem; line-height:1.5; }
+.funny-engagement { margin-top:auto; padding-top:.6rem; }
+.funny-engagement .engagement-copyright-year { white-space:nowrap; font-size:.78rem !important; }
+.engagement-copyright-year a { color:var(--purple); font-weight:700; }
+.funny-engagement .content-response-actions { margin:0 0 .4rem; }
+.funny-engagement .engagement-share-row { min-height:34px; }
+.funny-commentary-viewport { scrollbar-gutter:auto; }
+@media (min-width:761px) {
+ .funny-viewer-grid { --image-side:clamp(360px,calc(100vh - 255px),470px); grid-template-columns:minmax(0,var(--image-side)) minmax(0,1fr); height:calc(var(--image-side) + 44px); }
+ .funny-viewer-media .funny-screen-frame { height:var(--image-side); width:var(--image-side); aspect-ratio:1; box-sizing:border-box; }
+ .funny-commentary-viewport .funny-commentary-panel.active { min-height:100%; }
+ .funny-commentary-viewport .lighter-copy { min-height:100%; }
+ .funny-content-link { margin-top:auto !important; padding-top:.6rem; }
+ .funny-content-link + .funny-engagement { margin-top:.65rem; }
+}
+@media (max-width:760px) {
+ .funny-viewer-grid { grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto; }
+ .funny-commentary-viewport { height:auto; max-height:none; overflow:visible; }
+ .funny-commentary-viewport .lighter-copy { min-height:0; }
+ .funny-commentary-viewport .lighter-copy h2 { font-size:1.4rem; }
+ .funny-engagement .engagement-copyright-year { white-space:normal; }
+}

@@ -1,17 +1,16 @@
 ---
 import { commentsFormFor } from '../data/comments';
 
-const { title, url, commentTitle = title, showComment = true, class: className = '' } = Astro.props;
+const { title, url, commentTitle = title, showComment = true, commentLast = false, class: className = '' } = Astro.props;
 const absoluteUrl = new URL(url, Astro.site).toString();
 const encodedUrl = encodeURIComponent(absoluteUrl);
 const encodedTitle = encodeURIComponent(title);
 ---
 <div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl}>
-  {showComment && (
+  {showComment && !commentLast && (
     <p class="content-response-actions"><a href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer">Send a Comment</a></p>
   )}
-  <p class="engagement-copyright-year">© 2026 Murtaza Insights</p>
-  <p class="engagement-copyright-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
+  <p class="engagement-copyright-year">© 2026 Murtaza Insights · <a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
   <div class="engagement-share-row" aria-label="Share this content">
     <button type="button" data-share-trigger>Share</button>
     <button type="button" data-copy-link>Copy link</button>
@@ -24,4 +23,7 @@ const encodedTitle = encodeURIComponent(title);
     <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">X</a>
     <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`}>Email</a>
   </div>
+  {showComment && commentLast && (
+    <div class="article-comment-invitation"><p>What do you think? What price would make Quickmart attractive to you? Or is there another aspect of the IPO you think investors should examine?</p><p class="content-response-actions"><a href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer">SEND A COMMENT</a></p></div>
+  )}
 </div>

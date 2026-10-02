@@ -64,7 +64,14 @@ const articleSchema = {
     <div class="article-grid">
       {post.data.toc && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
-        <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
+        <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} commentLast={post.data.slug === 'quickmart-ipo-what-price-should-you-pay'} class="article-engagement" />
+        {post.data.slug === 'quickmart-ipo-what-price-should-you-pay' && <aside class="article-help-card">
+          <h2>HOW I CAN HELP</h2><h3>Need an independent financial view?</h3>
+          <p>Sometimes the challenge is not getting more information — it is making sense of the numbers and understanding what they mean for the decision in front of you.</p>
+          <ul><li>Financial analysis and interpretation</li><li>Cash-flow and working-capital reviews</li><li>Budgeting and forecasting</li><li>Valuation and scenario analysis</li><li>Management reporting</li><li>Business-performance reviews</li><li>Independent assessment of business plans, transactions and investment proposals</li></ul>
+          <p>Remote finance assignments and project-based advisory work are available, particularly where experienced financial judgement is needed without adding a full-time senior finance role.</p>
+          <a class="button" href="https://forms.gle/HPmku2CCPTfA9mwv9" target="_blank" rel="noopener noreferrer">DISCUSS A PROJECT</a>
+        </aside>}
         <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Finance & Business Insights</span></p></div>
         <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
       </div>
