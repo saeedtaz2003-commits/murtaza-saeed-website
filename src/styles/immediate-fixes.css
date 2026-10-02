@@ -82,3 +82,10 @@
  .funny-commentary-viewport .lighter-copy h2 { font-size:1.4rem; }
  .funny-engagement .engagement-copyright-year { white-space:normal; }
 }
+@media (min-width:761px) {
+ .funny-viewer-grid { height:calc(var(--image-side) + 60px); }
+ .funny-viewer-media .funny-screen-frame { max-height:none; }
+}
+@media (max-width:760px) {
+ .funny-commentary-viewport { height:auto !important; min-height:0 !important; max-height:none !important; overflow:visible; }
+}
