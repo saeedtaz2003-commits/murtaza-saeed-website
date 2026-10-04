@@ -1,0 +1,14 @@
+---
+interface Props { topic: 'QuickMart IPO' | 'FUNNY BIZZ'; }
+const { topic } = Astro.props;
+const number = '254726829626';
+const message = topic === 'QuickMart IPO' ? 'Please add me to the QuickMart IPO alerts.' : 'Please add me to FUNNY BIZZ alerts.';
+const label = topic === 'QuickMart IPO' ? 'Get QuickMart IPO Alerts on WhatsApp' : 'Get new memes on WhatsApp';
+const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+---
+<aside class="whatsapp-alerts">
+  <h2>{topic === 'QuickMart IPO' ? 'Want updates on the QuickMart IPO?' : 'Like FUNNY BIZZ?'}</h2>
+  {topic === 'QuickMart IPO' && <p>Receive WhatsApp alerts for significant IPO developments, including the final Information Memorandum.</p>}
+  <a class="button" href={href} target="_blank" rel="noopener noreferrer">{label} →</a>
+  <p>Send the message, then save Murtaza Insights (+254 726 829626) in your contacts to receive broadcast alerts.</p>
+</aside>

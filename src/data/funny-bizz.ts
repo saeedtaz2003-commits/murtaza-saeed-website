@@ -2,6 +2,7 @@ export type FunnyBizzSliderCategory = 'Funny' | 'Featured Article' | 'Advertoria
 
 export type FunnyBizzItem = {
   id: string;
+  publishedAt?: string;
   sliderCategory: FunnyBizzSliderCategory;
   category: string;
   title: string;
@@ -18,6 +19,17 @@ export type FunnyBizzItem = {
 };
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
+  {
+    id: 'simbisa-customers-spend-less',
+    publishedAt: '2026-10-03',
+    sliderCategory: 'Funny',
+    category: 'Business & Finance',
+    title: 'Can Customers Spend Less — and Still Make You More Money?',
+    image: '/images/can-customers-spend-less-make-more-money.jpg',
+    alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
+    copy: 'Yes — through the right mix of pricing, volume, delivery channels and operating leverage. Simbisa Kenya offers a useful real-world example: average spend fell, yet revenue and operating profit still rose. See how the pieces came together in the Simbisa FY2026 results and this Equity Axis analysis.',
+    copyHtml: 'Yes — through the right mix of pricing, volume, delivery channels and operating leverage. Simbisa Kenya offers a useful real-world example: average spend fell, yet revenue and operating profit still rose. See how the pieces came together in the <a href="https://ir.simbisabrands.com/simbisa-brands-audited-abridged-financial-results-fye-30-june-2026/" target="_blank" rel="noopener noreferrer">Simbisa FY2026 results</a> and <a href="https://equityaxis.net/post/19508/2026/9/simbisa-turns-kenya-traffic-growth-into-higher-earnings" target="_blank" rel="noopener noreferrer">this Equity Axis analysis</a>.'
+  },
   {
     id: 'advertorial-launch-offer',
     sliderCategory: 'Advertorial',

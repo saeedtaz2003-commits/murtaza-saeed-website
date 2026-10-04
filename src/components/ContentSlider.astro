@@ -1,10 +1,15 @@
 ---
 import { funnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
 import ContentEngagement from './ContentEngagement.astro';
+import settings from '../data/slider-settings.json';
+const configured = items.find(item => item.id === settings.defaultMemeId);
+const newest = [...items].sort((a,b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))[0];
+const openingId = (configured ?? newest)?.id;
+const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
 ---
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Funny Bizz slideshow"}>
-    <div class="funny-carousel" data-carousel data-homepage={homepage ? "true" : "false"}>
+    <div class="funny-carousel" data-carousel data-default-meme={openingId} data-homepage={homepage ? "true" : "false"}>
       <p class="funny-slider-note">
         <strong>{homepage ? "Articles, Cartoons & Offers" : "Funny Bizz Slideshow"}</strong> — swipe or use Previous/Next to browse. Tap an article or offer to open it.
         <span class="funny-viewer-status" data-viewer-status>Loading slideshow…</span>
@@ -14,7 +19,7 @@ const { homepage = false } = Astro.props;
         <div class="funny-viewer-media">
           <div class="funny-screen-frame" aria-live="polite">
             <div class="funny-slides">
-              {items.map((item, index) => (
+              {orderedItems.map((item, index) => (
                 item.destinationUrl ? (
                   <a
                     class:list={['funny-slide-image', index === 0 && 'active']}
@@ -63,7 +68,7 @@ const { homepage = false } = Astro.props;
         </div>
 
         <div class="funny-commentary-viewport" aria-live="polite">
-          {items.map((item, index) => (
+          {orderedItems.map((item, index) => (
             <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
               <div class="lighter-copy">
                 {item.sliderCategory !== 'Funny' && (
@@ -106,7 +111,7 @@ const { homepage = false } = Astro.props;
     <h2 id="funny-archive-title">All Funny Bizz</h2>
     <p class="funny-archive-instruction">Select any item to load it into the slideshow viewer above.</p>
     <div class="funny-archive-list">
-      {items.map((item, index) => (
+      {orderedItems.map((item, index) => (
         <button
           class:list={['funny-archive-selector', index === 0 && 'active']}
           type="button"
@@ -157,42 +162,9 @@ const { homepage = false } = Astro.props;
         .filter((index) => index >= 0);
 
       const buildSequence = () => {
-        const funnyPool = shuffle(indicesFor('Funny'));
-        const featuredPool = shuffle(indicesFor('Featured Article'));
-        const advertorialPool = shuffle(indicesFor('Advertorial'));
-        const maxSlides = Math.min(10, slides.length);
-        if (!maxSlides) return [];
-
-        // With a 10-item maximum, a single advertorial would occupy 10% of one sequence.
-        // We therefore include one only on some loads so its long-run exposure remains about 5% or less.
-        const advertorialChance = Math.min(0.5, maxSlides * 0.05);
-        const homepage = carousel.getAttribute('data-homepage') === 'true';
-        const advertorialCount = advertorialPool.length > 0 && (homepage || (featuredPool.length > 0 && Math.random() < advertorialChance)) ? 1 : 0;
-        const baseFeaturedCount = featuredPool.length > 0 && maxSlides >= 5
-          ? Math.max(1, Math.round(maxSlides * 0.18))
-          : 0;
-        const featuredCount = Math.min(featuredPool.length, Math.max(0, baseFeaturedCount - (homepage ? 0 : advertorialCount)));
-        const funnyCount = Math.min(funnyPool.length, Math.max(0, maxSlides - featuredCount - advertorialCount));
-
-        const funnySelection = funnyPool.slice(0, funnyCount);
-        const specials = shuffle([
-          ...featuredPool.slice(0, featuredCount),
-          ...advertorialPool.slice(0, advertorialCount)
-        ]);
-
-        // Insert special items into distinct gaps between Funny items so two specials never sit together.
-        const availableGaps = shuffle(Array.from({ length: funnySelection.length + 1 }, (_, index) => index));
-        const specialByGap = new Map();
-        specials.slice(0, availableGaps.length).forEach((itemIndex, index) => {
-          specialByGap.set(availableGaps[index], itemIndex);
-        });
-
-        const arranged = [];
-        for (let gap = 0; gap <= funnySelection.length; gap += 1) {
-          if (specialByGap.has(gap)) arranged.push(specialByGap.get(gap));
-          if (gap < funnySelection.length) arranged.push(funnySelection[gap]);
-        }
-        return arranged;
+        const defaultId = carousel.getAttribute('data-default-meme');
+        const first = Math.max(0, slides.findIndex(slide => slide.getAttribute('data-item-id') === defaultId));
+        return slides.length ? [first, ...shuffle(slides.map((_, i) => i).filter(i => i !== first))] : [];
       };
 
       const rebuildDots = () => {

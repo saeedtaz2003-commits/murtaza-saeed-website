@@ -1,0 +1,14 @@
+/* Full artwork, proportional and bounded by the available viewport. */
+.article .article-image { width:auto; height:auto; aspect-ratio:auto; max-width:100%; max-height:calc(100svh - 150px); object-fit:contain; margin-inline:auto; }
+.section .advisor-art { display:block; width:min(100%,410px); height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; }
+.whatsapp-alerts { margin:1.8rem 0; padding:1.25rem; background:#f7f2fc; border:1px solid #d9cdec; border-radius:10px; }
+.whatsapp-alerts h2 { margin-top:0; font-size:1.25rem; }
+.whatsapp-alerts p { font-size:.95rem; line-height:1.5; }
+.whatsapp-alerts p:last-child { margin-bottom:0; }
+.search-form { display:flex; gap:.6rem; flex-wrap:wrap; margin:1.5rem 0; }
+.search-form input { min-width:0; flex:1; border:1px solid #b8a5d0; border-radius:6px; padding:.8rem; font:inherit; }
+.search-results { list-style:none; padding:0; }
+.search-results li { padding:1rem 0; border-bottom:1px solid var(--line); }
+.search-results h2 { font-size:1.25rem; margin:.3rem 0; }
+.search-results p { margin:.4rem 0; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
