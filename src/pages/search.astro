@@ -27,7 +27,9 @@ import Base from '../layouts/Base.astro';
    try {
     index ??= fetch('/search-index.json').then(response => { if (!response.ok) throw new Error('Index unavailable'); return response.json(); });
     const entries = await index;
-    const matches = entries.filter(entry => `${entry.title} ${entry.text}`.toLocaleLowerCase().includes(normalized))
+    const escaped = normalized.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const matcher = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}($|[^\\p{L}\\p{N}])`, 'iu');
+    const matches = entries.filter(entry => matcher.test(`${entry.title} ${entry.text}`))
       .sort((a,b) => Number(b.title.toLocaleLowerCase().includes(normalized)) - Number(a.title.toLocaleLowerCase().includes(normalized)));
     status.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} for “${query.trim()}”.`;
     for (const entry of matches) {

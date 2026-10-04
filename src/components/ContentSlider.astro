@@ -2,6 +2,7 @@
 import { funnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
 import ContentEngagement from './ContentEngagement.astro';
 import settings from '../data/slider-settings.json';
+import WhatsAppAlerts from './WhatsAppAlerts.astro';
 const configured = items.find(item => item.id === settings.defaultMemeId);
 const newest = [...items].sort((a,b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))[0];
 const openingId = (configured ?? newest)?.id;
@@ -104,6 +105,8 @@ const { homepage = false } = Astro.props;
       </div>
     </div>
   </section>
+
+  {!homepage && <section class="wrap"><WhatsAppAlerts topic="FUNNY BIZZ" /></section>}
 
   {!homepage && (
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
