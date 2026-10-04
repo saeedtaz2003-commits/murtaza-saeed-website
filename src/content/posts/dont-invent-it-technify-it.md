@@ -9,4 +9,10 @@ imageAlt: "Old merchant and modern AI robot illustrating how old business practi
 draft: true
 ---
 
-Placeholder pending approved article insertion.
+## At a glance
+
+Many supposedly new technology ideas are really old business practices with their limitations removed.
+
+AI can now provide the intelligence behind an application without the business having to build its own AI model.
+
+AI coding tools can also help create the software itself, lowering the barrier for entrepreneurs who are not programmers.
