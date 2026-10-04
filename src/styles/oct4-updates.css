@@ -12,3 +12,15 @@
 .search-results h2 { font-size:1.25rem; margin:.3rem 0; }
 .search-results p { margin:.4rem 0; }
 .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.prose .finance-ai-table table { display:table; width:100%; table-layout:fixed; }
+.finance-ai-table th, .finance-ai-table td { overflow-wrap:anywhere; }
+@media (max-width:600px) {
+  .prose .finance-ai-table table, .finance-ai-table tbody, .finance-ai-table tr, .finance-ai-table td { display:block; width:100%; }
+  .finance-ai-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+  .finance-ai-table tbody tr { margin:0 0 1rem; border:1px solid var(--line); border-radius:8px; padding:.6rem; }
+  .finance-ai-table td { box-sizing:border-box; border:0; padding:.45rem; }
+  .finance-ai-table td::before { display:block; font-weight:700; color:var(--purple); }
+  .finance-ai-table td:nth-child(1)::before { content:'Current environment'; }
+  .finance-ai-table td:nth-child(2)::before { content:'Main opportunity for AI'; }
+  .finance-ai-table td:nth-child(3)::before { content:'Possible outcome'; }
+}

@@ -20,6 +20,41 @@ export type FunnyBizzItem = {
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
+  "id": "technify-it-featured",
+  "publishedAt": "2026-10-04",
+  "sliderCategory": "Featured Article",
+  "category": "Technology",
+  "title": "Don’t Invent It. Technify It.",
+  "image": "/images/old-wine-new-bottle-technify-it.jpg",
+  "alt": "Old merchant says ‘I know my customers’ beside a modern AI robot saying ‘I call it predictive analytics,’ illustrating how old business practices are being turned into modern apps.",
+  "copy": "Many supposedly new business ideas are not new at all. Haggling, customer knowledge, barter, buying clubs and personal credit have existed for centuries. What AI and modern apps add is speed, scale and automation. The opportunity may be to identify an old practice that still works — then remove the limitation that stopped it scaling.",
+  "destinationUrl": "/dont-invent-it-technify-it",
+  "ctaLabel": "Read the full article →"
+},
+  {
+  "id": "paper-to-erp-featured",
+  "publishedAt": "2026-10-04",
+  "sliderCategory": "Featured Article",
+  "category": "Business & Finance",
+  "title": "From Paper to ERP: Where Can AI Improve Your Finance Function?",
+  "image": "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg",
+  "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
+  "copy": "How can AI help your business? By reducing manual input and errors, checking documents and transactions, reconciling information, highlighting exceptions, analysing margins, cash flow and working capital, and answering management questions more quickly. The opportunity exists for businesses using any kind of accounting system—paper-based records, Excel, basic or legacy software, modern cloud accounting, separate specialist systems or full ERP. Start with the pain point.",
+  "destinationUrl": "/from-paper-to-erp-ai-finance-function",
+  "ctaLabel": "Read the full article →"
+},
+  {
+  "id": "lexus-motomorphosis",
+  "publishedAt": "2026-10-04",
+  "sliderCategory": "Funny",
+  "category": "Brands & Marketing",
+  "title": "How Far Would You Twist Your Product to Stand Out?",
+  "image": "/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg",
+  "alt": "Twisted Lexus art car created by MSCHF for the Lexus MOTOMORPHOSIS project, illustrating how brands can use unexpected product design to attract attention.",
+  "copy": "Lexus turned an electrified vehicle into something almost unrecognisable, working with Brooklyn art collective MSCHF on its MOTOMORPHOSIS project. The aim was to spark a different conversation around electrification, imagination and transformation. Perhaps the marketing lesson isn't how far you should twist your product — but how far you're prepared to twist convention to get people talking."
+},
+
+  {
     id: 'simbisa-customers-spend-less',
     publishedAt: '2026-10-03',
     sliderCategory: 'Funny',
