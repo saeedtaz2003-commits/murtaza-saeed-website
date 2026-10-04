@@ -22,13 +22,12 @@ const posts = (await getCollection('posts'))
   <section id="latest" class="section wrap">
     <div class="section-heading"><div><p class="eyebrow">Latest perspective</p><h2>Fresh thinking, without the noise</h2></div></div>
     {posts[0] && <ArticleCard post={posts[0]} featured />}
-    <div class="home-view-all"><a class="button" href="/articles">View All Articles</a></div>
+    <div class="home-view-all"><a class="button" href="/insights">View Insights</a></div>
   </section>
   <section class="section muted"><div class="wrap"><p class="eyebrow">Explore by subject</p><h2>What you’ll find here</h2><div class="topics home-topics">
-    <a href="/business-finance"><span>01</span><h3>Business & Finance</h3><p>Markets, companies and the decisions behind the numbers.</p></a>
-    <a href="/technology"><span>02</span><h3>Technology</h3><p>Useful technology, responsible AI and their implications for business and society.</p></a>
-    <a href="/advertorials"><span>03</span><h3>Advertorials</h3><p>Clearly identified sponsored content for businesses and organisations with a useful story to tell.</p></a>
-    <a href="/the-lighter-side"><span>04</span><h3>The Lighter Side</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
+    <a href="/insights"><span>01</span><h3>Insights</h3><p>Business, finance and technology commentary, with a practical perspective on management decisions.</p></a>
+    <a href="/editorials"><span>03</span><h3>Editorials</h3><p>Clearly identified sponsored content for businesses and organisations with a useful story to tell.</p></a>
+    <a href="/the-lighter-side"><span>04</span><h3>Funny Business</h3><p>Humour and observations from business, technology and life beyond the boardroom.</p></a>
   </div></div></section>
   <section class="section wrap about-strip"><div><p class="eyebrow">About Murtaza</p><h2>Murtaza Saeed — Remote Finance &amp; Business Advisor</h2></div><div><p>Financial analysis, business reviews and project support, drawing on more than 35 years of finance, operations and management experience.</p><p><em>Murtaza Insights</em> is written for owners, senior executives, board members and investors seeking a practical, independent perspective on financial performance, operations, governance and digital transformation.</p><a class="read" href="/about">More about me →</a></div></section>
 </Base>

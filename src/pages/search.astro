@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Search | Murtaza Insights" description="Search Murtaza Insights articles, memes and commentary.">
+ <section class="page-head wrap">
+  <p class="eyebrow">Murtaza Insights</p><h1>Search</h1>
+  <form class="search-form" action="/search" role="search">
+   <label class="sr-only" for="search-query">Search the website</label>
+   <input id="search-query" name="q" type="search" placeholder="Search articles and memes" required />
+   <button class="button" type="submit">Search</button>
+  </form>
+  <p data-search-status role="status">Enter a word or phrase to search the website.</p>
+  <ul class="search-results" data-search-results></ul>
+ </section>
+ <script>
+  const form = document.querySelector('.search-form');
+  const input = document.querySelector<HTMLInputElement>('#search-query');
+  const status = document.querySelector('[data-search-status]');
+  const list = document.querySelector('[data-search-results]');
+  let index: Promise<{url:string;title:string;text:string}[]> | undefined;
+  async function search(query:string) {
+   if (!list || !status) return;
+   list.replaceChildren();
+   const normalized = query.trim().toLocaleLowerCase();
+   if (!normalized) { status.textContent = 'Enter a word or phrase to search the website.'; return; }
+   status.textContent = 'Searching…';
+   try {
+    index ??= fetch('/search-index.json').then(response => { if (!response.ok) throw new Error('Index unavailable'); return response.json(); });
+    const entries = await index;
+    const matches = entries.filter(entry => `${entry.title} ${entry.text}`.toLocaleLowerCase().includes(normalized))
+      .sort((a,b) => Number(b.title.toLocaleLowerCase().includes(normalized)) - Number(a.title.toLocaleLowerCase().includes(normalized)));
+    status.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} for “${query.trim()}”.`;
+    for (const entry of matches) {
+      const li = document.createElement('li'); const h2 = document.createElement('h2'); const link = document.createElement('a');
+      link.href = entry.url; link.textContent = entry.title; h2.append(link);
+      const excerpt = document.createElement('p'); const at = entry.text.toLocaleLowerCase().indexOf(normalized); const start = Math.max(0, at - 65);
+      excerpt.textContent = `${start ? '…' : ''}${entry.text.slice(start,start+230)}${entry.text.length > start+230 ? '…' : ''}`;
+      li.append(h2,excerpt);list.append(li);
+    }
+   } catch { index = undefined; status.textContent = 'Search is temporarily unavailable. Please try again.'; }
+  }
+  form?.addEventListener('submit',event => {event.preventDefault(); if (!input) return; history.replaceState(null,'',`/search?q=${encodeURIComponent(input.value)}`); void search(input.value);});
+  const query = new URLSearchParams(location.search).get('q');
+  if (query && input) {input.value=query;void search(query);}
+ </script>
+</Base>

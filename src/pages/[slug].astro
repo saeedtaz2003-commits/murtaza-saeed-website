@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ContentEngagement from '../components/ContentEngagement.astro';
+import WhatsAppAlerts from '../components/WhatsAppAlerts.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
@@ -12,8 +13,8 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const pageTitle = post.data.seoTitle ?? post.data.title;
 const pageDescription = post.data.metaDescription ?? post.data.summary;
 const isAdvertorial = post.data.advertorial;
-const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/articles';
-const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View All Articles';
+const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/insights';
+const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View Insights';
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': isAdvertorial ? 'AdvertiserContentArticle' : 'Article',
@@ -44,7 +45,7 @@ const articleSchema = {
   <article class="article wrap">
     <header class="article-header">
       <p class="eyebrow">
-        {isAdvertorial ? <><a href="/advertorials">ADVERTORIAL</a> · {post.data.category}</> : <a href={`/${post.data.category.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{post.data.category}</a>}
+        {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights">{post.data.category}</a>}
         {' · '}{post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}
       </p>
       <h1>{post.data.title}</h1><p class="dek">{post.data.summary}</p>
@@ -64,6 +65,7 @@ const articleSchema = {
     <div class="article-grid">
       {post.data.toc && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{post.data.toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
+        {post.data.slug === "quickmart-ipo-what-price-should-you-pay" && <WhatsAppAlerts topic="QuickMart IPO" />}
         <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} commentLast={post.data.slug === 'quickmart-ipo-what-price-should-you-pay'} class="article-engagement" />
         {post.data.slug === 'quickmart-ipo-what-price-should-you-pay' && <aside class="article-help-card">
           <h2>HOW I CAN HELP</h2><h3>Need an independent financial view?</h3>

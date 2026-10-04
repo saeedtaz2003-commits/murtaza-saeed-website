@@ -30,3 +30,13 @@ content:
       - { name: imageAlt, label: Image description, type: string, required: true }
       - { name: draft, label: Keep as draft, type: boolean, default: false }
       - { name: body, label: Article, type: rich-text, required: true }
+
+  - name: sliderSettings
+    label: Opening slider meme
+    type: file
+    path: src/data/slider-settings.json
+    fields:
+      - name: defaultMemeId
+        label: Default meme ID
+        type: string
+        description: Use a published meme ID. Changing this leaves the permanent Instagram link unchanged.

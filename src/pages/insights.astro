@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const posts = (await getCollection('posts'))
+  .filter(post => !post.data.draft && !post.data.advertorial)
+  .sort((a, b) => +b.data.date - +a.data.date);
+---
+<Base title="Insights | Murtaza Insights" description="All business, finance and technology articles by Murtaza Saeed, listed newest first.">
+  <section class="page-head wrap">
+    <p class="eyebrow">Insights</p>
+    <h1>Insights</h1>
+    <p>Business, finance and technology commentary for practical management decisions.</p>
+  </section>
+  <section class="section wrap listing archive-list" aria-label="All published articles">
+    {posts.map(post => <ArticleCard post={post} compact />)}
+  </section>
+</Base>
