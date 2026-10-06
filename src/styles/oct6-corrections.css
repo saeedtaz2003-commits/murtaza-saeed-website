@@ -10,3 +10,6 @@
  #content .article-toc { display: none; }
  #content .mobile-toc { display: block; }
 }
+
+#content .article .prose .finance-ai-table table { white-space: normal; }
+#content .article .prose .finance-ai-table th, #content .article .prose .finance-ai-table td { white-space: normal; word-break: normal; }
