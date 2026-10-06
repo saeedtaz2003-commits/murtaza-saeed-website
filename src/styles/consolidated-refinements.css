@@ -21,7 +21,6 @@ a.button[href*="wa.me"] { white-space: nowrap; }
 #content .funny-archive-selector { grid-template-columns: 76px minmax(0,1fr) auto; align-items: start; gap: .85rem; padding-block: .8rem; }
 #content .funny-archive-selector .funny-archive-summary-thumb { width: 76px; height: 76px; aspect-ratio: 1; object-fit: contain; }
 #content .funny-archive-selector .funny-archive-title { display: block; font-size: 1.05rem; font-weight: 800; line-height: 1.35; }
-.funny-sticky-sentinel { height: 0; }
 @media (max-width: 900px) {
  .topbar nav { top: 100%; gap: 0; padding-block: .4rem; }
  .topbar nav a { display: flex; align-items: center; min-height: 44px; padding: .25rem .6rem; line-height: 1.35; }
@@ -39,11 +38,29 @@ a.button[href*="wa.me"] { white-space: nowrap; }
  #content .funny-viewer-grid { display: flex !important; flex-direction: column; overflow: visible; }
  #content .funny-carousel { overflow-anchor: none; }
  #content .funny-viewer-media { position: sticky; top: calc(var(--sticky-header-height,84px) + 8px); z-index: 10; background: var(--paper); align-self: stretch; padding-bottom: .35rem; }
- #content .funny-viewer-media.is-compact { height: clamp(190px, calc((100dvh - var(--sticky-header-height,84px)) * .33), 300px) !important; grid-template-rows: minmax(0,1fr) 44px !important; }
- #content .funny-viewer-media.is-compact .funny-screen-frame { height: 100% !important; min-height: 0 !important; max-height: 100%; aspect-ratio: auto; }
- #content .funny-viewer-media.is-compact .meme-stage { aspect-ratio: auto !important; }
  #content .funny-viewer-media .funny-slide-image img { object-fit: contain; }
  #content .funny-commentary-viewport { height: auto !important; min-height: 0 !important; max-height: none !important; overflow: visible; }
  #content .funny-commentary-panel.active, #content .funny-commentary-panel.active .lighter-copy { min-height: 0; }
  #content .funny-engagement { margin-top: 1rem; }
+}
+/* Review corrections: genuine columns at every width and fully visible labels. */
+#content .archive-card { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 1.35rem; align-items: start; padding-block: 1.35rem; }
+#content .archive-card::after { display: none; }
+#content .archive-thumb { float: none; width: 150px; height: 150px; margin: 0; }
+#content .archive-copy { min-width: 0; }
+#content .archive-copy .archive-summary { margin-bottom: .6rem; }
+#content .archive-copy .read { display: inline-block; margin: 0; }
+#content .home-focus-heading { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.8rem,3vw,2.7rem); font-weight: 800; font-style: normal; color: var(--navy); line-height: 1.2; text-align: center; }
+a:not(.button):not(.funny-content-cta):not(.archive-thumb):not(.funny-slide-image):not(.brand):not(.logo) { text-decoration: underline; text-underline-offset: .18em; }
+#content .home-biz-buzz a, #content .archive-copy h2 a { text-decoration: underline; }
+a.button, #content .funny-content-cta, .content-response-actions a { text-transform: none; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; height: auto; }
+a.button .external-cta-icon { flex: 0 0 1.15em; }
+a.button[href*="wa.me"], a.button[href*="linkedin.com"] { white-space: normal; }
+@media (max-width:760px) {
+ #content .archive-card { grid-template-columns: 80px minmax(0,1fr); gap: .8rem; }
+ #content .archive-thumb { width: 80px; height: 80px; }
+ #content .funny-viewer-grid { height: auto; }
+ #content .funny-viewer-media { height: auto !important; grid-template-rows: auto auto; }
+ #content .funny-viewer-media .funny-screen-frame { width: 100%; height: auto !important; aspect-ratio: 1; max-height: none; }
+ #content .funny-viewer-media .meme-stage { aspect-ratio: 1; }
 }

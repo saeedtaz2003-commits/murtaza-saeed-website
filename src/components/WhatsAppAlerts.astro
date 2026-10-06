@@ -4,7 +4,7 @@ interface Props { topic: 'QuickMart IPO' | 'Biz Buzz'; }
 const { topic } = Astro.props;
 const number = '254726829626';
 const message = topic === 'QuickMart IPO' ? 'Please add me to the QuickMart IPO alerts.' : 'Please add me to Biz Buzz alerts.';
-const label = topic === 'QuickMart IPO' ? 'Get QuickMart IPO Alerts on WhatsApp' : 'Get new memes on WhatsApp';
+const label = topic === 'QuickMart IPO' ? 'Get QuickMart IPO Alerts on WhatsApp' : 'Get New Memes on WhatsApp';
 const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 ---
 <aside class="whatsapp-alerts">

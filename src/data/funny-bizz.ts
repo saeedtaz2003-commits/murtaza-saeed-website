@@ -29,7 +29,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   "alt": "Old merchant says ‘I know my customers’ beside a modern AI robot saying ‘I call it predictive analytics,’ illustrating how old business practices are being turned into modern apps.",
   "copy": "Many supposedly new business ideas are not new at all. Haggling, customer knowledge, barter, buying clubs and personal credit have existed for centuries. What AI and modern apps add is speed, scale and automation. The opportunity may be to identify an old practice that still works — then remove the limitation that stopped it scaling.",
   "destinationUrl": "/dont-invent-it-technify-it",
-  "ctaLabel": "Read the full article →"
+  "ctaLabel": "Read the Full Article"
 },
   {
   "id": "paper-to-erp-featured",
@@ -41,7 +41,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
   "copy": "How can AI help your business? By reducing manual input and errors, checking documents and transactions, reconciling information, highlighting exceptions, analysing margins, cash flow and working capital, and answering management questions more quickly. The opportunity exists for businesses using any kind of accounting system—paper-based records, Excel, basic or legacy software, modern cloud accounting, separate specialist systems or full ERP. Start with the pain point.",
   "destinationUrl": "/from-paper-to-erp-ai-finance-function",
-  "ctaLabel": "Read the full article →"
+  "ctaLabel": "Read the Full Article"
 },
   {
   "id": "lexus-motomorphosis",
@@ -64,7 +64,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
     destinationUrl: '/can-cutting-prices-improve-your-business-performance',
-    ctaLabel: 'Read the full article →'
+    ctaLabel: 'Read the Full Article'
   },
 
   {
@@ -154,7 +154,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     alt: 'Quickmart IPO Kenya cartoon showing Quickmart shares on a supermarket shelf with an unknown KSh price as an investor considers buying shares in the NSE listing',
     copy: 'Quickmart may be one of Kenya’s more interesting IPO prospects—but investors are buying shares from the current owners, and the final offer price will determine whether a promising business is also a worthwhile investment.',
     destinationUrl: '/quickmart-ipo-what-price-should-you-pay',
-    ctaLabel: 'Read the full article →'
+    ctaLabel: 'Read the Full Article'
   },
   {
     id: 'mbappe-endorsement-featured',
@@ -165,7 +165,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     alt: 'Editorial cartoon showing Kylian Mbappé leaving Nike and joining On',
     copy: 'Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership.',
     destinationUrl: '/mbappe-endorsement-to-ownership',
-    ctaLabel: 'Read the full article →'
+    ctaLabel: 'Read the Full Article'
   }
 ];
 

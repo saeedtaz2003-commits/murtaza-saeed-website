@@ -15,7 +15,6 @@ const { homepage = false } = Astro.props;
         <strong>{homepage ? "Articles, Cartoons & Offers" : "Biz Buzz Slideshow"}</strong> — swipe or use the arrows to browse. Tap an article or offer to open it.
       </p>
 
-      <div class="funny-sticky-sentinel" aria-hidden="true"></div>
       <div class="funny-viewer-grid">
         <div class="funny-viewer-media">
           <div class="funny-screen-frame" aria-live="polite">
@@ -72,12 +71,6 @@ const { homepage = false } = Astro.props;
           {orderedItems.map((item, index) => (
             <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
               <div class="lighter-copy">
-                {item.sliderCategory !== 'Funny' && (
-                  <p class:list={['funny-content-badge', item.sliderCategory === 'Advertorial' && 'is-advertorial']}>
-                    {item.sliderCategory === 'Advertorial' ? 'Advertorial' : 'Featured Article'}
-                  </p>
-                )}
-                <p class="eyebrow">{item.category}</p>
                 {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
                 <h2 set:html={item.titleHtml ?? item.title} />
                 <p set:html={item.copyHtml ?? item.copy} />
@@ -94,7 +87,7 @@ const { homepage = false } = Astro.props;
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
                 {item.destinationUrl && (
                   <p class="funny-content-link">
-                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View advertorial →' : 'Read the full article →')}</a>
+                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View Advertorial' : 'Read the Full Article')}</a>
                   </p>
                 )}
                 <ContentEngagement title={item.title} commentTitle={item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" />
@@ -148,23 +141,16 @@ const { homepage = false } = Astro.props;
       let current = 0;
       let touchStartX = 0;
       let ignoreNextClick = false;
-      const media = carousel.querySelector('.funny-viewer-media');
-      const sentinel = carousel.querySelector('.funny-sticky-sentinel');
-      const mobile = window.matchMedia('(max-width: 760px)');
       let stickyTick = false;
       const updateStickyMedia = () => {
         stickyTick = false;
         const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
         if (carousel instanceof HTMLElement) carousel.style.setProperty('--sticky-header-height', `${headerHeight}px`);
-        const compact = mobile.matches && !!sentinel && sentinel.getBoundingClientRect().top < headerHeight + 8;
-        media?.classList.toggle('is-compact', compact);
       };
       const queueStickyUpdate = () => {
         if (!stickyTick) { stickyTick = true; window.requestAnimationFrame(updateStickyMedia); }
       };
-      window.addEventListener('scroll', queueStickyUpdate, { passive: true });
       window.addEventListener('resize', queueStickyUpdate);
-      mobile.addEventListener('change', queueStickyUpdate);
       updateStickyMedia();
 
       const shuffle = (values) => {

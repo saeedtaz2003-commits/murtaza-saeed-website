@@ -14,7 +14,7 @@ const contentLabel = post.data.advertorial
       <p class="eyebrow">{!hideCategory && <>{contentLabel} · </>}{dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
       <p class="archive-summary">{post.data.summary}</p>
-      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read advertorial' : 'Read article'} <span aria-hidden="true">→</span></a>
+      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>
 ) : (
@@ -24,7 +24,7 @@ const contentLabel = post.data.advertorial
       <p class="eyebrow">{contentLabel} · {dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
       <p>{post.data.summary}</p>
-      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read advertorial' : 'Read article'} <span aria-hidden="true">→</span></a>
+      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>
 )}
