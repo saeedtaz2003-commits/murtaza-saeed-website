@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 const viewerUrl = `/the-lighter-side?meme=${encodeURIComponent(item.id)}#funny-slider`;
 const description = item.copy.length > 190 ? `${item.copy.slice(0, 187)}…` : item.copy;
-const pageTitle = `${item.title} | BIZ BUZZ | Murtaza Insights`;
+const pageTitle = `${item.title} | Biz Buzz | Murtaza Insights`;
 
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
@@ -29,11 +29,11 @@ const socialImage = `/images/social/${item.id}.jpg`;
   type="article"
 >
   <section class="section wrap funny-share-landing">
-    <p class="eyebrow">BIZ BUZZ</p>
+    <p class="eyebrow">Biz Buzz</p>
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.alt} />
     <p>{item.copy}</p>
-    <p><a class="button" href={viewerUrl}>Open in BIZ BUZZ slideshow</a></p>
+    <p><a class="button" href={viewerUrl}>Open in Biz Buzz slideshow</a></p>
     <ContentEngagement title={item.title} commentTitle={item.title} url={`/the-lighter-side/${item.id}?v=3`} />
   </section>
   <script define:vars={{ viewerUrl }}>

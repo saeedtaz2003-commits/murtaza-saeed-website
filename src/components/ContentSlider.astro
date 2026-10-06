@@ -9,11 +9,10 @@ const openingId = (configured ?? newest)?.id;
 const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
 ---
-  <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "BIZ BUZZ slideshow"}>
+  <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Biz Buzz slideshow"}>
     <div class="funny-carousel" data-carousel data-default-meme={openingId} data-homepage={homepage ? "true" : "false"}>
       <p class="funny-slider-note">
-        <strong>{homepage ? "Articles, Cartoons & Offers" : "BIZ BUZZ Slideshow"}</strong> — swipe or use Previous/Next to browse. Tap an article or offer to open it.
-        <span class="funny-viewer-status" data-viewer-status>Loading slideshow…</span>
+        <strong>{homepage ? "Articles, Cartoons & Offers" : "Biz Buzz Slideshow"}</strong> — swipe or use the arrows to browse. Tap an article or offer to open it.
       </p>
 
       <div class="funny-viewer-grid">
@@ -61,9 +60,9 @@ const { homepage = false } = Astro.props;
           </div>
 
           <div class="funny-controls" aria-label="Slideshow controls">
-            <button class="funny-control" type="button" data-prev aria-label="Previous slideshow item">← Previous</button>
+            <button class="funny-control" type="button" data-prev aria-label="Previous slideshow item"><span aria-hidden="true">◀</span></button>
             <div class="funny-dots" data-dots aria-label="Choose slideshow item"></div>
-            <button class="funny-control" type="button" data-next aria-label="Next slideshow item">Next →</button>
+            <button class="funny-control" type="button" data-next aria-label="Next slideshow item"><span aria-hidden="true">▶</span></button>
           </div>
 
         </div>
@@ -106,12 +105,12 @@ const { homepage = false } = Astro.props;
     </div>
   </section>
 
-  {!homepage && <section class="wrap"><WhatsAppAlerts topic="BIZ BUZZ" /></section>}
+  {!homepage && <section class="wrap"><WhatsAppAlerts topic="Biz Buzz" /></section>}
 
   {!homepage && (
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
     <p class="eyebrow">Archive</p>
-    <h2 id="funny-archive-title">All BIZ BUZZ</h2>
+    <h2 id="funny-archive-title">All Biz Buzz</h2>
     <p class="funny-archive-instruction">Select any item to load it into the slideshow viewer above.</p>
     <div class="funny-archive-list">
       {orderedItems.map((item, index) => (
@@ -121,7 +120,7 @@ const { homepage = false } = Astro.props;
           data-archive-index={index}
           data-item-id={item.id}
           aria-current={index === 0 ? 'true' : 'false'}
-          aria-label={`Show ${item.title} in the BIZ BUZZ viewer`}
+          aria-label={`Show ${item.title} in the Biz Buzz viewer`}
         >
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
@@ -144,7 +143,6 @@ const { homepage = false } = Astro.props;
       const commentaryViewport = carousel.querySelector('.funny-commentary-viewport');
       const screen = carousel.querySelector('.funny-screen-frame');
       const dotsContainer = carousel.querySelector('[data-dots]');
-      const status = carousel.querySelector('[data-viewer-status]');
       let sequence = [];
       let dotButtons = [];
       let current = 0;
@@ -209,11 +207,6 @@ const { homepage = false } = Astro.props;
           button.setAttribute('aria-current', active ? 'true' : 'false');
         });
 
-        if (status) {
-          status.textContent = sequencePosition >= 0
-            ? `Slide ${sequencePosition + 1} of ${sequence.length}`
-            : 'From the Archive';
-        }
 
         if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
       };
