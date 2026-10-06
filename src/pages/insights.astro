@@ -2,10 +2,10 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-const categories = ['Business & Performance Reviews', 'Business Analysis & Strategy', 'Information Systems & Process Improvement'];
+const categories = ['Business Performance Reviews', 'Business Analysis & Strategy', 'Information Systems & Process Improvement'];
 const posts = (await getCollection('posts')).filter(post => !post.data.draft && !post.data.advertorial).sort((a,b) => +b.data.date - +a.data.date);
 ---
 <Base title="Insights | Murtaza Insights">
 <section class="page-head wrap"><p class="eyebrow">Insights</p><h1>Insights</h1><p>Practical analysis of business performance, management decisions, systems, processes and technology.</p></section>
-{categories.map(category => { const categoryPosts = posts.filter(post => post.data.category === category); return <section class="section wrap listing archive-list" aria-label={category}><div class="section-heading"><div><h2>{category}</h2></div></div>{categoryPosts.map(post => <ArticleCard post={post} compact />)}</section>; })}
+{categories.filter(category => posts.some(post => post.data.category === category)).map(category => { const categoryPosts = posts.filter(post => post.data.category === category); return <section class="section wrap listing archive-list" aria-label={category}><div class="section-heading"><div><h2>{category}</h2></div></div>{categoryPosts.map(post => <ArticleCard post={post} compact />)}</section>; })}
 </Base>

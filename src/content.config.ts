@@ -7,7 +7,7 @@ const posts = defineCollection({
     title: z.string(),
     slug: z.string(),
     date: z.coerce.date(),
-    category: z.enum(['Business & Performance Reviews', 'Business Analysis & Strategy', 'Information Systems & Process Improvement']),
+    category: z.enum(['Business Performance Reviews', 'Business Analysis & Strategy', 'Information Systems & Process Improvement']),
     summary: z.string(),
     seoTitle: z.string().optional(),
     metaDescription: z.string().optional(),
@@ -22,3 +22,4 @@ const posts = defineCollection({
 });
 
 export const collections = { posts };
+

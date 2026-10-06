@@ -1,0 +1,12 @@
+/* Approved readability and article-template corrections, 6 October 2026. */
+#content .article .prose { font-size: 1.416rem; line-height: 1.75; overflow-wrap: anywhere; }
+#content .article .prose > p:first-child { font-size: 1.584rem; }
+#content .article-toc a, #content .mobile-toc nav a { font-size: .984rem; line-height: 1.5; }
+#content .article-grid { grid-template-columns: 240px minmax(0, 780px); gap: 2.25rem; }
+#content .article-grid-no-toc { grid-template-columns: minmax(0, 780px); }
+#content .article .prose th, #content .article .prose td { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+ #content .article-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+ #content .article-toc { display: none; }
+ #content .mobile-toc { display: block; }
+}

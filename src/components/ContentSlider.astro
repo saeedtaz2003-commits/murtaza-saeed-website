@@ -9,10 +9,10 @@ const openingId = (configured ?? newest)?.id;
 const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
 ---
-  <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Funny Bizz slideshow"}>
+  <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "BIZ BUZZ slideshow"}>
     <div class="funny-carousel" data-carousel data-default-meme={openingId} data-homepage={homepage ? "true" : "false"}>
       <p class="funny-slider-note">
-        <strong>{homepage ? "Articles, Cartoons & Offers" : "Funny Bizz Slideshow"}</strong> — swipe or use Previous/Next to browse. Tap an article or offer to open it.
+        <strong>{homepage ? "Articles, Cartoons & Offers" : "BIZ BUZZ Slideshow"}</strong> — swipe or use Previous/Next to browse. Tap an article or offer to open it.
         <span class="funny-viewer-status" data-viewer-status>Loading slideshow…</span>
       </p>
 
@@ -106,12 +106,12 @@ const { homepage = false } = Astro.props;
     </div>
   </section>
 
-  {!homepage && <section class="wrap"><WhatsAppAlerts topic="FUNNY BIZZ" /></section>}
+  {!homepage && <section class="wrap"><WhatsAppAlerts topic="BIZ BUZZ" /></section>}
 
   {!homepage && (
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
     <p class="eyebrow">Archive</p>
-    <h2 id="funny-archive-title">All Funny Bizz</h2>
+    <h2 id="funny-archive-title">All BIZ BUZZ</h2>
     <p class="funny-archive-instruction">Select any item to load it into the slideshow viewer above.</p>
     <div class="funny-archive-list">
       {orderedItems.map((item, index) => (
@@ -121,7 +121,7 @@ const { homepage = false } = Astro.props;
           data-archive-index={index}
           data-item-id={item.id}
           aria-current={index === 0 ? 'true' : 'false'}
-          aria-label={`Show ${item.title} in the Funny Bizz viewer`}
+          aria-label={`Show ${item.title} in the BIZ BUZZ viewer`}
         >
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
@@ -298,3 +298,4 @@ const { homepage = false } = Astro.props;
       }
     }
   </script>
+

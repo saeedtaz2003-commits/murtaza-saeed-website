@@ -348,19 +348,8 @@ It is a finance function that is more accurate, better controlled, more producti
 
 ## Could your finance function work better?
 
-I am not an AI developer or systems vendor.
+I can help an owner, Managing Director, CEO, CFO or finance manager review existing processes, accounting systems and management information; identify recurring pain points and manual work; examine whether existing capabilities are being underused; and assess opportunities to improve accuracy, control, analysis or productivity.
 
-My role is to approach the question from the business and finance side first.
+The starting question is: “What would you like your finance function to do better — and what is preventing it from doing so today?”
 
-I can help an owner, Managing Director, CEO, CFO or finance manager review existing finance processes, accounting systems and management information; identify recurring pain points and manual work; examine whether existing capabilities are being underused; and identify areas where AI could practically improve accuracy, control, analysis or productivity.
-
-From there, I can help determine which opportunities are worth pursuing — and which may simply add cost and complexity without sufficient business benefit.
-
-The starting question is not: “Which AI should we buy?”
-
-It is:
-
-## “What would you like your finance function to do better — and what is preventing it from doing so today?”
-
-If that is a question your business is facing, let's discuss a Finance Process & AI Opportunity Review.
-
+<a class="button" href="/work-with-me">DISCUSS INFORMATION SYSTEMS &amp; PROCESS IMPROVEMENT →</a>

@@ -1,7 +1,7 @@
 ---
 const path = Astro.url.pathname;
 const links = [
-  ['Home', '/'], ['Insights', '/insights'], ['Funny Bizz', '/the-lighter-side'],
+  ['Home', '/'], ['Insights', '/insights'], ['BIZ BUZZ', '/the-lighter-side'],
   ['Work With Me', '/work-with-me'], ['About', '/about'], ['Contact', '/contact']
 ];
 ---
@@ -9,7 +9,7 @@ const links = [
   <div class="topbar wrap">
     <a class="brand" href="/" aria-label="Murtaza Insights home">
       <img src="/images/murtaza-insights-full-logo-canonical.png" alt="Murtaza Insights" width="2048" height="768" />
-      <small>Business · Management · Technology</small>
+      <small>Business · Management · Systems</small>
     </a>
     <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main navigation">
@@ -26,3 +26,4 @@ const links = [
     nav?.classList.toggle('open');
   });
 </script>
+
