@@ -2,7 +2,7 @@
 title: "From Paper to ERP: Where Can AI Improve Your Finance Function?"
 slug: "from-paper-to-erp-ai-finance-function"
 date: "2026-10-04"
-category: "Business & Finance"
+category: "Information Systems & Process Improvement"
 summary: "AI or SI — whatever the name, how can it help your business?"
 image: "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg"
 imageAlt: "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP."

@@ -65,18 +65,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     copy: 'Yes — through the right mix of pricing, volume, delivery channels and operating leverage. Simbisa Kenya offers a useful real-world example: average spend fell, yet revenue and operating profit still rose. See how the pieces came together in the Simbisa FY2026 results and this Equity Axis analysis.',
     copyHtml: 'Yes — through the right mix of pricing, volume, delivery channels and operating leverage. Simbisa Kenya offers a useful real-world example: average spend fell, yet revenue and operating profit still rose. See how the pieces came together in the <a href="https://ir.simbisabrands.com/simbisa-brands-audited-abridged-financial-results-fye-30-june-2026/" target="_blank" rel="noopener noreferrer">Simbisa FY2026 results</a> and <a href="https://equityaxis.net/post/19508/2026/9/simbisa-turns-kenya-traffic-growth-into-higher-earnings" target="_blank" rel="noopener noreferrer">this Equity Axis analysis</a>.'
   },
-  {
-    id: 'advertorial-launch-offer',
-    sliderCategory: 'Advertorial',
-    category: 'Launch Offer',
-    title: 'Free Advertorials — Launch Offer',
-    image: '/images/murtaza-insights-free-advertorials-launch-offer-1080x1080.png',
-    alt: 'Murtaza Insights Free Advertorials Launch Offer highlighting Be Seen, Be Trusted, Be Chosen and its finance and business services.',
-    copy: 'To mark the launch of Murtaza Insights, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
-    copyHtml: 'To mark the launch of <em>Murtaza Insights</em>, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
-    destinationUrl: '/advertorials',
-    ctaLabel: 'View the launch offer →'
-  },
+
   {
     id: 'canada-swing-states-tariffs',
     sliderCategory: 'Funny',

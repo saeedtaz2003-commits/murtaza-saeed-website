@@ -2,7 +2,7 @@
 title: "Don’t Invent It. Technify It."
 slug: "dont-invent-it-technify-it"
 date: "2026-10-04"
-category: "Technology"
+category: "Information Systems & Process Improvement"
 summary: "Why your next AI opportunity may be hiding in a very old business practice"
 image: "/images/old-wine-new-bottle-technify-it.jpg"
 imageAlt: "Old merchant says ‘I know my customers’ beside a modern AI robot saying ‘I call it predictive analytics,’ illustrating how old business practices are being turned into modern apps."

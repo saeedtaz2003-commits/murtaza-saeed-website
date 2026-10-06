@@ -1,0 +1,12 @@
+  {
+    id: 'advertorial-launch-offer',
+    sliderCategory: 'Advertorial',
+    category: 'Launch Offer',
+    title: 'Free Advertorials — Launch Offer',
+    image: '/images/murtaza-insights-free-advertorials-launch-offer-1080x1080.png',
+    alt: 'Murtaza Insights Free Advertorials Launch Offer highlighting Be Seen, Be Trusted, Be Chosen and its finance and business services.',
+    copy: 'To mark the launch of Murtaza Insights, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
+    copyHtml: 'To mark the launch of <em>Murtaza Insights</em>, five businesses or organisations will be selected to have an advertorial prepared and published at no writing or publication charge. The offer provides an opportunity to present a business, product or service to a wider audience in a professionally prepared format.',
+    destinationUrl: '/advertorials',
+    ctaLabel: 'View the launch offer →'
+  },

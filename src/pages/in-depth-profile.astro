@@ -1,54 +1,97 @@
 ---
 import Base from '../layouts/Base.astro';
-const capabilities = [
-  { id: 'financial-analysis', title: 'Financial Analysis & Management Reporting', text: 'My work has focused on turning accounting and operational data into information that managers can use. At Pwani Oil Products, I developed management-information and exception-reporting systems for the Board, executive management and departmental heads. At Comcraft Services, I designed management reports and improved the flow of information supporting management accounts, quarterly Board reporting, year-end closing and external audit.' },
-  { id: 'business-reviews', title: 'Business Reviews & Performance Improvement', text: 'I look at financial performance in the context of how a business operates. At Pwani, I introduced Value Addition per Kg (VA/KG) to make profitability easier to understand and the Bulk-to-Consumer Ratio (BC Ratio) to track product mix, market penetration and brand development. My experience includes reviewing controls, processes and management information across functions.' },
-  { id: 'planning', title: 'Budgeting, Forecasting & Planning', text: 'I introduced formal budgeting and budgetary control at E.A. Match, together with Management by Objectives and Zero-Based Budgeting concepts. At Pwani, I supported structured budgeting, cash-flow forecasting and capital-expenditure planning, and initiated strategic planning with external consultants.' },
-  { id: 'projects', title: 'Project Support & Business Expansion', text: 'At Pwani, I prepared feasibility studies for two major expansion projects, supporting successful syndicated bank financing and related VAT-exemption applications. Earlier, at E.A. Match, I managed operational and expansion initiatives including a vertical-supply project approximately 800 km from the main operation, a new manufacturing facility and the development of a trading and distribution business.' },
-  { id: 'systems', title: 'ERP, Accounting Systems & Process Improvement', text: 'My systems experience spans early mechanised and computerised accounting through to integrated ERP. I led Pastel implementation at Pwani and developed customised applications with programming support. As Director – Value Chain Development, I led pre-ERP planning, evaluation, partner assessment, super-user development and change-management preparation, then worked closely with Oracle specialists during the Oracle E-Business Suite 12 rollout. At Comcraft, I took over and successfully implemented a stalled IMPACT ENCORE project across five Aluminium Group companies.' },
-  { id: 'operations', title: 'Operations & General Management', text: 'At E.A. Match, I progressed from Accountant to Chief Accountant, Operations Manager and General Manager. For more than five years I managed three manufacturing units, the trading operation and the workshop profit centre. This experience connected finance with production, purchasing, operational decisions and business development.' },
-  { id: 'commercial', title: 'Strategic & Commercial Perspective', text: 'My responsibilities have extended beyond finance into governance, strategic planning and cross-functional management. I helped commercialise E.A. Match’s in-house workshop as a profit centre serving external customers and supported development-bank funding for expansion and specialised manufacturing equipment. At Pwani, my contributions also included customer presentations, packaging and label redesign, advertising campaigns and a self-administered company medical scheme.' },
-  { id: 'digital', title: 'Digital Business & Promotion', text: 'Through Next Step Consulting, from 2012 to 2021, I developed practical experience in promotional material, presentations, social-media campaigns, targeted Facebook advertising, websites, SEO and Google business listings. Assignments included Nyali Centre and Shanker Electronics. Voluntary work for Nyali Golf & Country Club included the “Have Your Say” project, gathering and presenting members’ priorities for the club’s development. Next Step Consulting is a past chapter of my career.' }
-];
-const timeline = [
-  ['2026–Present', 'Remote Finance & Business Advisor'],
-  ['2021–2026', 'Retirement Break'],
-  ['2012–2021', 'Lead Consultant – Digital Marketing & Business Promotion, Next Step Consulting'],
-  ['2011–2012', 'Director – Value Chain Development, Pwani Oil Products Ltd'],
-  ['2004–2011', 'Chief Finance Manager, Pwani Oil Products Ltd'],
-  ['1995–2002', 'MIS Manager, Comcraft Services Ltd'],
-  ['1977–1994', 'Accountant → Chief Accountant → Operations Manager → General Manager, E.A. Match Co. (K) Ltd']
-];
-const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: 'Murtaza Saeed', jobTitle: 'Remote Finance & Business Advisor', url: new URL('/in-depth-profile', Astro.site).href, sameAs: ['https://linkedin.com/in/murtaza-saeed'], description: 'Finance and business professional with more than 35 years of experience in financial management, business systems, operations and general management.' };
 ---
-<Base
-  title="In-Depth Profile of Murtaza Saeed | Remote Finance & Business Advisor"
-  description="Explore Murtaza Saeed’s career, capabilities and major projects across financial analysis, business reviews, ERP, manufacturing and general management."
-  image="/images/murtaza-saeed-in-depth-profile-social-preview.png"
-  imageAlt="Murtaza Saeed, Remote Finance & Business Advisor, with Murtaza Insights branding and service areas."
-  imageWidth="1734"
-  imageHeight="907"
-  jsonLd={jsonLd}
->
-  <section class="page-head wrap"><p class="eyebrow">Professional background</p><h1>In-Depth Profile of Murtaza Saeed</h1><h2>Remote Finance &amp; Business Advisor</h2><p>Financial Analysis • Business Reviews • Project Support</p></section>
-  <section class="section wrap profile-layout">
-    <nav class="profile-nav profile-nav-desktop" aria-label="In this profile"><strong>In this profile</strong>{capabilities.map(item => <a href={`#${item.id}`}>{item.title}</a>)}<a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav>
-    <details id="profile-contents" class="profile-nav-mobile">
-      <summary>In this profile</summary>
-      <nav aria-label="Profile contents">{capabilities.map(item => <a href={`#${item.id}`}>{item.title}</a>)}<a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav>
-    </details>
-    <div class="prose">
-      <p>My career has combined financial management with a practical understanding of systems, manufacturing, operations and business development. With more than 35 years of experience, I bring a broad perspective to the numbers and the decisions behind them.</p>
-      {capabilities.map(item => <section id={item.id} class="profile-capability"><h2>{item.title}</h2><p>{item.text}</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>)}
-      <section id="current-focus" class="profile-routes"><h2>Current Focus</h2><p>I provide selective remote finance and business support to organisations that need experienced input without a full-time senior finance appointment.</p><p>Based in Kenya, I am available for remote assignments with businesses in Kenya, the UK and other international markets. My focus is on work that can be delivered effectively remotely, with on-site involvement considered only where genuinely necessary and practical.</p><p>I also publish business, finance and technology commentary at <em>Murtaza Insights</em>.</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
-      <section id="professional-background"><h2>Professional Background</h2><p>I qualified as a Chartered Accountant with ICAEW earlier in my career. My subsequent experience has extended across financial management, management reporting, business systems, operations and general management.</p><p>I have the legal right to work in both Kenya and the United Kingdom.</p><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
-      <section id="career-timeline"><h2>Career Timeline</h2><ol class="career-timeline">{timeline.map(([dates, role]) => <li><strong>{dates}</strong><span>{role}</span></li>)}</ol><p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p></section>
-      <section id="work-with-me" class="cta"><h2>Work With Me</h2><p>For financial analysis, a business review or project support, share your objective, expected timescale and the help you need.</p><div class="actions"><a class="button" href="/work-with-me">Explore how I can help</a><a class="read" href="https://linkedin.com/in/murtaza-saeed" target="_blank" rel="noopener noreferrer">View LinkedIn Profile ↗</a></div></section>
-    </div>
-  </section>
+<Base title="In-Depth Profile of Murtaza Saeed | Remote Business Advisor" description="Murtaza Saeed, Remote Business Advisor: business performance reviews, business analysis and strategy, information systems and process improvement." image="/images/murtaza-saeed-profile-web.jpg" imageAlt="Portrait of Murtaza Saeed, Remote Business Advisor">
+<section class="page-head wrap"><h1>In-Depth Profile of Murtaza Saeed</h1><h2>Remote Business Advisor</h2></section>
+<section class="section wrap profile-layout"><nav class="profile-nav profile-nav-desktop" aria-label="In this profile"><strong>In this profile</strong><a href="#business-performance-reviews">Business &amp; Performance Reviews</a><a href="#business-analysis-strategy">Business Analysis &amp; Strategy</a><a href="#information-systems-process-improvement">Information Systems &amp; Process Improvement</a><a href="#operations-general-management">Operations &amp; General Management</a><a href="#management-information-reporting">Management Information &amp; Reporting</a><a href="#planning-budgeting-performance-management">Planning, Budgeting &amp; Performance Management</a><a href="#digital-business-experience">Digital Business Experience</a><a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav><details id="profile-contents" class="profile-nav-mobile"><summary>In this profile</summary><nav aria-label="Profile contents"><a href="#business-performance-reviews">Business &amp; Performance Reviews</a><a href="#business-analysis-strategy">Business Analysis &amp; Strategy</a><a href="#information-systems-process-improvement">Information Systems &amp; Process Improvement</a><a href="#operations-general-management">Operations &amp; General Management</a><a href="#management-information-reporting">Management Information &amp; Reporting</a><a href="#planning-budgeting-performance-management">Planning, Budgeting &amp; Performance Management</a><a href="#digital-business-experience">Digital Business Experience</a><a href="#current-focus">Current Focus</a><a href="#professional-background">Professional Background</a><a href="#career-timeline">Career Timeline</a><a href="#work-with-me">Work With Me</a></nav></details><div class="prose">
+<p>My career has combined finance, business operations, systems, manufacturing and general management.</p>
+<p>Over more than 35 years, I have worked in roles where the central question was not simply whether the numbers were correct, but what they meant for the business, how decisions were being made, where systems or processes were failing and what management could do to improve performance.</p>
+<p>Today, that experience is reflected in three principal areas:</p>
+<p>Business &amp; Performance Reviews • Business Analysis &amp; Strategy • Information Systems &amp; Process Improvement</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="business-performance-reviews">Business &amp; Performance Reviews</h2>
+<p>My approach to business reviews is to look beyond headline results and understand what is driving them.</p>
+<p>At Pwani Oil Products, I developed management-information and exception-reporting systems for the Board, executive management and departmental heads. I introduced measures including Value Addition per Kg (VA/KG) to make profitability easier to understand and the Bulk-to-Consumer Ratio to track product mix, market penetration and brand development.</p>
+<p>My work also involved reviewing controls, processes, management information and operating performance across different parts of the business.</p>
+<p>Earlier, at E.A. Match, I progressed from Accountant to Chief Accountant, Operations Manager and General Manager. For more than five years I managed three manufacturing units, the trading operation and the workshop profit centre.</p>
+<p>That experience reinforced the importance of reviewing performance in the context of how a business actually operates.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="business-analysis-strategy">Business Analysis &amp; Strategy</h2>
+<p>Much of my career has involved analysing important business decisions before management commits significant resources.</p>
+<p>At Pwani Oil Products, I prepared feasibility studies for two major expansion projects, supporting successful syndicated bank financing and related VAT-exemption applications.</p>
+<p>I also supported structured budgeting, cash-flow forecasting, capital-expenditure planning and the introduction of a more formal strategic-planning process with external consultants.</p>
+<p>At E.A. Match, I was involved in operational and expansion initiatives including:</p>
+<ul>
+<li>a vertical-supply project approximately 800 km from the main operation;</li>
+<li>development of a new manufacturing facility;</li>
+<li>creation of a trading and distribution business; and</li>
+<li>commercialisation of the company workshop as a profit centre serving external customers.</li>
+</ul>
+<p>My responsibilities also extended into broader commercial areas, including customer presentations, packaging and label redesign, advertising campaigns and administration of a company medical scheme.</p>
+<p>The common thread has been the need to assess alternatives, understand risks, test assumptions and support management decisions with practical analysis.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="information-systems-process-improvement">Information Systems &amp; Process Improvement</h2>
+<p>Business systems have been a significant part of my career, from early mechanised and computerised accounting through to integrated ERP.</p>
+<p>At Pwani Oil Products, I led implementation of Pastel and developed customised applications with programming support.</p>
+<p>Later, as Director – Value Chain Development, I led pre-ERP planning, evaluation, partner assessment, super-user development and change-management preparation. I then worked closely with Oracle specialists during the rollout of Oracle E-Business Suite 12.</p>
+<p>At Comcraft Services, I took over a stalled IMPACT ENCORE implementation and successfully completed the project across five Aluminium Group companies.</p>
+<p>My systems work has always been closely connected to business processes and management information. The objective was not technology for its own sake, but better information, stronger controls, less duplication and more effective decision-making.</p>
+<p>That same principle applies to AI and other modern tools: start with the business problem or process, then determine where technology can genuinely improve it.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="operations-general-management">Operations &amp; General Management</h2>
+<p>My career has not been confined to finance.</p>
+<p>At E.A. Match, my progression into Operations Manager and then General Manager gave me responsibility for manufacturing, purchasing, trading activities, workshop operations and business development.</p>
+<p>Managing operating units directly provided a practical understanding of how decisions made in finance, production, procurement and sales affect one another.</p>
+<p>That broader operational experience continues to shape the way I look at businesses today.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="management-information-reporting">Management Information &amp; Reporting</h2>
+<p>Throughout my career, I have focused on turning accounting and operational data into information that management can use.</p>
+<p>At Pwani Oil Products, I developed management-information and exception-reporting systems for different levels of management.</p>
+<p>At Comcraft Services, I designed management reports and improved information flows supporting management accounts, quarterly Board reporting, year-end closing and external audit.</p>
+<p>The underlying principle was always the same: management information should help people identify issues, ask better questions and make decisions—not simply produce more reports.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="planning-budgeting-performance-management">Planning, Budgeting &amp; Performance Management</h2>
+<p>At E.A. Match, I introduced formal budgeting and budgetary control together with concepts including Management by Objectives and Zero-Based Budgeting.</p>
+<p>At Pwani Oil Products, I was involved in budgeting, cash-flow forecasting, capital-expenditure planning and strategic planning.</p>
+<p>These disciplines remain relevant to business analysis today, but I now see them as part of the wider management process rather than as standalone finance activities.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="digital-business-experience">Digital Business Experience</h2>
+<p>From 2012 to 2021, through Next Step Consulting, I developed practical experience in business promotion and digital communications.</p>
+<p>This included promotional material, presentations, social-media campaigns, targeted Facebook advertising, websites, SEO and Google business listings.</p>
+<p>Assignments included work for Nyali Centre and Shanker Electronics.</p>
+<p>I also undertook voluntary work for Nyali Golf &amp; Country Club, including the Have Your Say project, which gathered and presented members’ priorities for the club’s development.</p>
+<p>Next Step Consulting is now a completed chapter of my career, but the experience broadened my understanding of how businesses communicate, position themselves and use digital tools.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="current-focus">Current Focus</h2>
+<p>I am now retired from full-time corporate employment but remain professionally engaged.</p>
+<p>I work selectively with business owners, executives and management teams who would benefit from an experienced, independent perspective on:</p>
+<ul>
+<li>Business &amp; Performance Reviews</li>
+<li>Business Analysis &amp; Strategy</li>
+<li>Information Systems &amp; Process Improvement</li>
+</ul>
+<p>I work primarily remotely from Kenya and can support businesses in Kenya, the UK and other international markets.</p>
+<p>On-site involvement can be considered where genuinely necessary and practical.</p>
+<p>I also publish business, management and technology commentary through <em>Murtaza Insights</em>.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="professional-background">Professional Background</h2>
+<p>I qualified as a Chartered Accountant with ICAEW earlier in my career.</p>
+<p>My subsequent experience extended well beyond accounting into financial management, management information, systems implementation, manufacturing, operations, business development and general management.</p>
+<p>I have the legal right to work in both Kenya and the United Kingdom.</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="career-timeline">Career Timeline</h2>
+<p>2026–Present</p>
+<p>Remote Business Advisor</p>
+<p>2021–2026</p>
+<p>Retirement Break</p>
+<p>2012–2021</p>
+<p>Lead Consultant — Digital Marketing &amp; Business Promotion, Next Step Consulting</p>
+<p>2011–2012</p>
+<p>Director — Value Chain Development, Pwani Oil Products Ltd</p>
+<p>2004–2011</p>
+<p>Chief Finance Manager, Pwani Oil Products Ltd</p>
+<p>1995–2002</p>
+<p>MIS Manager, Comcraft Services Ltd</p>
+<p>1977–1994</p>
+<p>Accountant → Chief Accountant → Operations Manager → General Manager, E.A. Match Co. (K) Ltd</p>
+<p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="work-with-me">Work With Me</h2>
+<p>If you have a business issue, important decision, system or process that would benefit from an independent review, you can see the areas in which I currently work on the Work With Me page.</p>
+<p><a class="button" href="/work-with-me">Explore How I Can Help →</a></p>
+<p><a class="button" href="https://linkedin.com/in/murtaza-saeed" target="_blank" rel="noopener noreferrer">View LinkedIn Profile →</a></p>
+</div></section>
 </Base>
-
 <style>
+  .prose h2[id] { scroll-margin-top: 110px; }
   .profile-nav-mobile { display: none; }
   .profile-back-link { display: none; }
 

@@ -24,7 +24,7 @@ content:
         type: select
         required: true
         options:
-          values: [Business & Finance, Reviews & Experiences, Technology, Travel & Leisure]
+          values: [Business & Performance Reviews, Business Analysis & Strategy, Information Systems & Process Improvement]
       - { name: summary, label: Summary, type: text, required: true }
       - { name: image, label: Main image, type: image, required: true }
       - { name: imageAlt, label: Image description, type: string, required: true }

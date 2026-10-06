@@ -2,7 +2,7 @@
 title: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
 slug: "mbappe-endorsement-to-ownership"
 date: 2026-09-22
-category: "Business & Finance"
+category: "Business Analysis & Strategy"
 summary: "Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership."
 seoTitle: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
 metaDescription: "Explore why Kylian Mbappé left Nike for On—and what the reported equity deal teaches about athlete endorsements, ownership and long-term value."

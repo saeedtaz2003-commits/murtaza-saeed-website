@@ -2,7 +2,7 @@
 title: "Quickmart IPO: A Good Business — But What Is It Worth?"
 slug: "quickmart-ipo-what-price-should-you-pay"
 date: 2026-09-24
-category: "Business & Finance"
+category: "Business Analysis & Strategy"
 summary: "Quickmart may be one of Kenya’s more interesting IPO prospects—but investors are buying shares from the current owners, and the final offer price will determine whether a promising business is also a worthwhile investment."
 seoTitle: "Quickmart IPO Kenya: What Price Makes the Shares Worth Buying?"
 metaDescription: "Independent analysis of the proposed Quickmart IPO: secondary share sale, valuation scenarios, dividends, supplier-credit risk and what Kenyan investors should examine."

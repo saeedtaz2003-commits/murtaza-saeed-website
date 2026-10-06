@@ -10,7 +10,7 @@ async function walk(dir) {
   else if (file.name === 'index.html') {
    const url = '/' + path.relative('dist', dir).split(path.sep).filter(Boolean).join('/') + '/';
    if (url === '//') continue;
-   if (['/search/', '/articles/', '/technology/', '/business-finance/'].includes(url)) continue;
+   if (['/search/', '/articles/', '/technology/', '/business-finance/', '/editorials/', '/advertorials/'].includes(url)) continue;
    const html = await readFile(full, 'utf8');
    if (/http-equiv="refresh"/.test(html)) continue;
    const main = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? '';
