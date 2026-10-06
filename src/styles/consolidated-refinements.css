@@ -51,7 +51,7 @@ a.button[href*="wa.me"] { white-space: nowrap; }
 #content .archive-copy .archive-summary { margin-bottom: .6rem; }
 #content .archive-copy .read { display: inline-block; margin: 0; }
 #content .home-focus-heading { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.8rem,3vw,2.7rem); font-weight: 800; font-style: normal; color: var(--navy); line-height: 1.2; text-align: center; }
-a:not(.button):not(.funny-content-cta):not(.archive-thumb):not(.funny-slide-image):not(.brand):not(.logo) { text-decoration: underline; text-underline-offset: .18em; }
+a:not(.button):not(.funny-content-cta):not(.archive-thumb):not(.funny-slide-image):not(.brand):not(.logo):not(.home-topics > a):not(.card-image) { text-decoration: underline; text-underline-offset: .18em; }
 #content .home-biz-buzz a, #content .archive-copy h2 a { text-decoration: underline; }
 a.button, #content .funny-content-cta, .content-response-actions a { text-transform: none; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; height: auto; }
 a.button .external-cta-icon { flex: 0 0 1.15em; }
