@@ -37,6 +37,7 @@ a.button[href*="wa.me"] { white-space: nowrap; }
  #content .funny-archive-selector .funny-archive-summary-thumb { width: 64px; height: 64px; }
  #content .funny-archive-selector .funny-archive-title { font-size: 1.05rem; }
  #content .funny-viewer-grid { display: flex !important; flex-direction: column; overflow: visible; }
+ #content .funny-carousel { overflow-anchor: none; }
  #content .funny-viewer-media { position: sticky; top: calc(var(--sticky-header-height,84px) + 8px); z-index: 10; background: var(--paper); align-self: stretch; padding-bottom: .35rem; }
  #content .funny-viewer-media.is-compact { height: clamp(190px, calc((100dvh - var(--sticky-header-height,84px)) * .33), 300px) !important; grid-template-rows: minmax(0,1fr) 44px !important; }
  #content .funny-viewer-media.is-compact .funny-screen-frame { height: 100% !important; min-height: 0 !important; max-height: 100%; aspect-ratio: auto; }
