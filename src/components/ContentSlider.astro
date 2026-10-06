@@ -187,7 +187,20 @@ const { homepage = false } = Astro.props;
         });
       };
 
-      const show = (index) => {
+      const revealCommentary = () => {
+        const heading = panels[current]?.querySelector('h2');
+        if (!(heading instanceof HTMLElement) || !(commentaryViewport instanceof HTMLElement)) return;
+        const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
+        const mobile = window.matchMedia('(max-width: 760px)').matches;
+        const mediaHeight = mobile ? carousel.querySelector('.funny-viewer-media')?.getBoundingClientRect().height ?? 0 : 0;
+        const visibleTop = headerHeight + mediaHeight + (mobile ? 20 : 12);
+        if (!mobile) commentaryViewport.scrollTo({ top: 0, behavior: 'smooth' });
+        const rect = mobile ? heading.getBoundingClientRect() : commentaryViewport.getBoundingClientRect();
+        if (rect.top >= visibleTop && rect.top + heading.offsetHeight <= window.innerHeight) return;
+        window.scrollTo({ top: Math.max(0, window.scrollY + rect.top - visibleTop), behavior: 'smooth' });
+      };
+
+      const show = (index, reveal = true) => {
         if (!slides.length || index < 0 || index >= slides.length) return;
         current = index;
 
@@ -212,7 +225,8 @@ const { homepage = false } = Astro.props;
         });
 
 
-        if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
+        if (reveal) window.requestAnimationFrame(revealCommentary);
+        else if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
       };
 
       const stepSequence = (direction) => {
@@ -275,7 +289,7 @@ const { homepage = false } = Astro.props;
           const index = Number(button.getAttribute('data-archive-index'));
           if (!Number.isFinite(index)) return;
           show(index);
-          scrollViewerIntoView();
+
         });
       });
 
@@ -285,9 +299,9 @@ const { homepage = false } = Astro.props;
         : -1;
 
       if (requestedIndex >= 0) {
-        show(requestedIndex);
+        show(requestedIndex, false);
       } else if (sequence.length) {
-        show(sequence[0]);
+        show(sequence[0], false);
       }
 
       if (window.location.hash === '#funny-slider') {

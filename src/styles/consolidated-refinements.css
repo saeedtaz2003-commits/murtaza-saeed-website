@@ -64,3 +64,24 @@ a.button[href*="wa.me"], a.button[href*="linkedin.com"] { white-space: normal; }
  #content .funny-viewer-media .funny-screen-frame { width: 100%; height: auto !important; aspect-ratio: 1; max-height: none; }
  #content .funny-viewer-media .meme-stage { aspect-ratio: 1; }
 }
+
+/* Latest navigation and Profile corrections. */
+#content .home-biz-buzz { white-space: normal; text-wrap: wrap; }
+#content .home-biz-buzz a { display: inline; white-space: normal; }
+#content .archive-copy h2 a { color: var(--navy); text-decoration-thickness: 1px; text-decoration-color: #101d3855; text-underline-offset: .14em; }
+#content .archive-copy h2 a:hover { text-decoration-color: currentColor; }
+#content .article .prose :is(h2,h3)[id], #content .profile-layout .prose h2[id] { scroll-margin-top: calc(var(--site-header-height,100px) + 12px); }
+#content .career-history { margin: 1rem 0; }
+#content .career-row { display: grid; grid-template-columns: 8.5rem minmax(0,1fr); gap: .75rem; padding-block: .5rem; align-items: start; }
+#content .career-row dt { font-weight: 700; }
+#content .career-row dd { margin: 0; min-width: 0; }
+@media (max-width:900px) {
+ #content .article .prose :is(h2,h3)[id] { scroll-margin-top: calc(var(--site-header-height,84px) + 80px); }
+ #content .mobile-toc { top: var(--site-header-height,84px); }
+}
+@media (max-width:760px) {
+ #content .profile-nav-mobile { top: var(--site-header-height,84px); }
+ #content .profile-layout .prose h2[id] { scroll-margin-top: calc(var(--site-header-height,84px) + 68px); }
+ #content .career-row { grid-template-columns: 6.4rem minmax(0,1fr); gap: .5rem; }
+}
+@media (max-width:350px) { #content .career-row { grid-template-columns: 1fr; gap: .15rem; } }

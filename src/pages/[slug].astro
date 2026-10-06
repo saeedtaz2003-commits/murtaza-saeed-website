@@ -79,9 +79,11 @@ const articleSchema = {
     </div>
   </article>
   <script>
+    import { initSectionNavigation } from '../scripts/section-navigation';
+    initSectionNavigation('.article-toc a');
     document.querySelectorAll('.mobile-toc a').forEach(link => link.addEventListener('click', () => link.closest('details')?.removeAttribute('open')));
     const tocLinks = [...document.querySelectorAll('.article-toc a')];
-    const sections = tocLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const sections = tocLinks.map(link => document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1)))).filter(Boolean);
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) {
         tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));

@@ -71,25 +71,16 @@ import ExternalCtaIcon from '../components/ExternalCtaIcon.astro';
 <p>My subsequent experience extended well beyond accounting into financial management, management information, systems implementation, manufacturing, operations, business development and general management.</p>
 <p>I have the legal right to work in both Kenya and the United Kingdom.</p>
 <p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="career-timeline">Career Timeline</h2>
-<p>2026–Present</p>
-<p>Remote Business Advisor</p>
-<p>2021–2026</p>
-<p>Retirement Break</p>
-<p>2012–2021</p>
-<p>Lead Consultant — Digital Marketing &amp; Business Promotion, Next Step Consulting</p>
-<p>2011–2012</p>
-<p>Director — Value Chain Development, Pwani Oil Products Ltd</p>
-<p>2004–2011</p>
-<p>Chief Finance Manager, Pwani Oil Products Ltd</p>
-<p>1995–2002</p>
-<p>MIS Manager, Comcraft Services Ltd</p>
-<p>1977–1994</p>
-<p>Accountant → Chief Accountant → Operations Manager → General Manager, E.A. Match Co. (K) Ltd</p>
+<dl class="career-history"><div class="career-row"><dt>2026–Present</dt><dd>Remote Business Advisor</dd></div><div class="career-row"><dt>2021–2026</dt><dd>Retirement Break</dd></div><div class="career-row"><dt>2012–2021</dt><dd>Lead Consultant — Digital Marketing &amp; Business Promotion, Next Step Consulting</dd></div><div class="career-row"><dt>2011–2012</dt><dd>Director — Value Chain Development, Pwani Oil Products Ltd</dd></div><div class="career-row"><dt>2004–2011</dt><dd>Chief Finance Manager, Pwani Oil Products Ltd</dd></div><div class="career-row"><dt>1995–2002</dt><dd>MIS Manager, Comcraft Services Ltd</dd></div><div class="career-row"><dt>1977–1994</dt><dd>Accountant → Chief Accountant → Operations Manager → General Manager, E.A. Match Co. (K) Ltd</dd></div></dl>
 <p class="profile-back-link"><a href="#profile-contents">↑ Profile contents</a></p><h2 id="work-with-me">Work With Me</h2>
 <p>If you have a business issue, important decision, system or process that would benefit from an independent review, you can see the areas in which I currently work on the Work With Me page.</p>
 <p><a class="button" href="/work-with-me">Explore How I Can Help</a></p>
 <p><a class="button" href="https://linkedin.com/in/murtaza-saeed" target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="linkedin" />View LinkedIn Profile</a></p>
 </div></section>
+<script>
+  import { initSectionNavigation } from '../scripts/section-navigation';
+  initSectionNavigation('.profile-nav a, .profile-nav-mobile nav a', '.profile-nav-mobile');
+</script>
 </Base>
 <style>
   .prose h2[id] { scroll-margin-top: 110px; }
