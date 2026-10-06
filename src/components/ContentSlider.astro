@@ -15,6 +15,7 @@ const { homepage = false } = Astro.props;
         <strong>{homepage ? "Articles, Cartoons & Offers" : "Biz Buzz Slideshow"}</strong> — swipe or use the arrows to browse. Tap an article or offer to open it.
       </p>
 
+      <div class="funny-sticky-sentinel" aria-hidden="true"></div>
       <div class="funny-viewer-grid">
         <div class="funny-viewer-media">
           <div class="funny-screen-frame" aria-live="polite">
@@ -125,7 +126,6 @@ const { homepage = false } = Astro.props;
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
             <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
-            <small>{item.sliderCategory === 'Funny' ? item.category : `${item.sliderCategory} · ${item.category}`}</small>
           </span>
           <span class="funny-archive-open" aria-hidden="true">↗</span>
         </button>
@@ -148,6 +148,24 @@ const { homepage = false } = Astro.props;
       let current = 0;
       let touchStartX = 0;
       let ignoreNextClick = false;
+      const media = carousel.querySelector('.funny-viewer-media');
+      const sentinel = carousel.querySelector('.funny-sticky-sentinel');
+      const mobile = window.matchMedia('(max-width: 760px)');
+      let stickyTick = false;
+      const updateStickyMedia = () => {
+        stickyTick = false;
+        const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
+        if (carousel instanceof HTMLElement) carousel.style.setProperty('--sticky-header-height', `${headerHeight}px`);
+        const compact = mobile.matches && !!sentinel && sentinel.getBoundingClientRect().top < headerHeight + 8;
+        media?.classList.toggle('is-compact', compact);
+      };
+      const queueStickyUpdate = () => {
+        if (!stickyTick) { stickyTick = true; window.requestAnimationFrame(updateStickyMedia); }
+      };
+      window.addEventListener('scroll', queueStickyUpdate, { passive: true });
+      window.addEventListener('resize', queueStickyUpdate);
+      mobile.addEventListener('change', queueStickyUpdate);
+      updateStickyMedia();
 
       const shuffle = (values) => {
         const result = [...values];

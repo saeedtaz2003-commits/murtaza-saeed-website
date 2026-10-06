@@ -123,4 +123,4 @@ Sometimes the opportunity is not one major change, but two or three smaller chan
 
 A Business Performance Review can help identify which changes could make a measurable difference — and test the numbers before you act.
 
-<a class="button" href="/work-with-me">DISCUSS A BUSINESS PERFORMANCE REVIEW →</a>
+<a class="button" href="/work-with-me">DISCUSS A BUSINESS PERFORMANCE REVIEW</a>

@@ -7,5 +7,5 @@ const posts = (await getCollection('posts')).filter(post => !post.data.draft && 
 ---
 <Base title="Insights | Murtaza Insights">
 <section class="page-head wrap"><p class="eyebrow">Insights</p><h1>Insights</h1><p>Practical analysis of business performance, management decisions, systems, processes and technology.</p></section>
-{categories.filter(category => posts.some(post => post.data.category === category)).map(category => { const categoryPosts = posts.filter(post => post.data.category === category); return <section class="section wrap listing archive-list insights-category" aria-label={category}><div class="section-heading"><div><h2>{category}</h2></div></div>{categoryPosts.map(post => <ArticleCard post={post} compact />)}</section>; })}
+{categories.filter(category => posts.some(post => post.data.category === category)).map(category => { const categoryPosts = posts.filter(post => post.data.category === category); return <section class="section wrap listing archive-list insights-category" aria-label={category}><div class="section-heading"><div><h2>{category}</h2></div></div>{categoryPosts.map(post => <ArticleCard post={post} compact hideCategory />)}</section>; })}
 </Base>

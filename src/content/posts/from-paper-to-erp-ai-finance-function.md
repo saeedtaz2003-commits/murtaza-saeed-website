@@ -352,4 +352,4 @@ I can help an owner, Managing Director, CEO, CFO or finance manager review exist
 
 The starting question is: “What would you like your finance function to do better — and what is preventing it from doing so today?”
 
-<a class="button" href="/work-with-me">DISCUSS INFORMATION SYSTEMS &amp; PROCESS IMPROVEMENT →</a>
+<a class="button" href="/work-with-me">DISCUSS INFORMATION SYSTEMS &amp; PROCESS IMPROVEMENT</a>
