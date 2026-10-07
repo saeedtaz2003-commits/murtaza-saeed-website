@@ -87,7 +87,7 @@ const { homepage = false } = Astro.props;
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
                 {item.destinationUrl && (
                   <p class="funny-content-link">
-                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View Advertorial' : 'Read the Full Article')}</a>
+                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View Advertorial' : 'Read the Article')}</a>
                   </p>
                 )}
                 <ContentEngagement title={item.title} commentTitle={item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" />
@@ -293,7 +293,8 @@ const { homepage = false } = Astro.props;
         });
       });
 
-      const requestedId = new URLSearchParams(window.location.search).get('meme');
+      const sharedId = new URLSearchParams(window.location.search).get('meme');
+      const requestedId = sharedId === 'quickmart-ipo-featured' ? 'quickmart-ipo-ksh7-50-is-it-worth-buying' : sharedId;
       const requestedIndex = requestedId
         ? slides.findIndex((slide) => slide.getAttribute('data-item-id') === requestedId)
         : -1;

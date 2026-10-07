@@ -22,7 +22,7 @@ const articleSchema = {
   headline: pageTitle,
   description: pageDescription,
   datePublished: post.data.date.toISOString(),
-  dateModified: '2026-09-23T00:00:00.000Z',
+  dateModified: post.data.date.toISOString(),
   mainEntityOfPage: pageUrl,
   image: new URL(post.data.image, Astro.site).toString(),
   author: {
@@ -66,13 +66,8 @@ const articleSchema = {
     <div class:list={["article-grid", { "article-grid-no-toc": !toc.length }]}>
       {toc.length > 0 && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
-        {post.data.slug === "quickmart-ipo-what-price-should-you-pay" && <WhatsAppAlerts topic="QuickMart IPO" />}
-        <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} commentLast={post.data.slug === 'quickmart-ipo-what-price-should-you-pay'} class="article-engagement" />
-        {post.data.slug === 'quickmart-ipo-what-price-should-you-pay' && <aside class="article-help-card">
-          <h2>HOW I CAN HELP</h2><h3>Looking for an independent view of your business?</h3>
-          <ul><li>Business Performance Reviews</li><li>Business Analysis &amp; Strategy</li><li>Information Systems &amp; Process Improvement</li></ul>
-          <a class="button" href="/work-with-me">Discuss a Project</a>
-        </aside>}
+        {post.data.slug === "quickmart-ipo-ksh7-50-is-it-worth-buying" && <WhatsAppAlerts topic="QuickMart IPO" />}
+        <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
         <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Business, Management & Systems Insights</span></p></div>
         <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
       </div>

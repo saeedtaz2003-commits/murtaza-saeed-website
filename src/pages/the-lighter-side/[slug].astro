@@ -17,15 +17,16 @@ const pageTitle = `${item.title} | Biz Buzz | Murtaza Insights`;
 
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
-const socialImage = `/images/social/${item.id}.jpg`;
+const isCurrentQuickmart = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying';
+const socialImage = isCurrentQuickmart ? item.image : `/images/social/${item.id}.jpg`;
 ---
 <Base
   title={pageTitle}
   description={description}
   image={socialImage}
   imageAlt={item.alt}
-  imageWidth={1200}
-  imageHeight={1200}
+  imageWidth={isCurrentQuickmart ? 1254 : 1200}
+  imageHeight={isCurrentQuickmart ? 1254 : 1200}
   type="article"
 >
   <section class="section wrap funny-share-landing">

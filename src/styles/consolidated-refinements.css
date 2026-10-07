@@ -85,3 +85,9 @@ a.button[href*="wa.me"], a.button[href*="linkedin.com"] { white-space: normal; }
  #content .career-row { grid-template-columns: 6.4rem minmax(0,1fr); gap: .5rem; }
 }
 @media (max-width:350px) { #content .career-row { grid-template-columns: 1fr; gap: .15rem; } }
+
+/* Approved primary article action and responsive Quickmart comparison. */
+#content .funny-content-cta { background: var(--purple); color: #fff; border-radius: .4rem; }
+#content .funny-content-cta:hover, #content .funny-content-cta:focus-visible { background: var(--purple-deep, #6135bd); color: #fff; }
+#content .article .prose .quickmart-comparison { display: table; width: 100%; table-layout: fixed; white-space: normal; }
+#content .article .prose .quickmart-comparison th, #content .article .prose .quickmart-comparison td { white-space: normal; overflow-wrap: anywhere; }
