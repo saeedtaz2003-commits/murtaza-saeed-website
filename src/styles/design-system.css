@@ -45,3 +45,5 @@ body { font-size: var(--body-size); }
 @media (min-width: 761px) {
   #content :is(.mobile-toc,.profile-nav-mobile) { display: none; }
 }
+
+#funny-archive-title { scroll-margin-top: calc(var(--site-header-height,84px) + 16px); }
