@@ -1,17 +1,16 @@
 ---
 import ExternalCtaIcon from './ExternalCtaIcon.astro';
-interface Props { topic: 'QuickMart IPO' | 'Biz Buzz'; }
+interface Props { topic: 'Updates' | 'Biz Buzz'; }
 const { topic } = Astro.props;
 const number = '254726829626';
-const message = topic === 'QuickMart IPO' ? 'Please add me to the QuickMart IPO alerts.' : 'Please add me to Biz Buzz alerts.';
-const label = topic === 'QuickMart IPO' ? 'Get QuickMart IPO Alerts on WhatsApp' : 'Get New Meme Notifications';
+const message = topic === 'Updates' ? 'Please add me to general Murtaza Insights updates.' : 'Please add me to Biz Buzz alerts.';
+const label = topic === 'Updates' ? 'Get Updates' : 'Get New Meme Notifications';
 const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 ---
-<aside class="whatsapp-alerts">
-  <h2>{topic === 'QuickMart IPO' ? 'Want updates on the QuickMart IPO?' : 'Like Biz Buzz?'}</h2>
-  {topic === 'QuickMart IPO' && <p>Receive WhatsApp alerts for significant IPO developments, including the final Information Memorandum.</p>}
+<aside class:list={["whatsapp-alerts", { "article-updates": topic === 'Updates' }]}>
+  <h2>{topic === 'Updates' ? 'Be the First to Get New Updates' : 'Like Biz Buzz?'}</h2>
   <a class="button" href={href} target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="whatsapp" />{label}</a>
   {topic === 'Biz Buzz' && <p><a class="button" href="/the-lighter-side#funny-slider">Explore More Memes</a></p>}
-  <p>Send the message, then save Murtaza Insights (+254 726 829626) in your contacts to receive broadcast alerts.</p>
+  <p>Send the message, then save <em>Murtaza Insights</em> (+254 726 829626) in your contacts to receive broadcast alerts.</p>
 </aside>
 

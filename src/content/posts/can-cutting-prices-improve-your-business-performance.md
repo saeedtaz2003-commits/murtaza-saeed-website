@@ -122,5 +122,3 @@ It is about finding two changes that work together.
 Sometimes the opportunity is not one major change, but two or three smaller changes that work together.
 
 A Business Performance Review can help identify which changes could make a measurable difference — and test the numbers before you act.
-
-<a class="button" href="/work-with-me">Discuss a Business Performance Review</a>

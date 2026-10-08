@@ -1,11 +1,10 @@
 ---
 import { funnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
 import ContentEngagement from './ContentEngagement.astro';
-import settings from '../data/slider-settings.json';
+import { italicizeBrandHtml } from '../utils/brand-format.mjs';
 import WhatsAppAlerts from './WhatsAppAlerts.astro';
-const configured = items.find(item => item.id === settings.defaultMemeId);
 const newest = [...items].sort((a,b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))[0];
-const openingId = (configured ?? newest)?.id;
+const openingId = newest?.id;
 const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
 ---
@@ -73,7 +72,7 @@ const { homepage = false } = Astro.props;
               <div class="lighter-copy">
                 {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
                 <h2 set:html={item.titleHtml ?? item.title} />
-                <p set:html={item.copyHtml ?? item.copy} />
+                <p set:html={italicizeBrandHtml(item.copyHtml ?? item.copy)} />
                 {'domains' in item && item.domains && (
                   <section class="domain-name-list" aria-label="Unfortunate domain names">
                     <h3>Unfortunate Domain Names</h3>

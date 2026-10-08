@@ -422,6 +422,3 @@ Technify it.
 If your business still has a process that depends heavily on manual judgement, repeated negotiation, spreadsheets, individual memory or time-consuming coordination, it may be worth examining whether technology can simplify it.
 
 I can help you identify the commercial problem, challenge the idea, define what a practical first version should achieve and assess whether it is worth pursuing before substantial money is committed.
-
-<a class="button" href="/work-with-me">Work With Me</a>
-

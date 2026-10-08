@@ -1,4 +1,5 @@
 ---
+import BrandText from './BrandText.astro';
 const { post, featured = false, compact = false, hideCategory = false } = Astro.props;
 const dateLabel = post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
 const contentLabel = post.data.advertorial
@@ -13,7 +14,7 @@ const contentLabel = post.data.advertorial
     <div class="archive-copy">
       <p class="eyebrow">{!hideCategory && <>{contentLabel} · </>}{dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
-      <p class="archive-summary">{post.data.summary}</p>
+      <p class="archive-summary"><BrandText text={post.data.summary} /></p>
       <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>
@@ -23,7 +24,7 @@ const contentLabel = post.data.advertorial
     <div class="card-copy">
       <p class="eyebrow">{contentLabel} · {dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
-      <p>{post.data.summary}</p>
+      <p><BrandText text={post.data.summary} /></p>
       <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>

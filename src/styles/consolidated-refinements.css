@@ -91,3 +91,20 @@ a.button[href*="wa.me"], a.button[href*="linkedin.com"] { white-space: normal; }
 #content .funny-content-cta:hover, #content .funny-content-cta:focus-visible { background: var(--purple-deep, #6135bd); color: #fff; }
 #content .article .prose .quickmart-comparison { display: table; width: 100%; table-layout: fixed; white-space: normal; }
 #content .article .prose .quickmart-comparison th, #content .article .prose .quickmart-comparison td { white-space: normal; overflow-wrap: anywhere; }
+
+/* 8 October: article actions stay outside the sticky reading area. */
+#content .article-actions { max-width: 780px; margin: 2rem auto; }
+#content .article-updates { padding: 1rem; margin-block: 1rem; }
+#content .article-updates h2 { font-size: 1.45rem; margin: 0 0 .75rem; }
+#content .article-updates .button { gap: .5rem; padding: .45rem .9rem; }
+#content .article-updates .external-cta-icon { width: 32px; height: 32px; flex: 0 0 32px; }
+#content .article-updates > p { font-size: .95rem; margin: .65rem 0 0; }
+#content .related-articles { margin: 2rem 0; }
+#content .related-articles > h2 { font-size: 1.7rem; color: var(--purple); }
+#content .related-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+#content .related-card { min-width: 0; }
+#content .related-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+#content .related-card h3 { font-size: 1.35rem; color: var(--navy); line-height: 1.3; margin-block: .7rem .4rem; }
+#content .related-card p { font-size: 1.05rem; line-height: 1.5; }
+#content .home-biz-buzz a { white-space: nowrap; }
+@media (max-width:760px) { #content .related-grid { grid-template-columns: minmax(0,1fr); } }

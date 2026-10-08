@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import BrandText from './BrandText.astro';
+const { currentSlug, category } = Astro.props;
+const posts = (await getCollection('posts')).filter(p => !p.data.draft && !p.data.advertorial && p.data.slug !== currentSlug)
+  .sort((a,b) => Number(b.data.category === category) - Number(a.data.category === category) || +b.data.date - +a.data.date).slice(0,3);
+const teasers = {
+  'can-cutting-prices-improve-your-business-performance': 'Explore how lower prices can improve business performance when a second change helps you reach and serve more customers economically, using Simbisa as an example.',
+  'dont-invent-it-technify-it': 'Many new technology ideas begin with old business practices. Explore how AI and software can remove their limitations and create practical opportunities for your business.',
+  'from-paper-to-erp-ai-finance-function': 'From handwritten records to full ERP, examine where AI can reduce manual work, improve controls and help management get more useful answers from existing information.',
+  'quickmart-ipo-ksh7-50-is-it-worth-buying': 'Quickmart is growing and profitable. Examine what KSh7.50 buys, how its dividend compares with a Treasury bill, and why future growth matters to the investment.',
+  'mbappe-endorsement-to-ownership': 'Mbappé’s move from Nike to On combines cash, equity and product influence. Explore the wider business lessons about turning a celebrity endorsement into ownership.'
+};
+---
+{posts.length > 0 && <section class="related-articles" aria-labelledby="related-title"><h2 id="related-title">More from {category}</h2><div class="related-grid">{posts.map(p => <article class="related-card"><a href={`/${p.data.slug}/`}><img src={p.data.image} alt={p.data.imageAlt} loading="lazy" /><h3>{p.data.title}</h3></a><p><BrandText text={teasers[p.data.slug] ?? p.data.summary.split(/\s+/).slice(0,25).join(' ')} /></p></article>)}</div></section>}

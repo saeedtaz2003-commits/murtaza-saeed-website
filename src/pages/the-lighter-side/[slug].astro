@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import BrandText from '../../components/BrandText.astro';
 import { funnyBizzItems } from '../../data/funny-bizz';
 import ContentEngagement from '../../components/ContentEngagement.astro';
 
@@ -33,7 +34,7 @@ const socialImage = isCurrentQuickmart ? item.image : `/images/social/${item.id}
     <p class="eyebrow">Biz Buzz</p>
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.alt} />
-    <p>{item.copy}</p>
+    <p><BrandText text={item.copy} /></p>
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
     <ContentEngagement title={item.title} commentTitle={item.title} url={`/the-lighter-side/${item.id}?v=3`} />
   </section>

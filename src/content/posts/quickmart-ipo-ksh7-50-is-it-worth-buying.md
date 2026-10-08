@@ -19,6 +19,7 @@ imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
 <li>The growth question: Quickmart therefore needs future earnings, dividends and potentially its share price to grow to justify accepting the lower initial income yield and higher risk.</li>
 <li>The cash question: Quickmart plans substantial expansion while distributing a very high proportion of profits. Supplier credit and continued strong cash generation will therefore matter.</li>
 <li>The IPO structure: Your KSh7.50 buys existing shares; the IPO proceeds go to the selling shareholder, not into Quickmart.</li>
+<li>The lock-up risk: After a fully subscribed IPO, 800 million retained shares (20% of Quickmart) are outside the 24-month lock-up; any further sale could affect the market price.</li>
 <li>The positive signal: IFC’s proposed KSh1.94 billion investment adds institutional credibility — but it does not make KSh7.50 automatically cheap.</li>
 </ul>
 <p>Bottom line: Quickmart may be worth buying at KSh7.50 — but the investment case rests more on tomorrow’s growth than today’s dividend.</p>
@@ -167,6 +168,20 @@ imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
 
 <p>That future growth must principally be financed by the business itself and whatever other funding sources are available to it. This makes Quickmart’s future cash generation particularly important.</p>
 
+## Shareholder Lock-up: Could Another 800 Million Shares Be Sold?
+
+If the IPO is fully subscribed, Sokoni retains two billion shares. Quickmart’s [official IPO disclosures](https://ipo.quickmart.co.ke/) say 60% of that remaining holding is subject to a 24-month lock-up from listing, with limited exceptions.
+
+That means **1.2 billion shares are locked**, while **800 million shares — 20% of Quickmart’s issued shares — are outside that lock-up**. At KSh7.50, the unlocked shares have an indicative value of **KSh6 billion**. No further sale has been announced; being outside the lock-up does not mean they will be sold.
+
+What could a further sale mean?
+
+- **Selling pressure:** Additional shares offered could put downward pressure on the market price if demand does not absorb them.
+- **Capital gains:** That extra supply could restrain share-price appreciation even if the business performs well.
+- **Investor confidence:** Investors may interpret further selling as reduced commitment, although shareholder liquidity needs need not signal weaker business prospects.
+- **Liquidity:** Wider ownership and more shares available to trade could improve liquidity, depending on demand and how sales occur.
+- **No dilution:** These are existing shares. Their sale changes ownership; it does not increase the share count, dilute other shareholders or directly reduce earnings per share.
+
 ## What does IFC’s investment tell us?
 
 <p>The International Finance Corporation (IFC), part of the World Bank Group, has conditionally agreed to invest approximately KSh1.94 billion in the IPO.</p>
@@ -249,11 +264,10 @@ imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
 
 <p>It is what is driving them, what could change them, and what they mean for the decision ahead.</p>
 
-<p>Murtaza Insights applies this kind of structured analysis to business performance, strategy and decision-making.</p>
+<p><em>Murtaza Insights</em> applies this kind of structured analysis to business performance, strategy and decision-making.</p>
 
 <p><strong>Need an independent analysis of a business issue or opportunity?</strong></p>
 
-<p><a class="button" href="https://forms.gle/HPmku2CCPTfA9mwv9" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
 
 <p><em>This article is business analysis and commentary for general information. It is not personal investment advice.</em></p>
 

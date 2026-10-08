@@ -1,0 +1,5 @@
+---
+const { text } = Astro.props;
+const parts = String(text ?? '').split('Murtaza Insights');
+---
+{parts.map((part, index) => <>{index > 0 && <em>Murtaza Insights</em>}{part}</>)}

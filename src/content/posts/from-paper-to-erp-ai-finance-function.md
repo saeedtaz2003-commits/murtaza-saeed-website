@@ -351,5 +351,3 @@ It is a finance function that is more accurate, better controlled, more producti
 I can help an owner, Managing Director, CEO, CFO or finance manager review existing processes, accounting systems and management information; identify recurring pain points and manual work; examine whether existing capabilities are being underused; and assess opportunities to improve accuracy, control, analysis or productivity.
 
 The starting question is: “What would you like your finance function to do better — and what is preventing it from doing so today?”
-
-<a class="button" href="/work-with-me">Discuss Information Systems &amp; Process Improvement</a>

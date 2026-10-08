@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ContentEngagement from '../components/ContentEngagement.astro';
 import WhatsAppAlerts from '../components/WhatsAppAlerts.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
+import BrandText from '../components/BrandText.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
@@ -49,7 +51,7 @@ const articleSchema = {
         {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights">{post.data.category}</a>}
         {' · '}{post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}
       </p>
-      <h1>{post.data.title}</h1><p class="dek">{post.data.summary}</p>
+      <h1>{post.data.title}</h1><p class="dek"><BrandText text={post.data.summary} /></p>
     </header>
     {isAdvertorial && (
       <aside class="article-advertorial-disclosure" aria-label="Advertorial disclosure">
@@ -61,17 +63,22 @@ const articleSchema = {
       </aside>
     )}
     <img class="article-image" src={post.data.image} alt={post.data.imageAlt} />
-    {post.data.takeaways && <section class="at-a-glance" aria-labelledby="glance-title"><p class="eyebrow" id="glance-title">At a glance</p><ul>{post.data.takeaways.map(item => <li>{item}</li>)}</ul></section>}
+    {post.data.takeaways && <section class="at-a-glance" aria-labelledby="glance-title"><p class="eyebrow" id="glance-title">At a glance</p><ul>{post.data.takeaways.map(item => <li><BrandText text={item} /></li>)}</ul></section>}
+    <div class="article-reading">
     {toc.length > 0 && <details class="mobile-toc"><summary>In this article</summary><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></details>}
     <div class:list={["article-grid", { "article-grid-no-toc": !toc.length }]}>
       {toc.length > 0 && <aside class="article-toc"><p>In this article</p><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
-      <div class="prose"><Content />
-        {post.data.slug === "quickmart-ipo-ksh7-50-is-it-worth-buying" && <WhatsAppAlerts topic="QuickMart IPO" />}
-        <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
-        <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Business, Management & Systems Insights</span></p></div>
-        <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
-      </div>
+      <div class="prose"><Content /></div>
     </div>
+    </div>
+    <div class="article-actions prose">
+      <p class="primary-article-action"><a class="button" href="https://forms.gle/HPmku2CCPTfA9mwv9" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
+      <WhatsAppAlerts topic="Updates" />
+      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
+    </div>
+    <RelatedArticles currentSlug={post.data.slug} category={post.data.category} />
+    <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Business, Management & Systems Insights</span></p></div>
+    <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
   </article>
   <script>
     import { initSectionNavigation } from '../scripts/section-navigation';
