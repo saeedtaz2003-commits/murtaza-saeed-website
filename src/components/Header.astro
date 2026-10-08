@@ -31,5 +31,9 @@ const links = [
     button.setAttribute('aria-expanded', String(!open));
     nav?.classList.toggle('open');
   });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    button?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+  }));
 </script>
 
