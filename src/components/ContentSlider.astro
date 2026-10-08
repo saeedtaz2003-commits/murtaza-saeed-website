@@ -90,6 +90,7 @@ const { homepage = false } = Astro.props;
                   </p>
                 )}
                 <ContentEngagement title={item.title} commentTitle={item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" />
+                {!homepage && <div class="funny-inline-discovery"><WhatsAppAlerts topic="Biz Buzz" /></div>}
               </div>
             </article>
           ))}
@@ -98,7 +99,7 @@ const { homepage = false } = Astro.props;
     </div>
   </section>
 
-  {!homepage && <section class="wrap"><WhatsAppAlerts topic="Biz Buzz" /></section>}
+  {!homepage && <section class="wrap funny-below-discovery"><WhatsAppAlerts topic="Biz Buzz" /></section>
 
   {!homepage && (
   <section class="wrap funny-archive" aria-labelledby="funny-archive-title">
@@ -127,6 +128,10 @@ const { homepage = false } = Astro.props;
   )}
 
   <script>
+    // Both discovery links should open the archive, not jump back to the current slide.
+    document.querySelectorAll('.funny-inline-discovery a[href$="#funny-slider"], .funny-below-discovery a[href$="#funny-slider"]').forEach((link) => {
+      link.setAttribute('href', '#funny-archive-title');
+    });
     const carousel = document.querySelector('[data-carousel]');
     if (carousel) {
       const slides = Array.from(carousel.querySelectorAll('[data-slide]'));

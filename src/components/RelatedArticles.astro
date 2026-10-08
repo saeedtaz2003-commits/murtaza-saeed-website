@@ -2,8 +2,11 @@
 import { getCollection } from 'astro:content';
 import BrandText from './BrandText.astro';
 const { currentSlug, category } = Astro.props;
-const posts = (await getCollection('posts')).filter(p => !p.data.draft && !p.data.advertorial && p.data.slug !== currentSlug)
-  .sort((a,b) => Number(b.data.category === category) - Number(a.data.category === category) || +b.data.date - +a.data.date).slice(0,3);
+// Category-specific recommendations must only include articles in the same canonical category.
+const posts = (await getCollection('posts'))
+  .filter(p => !p.data.draft && !p.data.advertorial && p.data.slug !== currentSlug && p.data.category === category)
+  .sort((a,b) => +b.data.date - +a.data.date)
+  .slice(0,3);
 const teasers = {
   'can-cutting-prices-improve-your-business-performance': 'Explore how lower prices can improve business performance when a second change helps you reach and serve more customers economically, using Simbisa as an example.',
   'dont-invent-it-technify-it': 'Many new technology ideas begin with old business practices. Explore how AI and software can remove their limitations and create practical opportunities for your business.',
