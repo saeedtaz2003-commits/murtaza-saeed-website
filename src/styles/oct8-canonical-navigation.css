@@ -57,6 +57,7 @@
 
 /* Same typography, colours and spacing for both mobile dropdowns. */
 @media (max-width: 760px) {
+  #content .article-grid:has(.article-toc) { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   #content :is(.article-toc, .profile-nav-desktop) { display: none; }
   #content :is(.mobile-toc, .profile-nav-mobile) {
     display: block;
