@@ -28,6 +28,7 @@ toc:
 image: "/images/mbappe-nike-to-on-web.jpg"
 imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
 draft: false
+sources: [{"text": "On: “On enters football alongside Kylian Mbappé”", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}]
 ---
 
 ## Why did Kylian Mbappé leave Nike after nearly 20 years?
@@ -218,10 +219,3 @@ On still has to design excellent football products, manufacture them reliably an
 Yet the strategic direction is persuasive. The most valuable person in a campaign need not remain satisfied with a fee for appearing in it. The better ambition is to gain a voice in the product and a stake in the value created.
 
 **Do not merely negotiate a bigger cheque for today—secure a strategic share of tomorrow.**
-
-### Sources and further reading
-
-- [On: “On enters football alongside Kylian Mbappé”](https://press.on-running.com/on-enters-football-alongside-kylian-mbappe)
-- [The Guardian: Mbappé leaves Nike and becomes an On shareholder](https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on)
-- [Reuters: Mbappé leaves Nike as On enters football](https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/)
-- [Reuters analysis: the opportunity and hurdles facing On](https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/)

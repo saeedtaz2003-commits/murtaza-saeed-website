@@ -8,6 +8,7 @@ seoTitle: "Quickmart IPO at KSh7.50: Is It Worth Buying?"
 metaDescription: "Quickmart’s IPO is priced at KSh7.50. We examine valuation, dividend yield, growth, IFC investment and comparisons with Treasury bills and infrastructure bonds."
 image: "/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png"
 imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
+sources: [{"text": "Quickmart IPO official site and Information Memorandum: offer price, shares offered, proceeds, store count, dividend policy, resident dividend withholding tax, IFC cornerstone commitment and offer timetable.", "url": "https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/QUICKMART-PLC-INFORMATION-MEMORANDUM_OCT2026_FINAL.pdf"}, {"text": "Central Bank of Kenya: 364-day Treasury bill previous average interest rate 9.0397% for the auction dated 8 October 2026; CBK government-securities guidance states 15% withholding tax for Treasury bills.", "url": "https://www.centralbank.go.ke/bills-bonds/treasury-bills-average-rates/"}, {"text": "Quickmart FY2025/H1 2026 financial information: FY2025 revenue KSh50.43bn; reported PAT KSh1.51bn; adjusted PAT KSh1.71bn; June 2026 borrowings KSh6.8m; structurally negative working capital about KSh4bn.", "url": "https://ipo.quickmart.co.ke/"}, {"text": "Central Bank of Kenya: August 2026 infrastructure bond reopening, accepted average yields IFB1/2019/016 12.1960%, IFB1/2021/018 12.6877%, IFB1/2021/021 13.0520%. Historical auction yields do not represent current secondary-market yields.", "url": "https://www.centralbank.go.ke/uploads/historical_treasury_bond_results/1214594764_RESULTS%20IFB1-2019-016%20IFB1-2021-018%20AND%20IFB1-2021-021%20DATED%2017-08-2026.pdf"}]
 ---
 
 <section class="at-a-glance editorial-summary" aria-labelledby="article-at-a-glance"><p class="eyebrow" id="article-at-a-glance">AT A GLANCE</p>
@@ -288,13 +289,3 @@ What could a further sale mean?
 <p>Need an independent analysis of a business issue or opportunity?</p>
 
 <p>This article is business analysis and commentary for general information. It is not personal investment advice.</p>
-
-## Source notes for publication
-
-<p>Quickmart IPO official site and Information Memorandum: offer price, shares offered, proceeds, store count, dividend policy, resident dividend withholding tax, IFC cornerstone commitment and offer timetable.</p>
-
-<p>Central Bank of Kenya: 364-day Treasury bill previous average interest rate 9.0397% for the auction dated 8 October 2026; CBK government-securities guidance states 15% withholding tax for Treasury bills.</p>
-
-<p>Quickmart FY2025/H1 2026 financial information: FY2025 revenue KSh50.43bn; reported PAT KSh1.51bn; adjusted PAT KSh1.71bn; June 2026 borrowings KSh6.8m; structurally negative working capital about KSh4bn.</p>
-
-<p>Central Bank of Kenya: August 2026 infrastructure bond reopening, accepted average yields IFB1/2019/016 12.1960%, IFB1/2021/018 12.6877%, IFB1/2021/021 13.0520%. Historical auction yields do not represent current secondary-market yields.</p>

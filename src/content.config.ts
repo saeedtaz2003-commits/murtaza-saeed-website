@@ -12,6 +12,7 @@ const posts = defineCollection({
     seoTitle: z.string().optional(),
     metaDescription: z.string().optional(),
     takeaways: z.array(z.string()).optional(),
+    sources: z.array(z.object({ text: z.string(), url: z.string().url().optional() })).optional(),
     toc: z.array(z.object({ label: z.string(), id: z.string() })).optional(),
     image: z.string(),
     imageAlt: z.string(),

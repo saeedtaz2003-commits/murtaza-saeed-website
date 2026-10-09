@@ -24,3 +24,17 @@
   vertical-align: top;
 }
 .editorial-table-scroll:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+.responsive-table-cards { display: none; }
+#content .article-sources { margin-top: 2rem; padding: 1rem; border-top: 1px solid #ddd5eb; }
+#content .article-sources summary { color: #4b2375; font-weight: 700; cursor: pointer; }
+#content .article-sources :is(summary, li, a) { font-size: .875rem; line-height: 1.6; }
+#content .article-sources li { margin-block: .75rem; overflow-wrap: anywhere; }
+#content .article-sources summary:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .responsive-table-desktop { display: none; }
+  #content .article .prose .responsive-table-cards { display: grid; gap: 1rem; margin: 0; }
+  .comparison-card { margin: 0; min-width: 0; padding: 1rem; border: 1px solid #ddd5eb; border-radius: 8px; background: #faf8fd; }
+  .comparison-field + .comparison-field { margin-top: .8rem; }
+  .comparison-field dt { font-weight: 700; color: #4b2375; }
+  #content .article .prose .comparison-field dd { margin: .2rem 0 0; overflow-wrap: anywhere; }
+}

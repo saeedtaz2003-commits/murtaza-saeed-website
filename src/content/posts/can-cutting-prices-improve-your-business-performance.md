@@ -7,6 +7,7 @@ summary: "Sometimes it can — if another change helps you handle the extra volu
 image: "/images/can-customers-spend-less-make-more-money.jpg"
 imageAlt: "Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow."
 draft: false
+sources: [{"text": "Source: Simbisa Brands Limited, Audited Abridged Financial Results for the year ended 30 June 2026, together with its FY2026 trading updates.", "url": "https://ir.simbisabrands.com/simbisa-brands-audited-abridged-financial-results-fye-30-june-2026/"}]
 ---
 
 The normal reaction to a price reduction is straightforward:
@@ -115,7 +116,7 @@ Sometimes improving performance is not about making one dramatic change.
 
 It is about finding two changes that work together.
 
-<p><a href="https://ir.simbisabrands.com/simbisa-brands-audited-abridged-financial-results-fye-30-june-2026/" target="_blank" rel="noopener noreferrer">Source: Simbisa Brands Limited, Audited Abridged Financial Results for the year ended 30 June 2026, together with its FY2026 trading updates.</a></p>
+
 
 ## Could a few targeted changes improve your business performance?
 

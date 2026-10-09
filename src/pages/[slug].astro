@@ -5,6 +5,7 @@ import ContentEngagement from '../components/ContentEngagement.astro';
 import WhatsAppAlerts from '../components/WhatsAppAlerts.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import BrandText from '../components/BrandText.astro';
+import ArticleSources from '../components/ArticleSources.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
@@ -79,6 +80,7 @@ const articleSchema = {
     <RelatedArticles currentSlug={post.data.slug} category={post.data.category} />
     <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Business, Management & Systems Insights</span></p></div>
     <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
+    <ArticleSources sources={post.data.sources} />
   </article>
   <script>
     import { initSectionNavigation } from '../scripts/section-navigation';
