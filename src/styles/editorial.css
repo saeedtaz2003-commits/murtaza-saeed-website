@@ -1,0 +1,26 @@
+#content .article .prose .editorial-summary {
+  background: #F4F0FA;
+  border-top: 3px solid var(--purple);
+}
+#content .article .editorial-summary .eyebrow,
+#content .article .editorial-bottom-line strong,
+#content .article .worth-exploring .eyebrow {
+  color: #4b2375;
+}
+.worth-exploring { margin-block: 2rem; }
+.editorial-table-scroll { max-width: 100%; overflow-x: auto; margin-block: 1.5rem; }
+#content .article .prose .editorial-comparison {
+  display: table;
+  width: 100%;
+  min-width: 640px;
+  table-layout: fixed;
+  white-space: normal;
+  margin: 0;
+}
+#content .article .prose .editorial-comparison th,
+#content .article .prose .editorial-comparison td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.editorial-table-scroll:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
