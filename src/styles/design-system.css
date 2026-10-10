@@ -30,8 +30,8 @@ body { font-size: var(--body-size); }
 #content .archive-card .archive-copy h2 { font-size: var(--preview-heading); font-weight: 800; line-height: 1.3; margin: .4rem 0; }
 #content .archive-card .archive-summary { font-size: var(--body-size); line-height: var(--body-leading); margin: .5rem 0; }
 #content .archive-card .eyebrow { font-size: var(--body-size); line-height: 1.4; margin: 0; letter-spacing: normal; }
-#content .related-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
-#content .related-grid .archive-card { grid-template-columns: minmax(0,1fr); }
+#content .related-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 1.5rem; }
+#content .related-grid .archive-card { grid-template-columns: var(--preview-image) minmax(0,1fr); }
 #content .related-grid .archive-thumb { width: var(--preview-image); height: var(--preview-image); }
 @media (max-width: 760px) {
   #content .related-grid { grid-template-columns: minmax(0,1fr); }

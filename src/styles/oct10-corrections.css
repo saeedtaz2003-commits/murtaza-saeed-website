@@ -1,7 +1,7 @@
 /* Shared action placement and contents hierarchy, 10 October 2026. */
 #content :is(.article-toc, .profile-nav-desktop, .mobile-toc, .profile-nav-mobile) { background: #F1ECF9; }
 #content :is(.article-toc, .profile-nav-desktop) > :is(p,strong),
-#content :is(.mobile-toc, .profile-nav-mobile) summary { color: #563184; }
+#content :is(.mobile-toc, .profile-nav-mobile) summary { color: var(--navy); }
 #content .article-actions { width: 100%; max-width: none; margin: 2rem 0; }
 #content :is(.content-response-actions,.engagement-copyright-year,.engagement-policy,.primary-article-action,.funny-content-link) { text-align: center; }
 #content .content-response-actions { justify-content: center; }
@@ -26,4 +26,35 @@ footer .footer-alert-instructions::before { content: ' · '; }
   footer .footer-grid > div:last-child { text-align: center; }
   footer :is(.footer-copyright,.footer-policy,.footer-alert-instructions) { display: block; }
   footer :is(.footer-policy,.footer-alert-instructions)::before { content: none; }
+}
+
+/* Canonical CTA and navigation typography for every page and commentary. */
+#content :is(.button,.funny-content-cta),
+#content .funny-inline-discovery .whatsapp-alerts .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: .65rem 1rem;
+  border-radius: 7px;
+  font: 800 var(--body-size)/1.4 Inter, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+#content a.button[href*="linkedin.com"] { background: #0A66C2; color: #fff; }
+#content a.button .external-cta-icon { width: 24px; height: 24px; flex: 0 0 24px; margin: 0; object-fit: contain; }
+#content :is(.article-toc nav a,.profile-nav-desktop > a,.mobile-toc nav a,.profile-nav-mobile nav a) {
+  font: 500 var(--contents-size)/1.4 Inter, Arial, sans-serif;
+}
+#content :is(.read,.text-link,.funny-content-link,.content-engagement) { font-family: Inter, Arial, sans-serif; }
+#content .contact-banner { margin-block: 0 1.5rem; }
+#content .contact-banner > img { display: block; width: 100%; height: auto; border-radius: 9px; }
+#content .contact-banner-mobile-copy { display: none; }
+@media (max-width: 760px) {
+  #content .contact-banner-mobile-copy { display: block; text-align: center; padding-top: .75rem; }
+  #content .contact-banner-mobile-copy h2 { margin: 0 0 .35rem; font-size: 1.5rem; color: var(--navy); }
+  #content .contact-banner-mobile-copy p { margin: 0; font-size: var(--body-size); line-height: var(--body-leading); }
 }
