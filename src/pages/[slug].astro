@@ -69,18 +69,19 @@ const articleSchema = {
     {toc.length > 0 && <details class="mobile-toc contents-nav"><summary>In this article</summary><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></details>}
     <div class:list={["article-grid", { "article-grid-no-toc": !toc.length }]}>
       {toc.length > 0 && <aside class="article-toc contents-nav"><p>In this article</p><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
-      <div class="prose"><Content /></div>
-    </div>
-    </div>
-    <div class="article-actions prose">
+      <div class="prose"><Content />
+    <ArticleSources sources={post.data.sources} />
+    <div class="article-actions">
       <p class="primary-article-action"><a class="button" href="https://forms.gle/HPmku2CCPTfA9mwv9" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
       <WhatsAppAlerts topic="Updates" />
       <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
     </div>
+      </div>
+    </div>
+    </div>
     <RelatedArticles currentSlug={post.data.slug} category={post.data.category} />
     <div class="author-note"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Murtaza Saeed" width="72" height="72" /><p>Written by <strong>Murtaza Saeed</strong><br /><span>Business, Management & Systems Insights</span></p></div>
     <div class="article-view-all"><a class="button" href={archiveHref}>{archiveLabel}</a></div>
-    <ArticleSources sources={post.data.sources} />
   </article>
   <script>
     import { initSectionNavigation } from '../scripts/section-navigation';

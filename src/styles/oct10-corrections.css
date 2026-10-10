@@ -1,0 +1,25 @@
+/* Shared action placement and contents hierarchy, 10 October 2026. */
+#content :is(.article-toc, .profile-nav-desktop, .mobile-toc, .profile-nav-mobile) { background: #F1ECF9; }
+#content :is(.article-toc, .profile-nav-desktop) > :is(p,strong),
+#content :is(.mobile-toc, .profile-nav-mobile) summary { color: #563184; }
+#content .article-actions { width: 100%; max-width: none; margin: 2rem 0; }
+#content :is(.content-response-actions,.engagement-copyright-year,.engagement-policy,.primary-article-action,.funny-content-link) { text-align: center; }
+#content .engagement-share-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+#content .engagement-share-row [data-share-status]:empty { display: none; }
+#content .page-end-actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin-block: 2rem; }
+#content .page-end-actions > p { margin: 0; }
+#content .contact-actions { display: flex; justify-content: center; }
+#content :is(.hero,.about-strip) .actions { justify-content: center; }
+#content .hero .actions .text-link { color: #fff; text-decoration: underline; }
+#content .about-strip .actions a { text-decoration: underline; }
+footer .footer-policy::before { content: ' — '; }
+footer .footer-alert-instructions::before { content: ' · '; }
+@media (max-width: 760px) {
+  #content :is(.mobile-toc,.profile-nav-mobile) summary { text-align: center; }
+  #content :is(.mobile-toc,.profile-nav-mobile) nav { text-align: left; }
+  #content :is(.page-end-actions,.hero .actions,.about-strip .actions) { flex-direction: column; align-items: center; }
+  #content .page-end-actions .button { width: auto; max-width: 100%; }
+  footer .footer-grid > div:last-child { text-align: center; }
+  footer :is(.footer-copyright,.footer-policy,.footer-alert-instructions) { display: block; }
+  footer :is(.footer-policy,.footer-alert-instructions)::before { content: none; }
+}
