@@ -34,8 +34,8 @@ updated: "2026-10-10"
 
 <li><strong>The IPO structure: </strong>My KSh7.50 would buy existing shares. The IPO proceeds go to the selling shareholder rather than providing new capital to Quickmart.</li>
 
-</ul><p class="editorial-bottom-line"><strong>BOTTOM LINE</strong><br /><strong>BOTTOM LINE
-</strong><strong>Quickmart may be a good business. At KSh7.50, I do not think the prospective return adequately compensates me for the risks I would be taking.</strong></p></section>
+<li><strong>The additional selling risk: </strong>Following a fully subscribed IPO, 800 million retained shares (20% of Quickmart) would be outside the 24-month lock-up, potentially creating further market supply.</li>
+</ul><p class="editorial-bottom-line"><strong>BOTTOM LINE</strong><br />Quickmart may be a good business. At KSh7.50, I do not think the prospective return adequately compensates me for the risks I would be taking.</p></section>
 
 ## 1. The dividend does not compensate me sufficiently
 
