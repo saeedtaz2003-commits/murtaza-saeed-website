@@ -4,6 +4,7 @@
 #content :is(.mobile-toc, .profile-nav-mobile) summary { color: #563184; }
 #content .article-actions { width: 100%; max-width: none; margin: 2rem 0; }
 #content :is(.content-response-actions,.engagement-copyright-year,.engagement-policy,.primary-article-action,.funny-content-link) { text-align: center; }
+#content .content-response-actions { justify-content: center; }
 #content .engagement-share-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
 #content .engagement-share-row [data-share-status]:empty { display: none; }
 #content .page-end-actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin-block: 2rem; }
