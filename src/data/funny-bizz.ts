@@ -147,20 +147,20 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'quickmart-ipo-ksh7-50-is-it-worth-buying',
-    publishedAt: '2026-10-07',
+    publishedAt: '2026-10-10',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
     title: "Quickmart IPO at KSh7.50: Is It Worth Buying?",
     image: '/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png',
     alt: "Quickmart IPO KSh7.50 per share – Is it worth buying?",
-    copy: "Quickmart is offering investors a stake in one of Kenya’s largest supermarket businesses. But a good company is not automatically a good investment at any price.",
+    copy: "Quickmart is growing, profitable and attracting major investors. But does that make KSh7.50 an attractive price?\n\nA good company is not automatically a good investment at any price.\n\nRead the article for my assessment.",
     destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying',
     ctaLabel: 'Read the Article'
   },
   {
     id: 'mbappe-endorsement-featured',
     sliderCategory: 'Featured Article',
-    category: 'Business & Finance',
+    category: 'Business Analysis & Strategy',
     title: 'Why Kylian Mbappé Left Nike for On: The Shift to Equity',
     image: '/images/mbappe-nike-to-on-web.jpg',
     alt: 'Editorial cartoon showing Kylian Mbappé leaving Nike and joining On',

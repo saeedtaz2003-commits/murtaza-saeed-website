@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 import BrandText from '../../components/BrandText.astro';
 import { funnyBizzItems } from '../../data/funny-bizz';
 import ContentEngagement from '../../components/ContentEngagement.astro';
@@ -13,7 +14,11 @@ export function getStaticPaths() {
 
 const { item } = Astro.props;
 const viewerUrl = `/the-lighter-side?meme=${encodeURIComponent(item.id)}#funny-slider`;
-const description = item.copy.length > 190 ? `${item.copy.slice(0, 187)}…` : item.copy;
+const linkedArticle = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying'
+  ? (await getCollection('posts')).find(post => post.data.slug === item.id)
+  : undefined;
+const previewCopy = linkedArticle?.data.metaDescription ?? item.copy;
+const description = previewCopy.length > 190 ? `${previewCopy.slice(0, 187)}…` : previewCopy;
 const pageTitle = `${item.title} | Biz Buzz | Murtaza Insights`;
 
 // Social platforms are more reliable with a lightweight, explicitly-sized image.

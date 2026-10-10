@@ -72,7 +72,7 @@ const { homepage = false } = Astro.props;
               <div class="lighter-copy">
                 {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
                 <h2 set:html={item.titleHtml ?? item.title} />
-                <p set:html={italicizeBrandHtml(item.copyHtml ?? item.copy)} />
+                {(item.copyHtml ?? item.copy).split(/\n\n/).map(paragraph => <p set:html={italicizeBrandHtml(paragraph)} />)}
                 {'domains' in item && item.domains && (
                   <section class="domain-name-list" aria-label="Unfortunate domain names">
                     <h3>Unfortunate Domain Names</h3>

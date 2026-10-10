@@ -38,3 +38,7 @@
   .comparison-field dt { font-weight: 700; color: #4b2375; }
   #content .article .prose .comparison-field dd { margin: .2rem 0 0; overflow-wrap: anywhere; }
 }
+
+#content .article .prose .article-chart { margin: 1.5rem 0; min-width: 0; }
+#content .article .prose .article-chart img { display: block; width: 100%; max-width: 100%; height: auto; }
+#content .article .prose .article-chart figcaption { margin-top: .5rem; font-size: var(--body-size); line-height: var(--body-leading); }
