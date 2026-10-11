@@ -33,3 +33,9 @@
 #content .funny-engagement .content-response-actions a { padding-block: 0; }
 #content .funny-engagement .engagement-share-row button { padding-block: 0; min-height: 30px; }
 #content .funny-engagement :is(.content-response-actions,.engagement-copyright-year,.engagement-policy) { margin-block: .15rem; }
+@media (min-width: 761px) {
+  #content .funny-viewer-grid { height: auto; align-items: start; }
+  #content .funny-commentary-viewport { height: auto; min-height: calc(var(--image-side) + 44px); max-height: max(calc(var(--image-side) + 44px), calc(100dvh - var(--site-header-height, 99px) - 32px)); }
+  #content .funny-commentary-viewport .funny-commentary-panel.active,
+  #content .funny-commentary-viewport .lighter-copy { min-height: 0; }
+}
