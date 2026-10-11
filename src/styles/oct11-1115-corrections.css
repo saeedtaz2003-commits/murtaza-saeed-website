@@ -39,3 +39,34 @@
   #content .funny-commentary-viewport .funny-commentary-panel.active,
   #content .funny-commentary-viewport .lighter-copy { min-height: 0; }
 }
+
+/* Mobile: keep both discovery CTAs in the commentary and size the panel to its
+   content when it fits, rather than forcing a 260px inner scroll area. */
+@media (max-width: 760px) {
+  #content .funny-inline-discovery { display: block; }
+  #content .funny-commentary-viewport {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 90dvh !important;
+    overflow-y: auto;
+  }
+  #content .funny-commentary-viewport .funny-commentary-panel.active {
+    height: auto;
+  }
+  #content .funny-inline-discovery .whatsapp-alerts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .4rem;
+  }
+  #content .funny-inline-discovery .whatsapp-alerts > a.button {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #content .funny-inline-discovery .whatsapp-alerts > p:first-of-type {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #content .funny-inline-discovery .whatsapp-alerts > p:last-child {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
