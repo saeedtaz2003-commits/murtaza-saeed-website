@@ -26,3 +26,10 @@
   #content .funny-inline-discovery .whatsapp-alerts > p:first-of-type { grid-column: 1; grid-row: 2; }
   #content .funny-inline-discovery .whatsapp-alerts > p:last-child { grid-column: 1; grid-row: 3; }
 }
+/* Action hit areas stay readable without redundant paragraph/button padding. */
+#content .funny-commentary-viewport .lighter-copy { padding: .75rem; }
+#content .funny-commentary-viewport .lighter-copy > p { margin-block: .35rem; }
+#content .funny-commentary-viewport .funny-content-link { display: flex; justify-content: center; margin-block: .4rem; }
+#content .funny-engagement .content-response-actions a { padding-block: 0; }
+#content .funny-engagement .engagement-share-row button { padding-block: 0; min-height: 30px; }
+#content .funny-engagement :is(.content-response-actions,.engagement-copyright-year,.engagement-policy) { margin-block: .15rem; }
