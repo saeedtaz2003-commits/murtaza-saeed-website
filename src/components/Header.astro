@@ -40,13 +40,13 @@ const links = [
   });
   const searchLink = document.querySelector<HTMLAnchorElement>('.nav-search');
   const panel = document.querySelector<HTMLElement>('#site-search-panel');
-  const closeSearch = () => { if (panel) panel.hidden = true; searchLink?.setAttribute('aria-expanded', 'false'); searchLink?.focus(); };
+  const closeSearch = () => { if (panel) panel.hidden = true; searchLink?.setAttribute('aria-expanded', 'false'); searchLink?.focus({ preventScroll: true }); };
   searchLink?.addEventListener('click', event => {
     if (!panel) return;
     event.preventDefault();
     const open = !panel.hidden; panel.hidden = open;
     searchLink.setAttribute('aria-expanded', String(!open));
-    if (!open) panel.querySelector<HTMLInputElement>('input')?.focus();
+    if (!open) panel.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
   });
   panel?.querySelector('[data-close-search]')?.addEventListener('click', closeSearch);
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && panel && !panel.hidden) closeSearch(); });
