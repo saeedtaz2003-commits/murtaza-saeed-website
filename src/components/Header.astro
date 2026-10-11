@@ -40,11 +40,15 @@ const links = [
   });
   const searchLink = document.querySelector<HTMLAnchorElement>('.nav-search');
   const panel = document.querySelector<HTMLElement>('#site-search-panel');
-  const closeSearch = () => { if (panel) panel.hidden = true; searchLink?.setAttribute('aria-expanded', 'false'); searchLink?.focus({ preventScroll: true }); };
+  let searchScrollY = 0;
+  const closeSearch = () => { if (panel) panel.hidden = true; searchLink?.setAttribute('aria-expanded', 'false'); searchLink?.focus({ preventScroll: true }); window.scrollTo({ top: searchScrollY, behavior: 'instant' }); };
   searchLink?.addEventListener('click', event => {
     if (!panel) return;
     event.preventDefault();
-    const open = !panel.hidden; panel.hidden = open;
+    const open = !panel.hidden;
+    if (open) { closeSearch(); return; }
+    searchScrollY = window.scrollY;
+    panel.hidden = false;
     searchLink.setAttribute('aria-expanded', String(!open));
     if (!open) panel.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
   });
