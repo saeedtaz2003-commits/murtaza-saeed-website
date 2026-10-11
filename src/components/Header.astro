@@ -1,4 +1,5 @@
 ---
+import SiteSearch from './SiteSearch.astro';
 const path = Astro.url.pathname;
 const links = [
   ['Home', '/'], ['Insights', '/insights'], ['Biz Buzz', '/the-lighter-side'],
@@ -14,9 +15,14 @@ const links = [
     <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main navigation">
       {links.map(([label, href]) => <a class={path === href || path === `${href}/` ? 'active' : ''} href={href}>{label}</a>)}
-      <a class:list={["nav-search", { active: path.startsWith("/search") }]} href="/search" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><span class="search-nav-label">Search</span></a>
+      <a class:list={["nav-search", { active: path.startsWith("/search") }]} href="/search" aria-label="Search" aria-expanded="false" aria-controls="site-search-panel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><span class="search-nav-label">Search</span></a>
     </nav>
   </div>
+  <section id="site-search-panel" class="inline-search-panel" aria-label="Website search" hidden>
+    <div class="inline-search-heading"><h2>Search</h2><button type="button" data-close-search aria-label="Close search">Close</button></div>
+    <SiteSearch inputId="inline-search-query" />
+    <a class="search-fallback" href="/search/">Open full search page</a>
+  </section>
 </header>
 <script>
   const header = document.querySelector<HTMLElement>('.site-header');
@@ -32,6 +38,18 @@ const links = [
     button.setAttribute('aria-expanded', String(!open));
     nav?.classList.toggle('open');
   });
+  const searchLink = document.querySelector<HTMLAnchorElement>('.nav-search');
+  const panel = document.querySelector<HTMLElement>('#site-search-panel');
+  const closeSearch = () => { if (panel) panel.hidden = true; searchLink?.setAttribute('aria-expanded', 'false'); searchLink?.focus(); };
+  searchLink?.addEventListener('click', event => {
+    if (!panel) return;
+    event.preventDefault();
+    const open = !panel.hidden; panel.hidden = open;
+    searchLink.setAttribute('aria-expanded', String(!open));
+    if (!open) panel.querySelector<HTMLInputElement>('input')?.focus();
+  });
+  panel?.querySelector('[data-close-search]')?.addEventListener('click', closeSearch);
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && panel && !panel.hidden) closeSearch(); });
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
     button?.setAttribute('aria-expanded', 'false');
     nav.classList.remove('open');

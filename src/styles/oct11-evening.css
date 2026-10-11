@@ -1,0 +1,31 @@
+/* Inline search uses the existing results UI and keeps the current page open. */
+.site-header { position: sticky; }
+.topbar nav .nav-search { background: var(--purple); color: #fff; padding: .55rem; border-radius: 7px; text-decoration: none; }
+.topbar nav .nav-search:is(:hover,:focus-visible) { background: #6135bd; color: #fff; }
+.nav-search svg { flex: 0 0 24px; }
+.inline-search-panel { position: absolute; top: 100%; right: max(1rem,calc((100vw - 1200px)/2)); width: min(850px,calc(100vw - 2rem)); max-height: calc(100dvh - var(--site-header-height,99px) - 24px); overflow: auto; background: #fff; color: var(--navy); padding: 1.25rem; border: 1px solid var(--line); border-radius: 0 0 10px 10px; box-shadow: 0 12px 28px #19123026; box-sizing: border-box; }
+.inline-search-panel[hidden] { display: none; }
+.inline-search-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.inline-search-heading h2 { margin: 0; font-size: 1.5rem; }
+.inline-search-heading button { font: inherit; cursor: pointer; border: 1px solid var(--line); border-radius: 5px; padding: .3rem .6rem; background: #F1ECF9; color: var(--purple); }
+.inline-search-panel .search-results { padding: 0; list-style: none; }
+.inline-search-panel .search-results li { border-top: 1px solid var(--line); padding-block: .75rem; }
+.inline-search-panel .search-results h2 { font-size: 1.35rem; margin: 0 0 .4rem; }
+.inline-search-panel .search-results p { font-size: 1rem; line-height: 1.5; margin: 0; }
+.inline-search-panel .search-form input { width: 100%; min-width: 0; }
+.search-fallback { font-size: 1rem; }
+#content .whatsapp-opt-in { min-width: 0; text-align: center; }
+#content .whatsapp-opt-in .whatsapp-helper { font-size: calc(var(--body-size) * .95) !important; line-height: 1.4; margin: .4rem 0 0; }
+#content .funny-inline-discovery .whatsapp-alerts { grid-template-columns: minmax(0,1.2fr) minmax(0,.85fr); align-items: start; }
+#content .funny-inline-discovery .whatsapp-opt-in { grid-column: 1; grid-row: 1; }
+#content .funny-inline-discovery .whatsapp-alerts > p:first-of-type { grid-column: 2; grid-row: 1; }
+#content .article-updates { margin-top: 1rem; }
+#content .author-note { flex-wrap: wrap; }
+#content .author-insights { margin-left: auto; white-space: nowrap; padding: .45rem .8rem; }
+@media (max-width: 760px) {
+  #content .funny-inline-discovery .whatsapp-alerts { grid-template-columns: minmax(0,1fr); }
+  #content .funny-inline-discovery .whatsapp-alerts > p:first-of-type { grid-column: 1; grid-row: 2; }
+  #content .author-insights { flex-basis: auto; margin: .5rem auto 0; }
+  #content .author-note::after { content: ''; flex-basis: 100%; order: 1; }
+  #content .author-insights { order: 2; }
+}
