@@ -77,7 +77,7 @@ const socialImageType = socialPath.endsWith('.webp')
         shareButton?.addEventListener('click', async () => {
           if (navigator.share) {
             try {
-              await navigator.share({ title, text: title, url });
+              await navigator.share({ url });
               return;
             } catch (error) {
               if (error instanceof DOMException && error.name === 'AbortError') return;

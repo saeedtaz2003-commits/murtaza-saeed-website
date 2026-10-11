@@ -9,14 +9,12 @@ metaDescription: "Quickmart is growing, profitable and attracting major investor
 image: "/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png"
 imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
 sources: [{"text": "Quickmart IPO official site and Information Memorandum: offer price, shares offered, proceeds, store count, dividend policy, resident dividend withholding tax, IFC cornerstone commitment and offer timetable.", "url": "https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/QUICKMART-PLC-INFORMATION-MEMORANDUM_OCT2026_FINAL.pdf"}, {"text": "Central Bank of Kenya: 364-day Treasury bill previous average interest rate 9.0397% for the auction dated 8 October 2026; CBK government-securities guidance states 15% withholding tax for Treasury bills.", "url": "https://www.centralbank.go.ke/bills-bonds/treasury-bills-average-rates/"}, {"text": "Quickmart FY2025/H1 2026 financial information: FY2025 revenue KSh50.43bn; reported PAT KSh1.51bn; adjusted PAT KSh1.71bn; June 2026 borrowings KSh6.8m; structurally negative working capital about KSh4bn.", "url": "https://ipo.quickmart.co.ke/"}, {"text": "Central Bank of Kenya: August 2026 infrastructure bond reopening, accepted average yields IFB1/2019/016 12.1960%, IFB1/2021/018 12.6877%, IFB1/2021/021 13.0520%. Historical auction yields do not represent current secondary-market yields.", "url": "https://www.centralbank.go.ke/uploads/historical_treasury_bond_results/1214594764_RESULTS%20IFB1-2019-016%20IFB1-2021-018%20AND%20IFB1-2021-021%20DATED%2017-08-2026.pdf"}]
-updated: "2026-10-10"
+updated: "2026-10-11"
 ---
 
 <p>Quickmart is one of Kenya’s largest supermarket businesses. It has scale, growing profits and ambitious expansion plans.</p>
 
 <p>But a good company is not automatically a good investment at any price.</p>
-
-<p><strong>At KSh7.50 per share, I am not buying.</strong></p>
 
 <section class="at-a-glance editorial-summary" aria-labelledby="article-at-a-glance"><p class="eyebrow" id="article-at-a-glance">AT A GLANCE</p><ul>
 
@@ -36,6 +34,8 @@ updated: "2026-10-10"
 
 <li><strong>The additional selling risk: </strong>Following a fully subscribed IPO, 800 million retained shares (20% of Quickmart) would be outside the 24-month lock-up, potentially creating further market supply.</li>
 </ul><p class="editorial-bottom-line"><strong>BOTTOM LINE</strong><br />Quickmart may be a good business. At KSh7.50, I do not think the prospective return adequately compensates me for the risks I would be taking.</p></section>
+
+## Why I Am Not Buying at KSh7.50
 
 ## 1. The dividend does not compensate me sufficiently
 
@@ -173,7 +173,7 @@ updated: "2026-10-10"
 
 <p>A good company and a good investment are not necessarily the same thing. And a good investment at one price may not be a good investment at another.</p>
 
-## Business Insights Addendum
+## Implications for Business Owners and Suppliers
 
 <p><strong>What Quickmart’s IPO tells business owners and suppliers</strong></p>
 

@@ -19,7 +19,7 @@ const encodedTitle = encodeURIComponent(title);
   </div>
   <div class="engagement-share-menu" data-share-fallback hidden aria-label="Share options">
     <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer">Facebook</a>
-    <a href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href={`https://wa.me/?text=${encodedUrl}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">X</a>
     <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`}>Email</a>
