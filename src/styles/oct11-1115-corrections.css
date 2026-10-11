@@ -1,0 +1,28 @@
+/* Readable references and compact, shared commentary actions. */
+#content .article-sources :is(summary,li,a) { font-size: var(--body-size); line-height: 1.5; }
+#content .article-sources summary { display: flex; align-items: center; gap: .55rem; list-style: none; font-weight: 600; }
+#content .article-sources summary::-webkit-details-marker { display: none; }
+#content .article-sources summary::before { content: '\25B8'; flex: 0 0 auto; }
+#content .article-sources[open] summary::before { content: '\25BE'; }
+#content .assignment-invitation { text-align: center; margin: 0 0 .75rem; }
+#content .funny-commentary-viewport .lighter-copy { padding: 1rem; }
+#content .funny-commentary-viewport .lighter-copy > h2 { margin-top: 0; margin-bottom: .65rem; }
+#content .funny-commentary-viewport .lighter-copy > p { margin-block: .55rem; }
+#content .funny-engagement { margin-top: .6rem; padding-top: .5rem; }
+#content .funny-engagement :is(.content-response-actions,.engagement-copyright-year,.engagement-policy) { margin-block: .25rem; }
+#content .funny-engagement .engagement-share-row { margin-block: .3rem; min-height: 0; }
+#content .funny-inline-discovery { display: block; margin-top: .45rem; }
+#content .funny-inline-discovery .whatsapp-alerts { padding-top: .45rem; gap: .4rem; }
+#content .funny-inline-discovery .whatsapp-alerts .button { padding: .4rem .65rem; }
+#content .funny-inline-discovery .whatsapp-alerts > p { margin: 0; }
+@media (max-width: 1200px) {
+  #content .funny-inline-discovery .whatsapp-alerts { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  #content .funny-inline-discovery .whatsapp-alerts > a.button { grid-column: 1; grid-row: 1; }
+  #content .funny-inline-discovery .whatsapp-alerts > p:first-of-type { grid-column: 2; grid-row: 1; }
+  #content .funny-inline-discovery .whatsapp-alerts > p:last-child { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 380px) {
+  #content .funny-inline-discovery .whatsapp-alerts { grid-template-columns: minmax(0,1fr); }
+  #content .funny-inline-discovery .whatsapp-alerts > p:first-of-type { grid-column: 1; grid-row: 2; }
+  #content .funny-inline-discovery .whatsapp-alerts > p:last-child { grid-column: 1; grid-row: 3; }
+}

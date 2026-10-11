@@ -2,11 +2,14 @@
 import { getCollection } from 'astro:content';
 import ArticleCard from './ArticleCard.astro';
 const { currentSlug, category } = Astro.props;
-// Category-specific recommendations must only include articles in the same canonical category.
-const posts = (await getCollection('posts'))
-  .filter(p => !p.data.draft && !p.data.advertorial && p.data.slug !== currentSlug && p.data.category === category)
-  .sort((a,b) => +b.data.date - +a.data.date)
-  .slice(0,3);
-
+const candidates = (await getCollection('posts'))
+  .filter(p => !p.data.draft && !p.data.advertorial && p.data.slug !== currentSlug)
+  .sort((a,b) => +b.data.date - +a.data.date);
+const matching = candidates.filter(p => p.data.category === category).slice(0,3);
+const fallback = candidates.filter(p => p.data.category !== category).slice(0,3 - matching.length);
 ---
-{posts.length > 0 && <section class="related-articles" aria-labelledby="related-title"><h2 id="related-title">More from {category}</h2><div class="related-grid">{posts.map(p => <ArticleCard post={p} compact />)}</div></section>}
+<section class="related-articles" aria-labelledby="related-title">
+  <h2 id="related-title">More from {category}</h2>
+  {matching.length > 0 ? <div class="related-grid">{matching.map(p => <ArticleCard post={p} compact />)}</div> : <p>More articles in this category will appear here as they are published.</p>}
+  {fallback.length > 0 && <><h2>More Insights</h2><div class="related-grid related-fallback">{fallback.map(p => <ArticleCard post={p} compact />)}</div></>}
+</section>

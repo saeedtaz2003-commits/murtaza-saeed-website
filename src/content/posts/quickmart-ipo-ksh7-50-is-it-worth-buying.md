@@ -99,7 +99,7 @@ updated: "2026-10-11"
 
 <p>Future growth therefore has to be financed principally through Quickmart’s own cash generation and other available funding. That makes the previous question about dividends, working capital and expansion even more relevant.</p>
 
-## 6. IFC’s investment is reassuring — but it doesn’t change my price
+## 6. IFC’s Investment Is Reassuring — But It Does Not Make KSh7.50 Attractive
 
 <p>IFC has conditionally agreed to invest approximately KSh1.94 billion, potentially acquiring around 6.45% of Quickmart at the same KSh7.50 price.</p>
 
@@ -204,9 +204,6 @@ updated: "2026-10-11"
 <p>It should also be: Where is the cash coming from, where is it going, and can the business continue financing its growth without creating financial strain?</p>
 
 <p>That question applies far beyond supermarkets.</p>
-
-<p><strong>Need an independent analysis of a business issue or opportunity?
-DISCUSS AN ASSIGNMENT</strong></p>
 
 <p><strong>Disclosure: I do not hold shares in Quickmart and am not applying for shares in its IPO.</strong></p>
 

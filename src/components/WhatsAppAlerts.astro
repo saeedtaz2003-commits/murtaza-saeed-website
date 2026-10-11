@@ -4,7 +4,7 @@ interface Props { topic: 'Updates' | 'Biz Buzz'; }
 const { topic } = Astro.props;
 const number = '254726829626';
 const message = topic === 'Updates' ? 'Please add me to general Murtaza Insights updates.' : 'Please add me to Biz Buzz alerts.';
-const label = topic === 'Updates' ? 'Get Updates' : 'Get New Meme Notifications';
+const label = 'Get Updates';
 const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 ---
 <aside class:list={["whatsapp-alerts", { "article-updates": topic === 'Updates' }]}>
