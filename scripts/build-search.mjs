@@ -25,8 +25,8 @@ async function walk(dir) {
    const root = parse(main);
    const prose = find(root, node => hasClass(node,'prose'))[0];
    const landing = find(root, node => hasClass(node,'funny-share-landing'))[0];
-   if (prose) {
-    const header = find(root, node => hasClass(node,'article-header'))[0];
+   const header = find(root, node => hasClass(node,'article-header'))[0];
+   if (prose && header) {
     entries.push({url,title,text:decode(`${header ? text(header) : ''} ${text(prose)}`).replace(/\s+/g,' ').trim()});
    } else if (landing) {
     const paragraphs = (landing.children ?? []).filter(node => node.name === 'p').slice(0,2);
