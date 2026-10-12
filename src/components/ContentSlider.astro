@@ -143,12 +143,19 @@ const { homepage = false } = Astro.props;
       let dotButtons = [];
       let current = 0;
       let touchStartX = 0;
+      let touchStartY = 0;
+      let revealFrame = 0;
       let ignoreNextClick = false;
       let stickyTick = false;
       const updateStickyMedia = () => {
         stickyTick = false;
         const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
-        if (carousel instanceof HTMLElement) carousel.style.setProperty('--sticky-header-height', `${headerHeight}px`);
+        if (carousel instanceof HTMLElement) {
+          carousel.style.setProperty('--sticky-header-height', `${headerHeight}px`);
+          const media = carousel.querySelector('.funny-viewer-media');
+          const needsSpace = (media?.getBoundingClientRect().height ?? 0) + headerHeight + 120 > window.innerHeight;
+          carousel.classList.toggle('media-exceeds-viewport', needsSpace);
+        }
       };
       const queueStickyUpdate = () => {
         if (!stickyTick) { stickyTick = true; window.requestAnimationFrame(updateStickyMedia); }
@@ -193,11 +200,13 @@ const { homepage = false } = Astro.props;
       const revealCommentary = () => {
         const heading = panels[current]?.querySelector('h2');
         if (!(heading instanceof HTMLElement) || !(commentaryViewport instanceof HTMLElement)) return;
+        updateStickyMedia();
         const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
         const mobile = window.matchMedia('(max-width: 760px)').matches;
-        const mediaHeight = mobile ? carousel.querySelector('.funny-viewer-media')?.getBoundingClientRect().height ?? 0 : 0;
+        const mediaHeight = mobile && !carousel.classList.contains('media-exceeds-viewport') ? carousel.querySelector('.funny-viewer-media')?.getBoundingClientRect().height ?? 0 : 0;
         const visibleTop = headerHeight + mediaHeight + (mobile ? 20 : 12);
         if (!mobile) commentaryViewport.scrollTo({ top: 0, behavior: 'smooth' });
+        else commentaryViewport.scrollTop = 0;
         const rect = mobile ? heading.getBoundingClientRect() : commentaryViewport.getBoundingClientRect();
         if (rect.top >= visibleTop && rect.top + heading.offsetHeight <= window.innerHeight) return;
         window.scrollTo({ top: Math.max(0, window.scrollY + rect.top - visibleTop), behavior: 'smooth' });
@@ -228,7 +237,8 @@ const { homepage = false } = Astro.props;
         });
 
 
-        if (reveal) window.requestAnimationFrame(revealCommentary);
+        window.cancelAnimationFrame(revealFrame);
+        if (reveal) revealFrame = window.requestAnimationFrame(revealCommentary);
         else if (commentaryViewport instanceof HTMLElement) commentaryViewport.scrollTop = 0;
       };
 
@@ -274,13 +284,15 @@ const { homepage = false } = Astro.props;
 
       screen?.addEventListener('touchstart', (event) => {
         touchStartX = event.changedTouches[0]?.clientX ?? 0;
+        touchStartY = event.changedTouches[0]?.clientY ?? 0;
         ignoreNextClick = false;
       }, { passive: true });
 
       screen?.addEventListener('touchend', (event) => {
         const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
         const distance = touchEndX - touchStartX;
-        if (Math.abs(distance) > 45) {
+        const verticalDistance = (event.changedTouches[0]?.clientY ?? touchStartY) - touchStartY;
+        if (Math.abs(distance) > 45 && Math.abs(distance) > Math.abs(verticalDistance) * 1.5) {
           ignoreNextClick = true;
           stepSequence(distance < 0 ? 1 : -1);
           window.setTimeout(() => { ignoreNextClick = false; }, 350);
@@ -303,12 +315,12 @@ const { homepage = false } = Astro.props;
         : -1;
 
       if (requestedIndex >= 0) {
-        show(requestedIndex, false);
+        show(requestedIndex, true);
       } else if (sequence.length) {
         show(sequence[0], false);
       }
 
-      if (window.location.hash === '#funny-slider') {
+      if (requestedIndex < 0 && window.location.hash === '#funny-slider') {
         window.requestAnimationFrame(() => scrollViewerIntoView());
       }
     }

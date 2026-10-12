@@ -1,0 +1,16 @@
+/* Exact approved wide banners; proportional display only. */
+#content .approved-wide-banner { display: block; width: 100%; height: auto; margin: 1.5rem 0 0; }
+footer .footer-grid { align-items: start; }
+footer .footer-grid > div > :first-child { margin-top: 0; }
+@media (max-width: 760px) {
+  /* Restore the page-scrolling mobile layout from consolidated-refinements.css.
+     The later 90dvh inner viewport created a second scroll surface. */
+  #content .funny-commentary-viewport { height: auto !important; min-height: 0 !important; max-height: none !important; overflow: visible !important; overscroll-behavior: auto; }
+  #content .funny-commentary-panel.active,
+  #content .funny-commentary-panel.active .lighter-copy { min-height: 0; height: auto; }
+  #content .funny-viewer-media { grid-template-rows: auto 44px !important; gap: .4rem; align-self: stretch; }
+  #content .funny-controls { position: static; height: 44px; min-height: 44px; margin: 0; grid-template-columns: 44px minmax(0,1fr) 44px; }
+  #content .funny-dots { flex-wrap: nowrap; justify-content: center; }
+  #content .funny-screen-frame { touch-action: pan-y pinch-zoom; }
+  #content .media-exceeds-viewport .funny-viewer-media { position: static; }
+}
