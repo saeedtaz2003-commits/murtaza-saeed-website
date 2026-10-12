@@ -14,3 +14,7 @@ footer .footer-grid > div > :first-child { margin-top: 0; }
   #content .funny-screen-frame { touch-action: pan-y pinch-zoom; }
   #content .media-exceeds-viewport .funny-viewer-media { position: static; }
 }
+@media (min-width: 761px) {
+  #content .funny-viewer-media { align-self: start; height: calc(var(--image-side) + 44px + .4rem); grid-template-rows: var(--image-side) 44px; gap: .4rem; }
+  #content .funny-controls { height: 44px; min-height: 44px; margin: 0; }
+}
