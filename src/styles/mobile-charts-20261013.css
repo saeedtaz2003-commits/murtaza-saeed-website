@@ -1,0 +1,19 @@
+/* Mobile-specific chart renderings. Original approved raster charts remain on desktop. */
+.mobile-data-chart { display:none; }
+@media (max-width:760px) {
+ #content .article .prose .desktop-chart { display:none; }
+ #content .article .prose .mobile-data-chart { display:block; box-sizing:border-box; width:100%; min-width:0; margin:1rem 0 1.5rem; padding:.8rem .65rem; border:1px solid #e2d9ed; border-radius:8px; background:#fff; font-family:Inter,Arial,sans-serif; }
+ #content .mobile-chart-row + .mobile-chart-row { margin-top:.7rem; }
+ #content .mobile-chart-label { display:block; font-size:15px; line-height:1.35; color:#1a2740; margin-bottom:.25rem; }
+ #content .mobile-chart-barline { display:flex; align-items:center; gap:.45rem; min-width:0; }
+ #content .mobile-chart-track { display:block; flex:1 1 auto; min-width:0; height:29px; background:#f1ecf8; }
+ #content .mobile-chart-fill { display:flex; align-items:center; justify-content:flex-end; box-sizing:border-box; width:var(--chart-width); height:29px; padding-inline:.45rem; background:var(--chart-color,#6d45a0); border-radius:3px; color:#fff; }
+ #content .mobile-chart-fill strong, #content .mobile-chart-value { font-size:16px; font-weight:800; line-height:1; white-space:nowrap; }
+ #content .mobile-performance-chart .mobile-chart-fill { padding-inline:0; background:var(--chart-color,#7447d7); }
+ #content .mobile-performance-chart .mobile-chart-value { flex:0 0 52px; color:#1a2740; text-align:right; }
+ #content .mobile-chart-note { display:block; margin-top:.8rem; font-size:12px; line-height:1.45; color:#4b5566; }
+ #content .mobile-chart-fullsize { display:inline-block; margin-top:.7rem; font-size:13px; line-height:1.4; color:var(--purple); text-decoration:underline; }
+ #content .mobile-line-chart { padding:.6rem .15rem; }
+ #content .mobile-line-chart svg { display:block; width:100%; height:auto; max-width:100%; overflow:visible; }
+ #content .mobile-line-chart .mobile-chart-fullsize { margin-left:.5rem; }
+}
