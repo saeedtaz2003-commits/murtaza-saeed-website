@@ -1,0 +1,17 @@
+---
+const { label = 'Share This Page' } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+const encodedUrl = encodeURIComponent(url);
+---
+<div class="content-engagement page-share" data-content-share data-share-url={url} data-share-title={Astro.props.title}>
+  <div class="engagement-share-row" aria-label={label}>
+    <button type="button" data-share-trigger>{label}</button>
+    <button type="button" data-copy-link>Copy Link</button>
+    <span data-share-status aria-live="polite"></span>
+  </div>
+  <div class="engagement-share-menu" data-share-fallback hidden aria-label="Share options">
+    <a href={`https://wa.me/?text=${encodedUrl}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</div>

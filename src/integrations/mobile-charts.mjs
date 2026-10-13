@@ -1,22 +1,26 @@
-// Mobile-only presentations of the four approved charts. The original desktop
+// Responsive presentations of the four approved charts. The original full-size
 // artwork and full-size destinations remain untouched. Values and notes are
 // transcribed from those exact approved images, not from article estimates.
 const escape = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
-const bars = (rows, max, color, signed = false) => '<div class="mobile-chart-bars">' + rows.map(([label,value,display]) => `<div class="mobile-chart-row"><div class="mobile-chart-label">${escape(label)}</div><div class="mobile-chart-track${signed ? ' signed' : ''}"><span class="mobile-chart-bar" style="--bar-width:${Math.abs(value)/(signed ? max+3 : max)*100}%;--bar-start:${signed ? (value < 0 ? 0 : 3/(max+3)*100) : 0}%;--bar-color:${value < 0 ? '#c17b32' : color}">${signed ? '' : `<strong>${display}</strong>`}</span>${signed ? `<strong class="mobile-chart-value">${display}</strong>` : ''}</div></div>`).join('') + '</div>';
+const bars = (rows, max, color, signed = false) => '<div class="mobile-chart-bars">' + rows.map(([label,value,display]) => `<div class="mobile-chart-row"><div class="mobile-chart-label">${escape(label)}</div><div class="mobile-chart-track${signed ? ' signed' : ''}"><span class="mobile-chart-bar" style="--bar-width:${Math.abs(value)/(signed ? max+3 : max)*100}%;--bar-start:${signed ? (value < 0 ? 0 : 3/(max+3)*100) : 0}%;--bar-color:${value < 0 ? '#c17b32' : color}">${signed ? '' : `<strong>${display}</strong>`}</span>${signed ? `<strong class="mobile-chart-value" style="left:calc(${(value < 0 ? 3 : 3 + value)/(max + 3)*100}% + 8px)">${display}</strong>` : ''}</div></div>`).join('') + '</div>';
 const lineChart = () => {
   const x = margin => 35+(margin-20)*4.25;
   const y = value => 250-value*6;
-  const series = [[3,'#7447d7',false],[5,'#101d38',true]];
-  let svg = '<svg viewBox="0 0 240 285" role="img" aria-label="Additional sales volume required for 3% and 5% price cuts at original contribution margins of 20%, 30%, 40% and 60%"><g font-family="Arial,sans-serif" font-size="13" fill="#101d38">';
-  for (const tick of [0,10,20,30]) svg += `<line x1="28" x2="220" y1="${y(tick)}" y2="${y(tick)}" stroke="#e8e5ef"/><text x="24" y="${y(tick)+4}" text-anchor="end">${tick}</text>`;
-  svg += '<path d="M28 25V250H220" fill="none" stroke="#101d38"/>';
-  for (const margin of [20,30,40,60]) svg += `<text x="${x(margin)}" y="274" text-anchor="middle">${margin}%</text>`;
-  for (const [cut,color,dashed] of series) {
-    const points = Array.from({length:81},(_,i)=>{const margin=20+i*.5;return `${x(margin)},${y(cut/(margin-cut)*100)}`;}).join(' ');
-    svg += `<polyline points="${points}" fill="none" stroke="${color}" stroke-width="3"${dashed ? ' stroke-dasharray="8 5"' : ''}/>`;
-    for (const margin of [20,30,40,60]) { const value=cut/(margin-cut)*100; svg += `<circle cx="${x(margin)}" cy="${y(value)}" r="3.5" fill="${color}"/><text x="${x(margin)}" y="${y(value)+(dashed ? -12 : 22)}" text-anchor="middle" font-size="16" font-weight="700" fill="${color}">${value.toFixed(1)}%</text>`; }
+  let paths='',labels='';
+  for(const tick of [0,10,20,30]) {
+    paths += `<line x1="28" x2="220" y1="${y(tick)}" y2="${y(tick)}" stroke="#e8e5ef" vector-effect="non-scaling-stroke"/>`;
+    labels += `<span class="line-axis-y" style="left:10%;top:${y(tick)/285*100}%">${tick}</span>`;
   }
-  return svg+'</g></svg>';
+  for(const margin of [20,30,40,60]) labels += `<span class="line-axis-x" style="left:${x(margin)/240*100}%;top:96%">${margin}%</span>`;
+  for(const [cut,color,dashed] of [[3,'#7447d7',false],[5,'#101d38',true]]) {
+    const points=Array.from({length:81},(_,i)=>{const margin=20+i*.5;return `${x(margin)},${y(cut/(margin-cut)*100)}`;}).join(' ');
+    paths += `<polyline points="${points}" fill="none" stroke="${color}" stroke-width="3" vector-effect="non-scaling-stroke"${dashed ? ' stroke-dasharray="8 5"' : ''}/>`;
+    for(const margin of [20,30,40,60]) {
+      const value=cut/(margin-cut)*100,left=x(margin)/240*100,top=y(value)/285*100;
+      labels += `<i class="line-point" style="left:${left}%;top:${top}%;background:${color}"></i><strong class="line-value ${dashed ? 'above' : 'below'}" style="left:${left}%;top:${top}%;color:${color}">${value.toFixed(1)}%</strong>`;
+    }
+  }
+  return `<div class="line-chart-plot" role="img" aria-label="Additional sales volume required for 3% and 5% price cuts at original contribution margins of 20%, 30%, 40% and 60%"><svg viewBox="0 0 240 285" preserveAspectRatio="none" aria-hidden="true">${paths}<path d="M28 25V250H220" fill="none" stroke="#101d38" vector-effect="non-scaling-stroke"/></svg>${labels}</div>`;
 };
 export const mobileCharts = {
   '/images/simbisa-kenya-fy2026-performance-chart.png': {
@@ -41,6 +45,6 @@ export function enhanceMobileCharts(html) {
     const src=body.match(/<img[^>]*src="([^"]+)"/)?.[1];
     const chart=mobileCharts[src];
     if (!chart) return original;
-    return `<figure class="article-chart has-mobile-chart"><div class="desktop-chart">${body}</div><div class="mobile-chart">${chart.title ? `<div class="mobile-chart-title">${escape(chart.title)}</div>` : ''}${chart.body}${chart.note ? `<div class="mobile-chart-note">${escape(chart.note)}</div>` : ''}<a class="mobile-chart-full" href="${src}" target="_blank" rel="noopener noreferrer">View full-size chart</a></div></figure>`;
+    return `<figure class="article-chart has-mobile-chart"><div class="desktop-chart">${body}</div><div class="mobile-chart responsive-chart">${chart.title ? `<div class="mobile-chart-title">${escape(chart.title)}</div>` : ''}${chart.body}${chart.note ? `<div class="mobile-chart-note">${escape(chart.note)}</div>` : ''}<a class="mobile-chart-full" href="${src}" target="_blank" rel="noopener noreferrer">View full-size chart</a></div></figure>`;
   });
 }

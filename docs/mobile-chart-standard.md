@@ -9,3 +9,7 @@ Keep approved full-size artwork accessible. Use a mobile-specific presentation w
 The current build enhancement in `src/integrations/mobile-charts.mjs` targets only the four explicitly approved Simbisa/Quickmart charts. Other and future artwork is not automatically redesigned. The adjacent Quickmart risk/payout notes remain in the article, in addition to the original full-size view.
 
 Actual mobile browser verification is required before claiming mobile verification passed. Source/build checks cannot establish touch, sticky scrolling or rendered layout behaviour.
+
+## Desktop typography (approved 13 October evening)
+
+Use category labels 16–18px medium, key values 18–20px bold, axes 14–15px medium, axis titles/legends 15–16px medium, and sources 13–14px. Keep text as native responsive labels when scaling a bitmap would fall below those sizes. Preserve data, chart type, colours and scales. The four current approved chart presentations share the responsive build enhancement; original artwork remains available through each full-size link. Future charts require their own approved data/rendering definition and rendered desktop/mobile verification.

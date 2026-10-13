@@ -1,0 +1,57 @@
+/* Approved shared update/share treatments, 13 October. */
+#content .page-share { margin-top: 1rem; }
+#content .page-share :is(button,a) { font-size: 14px !important; }
+footer .footer-alerts { width: min(100%,240px); }
+footer .footer-alert-instructions { display: block; font: 400 13px/1.4 Inter,Arial,sans-serif !important; text-align: center; margin-top: 7px; }
+footer .footer-alert-instructions::before { content: none; }
+footer .footer-alerts > a { margin-bottom: 0; text-align: center; }
+#content .article-updates { width: 100%; box-sizing: border-box; }
+#content .article-updates h2 { text-align: center; }
+#content .whatsapp-opt-in .whatsapp-helper { font-size: 14px !important; }
+@media (min-width: 761px) {
+  #content .hero .advisor-service-line { font-weight: 400; }
+  #content .hero .lead { font-weight: 700; }
+  #content .hero + .section { padding-bottom: 2.5rem; }
+  #content .about-strip { padding-block: 0 3rem; gap: 3rem; align-items: start; }
+  #content .about-strip h2 { margin-bottom: 0; }
+  #content .about-strip p { margin-top: 0; }
+  #content .about-strip .actions { margin-top: 1rem; }
+  #content .article-updates { display: grid; justify-items: center; gap: .5rem; padding: 1rem; margin-block: 1rem; }
+  #content .article-updates h2 { width: min(100%,320px); font: 700 18px/1.3 Inter,Arial,sans-serif; margin: 0; }
+  #content .article-updates .whatsapp-opt-in { width: min(100%,320px); }
+  #content .article-updates .button { width: 100%; }
+  #content .article-updates .whatsapp-helper { width: 100%; margin-top: 7px; line-height: 1.4; }
+}
+/* Native chart labels keep a fixed readable CSS size at every content width.
+   The original approved raster is retained at its full-size destination. */
+#content .article .prose .has-mobile-chart .desktop-chart { display: none; }
+#content .article .prose .responsive-chart { display: block; min-width: 0; font-family: Inter,Arial,sans-serif; }
+#content .line-chart-plot { position: relative; width: 100%; aspect-ratio: 240 / 285; margin-top: .5rem; }
+#content .line-chart-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+#content .line-axis-y { position: absolute; transform: translate(-100%,-50%); font-size: 14px; line-height: 1; color: #101d38; }
+#content .line-axis-x { position: absolute; transform: translate(-50%,-50%); font-size: 14px; line-height: 1; color: #101d38; }
+#content .line-point { position: absolute; width: 7px; height: 7px; border-radius: 50%; transform: translate(-50%,-50%); }
+#content .line-value { position: absolute; font: 700 16px/1 Inter,Arial,sans-serif; white-space: nowrap; }
+#content .line-value.above { transform: translate(-50%,calc(-100% - 8px)); }
+#content .line-value.below { transform: translate(-50%,8px); }
+@media (min-width: 761px) {
+  #content .responsive-chart .mobile-chart-title { font: 700 22px/1.3 Inter,Arial,sans-serif; color: #101d38; margin-bottom: .75rem; }
+  #content .responsive-chart .mobile-chart-subtitle { font-size: 16px; color: #526078; margin-bottom: .6rem; }
+  #content .responsive-chart .mobile-chart-row { margin-bottom: 14px; }
+  #content .responsive-chart .mobile-chart-label { font: 500 18px/1.4 Inter,Arial,sans-serif; margin-bottom: 4px; color: #272235; }
+  #content .responsive-chart .mobile-chart-track { position: relative; height: 34px; }
+  #content .responsive-chart .mobile-chart-bar { position: absolute; left: var(--bar-start); width: var(--bar-width); background: var(--bar-color); height: 34px; border-radius: 4px; display: flex; align-items: center; justify-content: end; box-sizing: border-box; padding-right: 10px; }
+  #content .responsive-chart .mobile-chart-bar strong { color: #fff; font: 700 20px/1 Inter,Arial,sans-serif; }
+  #content .responsive-chart .mobile-chart-track.signed { width: calc(100% - 80px); background: linear-gradient(to right,transparent 4.5%,#aeb5c4 4.5%,#aeb5c4 5%,transparent 5%); }
+  #content .responsive-chart .mobile-chart-track.signed .mobile-chart-value { position: absolute; left: calc(100% + 10px); top: 5px; font: 700 20px/1 Inter,Arial,sans-serif; color: #101d38; }
+  #content .responsive-chart .mobile-chart-bars:has(.signed) .mobile-chart-row { display: grid; grid-template-columns: minmax(150px,.7fr) minmax(0,1.3fr); align-items: center; gap: 12px; }
+  #content .responsive-chart .mobile-chart-axis { font: 500 15px/1.4 Inter,Arial,sans-serif; text-align: center; color: #526078; }
+  #content .responsive-chart .mobile-chart-legend { display: flex; justify-content: end; flex-wrap: wrap; gap: 1rem; font: 500 16px/1.4 Inter,Arial,sans-serif; margin-bottom: .5rem; }
+  #content .responsive-chart .mobile-chart-legend i { display: inline-block; width: 28px; border-top: 3px solid #7447d7; margin-right: 6px; vertical-align: middle; }
+  #content .responsive-chart .mobile-chart-legend i.dashed { border-color: #101d38; border-top-style: dashed; }
+  #content .responsive-chart .mobile-chart-note { font-size: 14px; line-height: 1.45; color: #526078; margin-top: .75rem; }
+  #content .responsive-chart .mobile-chart-full { display: block; font-size: 14px; margin-top: .6rem; }
+  #content .line-chart-plot { aspect-ratio: 720 / 330; }
+  #content .line-value { font-size: 20px; }
+  #content :is(.line-axis-x,.line-axis-y) { font-size: 15px; font-weight: 500; }
+}
