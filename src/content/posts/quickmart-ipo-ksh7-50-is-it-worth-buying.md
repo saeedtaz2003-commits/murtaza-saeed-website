@@ -43,7 +43,7 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 ### Figure 1. Indicative Annual Income Yields
 
-<figure class="article-chart"><a href="/images/quickmart-v26-figure-1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Indicative annual income yields: Quickmart 6.3%, Treasury bill 7.7%, historical IFBs 12.2%, 12.7%, 13.1%."><img src="/images/quickmart-v26-figure-1.png" alt="Indicative annual income yields: Quickmart 6.3%, Treasury bill 7.7%, historical IFBs 12.2%, 12.7%, 13.1%." loading="lazy" /></a></figure>
+<figure class="article-chart"><a href="/images/quickmart-v26-figure-1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Indicative annual income yields: Quickmart 6.3%, Treasury bill 7.7%, historical IFBs 12.2%, 12.7%, 13.1%."><img src="/images/quickmart-v26-figure-1.png" width="1280" height="734" alt="Indicative annual income yields: Quickmart 6.3%, Treasury bill 7.7%, historical IFBs 12.2%, 12.7%, 13.1%." loading="lazy" /></a></figure>
 
 <p>Quickmart&#x27;s yield is a prospective net dividend yield, not guaranteed. The Treasury bill figure is the referenced approximate net yield. Infrastructure bond figures are historical accepted yields from the August 2026 auction, with remaining maturities shown at that time. They are not current quotations. The instruments differ in maturity, liquidity, capital risk and certainty of income.</p>
 
@@ -147,7 +147,7 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 ### Figure 2. Quickmart's Intended Dividend Payout Ratios
 
-<figure class="article-chart"><a href="/images/quickmart-v26-figure-2.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Intended payout ratios: FY2026 95%, FY2027 90%, FY2028 onward at least 80%."><img src="/images/quickmart-v26-figure-2.png" alt="Intended payout ratios: FY2026 95%, FY2027 90%, FY2028 onward at least 80%." loading="lazy" /></a></figure>
+<figure class="article-chart"><a href="/images/quickmart-v26-figure-2.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Intended payout ratios: FY2026 95%, FY2027 90%, FY2028 onward at least 80%."><img src="/images/quickmart-v26-figure-2.png" width="1280" height="534" alt="Intended payout ratios: FY2026 95%, FY2027 90%, FY2028 onward at least 80%." loading="lazy" /></a></figure>
 
 <p>*At least 80% from FY2028 onward. These are policy targets, subject to profitability, cash requirements and board approval.</p>
 

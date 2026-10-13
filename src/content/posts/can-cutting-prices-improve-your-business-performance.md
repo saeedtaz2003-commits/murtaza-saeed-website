@@ -27,7 +27,7 @@ The conventional view is that reducing prices means sacrificing profit. That is 
 
 Simbisa Kenya’s FY2026 results provide an interesting illustration:
 
-<figure class="article-chart"><a href="/images/simbisa-kenya-fy2026-performance-chart.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Simbisa Kenya FY2026: Lower Spend, Stronger Performance. Average spending fell 3%, while revenue rose 11%, customer volumes 14%, operating profit 16% and delivery orders 59%."><img src="/images/simbisa-kenya-fy2026-performance-chart.png" alt="Simbisa Kenya FY2026: Lower Spend, Stronger Performance. Average spending fell 3%, while revenue rose 11%, customer volumes 14%, operating profit 16% and delivery orders 59%." loading="lazy" /></a></figure>
+<figure class="article-chart"><a href="/images/simbisa-kenya-fy2026-performance-chart.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Simbisa Kenya FY2026: Lower Spend, Stronger Performance. Average spending fell 3%, while revenue rose 11%, customer volumes 14%, operating profit 16% and delivery orders 59%."><img src="/images/simbisa-kenya-fy2026-performance-chart.png" width="2200" height="1280" alt="Simbisa Kenya FY2026: Lower Spend, Stronger Performance. Average spending fell 3%, while revenue rose 11%, customer volumes 14%, operating profit 16% and delivery orders 59%." loading="lazy" /></a></figure>
 
 Kenya faced pressure on household incomes and strong competition. Simbisa responded with value-focused offerings, promotions and additional value meals, aiming to stimulate customer traffic and defend market share.
 
@@ -60,7 +60,7 @@ Both percentages are measured against the original selling price. The formula as
 
 ### Additional Sales Volume Required to Maintain Current Total Contribution
 
-<figure class="article-chart"><a href="/images/price-cut-volume-chart-complete.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Additional sales volume required for 3% and 5% price cuts at different original contribution margins."><img src="/images/price-cut-volume-chart-complete.png" alt="Additional sales volume required for 3% and 5% price cuts at different original contribution margins." loading="lazy" /></a></figure>
+<figure class="article-chart"><a href="/images/price-cut-volume-chart-complete.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size chart: Additional sales volume required for 3% and 5% price cuts at different original contribution margins."><img src="/images/price-cut-volume-chart-complete.png" width="2200" height="1276" alt="Additional sales volume required for 3% and 5% price cuts at different original contribution margins." loading="lazy" /></a></figure>
 
 *Illustrative only; not Simbisa’s margins. Assumes unchanged variable cost per unit and unchanged fixed costs.*
 
