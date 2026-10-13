@@ -154,8 +154,6 @@ A controlled trial can help establish the answers. Measure incremental contribut
 
 A Business Performance Review can assess pricing, customer demand, capacity utilisation, distribution channels and operating costs together—testing the numbers before committing to significant changes.
 
-[**Discuss an Assignment**](https://forms.gle/AWvix79y4bZUg7rQ6)
-
 <details class="article-sources" id="sources-references">
 <summary><strong>Source Documents</strong></summary>
 

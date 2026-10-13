@@ -1,0 +1,60 @@
+/* Approved 13 October presentation corrections. Desktop artwork is unchanged. */
+.mobile-chart { display: none; }
+@media (max-width: 760px) {
+  #content .hero { padding-block: 2.5rem .75rem; }
+  #content .hero-grid { gap: 1.5rem; }
+  #content .hero .advisor-service-line { font-size: calc(var(--body-size) * .82); font-weight: 500; line-height: 1.5; text-align: left; margin-block: 1rem; }
+  #content .advisor-service-line > span:not(.service-separator) { display: block; }
+  #content .advisor-service-line .service-separator { display: none; }
+  #content .hero .lead { font-weight: 600; text-align: left; margin-block: 1rem 0; }
+  #content .hero-note { padding-block: .5rem; }
+  #content .hero + .section { padding-block: .75rem 0; }
+  #content .hero + .section .eyebrow { margin-bottom: .5rem; }
+  #content .home-focus-heading { margin-bottom: 1.875rem; }
+  #content .home-topics { margin-top: 0; }
+  #content .home-biz-buzz { margin-block: 2rem 0; padding-bottom: 0; }
+  #content .about-strip { padding-block: 2.75rem 2.5rem; gap: 1.5rem; }
+  #content .about-strip h2 { font-size: 1.52rem; margin-bottom: 0; line-height: 1.25; }
+  #content .about-strip p { margin-block: 0 1.25rem; }
+  #content .about-strip .eyebrow { margin-bottom: .8rem; }
+  #content .about-strip .actions { margin-top: 1.5rem; }
+  footer { padding-block: 2.25rem; }
+  footer .footer-grid { gap: 2rem; }
+  footer .footer-alerts { width: min(100%, 240px); margin-inline: auto; }
+  footer .footer-alerts > a { margin-bottom: 0; text-align: center; }
+  footer .footer-alert-instructions { font: 400 13px/1.45 Inter,Arial,sans-serif !important; margin-top: 7px; text-align: center; }
+  #content .contact-box { gap: 1rem; padding: 1.5rem; margin-block: 1.5rem 2.5rem; }
+  #content .contact-box p { margin-bottom: 0; }
+  #content .contact-actions { align-items: center; width: 100%; }
+  #content .article-updates { display: grid; grid-template-columns: minmax(0,1fr); gap: .6rem; padding: 1rem; margin-block: 1.25rem; }
+  #content .article-updates h2 { font: 700 18px/1.3 Inter,Arial,sans-serif; text-align: center; margin: 0; }
+  #content .article-updates .whatsapp-opt-in .button { width: 100%; }
+  #content .article-updates .whatsapp-opt-in .whatsapp-helper { font-size: 14px !important; line-height: 1.4; margin-top: 7px; }
+  #content .article .prose .comparison-card { padding: .7rem; }
+  #content .article .prose .responsive-table-cards { gap: .7rem; }
+  #content .comparison-field dt:empty { display: none; }
+  #content .comparison-field:first-child dd { font-weight: 700; }
+  #content .article .prose .comparison-field + .comparison-field { margin-top: .55rem; }
+  #content .article .prose .comparison-field :is(dt,dd) { font-size: calc(var(--body-size) * .82); line-height: 1.4; }
+  #content .related-grid .archive-card { grid-template-columns: minmax(0,1fr); gap: .75rem; }
+  #content .related-grid .archive-thumb { width: 100%; height: auto; max-width: 180px; }
+  #content .related-grid .archive-card .eyebrow { font: 500 13px/1.45 Inter,Arial,sans-serif; text-transform: none; letter-spacing: normal; color: #69547e; margin-bottom: .4rem; }
+  #content .article .prose .has-mobile-chart .desktop-chart { display: none; }
+  #content .article .prose .mobile-chart { display: block; min-width: 0; font-family: Inter,Arial,sans-serif; }
+  #content .mobile-chart-title { font-size: 18px; line-height: 1.3; font-weight: 700; color: #101d38; margin-bottom: .75rem; }
+  #content .mobile-chart-subtitle { font-size: 14px; line-height: 1.4; color: #526078; margin-bottom: .6rem; }
+  #content .mobile-chart-row { margin-bottom: 14px; }
+  #content .mobile-chart-label { font-size: 15px; line-height: 1.4; margin-bottom: 4px; color: #252438; }
+  #content .mobile-chart-track { position: relative; height: 30px; }
+  #content .mobile-chart-bar { position: absolute; left: var(--bar-start); width: var(--bar-width); background: var(--bar-color); height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: end; box-sizing: border-box; padding-right: 8px; }
+  #content .mobile-chart-bar strong { color: #fff; font-size: 16px; line-height: 1; }
+  #content .mobile-chart-track.signed { padding-right: 64px; background: linear-gradient(to right,transparent 4.5%,#aeb5c4 4.5%,#aeb5c4 5%,transparent 5%); width: calc(100% - 64px); }
+  #content .mobile-chart-track.signed .mobile-chart-value { position: absolute; left: calc(100% + 8px); top: 4px; white-space: nowrap; font-size: 16px; color: #101d38; }
+  #content .mobile-chart-axis { font-size: 13px; line-height: 1.4; text-align: center; color: #526078; }
+  #content .mobile-chart-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; font-size: 14px; margin-bottom: .5rem; }
+  #content .mobile-chart-legend i { display: inline-block; width: 20px; border-top: 3px solid #7447d7; margin-right: 5px; vertical-align: middle; }
+  #content .mobile-chart-legend i.dashed { border-color: #101d38; border-top-style: dashed; }
+  #content .mobile-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  #content .mobile-chart-note { font-size: 12px; line-height: 1.45; color: #526078; margin-top: .75rem; }
+  #content .mobile-chart .mobile-chart-full { display: block; font-size: 14px; margin-top: .6rem; }
+}

@@ -1,3 +1,4 @@
+import { enhanceMobileCharts } from './mobile-charts.mjs';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -41,7 +42,7 @@ export default function responsiveTables() {
           if (entry.isDirectory()) await visit(file);
           else if (entry.name.endsWith('.html')) {
             const html = await readFile(file, 'utf8');
-            const enhanced = enhanceArticleTables(html);
+            const enhanced = enhanceMobileCharts(enhanceArticleTables(html));
             if (enhanced !== html) await writeFile(file, enhanced);
           }
         }
