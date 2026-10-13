@@ -50,7 +50,7 @@ const articleSchema = {
     <header class="article-header">
       <p class="eyebrow">
         {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights">{post.data.category}</a>}
-        {' · '}{post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })}
+        {' · '}{post.data.updated ? 'Last updated: ' : 'Published: '}{(post.data.updated ?? post.data.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'UTC' })}
       </p>
       <h1>{post.data.title}</h1><p class="dek"><BrandText text={post.data.summary} /></p>
     </header>
@@ -70,7 +70,7 @@ const articleSchema = {
     <div class:list={["article-grid", { "article-grid-no-toc": !toc.length }]}>
       {toc.length > 0 && <aside class="article-toc contents-nav"><p>In this article</p><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></aside>}
       <div class="prose"><Content />
-    <ArticleSources sources={post.data.sources} />
+    <ArticleSources sources={post.data.sources} title={post.data.sourcesTitle} />
     <div class="article-actions">
       <p class="assignment-invitation">Need an independent analysis of a business issue or opportunity?</p>
       <p class="primary-article-action"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>

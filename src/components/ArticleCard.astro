@@ -2,7 +2,7 @@
 import { previewExcerpt } from '../utils/article-preview.mjs';
 import BrandText from './BrandText.astro';
 const { post, featured = false, compact = false, hideCategory = false } = Astro.props;
-const dateLabel = post.data.date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+const dateLabel = `${post.data.updated ? 'Last updated: ' : 'Published: '}${(post.data.updated ?? post.data.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'UTC' })}`;
 const contentLabel = post.data.advertorial
   ? `ADVERTORIAL${post.data.sponsor ? ` · Sponsored by ${post.data.sponsor}` : ''}`
   : post.data.category;
