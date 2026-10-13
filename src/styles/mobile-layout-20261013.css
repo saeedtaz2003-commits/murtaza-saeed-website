@@ -24,10 +24,11 @@
  footer { padding-block:2rem; }
  footer .footer-grid { gap:1.25rem; }
  footer .footer-grid > div p { margin-block:.45rem; }
- footer .footer-alert-block { text-align:center; }
+ footer .fine:has(.footer-alert-instructions) { text-align:center; }
+ footer .fine:has(.footer-alert-instructions) > a { display:table; margin:0 auto; }
  footer .footer-alert-wrap { display:inline-flex; flex-direction:column; align-items:center; max-width:100%; }
  footer .footer-alert-wrap > a { margin-bottom:0; }
- footer .footer-alert-instructions { display:block; max-width:100%; margin-top:7px; font-size:.83rem; line-height:1.35; text-align:center; }
+ footer .footer-alert-instructions { display:block; max-width:210px; margin:7px auto 0; font-size:.83rem; line-height:1.35; text-align:center; }
  #content .contact-box { margin-block:1.35rem 2.1rem; padding:1.4rem; gap:.7rem; }
  #content .contact-box h2 { margin-bottom:.55rem; }
  #content .contact-box p { margin-block:.35rem; }
