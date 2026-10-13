@@ -13,3 +13,7 @@ Actual mobile browser verification is required before claiming mobile verificati
 ## Desktop typography (approved 13 October evening)
 
 Use category labels 16–18px medium, key values 18–20px bold, axes 14–15px medium, axis titles/legends 15–16px medium, and sources 13–14px. Keep text as native responsive labels when scaling a bitmap would fall below those sizes. Preserve data, chart type, colours and scales. The four current approved chart presentations share the responsive build enhancement; original artwork remains available through each full-size link. Future charts require their own approved data/rendering definition and rendered desktop/mobile verification.
+
+## Latest mobile and full-view revision (13 October, 9 pm batch)
+
+Mobile targets supersede v1.0: complete titles 20–22px bold; categories 16–18px; values 18–20px bold; axes 15–16px; sources 13–14px. Reflow rather than shrink. Every title, subtitle, legend, point/bar, axis and note must fit the viewport width by default at 320/375/430px, with optional browser zoom. Full-size links now use HTML chart viewers with the same rendering and complete context; they do not open the Android/browser raw-image viewer. Original artwork remains stored unchanged. Keep the approved purple solid 3% and dark dashed 5% definitions and the exact contribution calculation. Real mobile testing is still required to establish rendered fit and interaction behaviour.

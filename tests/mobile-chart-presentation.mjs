@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {parse,walkSync} from 'ultrahtml';
-import {enhanceMobileCharts} from '../src/integrations/mobile-charts.mjs';
+import {enhanceMobileCharts,chartViewerHref} from '../src/integrations/mobile-charts.mjs';
 const find=(r,p)=>{const a=[];walkSync(r,n=>{if(p(n))a.push(n)});return a;};
 const cls=(n,c)=>(n.attributes?.class||'').split(' ').includes(c);
 const text=n=>n.type===2?n.value:(n.children||[]).map(text).join('');
@@ -16,7 +16,7 @@ for(const [slug,assets] of [
   const original=find(figures[i],n=>cls(n,'desktop-chart'))[0],mobile=find(figures[i],n=>cls(n,'mobile-chart'))[0];
   const img=find(original,n=>n.name==='img')[0];assert.equal(img.attributes.src,'/images/'+assets[i][0]);assert(img.attributes.width&&img.attributes.height);checks+=2;
   for(const value of assets[i][1]){assert(text(mobile).includes(value),`${assets[i][0]} missing ${value}`);checks++;}
-  const full=find(mobile,n=>cls(n,'mobile-chart-full'))[0];assert.equal(full.attributes.href,img.attributes.src);checks++;
+  const full=find(mobile,n=>cls(n,'mobile-chart-full'))[0];assert.equal(full.attributes.href,chartViewerHref(img.attributes.src));checks++;
  }
  assert.equal(find(root,n=>n.name==='a'&&text(n).trim()==='Discuss an Assignment').length,1);checks++;
 }

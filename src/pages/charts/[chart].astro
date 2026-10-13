@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import { mobileCharts, renderResponsiveChart } from '../../integrations/mobile-charts.mjs';
+export function getStaticPaths() {
+  return Object.entries(mobileCharts).map(([src, data]) => ({
+    params: { chart: src.split('/').pop().replace(/\.png$/, '') },
+    props: { src, data }
+  }));
+}
+const { src, data } = Astro.props;
+const title = data.viewerTitle ?? data.title;
+const article = src.includes('quickmart') ? '/quickmart-ipo-ksh7-50-is-it-worth-buying/' : '/can-cutting-prices-improve-your-business-performance/';
+---
+<Base title={`${title} | Murtaza Insights`} description={title} image={src}>
+  <section class="chart-viewer wrap" aria-label="Full chart view">
+    <h1>{title}</h1>
+    <div set:html={renderResponsiveChart(src, { viewer: true })} />
+    <p class="chart-return"><a href={article}>Return to article</a></p>
+  </section>
+</Base>
