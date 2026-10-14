@@ -1,0 +1,78 @@
+/* Utility Typography & Layout Standard V1.0, approved 14 October.
+   Commentary keeps its established serif typography. */
+footer .footer-alerts {
+  display: grid; grid-template-columns: minmax(0,1fr);
+  width: max-content; max-width: 100%; margin-inline: auto;
+}
+footer .footer-alerts > a { white-space: nowrap; text-align: center; margin-bottom: 0; }
+footer .footer-alert-instructions { width: 100%; white-space: normal; text-align: center; margin-top: 7px; }
+#content .content-engagement { padding-top: .5rem; margin-top: .75rem; text-align: center; }
+#content .content-engagement .content-response-actions { justify-content: center; margin-block: 0 .4rem; }
+#content .content-engagement .content-response-actions a {
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: border-box; height: 46px; min-height: 46px; padding: 0 20px;
+  font: 600 17.5px/1.2 Inter,Arial,sans-serif !important;
+  color: var(--purple); background: #faf8fd; border: 1px solid #d7cbea;
+  border-radius: 11px; text-decoration: none !important;
+}
+#content .content-engagement .engagement-copyright-year {
+  font: 400 16px/1.35 Inter,Arial,sans-serif !important;
+  color: #707684; margin-block: 5px !important;
+}
+#content .content-engagement .engagement-policy,
+#content .content-engagement .engagement-policy a {
+  font: 400 16.5px/1.35 Inter,Arial,sans-serif !important;
+  color: var(--navy); margin-block: 5px;
+}
+#content .content-engagement .engagement-policy a {
+  text-decoration: underline; text-underline-offset: .18em;
+}
+#content .content-engagement .engagement-share-row {
+  justify-content: center; align-items: center; gap: 8px; margin-top: .45rem;
+}
+#content .content-engagement .engagement-share-row button {
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: border-box; height: 46px; min-height: 46px; padding: 0 20px;
+  font: 600 18px/1.2 Inter,Arial,sans-serif !important; cursor: pointer;
+  border: 1px solid #d7cbea; border-radius: 11px; color: var(--purple);
+  background: #fff; text-decoration: none;
+}
+#content .content-engagement .engagement-share-row [data-share-status] {
+  font: 400 14px/1.3 Inter,Arial,sans-serif !important;
+}
+#content .content-engagement :is(.content-response-actions a,.engagement-share-row button):focus-visible {
+  outline: 2px solid var(--purple); outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  #content .content-engagement .content-response-actions a,
+  #content .content-engagement .engagement-share-row button {
+    height: 44px; min-height: 44px; padding-inline: 16px;
+    font-size: 16px !important;
+  }
+  #content .content-engagement .engagement-copyright-year { font-size: 14px !important; }
+  #content .content-engagement .engagement-policy,
+  #content .content-engagement .engagement-policy a { font-size: 15px !important; }
+}
+@media (min-width: 761px) {
+  #content .contact-intro { padding-block: 1.25rem .75rem; }
+  #content .contact-intro h1 {
+    font-size: clamp(1.55rem,2.65vw,2.45rem); margin-bottom: .75rem;
+  }
+  #content .contact-intro p { margin-block: 0 .65rem; }
+  #content .contact-banner { width: min(calc(100% - 2rem),660px); margin-block: 0 1rem; }
+  #content .contact-banner img { width: 100%; height: auto; }
+  #content .contact-box { margin-block: 1rem 2rem; padding: 1.25rem; gap: 1.25rem; }
+  #content .contact-box h2 { margin-bottom: .6rem; }
+  #content .contact-box p { margin-block: 0; }
+  /* Desktop tables fit their reading column instead of becoming block scroll areas.
+     The mobile comparison-card presentation is unchanged. */
+  #content .article .prose table {
+    display: table; width: 100%; max-width: 100%; min-width: 0;
+    table-layout: fixed; white-space: normal; overflow: visible;
+  }
+  #content .article .prose :is(th,td) {
+    white-space: normal; overflow-wrap: anywhere; vertical-align: top;
+    padding: .65rem; line-height: 1.45;
+  }
+  #content .article .prose table:has(thead tr > th:nth-child(3):last-child) th:first-child { width: 44%; }
+}
