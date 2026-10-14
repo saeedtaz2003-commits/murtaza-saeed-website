@@ -10,6 +10,7 @@ export type FunnyBizzItem = {
   image: string;
   alt: string;
   copy: string;
+  archiveSummary: string;
   copyHtml?: string;
   domains?: readonly (readonly [string, string])[];
   closing?: string;
@@ -21,6 +22,7 @@ export type FunnyBizzItem = {
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
   "id": "technify-it-featured",
+    archiveSummary: "Old business practices can become modern technology opportunities. This cartoon introduces how AI and apps can add speed, scale and automation to familiar routines, with a linked article exploring practical possibilities.",
   "publishedAt": "2026-10-04",
   "sliderCategory": "Featured Article",
   "category": "Technology",
@@ -33,6 +35,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 },
   {
   "id": "paper-to-erp-featured",
+    archiveSummary: "From handwritten records to full ERP systems, businesses face different information bottlenecks. This cartoon introduces an article about where AI can reduce manual work, strengthen controls and support clearer management decisions.",
   "publishedAt": "2026-10-04",
   "sliderCategory": "Featured Article",
   "category": "Business & Finance",
@@ -45,6 +48,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 },
   {
   "id": "lexus-motomorphosis",
+    archiveSummary: "Lexus and MSCHF’s twisted vehicle offers an unusual view of product design and brand attention. The commentary considers how challenging convention can start conversations about electrification, imagination and transformation.",
   "publishedAt": "2026-10-04",
   "sliderCategory": "Funny",
   "category": "Brands & Marketing",
@@ -56,6 +60,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 
   {
     id: 'simbisa-customers-spend-less',
+    archiveSummary: "Can lower customer spending produce a better business result? This cartoon poses the question without giving away the answer, inviting readers to explore the conditions behind improved business performance in the linked article.",
     publishedAt: '2026-10-03',
     sliderCategory: 'Featured Article',
     category: 'Business Performance Reviews',
@@ -69,6 +74,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 
   {
     id: 'canada-swing-states-tariffs',
+    archiveSummary: "Retaliatory tariffs can carry political as well as economic messages. This cartoon looks at Canada, U.S. swing states and the idea of choosing trade measures for their electoral impact.",
     sliderCategory: 'Funny',
     category: 'Trade & Politics',
     title: 'Canada Plays the Swing States',
@@ -78,6 +84,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'kenya-power-profit',
+    archiveSummary: "Strong profits and unreliable service make an uncomfortable pairing. This Kenya Power cartoon contrasts investor satisfaction with customers’ concerns about power cuts and bills, raising a familiar question about business results and customer experience.",
     sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
     title: 'A bright result. A rather dim customer experience.',
@@ -87,6 +94,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'domain-name-mistake',
+    archiveSummary: "A website name can tell an unintended story when spaces disappear. Murtaza’s near miss introduces ten unfortunate domain examples and a simple branding lesson: check the lowercase name before registering it.",
     sliderCategory: 'Funny',
     category: 'Websites & Branding',
     title: 'When “Murtaza Insights” Nearly Became “Murtaza in Tights”',
@@ -111,6 +119,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'ozempic-victorias-secret',
+    archiveSummary: "Weight-loss trends can create unexpected consumer-market questions. This cartoon considers whether changing waistlines, confidence and wardrobes could benefit Victoria’s Secret, while distinguishing a promising market narrative from sustained business profits.",
     sliderCategory: 'Funny',
     category: 'Markets & Consumers',
     title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
@@ -120,6 +129,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'pulse-ring',
+    archiveSummary: "An anti-smart ring offers a different response to device overload. This cartoon explores the irony of buying technology to pause technology use, and asks whether every modern problem really needs more data.",
     sliderCategory: 'Funny',
     category: 'Technology & Modern Life',
     title: 'When the smartest feature is knowing when to switch off',
@@ -129,6 +139,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'chasing-wifey-hole-in-one',
+    archiveSummary: "A personal golfing pursuit at Nyali Golf & Country Club becomes a retirement joke. After his wife’s hole-in-one, the Goofing Golfer keeps playing, hoping more rounds will improve his chances.",
     sliderCategory: 'Funny',
     category: 'Golf & Marriage',
     title: 'She did it in one. I’m still improving the odds',
@@ -138,6 +149,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'missed-hole-in-one',
+    archiveSummary: "A narrowly missed golf shot becomes a joke about changing the rules after seeing the result. The cartoon connects golf’s scorecard with business performance indicators and the temptation to redefine success.",
     sliderCategory: 'Funny',
     category: 'Golf & Management',
     title: 'I have decided… that counts as a hole-in-one!',
@@ -147,6 +159,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'quickmart-ipo-ksh7-50-is-it-worth-buying',
+    archiveSummary: "Quickmart’s IPO raises a straightforward question: is KSh7.50 worth paying? This cartoon leads to an independent assessment of the offer, keeping the investment conclusion in the article rather than revealing it here.",
     publishedAt: '2026-10-10',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
@@ -159,6 +172,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'mbappe-endorsement-featured',
+    archiveSummary: "Kylian Mbappé’s move from Nike to On introduces a wider business question about endorsement and ownership. The linked article examines cash, equity and product influence as parts of a commercial relationship.",
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
     title: 'Why Kylian Mbappé Left Nike for On: The Shift to Equity',

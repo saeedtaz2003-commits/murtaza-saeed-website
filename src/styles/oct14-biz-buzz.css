@@ -1,0 +1,22 @@
+/* Preserve the square viewer and commentary copy; compact only its desktop furniture. */
+#content .funny-archive-description { display: block; margin-top: .3rem; font-size: 16px; font-weight: 400; line-height: 1.45; color: var(--navy); }
+@media (min-width: 761px) {
+  #content .funny-commentary-viewport { min-height: 0; max-height: none; height: auto; overflow: visible; }
+  #content .funny-commentary-viewport .lighter-copy { padding: .75rem 1rem; }
+  #content .funny-commentary-viewport .lighter-copy > h2 { font-size: clamp(22px, 1.8vw, 27px); line-height: 1.2; margin: 0 0 .5rem; }
+  #content .funny-commentary-viewport .lighter-copy > p { margin-block: .35rem; line-height: 1.4; }
+  #content .funny-commentary-viewport .domain-name-list { margin-block: .4rem; padding: .4rem .65rem; }
+  #content .funny-commentary-viewport .domain-name-list h3 { margin-block: 0 .25rem; }
+  #content .funny-commentary-viewport .domain-name-list ul { margin: 0; }
+  #content .funny-commentary-viewport .domain-name-list li { padding-block: .2rem; line-height: 1.3; }
+  #content .funny-commentary-viewport .domain-name-list :is(strong,span) { font-size: 16px; overflow-wrap: anywhere; }
+  #content .funny-commentary-viewport .funny-content-cta { min-height: 42px; padding: .3rem 1rem; font-size: 17px; }
+  #content .funny-engagement { margin-top: .35rem; padding-top: .35rem; }
+  #content .funny-engagement .content-response-actions a,
+  #content .funny-engagement .engagement-share-row button { height: 44px; min-height: 44px; }
+  #content .funny-inline-discovery .whatsapp-alerts { margin-block: .5rem 0; padding-block: .5rem; }
+  #content .funny-inline-discovery .whatsapp-alerts h2 { font-size: 20px; margin-block: 0 .3rem; }
+}
+@media (max-width: 760px) {
+  #content .funny-archive-description { font-size: 15px; }
+}

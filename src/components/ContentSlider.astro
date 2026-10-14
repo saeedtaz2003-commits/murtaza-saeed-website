@@ -118,6 +118,7 @@ const { homepage = false } = Astro.props;
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
             <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
+            <span class="funny-archive-description">{item.archiveSummary}</span>
           </span>
           <span class="funny-archive-open" aria-hidden="true">↗</span>
         </button>
