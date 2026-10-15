@@ -2,6 +2,7 @@ export type FunnyBizzSliderCategory = 'Funny' | 'Featured Article' | 'Advertoria
 
 export type FunnyBizzItem = {
   id: string;
+  hidden?: boolean;
   publishedAt?: string;
   sliderCategory: FunnyBizzSliderCategory;
   category: string;
@@ -39,10 +40,10 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   "publishedAt": "2026-10-04",
   "sliderCategory": "Featured Article",
   "category": "Business & Finance",
-  "title": "From Paper to ERP: Where Can AI Improve Your Finance Function?",
+  "title": "From Paper to ERP: Where Can AI Help?",
   "image": "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg",
   "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
-  "copy": "How can AI help your business? By reducing manual input and errors, checking documents and transactions, reconciling information, highlighting exceptions, analysing margins, cash flow and working capital, and answering management questions more quickly. The opportunity exists for businesses using any kind of accounting system—paper-based records, Excel, basic or legacy software, modern cloud accounting, separate specialist systems or full ERP. Start with the pain point.",
+  "copy": "From paper records and Excel to full ERP, AI can reduce manual input, check transactions, reconcile information and highlight exceptions. It can also help managers analyse margins, cash flow and working capital. Start with the business pain point—not the technology.",
   "destinationUrl": "/from-paper-to-erp-ai-finance-function",
   "ctaLabel": "Read the Article"
 },
@@ -52,10 +53,10 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   "publishedAt": "2026-10-04",
   "sliderCategory": "Funny",
   "category": "Brands & Marketing",
-  "title": "How Far Would You Twist Your Product to Stand Out?",
+  "title": "How Far Would You Twist Your Product?",
   "image": "/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg",
   "alt": "Twisted Lexus art car created by MSCHF for the Lexus MOTOMORPHOSIS project, illustrating how brands can use unexpected product design to attract attention.",
-  "copy": "Lexus turned an electrified vehicle into something almost unrecognisable, working with Brooklyn art collective MSCHF on its MOTOMORPHOSIS project. The aim was to spark a different conversation around electrification, imagination and transformation. Perhaps the marketing lesson isn't how far you should twist your product — but how far you're prepared to twist convention to get people talking."
+  "copy": "Lexus and Brooklyn art collective MSCHF turned an electrified vehicle into something almost unrecognisable for MOTOMORPHOSIS. The aim was a fresh conversation about electrification and transformation. The marketing question: how far would you twist convention to get people talking?"
 },
 
   {
@@ -64,7 +65,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     publishedAt: '2026-10-03',
     sliderCategory: 'Featured Article',
     category: 'Business Performance Reviews',
-    title: 'Can Customers Spend Less — and Still Make You More Money?',
+    title: "Can Customers Spend Less — and Make You More?",
     image: '/images/can-customers-spend-less-make-more-money.jpg',
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
@@ -87,13 +88,14 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "Strong profits and unreliable service make an uncomfortable pairing. This Kenya Power cartoon contrasts investor satisfaction with customers’ concerns about power cuts and bills, raising a familiar question about business results and customer experience.",
     sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
-    title: 'A bright result. A rather dim customer experience.',
+    title: "Bright Profits. Dim Customer Experience.",
     image: '/images/kenya-power-sh25-billion-profit-power-cuts-cartoon.png',
     alt: 'Kenya Power Sh25 billion profit cartoon contrasting strong financial results with power cuts, higher bills and unreliable electricity supply in Kenya.',
     copy: 'Investors are delighted by Kenya Power’s profits. Customers are still waiting for the lights to stay on—and for a bill that doesn’t come as a shock.'
   },
   {
     id: 'domain-name-mistake',
+    hidden: true,
     archiveSummary: "A website name can tell an unintended story when spaces disappear. Murtaza’s near miss introduces ten unfortunate domain examples and a simple branding lesson: check the lowercase name before registering it.",
     sliderCategory: 'Funny',
     category: 'Websites & Branding',
@@ -122,7 +124,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "Weight-loss trends can create unexpected consumer-market questions. This cartoon considers whether changing waistlines, confidence and wardrobes could benefit Victoria’s Secret, while distinguishing a promising market narrative from sustained business profits.",
     sliderCategory: 'Funny',
     category: 'Markets & Consumers',
-    title: 'When waistlines shrink, wardrobes—and market opportunities—may grow',
+    title: "Smaller Waistlines. Bigger Opportunities?",
     image: '/images/ozempic-victorias-secret-shares-meme.webp',
     alt: 'Satirical cartoon linking the Ozempic weight-loss trend with rising expectations for Victoria’s Secret shares.',
     copy: 'Could weight-loss drugs provide an unexpected lift for Victoria’s Secret? Slimmer customers may feel more confident, replace clothing that no longer fits and spend more on fashion. Whether that translates into sustained profits remains uncertain—but Wall Street rarely ignores a promising new consumer trend.'
@@ -132,7 +134,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "An anti-smart ring offers a different response to device overload. This cartoon explores the irony of buying technology to pause technology use, and asks whether every modern problem really needs more data.",
     sliderCategory: 'Funny',
     category: 'Technology & Modern Life',
-    title: 'When the smartest feature is knowing when to switch off',
+    title: "The Smartest Feature? Switching Off.",
     image: '/images/pulse-mindfulness-anti-smart-ring-meme.webp',
     alt: 'Cartoon showing an overwhelmed gadget user being offered the Pulse Mindfulness Ring, which uses gentle vibrations to encourage screen-free pauses rather than tracking health data.',
     copy: 'Technology has become so good at measuring everything that we can spend more time studying dashboards than actually living. The Pulse Ring collects no health data. It simply vibrates occasionally, reminding its wearer to stop checking devices, pause and breathe. At about $199, the irony is expensive—but the message is valuable: not every problem needs more data.'
@@ -142,7 +144,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "A personal golfing pursuit at Nyali Golf & Country Club becomes a retirement joke. After his wife’s hole-in-one, the Goofing Golfer keeps playing, hoping more rounds will improve his chances.",
     sliderCategory: 'Funny',
     category: 'Golf & Marriage',
-    title: 'She did it in one. I’m still improving the odds',
+    title: "She Did It in One. I’m Still Trying.",
     image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
     alt: 'Goofing Golfer cartoon set at Nyali Golf & Country Club, showing a husband pursuing his first hole-in-one after his wife achieved hers.',
     copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
@@ -152,7 +154,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "A narrowly missed golf shot becomes a joke about changing the rules after seeing the result. The cartoon connects golf’s scorecard with business performance indicators and the temptation to redefine success.",
     sliderCategory: 'Funny',
     category: 'Golf & Management',
-    title: 'I have decided… that counts as a hole-in-one!',
+    title: "That Counts as a Hole-in-One!",
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
     alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
     copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
@@ -175,7 +177,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "Kylian Mbappé’s move from Nike to On introduces a wider business question about endorsement and ownership. The linked article examines cash, equity and product influence as parts of a commercial relationship.",
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
-    title: 'Why Kylian Mbappé Left Nike for On: The Shift to Equity',
+    title: "Mbappé: From Endorsement to Equity",
     image: '/images/mbappe-nike-to-on-web.jpg',
     alt: 'Editorial cartoon showing Kylian Mbappé leaving Nike and joining On',
     copy: 'Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership.',
@@ -185,3 +187,6 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 ];
 
 export const funnyBizzPermalink = (id: string) => `/the-lighter-side/${id}`;
+
+// Temporarily withdrawn items retain their complete source above for redesign.
+export const publicFunnyBizzItems = funnyBizzItems.filter(item => !item.hidden);

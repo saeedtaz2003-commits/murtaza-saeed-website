@@ -1,8 +1,25 @@
 <footer>
   <div class="wrap footer-grid">
-    <div><strong>Murtaza Saeed</strong><p>Former CFO with 35+ years of senior management experience. Independent insights on business performance, strategy and systems improvement. Available for selected remote advisory assignments.</p></div>
+    <div class="footer-bio"><strong>Murtaza Saeed</strong><div class="footer-captions" data-footer-captions><p class="footer-caption is-current">Former CFO with 35+ years of senior management experience. Independent insights on business performance, strategy and systems improvement. Available for selected remote advisory assignments.</p><p class="footer-caption">Better business performance starts with asking the right questions. Exploring practical ways to improve operations, efficiency and profitability.</p><p class="footer-caption">Looking beyond the numbers to understand what drives business success — and what may be holding it back.</p><p class="footer-caption">Exploring how better information systems, smarter processes and responsible AI can improve the way businesses operate.</p><p class="footer-caption">35+ years in senior management. Still questioning assumptions, exploring new ideas and finding better ways of doing business.</p></div></div>
     <div class="footer-menu"><a href="/">Home</a><a href="/about">About</a><a href="/insights">Insights</a><a href="/the-lighter-side">Biz Buzz</a><a href="/contact">Contact</a><a href="/work-with-me">Work With Me</a><a href="https://forms.gle/7bd6s91ezQGqkLHf9" target="_blank" rel="noopener noreferrer">Comments &amp; Feedback</a></div>
     <div><p><span class="footer-copyright">© 2026 <em>Murtaza Insights</em></span><span class="footer-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></span></p><p class="fine footer-alerts"><a href="https://wa.me/254726829626?text=Please%20add%20me%20to%20general%20Murtaza%20Insights%20alerts." target="_blank" rel="noopener noreferrer">General WhatsApp Alerts</a><span class="footer-alert-instructions">Send the message &amp; save our number.</span></p><p class="fine">Views are personal. Finance articles are general commentary, not personal financial advice.</p></div>
   </div>
 </footer>
 
+
+<script>
+  document.querySelectorAll('[data-footer-captions]').forEach(container => {
+    const captions = Array.from(container.querySelectorAll('.footer-caption'));
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let paused = false;
+    container.addEventListener('mouseenter', () => { paused = true; });
+    container.addEventListener('mouseleave', () => { paused = false; });
+    window.setInterval(() => {
+      if (paused || reduced.matches || document.hidden) return;
+      captions[current]?.classList.remove('is-current');
+      current = (current + 1) % captions.length;
+      captions[current]?.classList.add('is-current');
+    }, 15000);
+  });
+</script>
