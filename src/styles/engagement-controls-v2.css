@@ -27,3 +27,4 @@
   #content .content-engagement .engagement-share-row { gap: .4rem; }
   #content .content-engagement .engagement-share-row :is(button,.engagement-comment) { font-size: 15px !important; padding-inline: 12px; }
 }
+#content .content-engagement .engagement-share-row [data-copy-label] { font: inherit !important; color: inherit; }
