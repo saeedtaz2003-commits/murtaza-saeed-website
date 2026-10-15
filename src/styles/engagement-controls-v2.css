@@ -1,0 +1,29 @@
+/* Approved V2: legal line first, one centered group of matching utility actions. */
+#content .content-engagement {
+  display: flex; flex-direction: column; align-items: center; gap: .45rem;
+  padding-top: .4rem; margin-block: .45rem; text-align: center;
+}
+#content .content-engagement .engagement-legal-row {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center;
+  gap: .2rem 1rem; width: 100%;
+}
+#content .content-engagement :is(.engagement-copyright-year,.engagement-policy) { margin: 0 !important; }
+#content .content-engagement .engagement-share-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: .5rem; margin: 0; width: 100%;
+}
+#content .content-engagement .engagement-share-row :is(button,.engagement-comment) {
+  display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+  box-sizing: border-box; height: 44px; min-height: 44px; padding: 0 16px;
+  border: 1px solid #d7cbea; border-radius: 11px; background: #faf8fd;
+  color: var(--purple); font: 600 17px/1.2 Inter,Arial,sans-serif !important;
+  text-decoration: none !important; white-space: nowrap; cursor: pointer;
+}
+#content .content-engagement .engagement-icon { width: 18px; height: 18px; flex: 0 0 18px; }
+#content .content-engagement [data-share-status]:empty { display: none; }
+#content .content-engagement [data-share-status]:not(:empty) { flex-basis: 100%; }
+#content .content-engagement .engagement-share-row :is(button,.engagement-comment):focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+@media (max-width: 760px) {
+  #content .content-engagement .engagement-share-row { gap: .4rem; }
+  #content .content-engagement .engagement-share-row :is(button,.engagement-comment) { font-size: 15px !important; padding-inline: 12px; }
+}

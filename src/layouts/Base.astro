@@ -28,6 +28,7 @@ import '../styles/oct13-chart-readability.css';
 import '../styles/oct14-utility-layout.css';
 import '../styles/oct14-biz-buzz.css';
 import '../styles/oct15-footer-biz-buzz.css';
+import '../styles/engagement-controls-v2.css';
 const { title = 'Murtaza Saeed | Business, Management & Systems Insights', description = 'Independent business, management and systems commentary by Murtaza Saeed, shaped by more than 35 years of professional experience.', image = '/images/murtaza-insights-full-logo-canonical.png', type = 'website', jsonLd } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(image, Astro.site);
@@ -100,9 +101,10 @@ const socialImageType = socialPath.endsWith('.webp')
             await navigator.clipboard.writeText(url);
             if (status) status.textContent = 'Link copied';
             if (copyButton instanceof HTMLButtonElement) {
-              const original = copyButton.textContent;
-              copyButton.textContent = 'Copied';
-              window.setTimeout(() => { copyButton.textContent = original; }, 1600);
+              const label = copyButton.querySelector('[data-copy-label]') ?? copyButton;
+              const original = label.textContent;
+              label.textContent = 'Copied';
+              window.setTimeout(() => { label.textContent = original; }, 1600);
             }
           } catch {
             if (status) status.textContent = 'Copy unavailable — use Share instead';

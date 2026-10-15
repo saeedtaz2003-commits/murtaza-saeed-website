@@ -1,20 +1,21 @@
 ---
+import EngagementIcon from './EngagementIcon.astro';
 import { commentsFormFor } from '../data/comments';
 
-const { title, url, commentTitle = title, showComment = true, commentLast = false, class: className = '' } = Astro.props;
+const { title, url, commentTitle = title, showComment = true, class: className = '' } = Astro.props;
 const absoluteUrl = new URL(url, Astro.site).toString();
 const encodedUrl = encodeURIComponent(absoluteUrl);
 const encodedTitle = encodeURIComponent(title);
 ---
 <div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl}>
-  {showComment && !commentLast && (
-    <p class="content-response-actions"><a href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer">Send a Comment</a></p>
-  )}
-  <p class="engagement-copyright-year">© 2026 <em>Murtaza Insights</em></p>
-  <p class="engagement-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
+  <div class="engagement-legal-row">
+    <p class="engagement-copyright-year">© 2026 <em>Murtaza Insights</em></p>
+    <p class="engagement-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
+  </div>
   <div class="engagement-share-row" aria-label="Share this content">
-    <button type="button" data-share-trigger>Share</button>
-    <button type="button" data-copy-link>Copy Link</button>
+    {showComment && <a class="engagement-comment" href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer"><EngagementIcon name="message" />Send a Comment</a>}
+    <button type="button" data-share-trigger><EngagementIcon name="share" />Share</button>
+    <button type="button" data-copy-link><EngagementIcon name="link" /><span data-copy-label>Copy Link</span></button>
     <span data-share-status aria-live="polite"></span>
   </div>
   <div class="engagement-share-menu" data-share-fallback hidden aria-label="Share options">
@@ -24,7 +25,4 @@ const encodedTitle = encodeURIComponent(title);
     <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">X</a>
     <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`}>Email</a>
   </div>
-  {showComment && commentLast && (
-    <div class="article-comment-invitation"><p>What do you think? What price would make Quickmart attractive to you? Or is there another aspect of the IPO you think investors should examine?</p><p class="content-response-actions"><a href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer">Send a Comment</a></p></div>
-  )}
 </div>
