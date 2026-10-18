@@ -8,6 +8,8 @@ export type FunnyBizzItem = {
   category: string;
   title: string;
   titleHtml?: string;
+  commentaryTitle?: string;
+  commentaryCopyHtml?: string;
   image: string;
   alt: string;
   copy: string;
@@ -49,6 +51,12 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
 },
   {
   "id": "lexus-motomorphosis",
+  commentaryTitle: 'Lexus × MSCHF MOTOMORPHOSIS: When Product Marketing Becomes Art',
+  commentaryCopyHtml: `Lexus commissioned Brooklyn art collective MSCHF to turn two electrified cars into MOTOMORPHOSIS sculptures: one twisted, the other looped into a circle. The familiar product became an unexpected talking point. For a brand, the opportunity is to make people reconsider something they think they already know.
+
+But <strong>attention is only the opening move</strong>: the surprise needs a clear connection to the brand’s message. Here, transformation gives electrification a visual story. Yet the sculptures say little about driving range, charging or everyday usefulness.
+
+The installation gives Lexus an arresting image and a reason to be discussed; it does not, by itself, answer a buyer’s practical questions. <strong>Sparking curiosity is different from advancing a purchase decision.</strong> Would your boldest campaign help customers remember your proposition—or just the spectacle?`,
     archiveSummary: "Lexus and MSCHF’s twisted vehicle challenges conventions about product design and brand attention. Their MOTOMORPHOSIS project opens a conversation about electrification, imagination and how far a brand will go to stand out.",
   "publishedAt": "2026-10-04",
   "sliderCategory": "Funny",

@@ -1,16 +1,19 @@
 ---
 import ExternalCtaIcon from './ExternalCtaIcon.astro';
-interface Props { topic: 'Updates' | 'Biz Buzz'; }
-const { topic } = Astro.props;
+interface Props { topic: 'Updates' | 'Biz Buzz'; compact?: boolean; }
+const { topic, compact = false } = Astro.props;
 const number = '254726829626';
 const message = topic === 'Updates' ? 'Please add me to general Murtaza Insights updates.' : 'Please add me to Biz Buzz alerts.';
 const label = 'Get Updates';
 const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 ---
-<aside class:list={["whatsapp-alerts", { "article-updates": topic === 'Updates' }]}>
+{compact ? <aside class="biz-buzz-updates" aria-label="Biz Buzz updates and archive">
+  <a class="button biz-buzz-cta biz-buzz-wa" href={href} target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="whatsapp" />{label}</a>
+  <a class="button biz-buzz-cta biz-buzz-more" href="/the-lighter-side/#funny-archive-title">Explore More Memes</a>
+  <p class="biz-buzz-helper">Send the message &amp; save our number.</p>
+</aside> : <aside class:list={["whatsapp-alerts", { "article-updates": topic === 'Updates' }]}>
   <h2>{topic === 'Updates' ? 'Get New Article Updates' : 'Like Biz Buzz?'}</h2>
   <div class="whatsapp-opt-in"><a class="button" href={href} target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="whatsapp" />{label}</a>
   <p class="whatsapp-helper">Send the message &amp; save our number.</p></div>
   {topic === 'Biz Buzz' && <p><a class="button" href="/the-lighter-side/#funny-archive-title">Explore More Memes</a></p>}
-</aside>
-
+</aside>}

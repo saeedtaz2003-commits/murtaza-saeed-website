@@ -1,0 +1,29 @@
+/* Shared active-slider footer. Archive cards and non-slider controls are unchanged. */
+#content .funny-commentary-text { min-height:0; }
+#content .funny-action-footer { flex:0 0 auto; margin-top:auto; padding-top:8px; }
+#content .funny-action-footer .content-engagement { display:flex; flex-direction:column; gap:5px; margin:0; padding:0; border:0; }
+#content .funny-action-footer .engagement-legal-row { margin:0; gap:4px 12px; justify-content:center; }
+#content .funny-action-footer .engagement-legal-row p { margin:0!important; font-size:13px!important; line-height:1.3; }
+#content .funny-action-footer .engagement-policy a { text-decoration:underline; }
+#content .funny-action-footer .engagement-share-row { display:flex; flex-wrap:wrap; justify-content:center; gap:5px; margin:0; }
+#content .funny-action-footer .engagement-share-row :is(a,button) { display:inline-flex; align-items:center; justify-content:center; gap:4px; min-height:36px; height:36px; box-sizing:border-box; padding:0 8px; border:1px solid #d8cbe8; border-radius:9px; background:#faf8fd; color:var(--purple,#663399); font:600 13px/1.15 Inter,system-ui,sans-serif!important; text-decoration:none; }
+#content .funny-action-footer .engagement-icon { width:16px; height:16px; flex-shrink:0; }
+#content .funny-action-footer .biz-buzz-updates { width:min(100%,360px); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 8px; margin:5px auto 0; padding:0; border:0; }
+#content .funny-action-footer .biz-buzz-cta { display:flex!important; align-items:center; justify-content:center; gap:5px; width:100%!important; min-height:40px!important; height:40px!important; box-sizing:border-box; margin:0!important; padding:0 8px!important; border:1px solid transparent; border-radius:9px!important; color:#fff!important; font:600 14px/1.15 Inter,system-ui,sans-serif!important; white-space:nowrap; text-decoration:none!important; }
+#content .funny-action-footer .biz-buzz-wa { background:#168b49; }
+#content .funny-action-footer .biz-buzz-more { background:var(--purple,#663399); }
+#content .funny-action-footer .biz-buzz-cta svg { width:20px; height:20px; flex:0 0 20px; }
+#content .funny-action-footer .biz-buzz-helper { grid-column:1; width:100%; margin:3px 0 0!important; text-align:center; font:12px/1.25 Inter,system-ui,sans-serif!important; }
+@media(min-width:761px) {
+ #content .funny-commentary-viewport .lighter-copy { min-height:0; display:flex; flex-direction:column; }
+ #content .funny-commentary-text { flex:1 1 auto; overflow:auto; }
+ #content .funny-commentary-text > p { font-size:18px; line-height:1.35; margin:.25rem 0; }
+}
+#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:22px; line-height:1.4; margin:.45em 0; }
+@media(max-width:760px) {
+ #content .funny-commentary-panel .funny-commentary-text > p { font-size:18px; line-height:1.4; margin:.55em 0; }
+ #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:18px; }
+ #content .funny-action-footer { margin-top:8px; }
+ #content .funny-action-footer .engagement-share-row :is(a,button) { padding:0 6px; font-size:12px!important; }
+ #content .funny-action-footer .biz-buzz-cta { font-size:12px!important; padding:0 5px!important; }
+}

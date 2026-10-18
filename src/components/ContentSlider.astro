@@ -68,11 +68,12 @@ const { homepage = false } = Astro.props;
 
         <div class="funny-commentary-viewport" aria-live="polite">
           {orderedItems.map((item, index) => (
-            <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel aria-hidden={index === 0 ? 'false' : 'true'}>
+            <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel data-commentary-id={item.id} aria-hidden={index === 0 ? 'false' : 'true'}>
               <div class="lighter-copy">
                 {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
-                <h2 set:html={item.titleHtml ?? item.title} />
-                {(item.copyHtml ?? item.copy).split(/\n\n/).map(paragraph => <p set:html={italicizeBrandHtml(paragraph)} />)}
+                <h2 set:html={item.commentaryTitle ?? item.titleHtml ?? item.title} />
+                <div class="funny-commentary-text">
+                {(item.commentaryCopyHtml ?? item.copyHtml ?? item.copy).split(/\n\n/).map(paragraph => <p set:html={italicizeBrandHtml(paragraph)} />)}
                 {'domains' in item && item.domains && (
                   <section class="domain-name-list" aria-label="Unfortunate domain names">
                     <h3>Unfortunate Domain Names</h3>
@@ -84,13 +85,11 @@ const { homepage = false } = Astro.props;
                   </section>
                 )}
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
-                {item.destinationUrl && (
-                  <p class="funny-content-link">
-                    <a class="funny-content-cta" href={item.destinationUrl}>{item.ctaLabel ?? (item.sliderCategory === 'Advertorial' ? 'View Advertorial' : 'Read the Article')}</a>
-                  </p>
-                )}
-                <ContentEngagement title={item.title} commentTitle={item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" />
-                {!homepage && <div class="funny-inline-discovery"><WhatsAppAlerts topic="Biz Buzz" /></div>}
+                </div>
+                <div class="funny-action-footer">
+                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" articleUrl={item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
+                  {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
+                </div>
               </div>
             </article>
           ))}
