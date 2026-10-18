@@ -37,3 +37,9 @@
  #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .lighter-copy > h2 { white-space:nowrap; }
 }
 #content .funny-action-footer .engagement-share-row .engagement-article { background:var(--purple,#7447d7); color:#fff; border-color:var(--purple,#7447d7); }
+
+/* Quickmart uses the approved compact commentary standard, independently of other slides. */
+#content .funny-commentary-panel[data-commentary-id="quickmart-ipo-ksh7-50-is-it-worth-buying"] .funny-commentary-text > p { font-size:17px; line-height:1.4; margin:.4em 0; }
+@media(min-width:1200px) {
+ #content .funny-commentary-panel[data-commentary-id="quickmart-ipo-ksh7-50-is-it-worth-buying"] .lighter-copy > h2 { white-space:nowrap; }
+}

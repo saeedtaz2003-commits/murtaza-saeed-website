@@ -169,13 +169,21 @@ For business owners, the lesson extends beyond luxury cars. Unconventional marke
   },
   {
     id: 'quickmart-ipo-ksh7-50-is-it-worth-buying',
+    commentaryTitle: 'A Good Business. But at What Price?',
+    commentaryCopyHtml: `Quickmart’s growth, profitability and major investors make its IPO an attention-grabbing proposition. But a familiar brand and a growing business are only part of an investment decision.
+
+<strong>The price matters as much as the business.</strong> What return might shareholders receive at KSh7.50, and how does that compare with the risks and alternative investments?
+
+My independent assessment examines the valuation, prospective dividend yield, shareholder lock-up arrangements and potential selling pressure. It also considers what the offer could mean for business owners and suppliers.
+
+<strong>Read the full article for the analysis—and my conclusion.</strong>`,
     archiveSummary: "Quickmart’s IPO raises a straightforward question: is KSh7.50 worth paying? Growth and major investors provide context, while the linked independent assessment examines whether the offer price makes sense. The conclusion stays in the article.",
     publishedAt: '2026-10-10',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
     title: "Quickmart IPO at KSh7.50: Is It Worth Buying?",
     image: '/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png',
-    alt: "Quickmart IPO KSh7.50 per share – Is it worth buying?",
+    alt: "Quickmart IPO graphic showing a supermarket aisle and a price tag reading ‘KSh7.50 per share—Is it worth buying?’, with the Murtaza Insights monogram.",
     copy: "Quickmart is growing, profitable and attracting major investors. But does that make KSh7.50 an attractive price?\n\nA good company is not automatically a good investment at any price.\n\nRead the article for my assessment.",
     destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying',
     ctaLabel: 'Read the Article'
