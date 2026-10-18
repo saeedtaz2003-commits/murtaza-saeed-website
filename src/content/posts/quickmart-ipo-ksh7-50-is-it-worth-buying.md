@@ -1,10 +1,10 @@
 ---
-title: "Quickmart IPO at KSh7.50: Is It Worth Buying?"
+title: "Quickmart IPO: Valuation, Returns and Investment Risks"
 slug: "quickmart-ipo-ksh7-50-is-it-worth-buying"
 date: "2026-10-07"
 category: "Business Analysis & Strategy"
 summary: "Quickmart is growing, profitable and attracting major investors. But at KSh7.50, does the potential return justify the risks? A closer look at the valuation, dividends, growth plans and IPO structure."
-seoTitle: "Quickmart IPO at KSh7.50: Is It Worth Buying?"
+seoTitle: "Quickmart IPO: Valuation, Returns and Investment Risks"
 metaDescription: "Quickmart is growing, profitable and attracting major investors. But at KSh7.50, does the potential return justify the risks? A closer look at the valuation, dividends, growth plans and IPO structure."
 image: "/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png"
 imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
