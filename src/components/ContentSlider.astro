@@ -200,6 +200,8 @@ const { homepage = false } = Astro.props;
       const revealCommentary = () => {
         const heading = panels[current]?.querySelector('h2');
         if (!(heading instanceof HTMLElement) || !(commentaryViewport instanceof HTMLElement)) return;
+        const text = panels[current]?.querySelector('.funny-commentary-text');
+        if (text instanceof HTMLElement) text.scrollTop = 0;
         updateStickyMedia();
         const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 84;
         const mobile = window.matchMedia('(max-width: 760px)').matches;
