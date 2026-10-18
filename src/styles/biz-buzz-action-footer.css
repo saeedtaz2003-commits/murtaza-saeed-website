@@ -23,11 +23,17 @@
  #content .funny-commentary-text { flex:1 1 auto; overflow:auto; }
  #content .funny-commentary-text > p { font-size:18px; line-height:1.35; margin:.25rem 0; }
 }
-#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:22px; line-height:1.4; margin:.45em 0; }
+#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:17px; line-height:1.4; margin:.4em 0; }
 @media(max-width:760px) {
  #content .funny-commentary-panel .funny-commentary-text > p { font-size:18px; line-height:1.4; margin:.55em 0; }
- #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:18px; }
+ #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { font-size:17px; }
  #content .funny-action-footer { margin-top:8px; }
  #content .funny-action-footer .engagement-share-row :is(a,button) { padding:0 6px; font-size:12px!important; }
  #content .funny-action-footer .biz-buzz-cta { font-size:12px!important; padding:0 5px!important; }
 }
+
+/* Keep the shortened desktop heading at its existing type size. */
+@media(min-width:1200px) {
+ #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .lighter-copy > h2 { white-space:nowrap; }
+}
+#content .funny-action-footer .engagement-share-row .engagement-article { background:var(--purple,#7447d7); color:#fff; border-color:var(--purple,#7447d7); }
