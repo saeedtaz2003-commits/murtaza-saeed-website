@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { previewExcerpt } from '../utils/article-preview.mjs';
 import ContentEngagement from '../components/ContentEngagement.astro';
 import WhatsAppAlerts from '../components/WhatsAppAlerts.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
@@ -15,7 +16,7 @@ const { Content, headings } = await render(post);
 const toc = post.data.toc ?? headings.filter(heading => heading.depth === 2).map(heading => ({ id: heading.slug, label: heading.text }));
 const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const pageTitle = post.data.seoTitle ?? post.data.title;
-const pageDescription = post.data.metaDescription ?? post.data.summary;
+const pageDescription = post.data.metaDescription ?? previewExcerpt(post);
 const isAdvertorial = post.data.advertorial;
 const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/insights';
 const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View Insights';
@@ -23,6 +24,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': isAdvertorial ? 'AdvertiserContentArticle' : 'Article',
   headline: pageTitle,
+  articleSection: post.data.category,
   description: pageDescription,
   datePublished: post.data.date.toISOString(),
   dateModified: (post.data.updated ?? post.data.date).toISOString(),
@@ -30,8 +32,10 @@ const articleSchema = {
   image: new URL(post.data.image, Astro.site).toString(),
   author: {
     '@type': 'Person',
+    '@id': new URL('/about/#person', Astro.site).toString(),
     name: 'Murtaza Saeed',
-    url: new URL('/about', Astro.site).toString(),
+    url: new URL('/about/', Astro.site).toString(),
+    sameAs: ['https://linkedin.com/in/murtaza-saeed'],
     description: 'Former Chief Finance Manager and remote business advisor who qualified as a Chartered Accountant earlier in his career.'
   },
   publisher: {
@@ -45,7 +49,7 @@ const articleSchema = {
   } : undefined
 };
 ---
-<Base title={`${pageTitle} | Murtaza Saeed`} description={pageDescription} image={post.data.image} type="article" jsonLd={articleSchema}>
+<Base title={`${pageTitle} | Murtaza Saeed`} description={pageDescription} image={post.data.image} imageAlt={post.data.imageAlt} type="article" jsonLd={articleSchema}>
   <article class="article wrap">
     <header class="article-header">
       <p class="eyebrow">

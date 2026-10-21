@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageShare from '../components/PageShare.astro';
 import ExternalCtaIcon from '../components/ExternalCtaIcon.astro';
 ---
-<Base title="About Murtaza | Remote Business Advisor" description="Murtaza Saeed, Remote Business Advisor: business performance reviews, business analysis and strategy, information systems and process improvement." image="/images/murtaza-saeed-profile-web.jpg" imageAlt="Portrait of Murtaza Saeed, Remote Business Advisor">
+<Base jsonLd={{ '@context': 'https://schema.org', '@type': 'ProfilePage', mainEntity: { '@type': 'Person', '@id': new URL('/about/#person', Astro.site).toString(), name: 'Murtaza Saeed', url: new URL('/about/', Astro.site).toString(), sameAs: ['https://linkedin.com/in/murtaza-saeed'] } }} title="About Murtaza | Remote Business Advisor" description="Murtaza Saeed, Remote Business Advisor: business performance reviews, business analysis and strategy, information systems and process improvement." image="/images/murtaza-saeed-profile-web.jpg" imageAlt="Portrait of Murtaza Saeed, Remote Business Advisor">
 <section class="page-head wrap"><h1>About Murtaza</h1><h2>Remote Business Advisor</h2></section>
 <section class="section wrap content-page about-page"><figure class="about-portrait"><img src="/images/murtaza-saeed-profile-web.jpg" alt="Portrait of Murtaza Saeed" width="520" height="520" /><figcaption>Murtaza Saeed<br /><span>Remote Business Advisor</span></figcaption></figure><div class="prose">
 <p>I am a former Chief Finance Manager with more than 35 years of experience across finance, business operations, systems and general management.</p>

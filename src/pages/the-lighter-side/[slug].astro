@@ -24,27 +24,37 @@ const pageTitle = `${item.title} | Biz Buzz | Murtaza Insights`;
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
 const isCurrentQuickmart = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying';
+const socialSize = isCurrentQuickmart ? 1254 : item.id === 'simbisa-customers-spend-less' ? 1080 : 1200;
 const socialImage = isCurrentQuickmart ? item.image : `/images/social/${item.id}.jpg`;
 ---
 <Base
+  noindex={item.hidden}
   title={pageTitle}
   description={description}
   image={socialImage}
   imageAlt={item.alt}
-  imageWidth={isCurrentQuickmart ? 1254 : 1200}
-  imageHeight={isCurrentQuickmart ? 1254 : 1200}
-  type="article"
+  imageWidth={socialSize}
+  imageHeight={socialSize}
+  type="website"
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': new URL(Astro.url.pathname, Astro.site).toString(),
+    url: new URL(Astro.url.pathname, Astro.site).toString(),
+    name: item.title,
+    description,
+    image: new URL(item.image, Astro.site).toString(),
+    author: { '@type': 'Person', '@id': new URL('/about/#person', Astro.site).toString(), name: 'Murtaza Saeed', url: new URL('/about/', Astro.site).toString() }
+  }}
 >
   <section class="section wrap funny-share-landing">
     <p class="eyebrow">Biz Buzz</p>
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.alt} />
     <p><BrandText text={item.copy} /></p>
+    {item.destinationUrl && <p><a class="button" href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
     <ContentEngagement title={item.title} commentTitle={item.title} url={`/the-lighter-side/${item.id}?v=3`} />
   </section>
-  <script define:vars={{ viewerUrl }}>
-    window.location.replace(viewerUrl);
-  </script>
 </Base>
 
