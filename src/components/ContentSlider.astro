@@ -1,5 +1,5 @@
 ---
-import { publicFunnyBizzItems as items, funnyBizzPermalink } from '../data/funny-bizz';
+import { publicFunnyBizzItems as items, funnyBizzPermalink, funnyBizzShareUrl } from '../data/funny-bizz';
 import ContentEngagement from './ContentEngagement.astro';
 import { italicizeBrandHtml } from '../utils/brand-format.mjs';
 import WhatsAppAlerts from './WhatsAppAlerts.astro';
@@ -87,7 +87,7 @@ const { homepage = false } = Astro.props;
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
                 </div>
                 <div class="funny-action-footer">
-                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
+                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
                   {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
                 </div>
               </div>
@@ -256,7 +256,7 @@ const { homepage = false } = Astro.props;
       const scrollViewerIntoView = () => {
         const slider = document.getElementById('funny-slider');
         if (!slider) return;
-        const header = document.querySelector('.topbar');
+        const header = document.querySelector('.site-header');
         const headerHeight = header instanceof HTMLElement ? header.offsetHeight : 76;
         const top = window.scrollY + slider.getBoundingClientRect().top - headerHeight - 8;
         window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
@@ -317,13 +317,16 @@ const { homepage = false } = Astro.props;
         : -1;
 
       if (requestedIndex >= 0) {
-        show(requestedIndex, true);
+        show(requestedIndex, false);
       } else if (sequence.length) {
         show(sequence[0], false);
       }
 
-      if (requestedIndex < 0 && window.location.hash === '#funny-slider') {
-        window.requestAnimationFrame(() => scrollViewerIntoView());
+      if (requestedIndex >= 0 || window.location.hash === '#funny-slider') {
+        // Run after native fragment scrolling and image/font layout have settled.
+        const alignSharedViewer = () => window.requestAnimationFrame(() => window.requestAnimationFrame(scrollViewerIntoView));
+        if (document.readyState === 'complete') alignSharedViewer();
+        else window.addEventListener('load', alignSharedViewer, { once: true });
       }
     }
   </script>

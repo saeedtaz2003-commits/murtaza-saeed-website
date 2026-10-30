@@ -227,3 +227,7 @@ export const funnyBizzPermalink = (id: string) => `/the-lighter-side/${id}`;
 
 // Temporarily withdrawn items retain their complete source above for redesign.
 export const publicFunnyBizzItems = funnyBizzItems.filter(item => !item.hidden);
+
+// Item-specific social previews with automatic slideshow entry for human visitors.
+export const funnyBizzShareUrl = (id: string) => `${funnyBizzPermalink(id)}?view=slider`;
+export const funnyBizzViewerUrl = (id: string) => `/the-lighter-side/?meme=${encodeURIComponent(id)}#funny-slider`;

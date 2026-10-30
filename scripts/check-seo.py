@@ -39,7 +39,11 @@ for path in pages:
             checks+=3
         if schema['@type']=='CreativeWork':
             assert schema['url']==p.canonical[0] and schema['image'].startswith('https://murtazainsights.com/images/')
-            assert 'window.location.replace' not in path.read_text(), path
+            # Canonical pages stay put; only opt-in sharing URLs enter the slider.
+            html=path.read_text()
+            assert "get('view') === 'slider'" in html and 'window.location.replace(viewerUrl)' in html, path
+            assert f'/the-lighter-side/?meme={path.parent.name}#funny-slider' in html, path
+            assert f'/the-lighter-side/{path.parent.name}?view=slider' in html, path
             checks+=2
 for path in ['dist/search/index.html','dist/404.html','dist/the-lighter-side/domain-name-mistake/index.html']:
     assert Page(Path(path).read_text()).meta['robots']=='noindex, follow'; checks+=1

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import BrandText from '../../components/BrandText.astro';
 import { italicizeBrandHtml } from '../../utils/brand-format.mjs';
-import { funnyBizzItems } from '../../data/funny-bizz';
+import { funnyBizzItems, funnyBizzShareUrl, funnyBizzViewerUrl } from '../../data/funny-bizz';
 import ContentEngagement from '../../components/ContentEngagement.astro';
 
 export function getStaticPaths() {
@@ -15,7 +15,7 @@ export function getStaticPaths() {
 
 const { item } = Astro.props;
 const isPapss = item.id === 'papss-kenya-nigeria-shortcut';
-const viewerUrl = `/the-lighter-side?meme=${encodeURIComponent(item.id)}#funny-slider`;
+const viewerUrl = funnyBizzViewerUrl(item.id);
 const linkedArticle = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying'
   ? (await getCollection('posts')).find(post => post.data.slug === item.id)
   : undefined;
@@ -61,7 +61,13 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     ) : <p><BrandText text={item.copy} /></p>}
     {!isPapss && item.destinationUrl && <p><a class="button" href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
-    <ContentEngagement title={item.title} commentTitle={item.title} url={`/the-lighter-side/${item.id}?v=3`} />
+    <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} />
   </section>
+  <script define:vars={{ viewerUrl }}>
+    // Keep canonical pages crawlable. Only explicitly shared links enter the slider.
+    if (new URLSearchParams(window.location.search).get('view') === 'slider') {
+      window.location.replace(viewerUrl);
+    }
+  </script>
 </Base>
 
