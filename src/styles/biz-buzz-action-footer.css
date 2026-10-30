@@ -43,3 +43,6 @@
 @media(min-width:1200px) {
  #content .funny-commentary-panel[data-commentary-id="quickmart-ipo-ksh7-50-is-it-worth-buying"] .lighter-copy > h2 { white-space:nowrap; }
 }
+
+/* PAPSS uses the approved compact standard without changing other memes. */
+#content .funny-commentary-panel[data-commentary-id="papss-kenya-nigeria-shortcut"] .funny-commentary-text > p { font-size:17px; line-height:1.4; margin:.4em 0; }
