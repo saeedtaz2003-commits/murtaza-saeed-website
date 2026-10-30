@@ -29,14 +29,16 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     sliderCategory: 'Funny',
     category: 'Business Analysis & Strategy',
     title: 'Why Send Money Around the World to Pay Your Neighbour?',
-    commentaryTitle: 'PAPSS: A Faster Route for African Cross-Border Payments',
+    commentaryTitle: 'PAPSS: A Shortcut for African Payments',
     image: '/images/papss-kenya-nigeria-shortcut-biz-buzz.jpg',
     alt: 'Biz Buzz illustration by Murtaza Insights showing a Kenyan businessman and Nigerian businesswoman, with a payment route detouring through New York, London, Frankfurt and Singapore. The meme highlights a shorter alternative for African cross-border payments through PAPSS.',
     archiveSummary: 'African businesses have long faced costly international banking detours when paying suppliers across borders. PAPSS offers a more direct alternative, reducing dependence on intermediary banks and dollar or euro conversions.',
     copy: 'African businesses have long faced costly international banking detours when paying suppliers across borders. PAPSS offers a more direct alternative, reducing dependence on intermediary banks and dollar or euro conversions.\n\nThe Pan-African Payment and Settlement System reported 31 reachable African countries and over 440 financial institutions in June 2026, including 190+ participating institutions. Its system targets payment processing within 120 seconds. A practical example: A Kenyan business can use a participating bank to pay a Nigerian supplier through PAPSS, with local-currency settlement avoiding the traditional dollar-routing detour. Actual costs and availability depend on the banks involved.\n\nTrading across Africa? Ask your bank whether PAPSS supports your payment routes.',
-    commentaryCopyHtml: `African businesses have long faced costly international banking detours when paying suppliers across borders. <strong>PAPSS offers a more direct alternative</strong>, reducing dependence on intermediary banks and dollar or euro conversions.
+    commentaryCopyHtml: `Why route African payments through international banks and dollar conversions? <strong>PAPSS offers a more direct alternative</strong>, potentially reducing costs and delays.
 
-The Pan-African Payment and Settlement System reported <strong>31 reachable African countries and over 440 financial institutions</strong> in June 2026, including 190+ participating institutions. Its system targets payment processing within 120 seconds. <strong>A practical example:</strong> A Kenyan business can use a participating bank to pay a Nigerian supplier through PAPSS, with local-currency settlement avoiding the traditional dollar-routing detour. Actual costs and availability depend on the banks involved.
+The Pan-African Payment and Settlement System reported <strong>31 reachable countries and 440+ financial institutions</strong> in June 2026. It targets processing within 120 seconds.
+
+<strong>For example</strong>, Kenyan businesses can use participating banks to pay Nigerian suppliers through PAPSS, without the traditional dollar detour.
 
 <strong>Trading across Africa?</strong> Ask your bank whether PAPSS supports your payment routes.`,
     destinationUrl: 'https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2026/09/PAPSS-countries.pdf',
