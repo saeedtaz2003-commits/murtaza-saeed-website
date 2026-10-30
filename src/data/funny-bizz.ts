@@ -40,7 +40,7 @@ According to its June 2026 coverage report, PAPSS reaches <strong>31 countries a
 
 <strong>For example</strong>, a Kenyan business can use participating banks to pay a Nigerian supplier without the traditional dollar detour. Actual savings depend on the banks, exchange rates and fees involved.
 
-<strong>Trading across Africa?</strong> Ask your bank whether PAPSS supports your payment routes. <a class="text-link" href="https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2026/09/PAPSS-countries.pdf" target="_blank" rel="noopener noreferrer">Check participating banks and countries — June 2026</a>.`,
+<strong>Trading across Africa?</strong> Ask your bank whether PAPSS supports your payment routes. <a class="papss-coverage-link" href="https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2026/09/PAPSS-countries.pdf" target="_blank" rel="noopener noreferrer">Participating banks &amp; countries</a>.`,
     destinationUrl: 'https://www.imbankgroup.com/ke/wp-content/uploads/sites/2/2026/09/PAPSS-countries.pdf',
     ctaLabel: 'Check participating banks and countries'
   },

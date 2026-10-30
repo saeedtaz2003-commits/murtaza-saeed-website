@@ -47,3 +47,9 @@
 /* PAPSS uses the approved compact standard without changing other memes. */
 #content .funny-commentary-panel[data-commentary-id="papss-kenya-nigeria-shortcut"] .funny-commentary-text > p { font-size:17px; line-height:1.4; margin:0 0 9px; }
 #content .funny-commentary-panel[data-commentary-id="papss-kenya-nigeria-shortcut"] .funny-commentary-text > p:last-child { margin-bottom:0; }
+
+/* Keep this source link at the surrounding PAPSS commentary scale. */
+#content .funny-commentary-panel[data-commentary-id="papss-kenya-nigeria-shortcut"] .funny-commentary-text a.papss-coverage-link {
+ font:inherit; font-weight:400; line-height:inherit; color:var(--purple,#7447d7);
+ text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em;
+}
