@@ -87,7 +87,7 @@ const { homepage = false } = Astro.props;
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
                 </div>
                 <div class="funny-action-footer">
-                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" articleUrl={item.destinationUrl} articleNewTab={item.id === 'papss-kenya-nigeria-shortcut'} articleLabel={item.ctaLabel ?? 'Read the Article'} />
+                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={`${funnyBizzPermalink(item.id)}?v=3`} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
                   {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
                 </div>
               </div>
