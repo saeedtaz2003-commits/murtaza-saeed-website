@@ -53,3 +53,12 @@
  font:inherit; font-weight:400; line-height:inherit; color:var(--purple,#7447d7);
  text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em;
 }
+
+/* PAPSS permalink reads the same formatted copy as its slider. */
+#content .papss-permalink-copy { text-align:left; color:var(--ink,#172033); }
+#content .papss-permalink-copy > p { font-size:17px; line-height:1.4; margin:0 0 9px; }
+#content .papss-permalink-copy > p:last-child { margin-bottom:0; }
+#content .papss-permalink-copy a.papss-coverage-link {
+ font:inherit; font-weight:400; line-height:inherit; color:var(--purple,#7447d7);
+ text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em;
+}
