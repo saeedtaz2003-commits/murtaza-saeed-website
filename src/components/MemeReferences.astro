@@ -1,0 +1,5 @@
+---
+const { item } = Astro.props;
+---
+{item.sources?.length && <div class="meme-references">Sources: {item.sources.map((source, index) => <>{index > 0 && ' · '}<a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></>)}</div>}
+{item.illustrationDisclosure && <div class="meme-illustration-note">{item.illustrationDisclosure}</div>}

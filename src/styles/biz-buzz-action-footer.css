@@ -72,3 +72,11 @@
  #content .funny-share-landing > h1 { order:2; font-size:25px; line-height:1.2; text-align:left; margin:0 0 12px; }
  #content .funny-share-landing > p:not(.eyebrow):not(:has(.button)) { text-align:left; }
 }
+
+/* Approved Lexus publication: readable locked copy and inline attribution. */
+#content .meme-references, #content .meme-illustration-note { font:12px/1.35 Inter,system-ui,sans-serif; margin-top:6px; text-align:left; }
+#content .meme-references a { font:inherit; color:var(--purple,#7447d7); text-decoration:underline; text-underline-offset:.15em; }
+#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .lighter-copy > h2 { white-space:normal; overflow-wrap:break-word; }
+#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { margin:0 0 8px; }
+#content .lexus-detail-copy { text-align:left; }
+#content .lexus-detail > h1 { text-align:left; }

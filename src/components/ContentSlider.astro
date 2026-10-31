@@ -1,5 +1,6 @@
 ---
 import { publicFunnyBizzItems as items, funnyBizzPermalink, funnyBizzShareUrl } from '../data/funny-bizz';
+import MemeReferences from './MemeReferences.astro';
 import ContentEngagement from './ContentEngagement.astro';
 import { italicizeBrandHtml } from '../utils/brand-format.mjs';
 import WhatsAppAlerts from './WhatsAppAlerts.astro';
@@ -85,6 +86,7 @@ const { homepage = false } = Astro.props;
                   </section>
                 )}
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
+                <MemeReferences item={item} />
                 </div>
                 <div class="funny-action-footer">
                   <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />

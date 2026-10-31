@@ -20,7 +20,17 @@ export type FunnyBizzItem = {
   destinationUrl?: string;
   ctaLabel?: string;
   advertiser?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  sources?: readonly { label: string; url: string }[];
+  illustrationDisclosure?: string;
 };
+
+const lexusCommentary = `Lexus deliberately commissioned Brooklyn-based art collective MSCHF to transform two electrified vehicles into extraordinary sculptures for its September 2026 Motomorphosis exhibition in New York. The twisted Lexus RX 450h+ was one of them.
+
+<strong>Why?</strong> Lexus wanted to take the automobile beyond its familiar form, demonstrating imagination, movement and transformation. By displaying the distorted sculptures alongside their original production vehicles, Lexus created a striking contrast between conventional engineering and artistic possibility.
+
+<strong>The business insight:</strong> Not every marketing investment needs to generate immediate sales. Unusual, memorable experiences can strengthen brand recall, distinctiveness and long-term consumer preference. <strong>In crowded markets, the brands that stand out and stay in people's minds have an advantage when purchasing decisions are eventually made.</strong>`;
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
@@ -71,22 +81,25 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "ctaLabel": "Read the Article"
 },
   {
-  "id": "lexus-motomorphosis",
-  commentaryTitle: 'Lexus × MSCHF: Unconventional Marketing?',
-  commentaryCopyHtml: `Lexus commissioned Brooklyn art collective MSCHF to transform two electrified cars into MOTOMORPHOSIS sculptures: one twisted, the other looped into a circle.
-
-The unexpected forms invite attention and associate the brand with imagination and transformation. Such creative collaborations can help a familiar product stand apart in crowded markets.
-
-For business owners, the lesson extends beyond luxury cars. Unconventional marketing can be a deliberate strategy to <strong>build brand awareness</strong>, differentiate a business and remain memorable. Its value need not be measured in immediate sales; strengthening brand recognition and positioning can itself be a <strong>worthwhile long-term investment.</strong>`,
-    archiveSummary: "Lexus and MSCHF’s twisted vehicle challenges conventions about product design and brand attention. Their MOTOMORPHOSIS project opens a conversation about electrification, imagination and how far a brand will go to stand out.",
-  "publishedAt": "2026-10-04",
-  "sliderCategory": "Funny",
-  "category": "Brands & Marketing",
-  "title": "How Far Would You Twist Your Product?",
-  "image": "/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg",
-  "alt": "Twisted Lexus art car created by MSCHF for the Lexus MOTOMORPHOSIS project, illustrating how brands can use unexpected product design to attract attention.",
-  "copy": "Lexus and Brooklyn art collective MSCHF turned an electrified vehicle into something almost unrecognisable for MOTOMORPHOSIS. The aim was a fresh conversation about electrification and transformation. The marketing question: how far would you twist convention to get people talking?"
-},
+    id: 'lexus-motomorphosis',
+    commentaryTitle: 'How Lexus Turned a Distorted Car into a Publicity Stunt',
+    title: 'How Lexus Turned a Distorted Car into a Publicity Stunt',
+    seoTitle: 'Lexus Motomorphosis: The Strategy Behind the Twisted Car',
+    metaDescription: 'Why did Lexus commission MSCHF to distort its vehicles? Explore the Motomorphosis art collaboration and the marketing strategy behind it.',
+    commentaryCopyHtml: lexusCommentary,
+    copy: lexusCommentary.replace(/<[^>]*>/g, ''),
+    archiveSummary: 'Lexus commissioned art collective MSCHF to transform its electrified vehicles into bizarre sculptures for a New York exhibition. The unusual collaboration raises an intriguing question about creativity, brand differentiation and commercial value.',
+    publishedAt: '2026-10-04',
+    sliderCategory: 'Funny',
+    category: 'Business Analysis & Strategy',
+    image: '/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg',
+    alt: "Silver Lexus RX 450h+ transformed into a dramatically twisted sculpture in a gallery, with the headlines 'IT WASN’T AN ACCIDENT' and 'LEXUS PAID SOMEONE TO DO THIS', and the Murtaza Insights monogram.",
+    sources: [
+      { label: 'Lexus exhibition announcement', url: 'https://pressroom.lexus.com/mschf-turns-two-lexus-electrified-vehicles-into-sculpture-for-motomorphosis/' },
+      { label: 'Behind the sculptures', url: 'https://pressroom.lexus.com/bending-the-rules-how-lexus-and-mschf-turned-the-impossible-into-physical-reality/' }
+    ],
+    illustrationDisclosure: 'AI-assisted editorial illustration; not an unaltered exhibition photograph.'
+  },
 
   {
     id: 'simbisa-customers-spend-less',
