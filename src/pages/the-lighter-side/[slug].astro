@@ -64,8 +64,9 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} />
   </section>
   <script define:vars={{ viewerUrl }}>
-    // Keep canonical pages crawlable. Only explicitly shared links enter the slider.
-    if (new URLSearchParams(window.location.search).get('view') === 'slider') {
+    // Keep canonical pages crawlable. Preview crawlers do not receive fragments;
+    // visitors following an explicitly shared link enter the selected slideshow.
+    if (window.location.hash === '#view=slider') {
       window.location.replace(viewerUrl);
     }
   </script>

@@ -223,11 +223,13 @@ My independent assessment examines the valuation, prospective dividend yield, sh
   }
 ];
 
-export const funnyBizzPermalink = (id: string) => `/the-lighter-side/${id}`;
+export const funnyBizzPermalink = (id: string) => `/the-lighter-side/${id}/`;
 
 // Temporarily withdrawn items retain their complete source above for redesign.
 export const publicFunnyBizzItems = funnyBizzItems.filter(item => !item.hidden);
 
-// Item-specific social previews with automatic slideshow entry for human visitors.
-export const funnyBizzShareUrl = (id: string) => `${funnyBizzPermalink(id)}?view=slider`;
+// Fragments are not sent to preview crawlers. They receive the clean, established
+// permalink and its item-specific metadata; browsers use the fragment to enter
+// the selected item in the working slideshow.
+export const funnyBizzShareUrl = (id: string) => `${funnyBizzPermalink(id)}#view=slider`;
 export const funnyBizzViewerUrl = (id: string) => `/the-lighter-side/?meme=${encodeURIComponent(id)}#funny-slider`;
