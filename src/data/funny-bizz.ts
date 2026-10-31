@@ -32,6 +32,16 @@ const lexusCommentary = `Lexus commissioned Brooklyn-based art collective MSCHF 
 
 <strong>The business insight:</strong> Not every marketing investment needs to generate immediate sales. Memorable experiences can strengthen brand recall, distinctiveness and long-term consumer preference. In crowded markets, brands that stand out and stay in people's minds gain an advantage when purchasing decisions are eventually made.`;
 
+const technifyCommentary = `The traditional wine merchant knew his customers. Today's AI-powered systems can analyse purchasing patterns across thousands of customers. <strong>The underlying commercial thinking is familiar; what changes is the scale.</strong>
+
+The same principle extends well beyond customer analytics. Negotiation, buying clubs, barter and other long-established business practices are finding new possibilities through software and AI.
+
+For business owners, the opportunity may be hiding in a familiar process that once depended on individual memory, manual coordination or considerable time.
+
+<strong>What becomes commercially possible when technology removes those limitations?</strong>
+
+Our article, <em>Don't Invent It. Technify It.</em>, explores the possibilities.`;
+
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
     id: 'papss-kenya-nigeria-shortcut',
@@ -55,18 +65,22 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     ctaLabel: 'Check participating banks and countries'
   },
   {
-  "id": "technify-it-featured",
+    id: 'technify-it-featured',
     archiveSummary: "Old business practices can become modern technology opportunities. AI and apps add speed, scale and automation to familiar routines; the linked article explores how removing old limitations can create practical business possibilities.",
-  "publishedAt": "2026-10-04",
-  "sliderCategory": "Featured Article",
-  "category": "Technology",
-  "title": "Don’t Invent It. Technify It.",
-  "image": "/images/old-wine-new-bottle-technify-it.jpg",
-  "alt": "Old merchant says ‘I know my customers’ beside a modern AI robot saying ‘I call it predictive analytics,’ illustrating how old business practices are being turned into modern apps.",
-  "copy": "Many supposedly new business ideas are not new at all. Haggling, customer knowledge, barter, buying clubs and personal credit have existed for centuries. What AI and modern apps add is speed, scale and automation. The opportunity may be to identify an old practice that still works — then remove the limitation that stopped it scaling.",
-  "destinationUrl": "/dont-invent-it-technify-it",
-  "ctaLabel": "Read the Article"
-},
+    publishedAt: '2026-10-04',
+    sliderCategory: 'Featured Article',
+    category: 'Technology',
+    title: 'Old Business Ideas, New Technology',
+    commentaryTitle: 'Old Business Ideas, New Technology',
+    commentaryCopyHtml: technifyCommentary,
+    copy: technifyCommentary.replace(/<[^>]*>/g, ''),
+    seoTitle: 'Old Wine, New Bottle? How AI Reinvents Business Ideas',
+    metaDescription: 'Discover how AI and digital technology can transform familiar business practices, from customer relationships to negotiation and buying clubs.',
+    image: '/images/old-wine-new-bottle-technify-ai-business.jpg',
+    alt: 'Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI.',
+    destinationUrl: '/dont-invent-it-technify-it',
+    ctaLabel: 'Read the Article'
+  },
   {
   "id": "paper-to-erp-featured",
     archiveSummary: "From handwritten records to full ERP systems, businesses face different information bottlenecks. Explore where AI can reduce manual work, strengthen controls and help managers get clearer answers from the systems they already use.",

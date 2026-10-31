@@ -16,8 +16,9 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+const isTechnify = item.id === 'technify-it-featured';
 const isLexus = item.id === 'lexus-motomorphosis';
-const hasApprovedCopy = isLexus || item.id === 'papss-kenya-nigeria-shortcut';
+const hasApprovedCopy = isTechnify || isLexus || item.id === 'papss-kenya-nigeria-shortcut';
 const isPapss = item.id === 'papss-kenya-nigeria-shortcut';
 const viewerUrl = funnyBizzViewerUrl(item.id);
 const linkedArticle = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying'
@@ -30,8 +31,8 @@ const pageTitle = item.seoTitle ?? `${item.title} | Biz Buzz | Murtaza Insights`
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
 const isCurrentQuickmart = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying';
-const useOriginalSocialImage = isLexus || isCurrentQuickmart || item.id === 'papss-kenya-nigeria-shortcut';
-const socialSize = isLexus ? 1080 : useOriginalSocialImage ? 1254 : item.id === 'simbisa-customers-spend-less' ? 1080 : 1200;
+const useOriginalSocialImage = isTechnify || isLexus || isCurrentQuickmart || item.id === 'papss-kenya-nigeria-shortcut';
+const socialSize = (isTechnify || isLexus) ? 1080 : useOriginalSocialImage ? 1254 : item.id === 'simbisa-customers-spend-less' ? 1080 : 1200;
 const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item.id}.jpg`;
 ---
 <Base
@@ -48,7 +49,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     '@type': 'CreativeWork',
     '@id': new URL(Astro.url.pathname, Astro.site).toString(),
     url: new URL(Astro.url.pathname, Astro.site).toString(),
-    name: isLexus ? item.commentaryTitle ?? item.title : item.title,
+    name: (isTechnify || isLexus) ? item.commentaryTitle ?? item.title : item.title,
     ...(isLexus ? { genre: item.category, keywords: ['Lexus', 'MSCHF', 'Motomorphosis', 'brand marketing', 'automotive industry'], spatialCoverage: 'New York', temporalCoverage: '2026-09-24/2026-09-26' } : {}),
     description,
     image: new URL(item.image, Astro.site).toString(),
@@ -67,9 +68,9 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     ) : <p><BrandText text={item.copy} /></p>}
     {!isPapss && item.destinationUrl && <p><a class="button" href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
-    <div class:list={[isLexus && 'funny-action-footer']}>
+    <div class:list={[(isTechnify || isLexus) && 'funny-action-footer']}>
       <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} />
-      {isLexus && <WhatsAppAlerts topic="Biz Buzz" compact />}
+      {(isTechnify || isLexus) && <WhatsAppAlerts topic="Biz Buzz" compact />}
     </div>
   </section>
   <script define:vars={{ viewerUrl }}>

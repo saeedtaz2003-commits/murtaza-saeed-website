@@ -97,3 +97,7 @@
 #content .funny-action-footer .biz-buzz-helper { margin-top:3px!important; }
 #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .meme-references { font-size:12px; line-height:1.35; }
 #content .funny-action-footer .engagement-share-row :is(a,button) { min-height:40px; height:40px; }
+
+/* TECHNIFY uses the approved compact commentary size on both surfaces. */
+#content .funny-commentary-panel[data-commentary-id="technify-it-featured"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
+#content .funny-commentary-panel[data-commentary-id="technify-it-featured"] .lighter-copy > h2 { overflow-wrap:break-word; }
