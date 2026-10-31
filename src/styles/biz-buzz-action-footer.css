@@ -82,5 +82,5 @@
 #content .lexus-detail > h1 { text-align:left; }
 @media(min-width:761px) {
  #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { line-height:1.35; }
- #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] :is(.meme-references,.meme-illustration-note) { font-size:11px; line-height:1.2; margin-top:4px; }
+ #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] :is(.meme-references,.meme-illustration-note) { font-size:11px; line-height:1.2; margin-top:3px; }
 }

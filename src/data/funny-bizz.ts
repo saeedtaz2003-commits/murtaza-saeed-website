@@ -92,7 +92,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     publishedAt: '2026-10-04',
     sliderCategory: 'Funny',
     category: 'Business Analysis & Strategy',
-    image: '/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg',
+    image: '/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg?v=20261031',
     alt: "Silver Lexus RX 450h+ transformed into a dramatically twisted sculpture in a gallery, with the headlines 'IT WASN’T AN ACCIDENT' and 'LEXUS PAID SOMEONE TO DO THIS', and the Murtaza Insights monogram.",
     sources: [
       { label: 'Lexus exhibition announcement', url: 'https://pressroom.lexus.com/mschf-turns-two-lexus-electrified-vehicles-into-sculpture-for-motomorphosis/' },

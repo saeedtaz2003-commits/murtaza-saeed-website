@@ -29,7 +29,7 @@ for path in pages:
     checks+=4
     for im in p.images:
         assert 'alt' in im, path
-        if im.get('src','').startswith('/'): assert Path('dist'+unquote(im['src'])).is_file(), (path,im['src'])
+        if im.get('src','').startswith('/'): assert Path('dist'+unquote(urlparse(im['src']).path)).is_file(), (path,im['src'])
         checks+=1
     for schema in p.json:
         if schema['@type']=='Article':
