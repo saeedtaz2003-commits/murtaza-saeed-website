@@ -86,7 +86,7 @@ const { homepage = false } = Astro.props;
                   </section>
                 )}
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
-                <MemeReferences item={item} />
+                <MemeReferences item={item} showDisclosure={item.id !== 'lexus-motomorphosis'} />
                 </div>
                 <div class="funny-action-footer">
                   <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />

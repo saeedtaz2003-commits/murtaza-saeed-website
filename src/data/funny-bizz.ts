@@ -26,11 +26,11 @@ export type FunnyBizzItem = {
   illustrationDisclosure?: string;
 };
 
-const lexusCommentary = `Lexus deliberately commissioned Brooklyn-based art collective MSCHF to transform two electrified vehicles into extraordinary sculptures for its September 2026 Motomorphosis exhibition in New York. The twisted Lexus RX 450h+ was one of them.
+const lexusCommentary = `Lexus commissioned Brooklyn-based art collective MSCHF to transform two electrified vehicles into extraordinary sculptures for its September 2026 Motomorphosis exhibition in New York.
 
-<strong>Why?</strong> Lexus wanted to take the automobile beyond its familiar form, demonstrating imagination, movement and transformation. By displaying the distorted sculptures alongside their original production vehicles, Lexus created a striking contrast between conventional engineering and artistic possibility.
+<strong>Why?</strong> By displaying the distorted sculptures alongside the original production vehicles, Lexus demonstrated imagination and artistic possibility beyond conventional automotive engineering.
 
-<strong>The business insight:</strong> Not every marketing investment needs to generate immediate sales. Unusual, memorable experiences can strengthen brand recall, distinctiveness and long-term consumer preference. <strong>In crowded markets, the brands that stand out and stay in people's minds have an advantage when purchasing decisions are eventually made.</strong>`;
+<strong>The business insight:</strong> Not every marketing investment needs to generate immediate sales. Memorable experiences can strengthen brand recall, distinctiveness and long-term consumer preference. In crowded markets, brands that stand out and stay in people's minds gain an advantage when purchasing decisions are eventually made.`;
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
@@ -82,9 +82,9 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
 },
   {
     id: 'lexus-motomorphosis',
-    commentaryTitle: 'How Lexus Turned a Distorted Car into a Publicity Stunt',
-    title: 'How Lexus Turned a Distorted Car into a Publicity Stunt',
-    seoTitle: 'Lexus Motomorphosis: The Strategy Behind the Twisted Car',
+    commentaryTitle: 'How Lexus Turned Distortion into Publicity',
+    title: 'How Lexus Turned Distortion into Publicity',
+    seoTitle: 'How Lexus Turned Distortion into Publicity',
     metaDescription: 'Why did Lexus commission MSCHF to distort its vehicles? Explore the Motomorphosis art collaboration and the marketing strategy behind it.',
     commentaryCopyHtml: lexusCommentary,
     copy: lexusCommentary.replace(/<[^>]*>/g, ''),
@@ -95,10 +95,9 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     image: '/images/lexus-mschf-motomorphosis-twisted-car-marketing.jpg?v=20261031',
     alt: "Silver Lexus RX 450h+ transformed into a dramatically twisted sculpture in a gallery, with the headlines 'IT WASN’T AN ACCIDENT' and 'LEXUS PAID SOMEONE TO DO THIS', and the Murtaza Insights monogram.",
     sources: [
-      { label: 'Lexus exhibition announcement', url: 'https://pressroom.lexus.com/mschf-turns-two-lexus-electrified-vehicles-into-sculpture-for-motomorphosis/' },
-      { label: 'Behind the sculptures', url: 'https://pressroom.lexus.com/bending-the-rules-how-lexus-and-mschf-turned-the-impossible-into-physical-reality/' }
+      { label: 'Lexus exhibition announcement', url: 'https://pressroom.lexus.com/mschf-turns-two-lexus-electrified-vehicles-into-sculpture-for-motomorphosis/' }
     ],
-    illustrationDisclosure: 'AI-assisted editorial illustration; not an unaltered exhibition photograph.'
+    illustrationDisclosure: 'AI-assisted editorial illustration based on the Lexus–MSCHF Motomorphosis project.'
   },
 
   {

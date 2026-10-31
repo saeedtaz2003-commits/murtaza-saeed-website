@@ -84,3 +84,15 @@
  #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .funny-commentary-text > p { line-height:1.35; }
  #content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] :is(.meme-references,.meme-illustration-note) { font-size:11px; line-height:1.2; margin-top:3px; }
 }
+
+/* Compact legal/action rows, with the policy matching the copyright baseline. */
+#content .funny-action-footer .engagement-legal-row :is(p,a,em) {
+ font-size:14px!important; line-height:1.3!important; font-weight:400!important;
+}
+#content .funny-action-footer .engagement-legal-row { align-items:baseline; }
+#content .funny-action-footer { padding-top:5px; }
+#content .funny-action-footer .content-engagement { gap:5px; }
+#content .funny-action-footer .biz-buzz-updates { margin-top:5px; }
+#content .funny-action-footer .biz-buzz-helper { margin-top:3px!important; }
+#content .funny-commentary-panel[data-commentary-id="lexus-motomorphosis"] .meme-references { font-size:12px; line-height:1.35; }
+#content .funny-action-footer .engagement-share-row :is(a,button) { min-height:40px; height:40px; }
