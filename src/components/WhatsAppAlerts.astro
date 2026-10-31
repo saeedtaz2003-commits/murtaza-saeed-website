@@ -11,6 +11,7 @@ const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   <a class="button biz-buzz-cta biz-buzz-wa" href={href} target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="whatsapp" />{label}</a>
   <a class="button biz-buzz-cta biz-buzz-more" href="/the-lighter-side/#funny-archive-title">Explore More Memes</a>
   <p class="biz-buzz-helper">Send the message &amp; save our number.</p>
+  <p class="biz-buzz-helper biz-buzz-more-helper">Browse the full Biz Buzz collection.</p>
 </aside> : <aside class:list={["whatsapp-alerts", { "article-updates": topic === 'Updates' }]}>
   <h2>{topic === 'Updates' ? 'Get New Article Updates' : 'Like Biz Buzz?'}</h2>
   <div class="whatsapp-opt-in"><a class="button" href={href} target="_blank" rel="noopener noreferrer"><ExternalCtaIcon network="whatsapp" />{label}</a>

@@ -18,6 +18,7 @@
 #content .funny-action-footer .biz-buzz-more { background:var(--purple,#663399); }
 #content .funny-action-footer .biz-buzz-cta svg { width:20px; height:20px; flex:0 0 20px; }
 #content .funny-action-footer .biz-buzz-helper { grid-column:1; width:100%; margin:3px 0 0!important; text-align:center; font:12px/1.25 Inter,system-ui,sans-serif!important; }
+#content .funny-action-footer .biz-buzz-more-helper { grid-column:2; grid-row:2; }
 @media(min-width:761px) {
  #content .funny-commentary-viewport .lighter-copy { min-height:0; display:flex; flex-direction:column; }
  #content .funny-commentary-text { flex:1 1 auto; overflow:auto; }
