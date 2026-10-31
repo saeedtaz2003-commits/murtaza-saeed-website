@@ -101,3 +101,8 @@
 /* TECHNIFY uses the approved compact commentary size on both surfaces. */
 #content .funny-commentary-panel[data-commentary-id="technify-it-featured"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
 #content .funny-commentary-panel[data-commentary-id="technify-it-featured"] .lighter-copy > h2 { overflow-wrap:break-word; }
+
+/* Pulse Ring: preserve legible compact copy and its inline manufacturer reference. */
+#content .funny-commentary-panel[data-commentary-id="pulse-ring"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
+#content .funny-commentary-panel[data-commentary-id="pulse-ring"] .meme-references { font-size:12px; line-height:1.35; }
+#content .funny-commentary-panel[data-commentary-id="pulse-ring"] .lighter-copy > h2 { overflow-wrap:break-word; }
