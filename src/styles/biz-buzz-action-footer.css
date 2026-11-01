@@ -106,3 +106,19 @@
 #content .funny-commentary-panel[data-commentary-id="pulse-ring"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
 #content .funny-commentary-panel[data-commentary-id="pulse-ring"] .meme-references { font-size:12px; line-height:1.35; }
 #content .funny-commentary-panel[data-commentary-id="pulse-ring"] .lighter-copy > h2 { overflow-wrap:break-word; }
+
+/* Mobile Biz Buzz: the article follows the commentary, ahead of legal/share controls. */
+@media (max-width:760px) {
+ #content .funny-action-footer .content-engagement:has(.engagement-article) {
+  display:grid; grid-template-columns:auto auto auto; justify-content:center;
+  align-items:center; gap:5px;
+ }
+ #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row { display:contents; }
+ #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-article {
+  grid-column:1 / -1; grid-row:1; justify-self:center; max-width:100%;
+ }
+ #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-legal-row {
+  grid-column:1 / -1; grid-row:2;
+ }
+ #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row > :is(.engagement-comment,button) { grid-row:3; }
+}
