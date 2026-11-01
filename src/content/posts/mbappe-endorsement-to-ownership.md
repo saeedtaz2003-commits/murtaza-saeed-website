@@ -21,6 +21,8 @@ toc:
     id: "what-happened-in-comparable-athlete-deals"
   - label: "The finance perspective"
     id: "the-deal-through-a-finance-lens"
+  - label: "Update: celebrity and business risk"
+    id: "update--1-november-2026-when-celebrity-risk-becomes-business-risk"
   - label: "Lessons for elite performers"
     id: "the-final-advice-turn-todays-fame-into-tomorrows-value"
   - label: "The verdict"
@@ -28,7 +30,7 @@ toc:
 image: "/images/mbappe-nike-to-on-web.jpg"
 imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
 draft: false
-sources: [{"text": "On: “On enters football alongside Kylian Mbappé”", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}]
+sources: [{"text": "On: “On enters football alongside Kylian Mbappé”", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}, {"text": "Reuters, 27 October 2026: Mbappé seeks to defuse anger in China after Mao comments", "url": "https://www.reuters.com/business/media-telecom/mbappe-dropped-by-chinese-brands-over-alleged-mao-meme-comments-2026-10-27/"}]
 ---
 
 ## Why did Kylian Mbappé leave Nike after nearly 20 years?
@@ -179,6 +181,18 @@ Public attention is already a win, but lasting success will require more than la
 First, On must produce a boot that elite players trust. Footballers are sensitive to fit and feel, and a product failure at the highest level can damage credibility quickly. Second, it must make the product available at sufficient scale. Interest that cannot be converted into a purchase is a missed opportunity. Third, it needs a wider football ecosystem: additional athletes, youth adoption, retailer support and eventually credible apparel or team relationships.
 
 It must also protect what made the brand distinctive. Chasing a mass market can dilute premium positioning, while remaining too exclusive can limit adoption in a sport whose culture is built on broad participation. The balance between aspiration and accessibility will matter.
+
+## UPDATE — 1 November 2026: When Celebrity Risk Becomes Business Risk
+
+Mbappé's move from Nike to On was intended to align his commercial success with the long-term growth of the company. Recent events in China have highlighted another side of that relationship.
+
+Following controversy over remarks he reportedly made about a meme depicting China's former leader Mao Zedong, several Chinese brands terminated their sponsorship agreements with Mbappé. Reuters said it had not independently authenticated the circulating video. He subsequently apologised, but the commercial fallout was immediate.
+
+For On, the implications go beyond a conventional endorsement. Mbappé is not simply a paid ambassador; his reported equity arrangement links his interests to the company's future performance. On welcomed his apology; it did not announce an end to the partnership.
+
+The episode illustrates a risk that works in both directions. A celebrity's reputation can help create business value, but reputational damage can also threaten that value. An equity partnership strengthens the alignment of interests without eliminating such exposure.
+
+The broader lesson: When a company makes an individual central to its growth strategy, it also becomes more exposed to circumstances beyond its direct control.
 
 ## The final advice: turn today’s fame into tomorrow’s value
 
