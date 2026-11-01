@@ -122,3 +122,8 @@
  }
  #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row > :is(.engagement-comment,button) { grid-row:3; }
 }
+
+/* Mbappé's approved four-paragraph commentary shares the compact Biz Buzz treatment. */
+#content .funny-commentary-panel[data-commentary-id="mbappe-endorsement-featured"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
+#content .funny-commentary-panel[data-commentary-id="mbappe-endorsement-featured"] .funny-commentary-text a { font:inherit; color:var(--purple,#7447d7); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em; }
+#content .funny-commentary-panel[data-commentary-id="mbappe-endorsement-featured"] .meme-illustration-note { font-size:12px; line-height:1.35; }

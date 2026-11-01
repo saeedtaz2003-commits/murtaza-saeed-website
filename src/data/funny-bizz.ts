@@ -50,6 +50,14 @@ The business question is intriguing. Are consumers beginning to value simplicity
 
 Pulse illustrates a clever differentiation strategy: <strong>doing less can sometimes create more value</strong>. In markets crowded with increasingly complex products, simplicity itself can become a compelling selling point — and potentially command a premium.`;
 
+const mbappeCommentary = `Kylian Mbappé’s move from Nike to Swiss sportswear brand On involves more than a new endorsement. According to <a href="https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a>, the agreement combines <strong>cash and an equity component</strong>, although its size and conditions have not been disclosed.
+
+<a href="https://press.on-running.com/on-enters-football-alongside-kylian-mbappe" target="_blank" rel="noopener noreferrer">On’s entry into football</a> involves Mbappé contributing to product development, with Thierry Henry as Director of Football. The company's first football boots are planned for 2027.
+
+<strong>For business leaders and managers:</strong> Strategic partnerships should deliver measurable commercial value, not just publicity. Equity can help align long-term interests.
+
+<strong>For athletes and sports personalities:</strong> Equity offers an opportunity to share in the value they help create, beyond endorsement fees — but also brings exposure to business risks.`;
+
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
     id: 'papss-kenya-nigeria-shortcut',
@@ -251,14 +259,19 @@ My independent assessment examines the valuation, prospective dividend yield, sh
   },
   {
     id: 'mbappe-endorsement-featured',
-    archiveSummary: "Kylian Mbappé’s move from Nike to On raises a wider business question about endorsement and ownership. Cash, equity and product influence offer different ways to participate in the value a commercial relationship creates.",
+    archiveSummary: 'Kylian Mbappé’s move from Nike to Swiss sportswear brand On includes cash and equity, giving the partnership a different commercial structure. What does it reveal about ownership, incentives and On’s football ambitions?',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
-    title: "Mbappé: From Endorsement to Equity",
-    image: '/images/mbappe-nike-to-on-web.jpg',
-    alt: 'Editorial cartoon showing Kylian Mbappé leaving Nike and joining On',
-    copy: 'Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership.',
-    destinationUrl: '/mbappe-endorsement-to-ownership',
+    title: 'A Win-Win for Mbappé and ON?',
+    commentaryTitle: 'A Win-Win for Mbappé and ON?',
+    image: '/images/mbappe-approved-monogram-biz-buzz.jpg',
+    alt: 'AI-assisted illustration of Kylian Mbappé seated between a Nike sign with a red cross and an On sign with a green tick. The headline reads “MBAPPÉ LEAVES NIKE FOR ON” and the bottom caption asks “WHAT IS THE REASON?”',
+    commentaryCopyHtml: mbappeCommentary,
+    copy: mbappeCommentary.replace(/<[^>]*>/g, ''),
+    seoTitle: 'Mbappé Leaves Nike for On: The Equity Deal Explained',
+    metaDescription: 'Why did Kylian Mbappé leave Nike for On? Explore the cash-and-equity deal, On’s football expansion and what it means for strategic partnerships.',
+    illustrationDisclosure: 'AI-assisted editorial illustration.',
+    destinationUrl: '/mbappe-endorsement-to-ownership/',
     ctaLabel: 'Read the Article'
   }
 ];
