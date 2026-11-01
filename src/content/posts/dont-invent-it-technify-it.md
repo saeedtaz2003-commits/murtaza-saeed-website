@@ -5,8 +5,8 @@ date: "2026-10-04"
 updated: "2026-10-13"
 category: "Information Systems & Process Improvement"
 summary: "Why your next AI opportunity may be hiding in a very old business practice"
-image: "/images/old-wine-new-bottle-technify-it.jpg"
-imageAlt: "Old merchant says ‘I know my customers’ beside a modern AI robot saying ‘I call it predictive analytics,’ illustrating how old business practices are being turned into modern apps."
+image: "/images/old-wine-new-bottle-technify-ai-business.jpg"
+imageAlt: "Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI."
 draft: false
 takeaways: ["Many supposedly new technology ideas are really old business practices with their limitations removed.", "AI can now provide the intelligence behind an application without the business having to build its own AI model.", "AI coding tools can also help create the software itself, lowering the barrier for entrepreneurs who are not programmers.", "For established businesses, the opportunity may be less about “AI transformation” and more about finding one old process that technology can make faster, cheaper or more scalable."]
 sourcesTitle: "Sources and further reading"

@@ -27,8 +27,8 @@ toc:
     id: "the-final-advice-turn-todays-fame-into-tomorrows-value"
   - label: "The verdict"
     id: "the-verdict"
-image: "/images/mbappe-nike-to-on-web.jpg"
-imageAlt: "Editorial cartoon showing Kylian Mbappé leaving Nike and joining On"
+image: "/images/mbappe-approved-monogram-biz-buzz.jpg"
+imageAlt: "AI-assisted illustration of Kylian Mbappé seated between a Nike sign with a red cross and an On sign with a green tick. The headline reads “MBAPPÉ LEAVES NIKE FOR ON” and the bottom caption asks “WHAT IS THE REASON?”"
 draft: false
 sources: [{"text": "On: “On enters football alongside Kylian Mbappé”", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}, {"text": "Reuters, 27 October 2026: Mbappé seeks to defuse anger in China after Mao comments", "url": "https://www.reuters.com/business/media-telecom/mbappe-dropped-by-chinese-brands-over-alleged-mao-meme-comments-2026-10-27/"}]
 ---
