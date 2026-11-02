@@ -2,14 +2,15 @@
 title: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
 slug: "mbappe-endorsement-to-ownership"
 date: 2026-09-22
+updated: 2026-11-02
 category: "Business Analysis & Strategy"
 summary: "Why did Kylian Mbappé leave Nike after nearly 20 years? His move to On combines cash, equity and product influence—and offers wider lessons about turning endorsement into ownership."
-seoTitle: "Why Kylian Mbappé Left Nike for On: The Shift to Equity"
+seoTitle: "Why Mbappé Left Nike for On: Equity Deal"
 metaDescription: "Explore why Kylian Mbappé left Nike for On—and what the reported equity deal teaches about athlete endorsements, ownership and long-term value."
 takeaways:
   - "Mbappé’s Nike contract ended; there is no confirmed public quarrel behind the move."
   - "His On agreement reportedly combines cash and equity with a role in developing football products."
-  - "The strategic lesson is to convert present-day influence into participation in future value—without ignoring the risks of equity."
+  - "For owners, equity can align contribution and reward, but carries dilution, vesting and valuation risk."
 toc:
   - label: "Why did Mbappé leave Nike?"
     id: "why-did-kylian-mbappé-leave-nike-after-nearly-20-years"
@@ -23,6 +24,8 @@ toc:
     id: "the-deal-through-a-finance-lens"
   - label: "Update: celebrity and business risk"
     id: "update--1-november-2026-when-celebrity-risk-becomes-business-risk"
+  - label: "Lessons for business owners"
+    id: "what-can-business-owners-learn-from-this-deal"
   - label: "Lessons for elite performers"
     id: "the-final-advice-turn-todays-fame-into-tomorrows-value"
   - label: "The verdict"
@@ -30,22 +33,18 @@ toc:
 image: "/images/mbappe-approved-monogram-biz-buzz.jpg"
 imageAlt: "AI-assisted illustration of Kylian Mbappé seated between a Nike sign with a red cross and an On sign with a green tick. The headline reads “MBAPPÉ LEAVES NIKE FOR ON” and the bottom caption asks “WHAT IS THE REASON?”"
 draft: false
-sources: [{"text": "On: “On enters football alongside Kylian Mbappé”", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}, {"text": "Reuters, 27 October 2026: Mbappé seeks to defuse anger in China after Mao comments", "url": "https://www.reuters.com/business/media-telecom/mbappe-dropped-by-chinese-brands-over-alleged-mao-meme-comments-2026-10-27/"}]
+sources: [{"text": "On: ‘On enters football alongside Kylian Mbappé’", "url": "https://press.on-running.com/on-enters-football-alongside-kylian-mbappe"}, {"text": "The Guardian: Mbappé leaves Nike and becomes an On shareholder", "url": "https://www.theguardian.com/football/2026/sep/18/kylian-mbappe-leaves-nike-20-years-boot-deal-swiss-brand-on"}, {"text": "L’Équipe, September 2026: why Mbappé chose On and Nike’s renewal offer", "url": "https://www.lequipe.fr/Football/Actualites/-j-ai-besoin-de-vivre-des-sensations-de-me-challenger-pourquoi-kylian-mbappe-a-signe-avec-on-son-nouvel-equipementier/1720404"}, {"text": "Reuters: Mbappé leaves Nike as On enters football", "url": "https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/"}, {"text": "Reuters analysis: the opportunity and hurdles facing On", "url": "https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/"}, {"text": "On Investor Relations: 90+ countries of presence", "url": "https://investors.on-running.com/home/default.aspx"}, {"text": "Nike FY2026 Form 10-K: Jordan Brand revenue", "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm"}, {"text": "Under Armour: Stephen Curry and Curry Brand separation, November 2025", "url": "https://about.underarmour.com/en/stories/press-releases/release.418ad4e7-ea5d-40e6-bc25-87f92315c9ba.html"}, {"text": "Sports Business Journal: Curry retains sole ownership of Curry Brand", "url": "https://www.sportsbusinessjournal.com/Articles/2025/11/13/under-armour-stephen-curry-parting-ways-after-13-years/"}, {"text": "Guild Esports regulatory announcement: sale to DCB Sports, October 2024", "url": "https://shareprices.com/rns/completion-of-the-asset-acquisition-by-dcb-sports-xbh6qw272txlx57/"}, {"text": "Companies House: Guild Esports and Gaming Ltd (15888617) liquidation", "url": "https://find-and-update.company-information.service.gov.uk/company/15888617/insolvency"}, {"text": "The Times: Guild Esports shares and business struggles, 2024", "url": "https://www.thetimes.com/business-money/companies/article/david-beckham-backed-guild-esports-group-battles-survival-cxl72235v"}, {"text": "IFRS Foundation: IFRS for SMEs (share-based payment, Section 26)", "url": "https://www.ifrs.org/issued-standards/ifrs-for-smes/"}, {"text": "Reuters, 27 October 2026: Mbappé seeks to defuse anger in China after Mao comments", "url": "https://www.reuters.com/business/media-telecom/mbappe-dropped-by-chinese-brands-over-alleged-mao-meme-comments-2026-10-27/"}]
 ---
 
 ## Why did Kylian Mbappé leave Nike after nearly 20 years?
 
-Mbappé’s Nike contract ended after a relationship dating back to childhood, and there is no confirmed public quarrel. He chose On because the reported agreement combines cash and equity with the chance to help develop a new football business—offering greater influence and potential long-term upside than a conventional endorsement.
+Mbappé’s relationship with Nike ended after his contract expired in July 2026, with no confirmed public quarrel. In an [interview with L’Équipe](https://www.lequipe.fr/Football/Actualites/-j-ai-besoin-de-vivre-des-sensations-de-me-challenger-pourquoi-kylian-mbappe-a-signe-avec-on-son-nouvel-equipementier/1720404), he described the attraction of helping On develop football products. L’Équipe also reported that Nike had proposed a substantial renewal, reportedly worth about €20 million annually. The competing offers have not been disclosed in full, so neither the size of the equity award nor Mbappé’s decisive motive can be established.
 
-That is the direct answer. The more interesting story is the business logic behind it. Mbappé is not simply exchanging one boot supplier for another; he is joining a younger company as it enters football, changing the balance of the relationship from ambassador towards product partner and shareholder.
+On told Reuters that the new agreement includes cash and equity, without disclosing amounts. On has also said Mbappé will work with its teams on football footwear and apparel. This is the business story: a high-profile athlete moving from a long-established supplier into a challenger’s product-development strategy, with a reported stake in the outcome.
 
 ### Who are Mbappé and Federer?
 
-For readers who do not closely follow sport, Kylian Mbappé is a French footballer who plays as a forward for Real Madrid and captains the French national team. He helped France win the 2018 FIFA World Cup and has become one of the most recognisable athletes of his generation. His speed, goalscoring record and international profile make his choice of footwear commercially important far beyond France or Spain.
-
-Roger Federer is a retired Swiss tennis player and one of the sport’s best-known champions. He won 20 Grand Slam singles titles during a career noted not only for sporting success but also for unusually strong global appeal. After a long relationship with Nike, Federer invested in On and helped the Swiss company develop tennis and lifestyle products. His involvement demonstrated how an athlete could contribute capital, expertise and reputation rather than serving only as an advertising face.
-
-Their sports are different, but the commercial comparison is relevant. Federer helped On move from running into tennis; Mbappé is now expected to help it enter football, a substantially larger but more competitive global market.
+Kylian Mbappé, a Real Madrid forward and captain of France, has a global profile that makes his sponsor choice commercially significant. Roger Federer, the former Swiss tennis champion, joined On as an investor and product collaborator in 2019. The comparison is useful, although On’s entry into tennis is not the same challenge as competing in football.
 
 <div class="article-photo-grid">
   <figure class="article-photo portrait">
@@ -60,7 +59,7 @@ Their sports are different, but the commercial comparison is relevant. Federer h
 
 On announced the partnership on 18 September 2026 as the beginning of its move into football. Its official statement says Mbappé will be a global ambassador and will work directly with product teams to develop and test future footwear and apparel. Thierry Henry, who has been involved with On since late 2025, is serving as its Director of Football. The company has also brought in Swiss international Sydney Schertenleib as it develops the women’s side of its football plans.
 
-The official announcement does not disclose the financial terms. However, [Reuters reported](https://www.reuters.com/) that the agreement includes both cash and equity, while other reporting has described it as a long-term partnership. That distinction matters. Cash pays an athlete for the use of his profile today; equity may allow him to benefit from the value created tomorrow. It also introduces risk: shares can rise or fall, and a challenger entering a new category has much to prove.
+The official announcement does not disclose the financial terms. However, On [told Reuters](https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/) that the agreement includes both cash and equity, while other reporting has described it as a long-term partnership. That distinction matters. Cash pays an athlete for the use of his profile today; equity may allow him to benefit from the value created tomorrow. It also introduces risk: shares can rise or fall, and a challenger entering a new category has much to prove.
 
 ## Why leaving Nike after 20 years is significant
 
@@ -110,7 +109,7 @@ Federer’s success is also the template On appears to be adapting for Mbappé. 
 
 Michael Jordan’s Nike arrangement was not principally an ownership stake in Nike. It was a signature brand and royalty relationship. That distinction matters, but the economics illustrate the value of participating in sales rather than receiving only a fixed endorsement fee.
 
-Air Jordan grew from a shoe partnership into Jordan Brand, a major business within Nike. Nike reported approximately [$7.0 billion of Jordan Brand revenue in its 2026 financial year](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm). It remains the standard against which athlete-led sports brands are measured.
+Air Jordan grew into Jordan Brand, one of Nike’s leading businesses. Nike reported Jordan Brand revenue of [$7.034 billion in fiscal 2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm), down 3% from fiscal 2025 following a 16% decline the previous year. That is Nike’s product revenue, not Jordan’s personal earnings. The achievement is exceptional, but even the strongest athlete-led brands face changing demand.
 
 The lesson is that ownership of company shares is not the only route to long-term participation. Royalties, intellectual-property rights and control over a sub-brand can be equally important. For Mbappé, the strongest outcome may eventually depend not only on the value of his On shares but also on whether he develops a distinctive product identity that consumers continue to buy.
 
@@ -121,11 +120,11 @@ The lesson is that ownership of company shares is not the only route to long-ter
 
 ### Stephen Curry and Under Armour: commercially important, but mixed
 
-Stephen Curry joined Under Armour in 2013 and helped give the company credibility in basketball. Curry Brand was launched inside Under Armour in 2020, and the relationship later included a long-term agreement with an equity component.
+Stephen Curry helped Under Armour build credibility in basketball, and Curry Brand was launched in 2020. In November 2025, Under Armour and Curry announced their separation. Curry Brand became independent; [Sports Business Journal reported](https://www.sportsbusinessjournal.com/Articles/2025/11/13/under-armour-stephen-curry-parting-ways-after-13-years/) that Curry would retain sole ownership of it.
 
-It was influential, but it never achieved the cultural reach or commercial scale of Jordan Brand. In November 2025, [Reuters reported](https://www.reuters.com/business/under-armour-expands-restructuring-effort-plans-separate-curry-business-2025-11-13/) that Curry and Under Armour had agreed to separate, with Curry Brand becoming independent. That does not make the entire partnership a failure: it lasted more than a decade, sold products and helped establish both parties in basketball. But the eventual split shows that a famous athlete, equity incentives and a signature brand do not guarantee permanent strategic alignment.
+The outcome is not simply a failed endorsement. The partnership produced a recognisable brand that could continue after the relationship with its original commercial partner ended. Ownership of a brand, rights on separation and freedom to seek another distribution partner may therefore be more consequential than the original fee alone.
 
-For On, this is an especially useful warning. Mbappé can create attention and authenticity, but the company still needs competitive products, distribution, marketing discipline and agreement over the long-term direction of its football business.
+For On, the question is whether Mbappé’s involvement builds a viable football-product business and whether both parties have negotiated an acceptable outcome if their priorities eventually diverge.
 
 <figure class="article-photo article-photo-wide">
   <img src="/images/stephen-curry-2022.jpg" alt="Stephen Curry during the 2022 NBA All-Star Weekend" loading="lazy" />
@@ -134,13 +133,13 @@ For On, this is an especially useful warning. Mbappé can create attention and a
 
 ### David Beckham and Guild Esports: the downside of equity
 
-A more sobering example comes from outside footwear. David Beckham became an investor and ambassador for Guild Esports when it entered the public market in 2020. The association generated visibility, but the underlying business struggled. By 2024, [The Times reported](https://www.thetimes.com/business-money/companies/article/david-beckham-backed-guild-esports-group-battles-survival-cxl72235v) that Guild had lost about 98% of its stock-market value and was fighting for survival.
+David Beckham was an investor and ambassador for Guild Esports when the company listed in London in 2020. The listed shares subsequently lost almost all their value. In October 2024, the listed company sold its esports operating business to DCB Sports for £100,000, with the buyer also assuming more than £2 million in liabilities. The listed company continued separately and later changed its name.
 
-This case is not directly comparable with On, which is an established international sportswear company with substantial sales. It does, however, demonstrate the central financial truth: celebrity can attract investors and customers, but it cannot repair a weak business model. Equity rewards success only when the company itself creates durable value.
+The acquired operating business was run through Guild Esports and Gaming Ltd, which entered creditors’ voluntary liquidation in September 2025. That later liquidation did not cause the earlier collapse in the listed share price. The lesson remains: celebrity involvement may generate visibility without making the underlying business commercially viable, and contractual ambassador income should not be confused with investment returns.
 
 ### The record is therefore mixed
 
-Federer and Jordan demonstrate the extraordinary upside possible when athlete credibility, strong products and capable management reinforce one another. Curry shows that a partnership may achieve meaningful results yet still fall short of becoming the next Jordan. Beckham’s Guild investment shows that a famous name offers no protection when the underlying economics fail.
+Federer’s investment and Jordan’s royalty-led arrangement illustrate different paths to long-term economic participation. Curry shows why ownership and separation rights can outlast a commercial partnership. Guild demonstrates the limits of celebrity influence when the underlying business performs poorly. These cases illustrate different outcomes; they are not a representative sample or proof that equity deals usually succeed.
 
 Mbappé’s arrangement should therefore be judged over years, not by the publicity surrounding its announcement. Early measures will include the quality of On’s first football boots, adoption by other players and retailers, and whether consumers associate the products with innovation rather than celebrity alone. The ultimate test will be whether football becomes a profitable, durable part of On’s business.
 
@@ -159,6 +158,8 @@ From a finance perspective, Mbappé appears to be accepting a different mix of r
 **Cash is certain value.** A guaranteed endorsement payment can be measured and received according to contract. Its value does not depend on the sponsor’s share price or success in football.
 
 **Equity is contingent value.** It may appreciate substantially if On grows, but it can also decline. The result depends on company performance, market valuation, the terms of the award and any restrictions on selling the shares.
+
+The risk was visible even before the deal was announced. [Reuters reported](https://www.reuters.com/sports/soccer/mbappe-boosts-ons-brand-visibility-hurdles-soccer-success-remain-2026-09-18/) that On’s shares had fallen about 40% during 2026 as of 18 September, following disappointing second-quarter sales relative to expectations. That historical decline does not determine the future value of Mbappé’s stake, whose terms remain undisclosed. It does show why an equity award cannot be evaluated like a guaranteed cash fee.
 
 **Influence has strategic value.** Product input, creative participation and a central position in the brand may increase Mbappé’s impact beyond the formal value of the contract. Influence can also strengthen his own commercial identity after his playing career.
 
@@ -193,6 +194,16 @@ For On, the implications go beyond a conventional endorsement. Mbappé is not si
 The episode illustrates a risk that works in both directions. A celebrity's reputation can help create business value, but reputational damage can also threaten that value. An equity partnership strengthens the alignment of interests without eliminating such exposure.
 
 The broader lesson: When a company makes an individual central to its growth strategy, it also becomes more exposed to circumstances beyond its direct control.
+
+## What Can Business Owners Learn from This Deal?
+
+Strip away the celebrity and the strategic choice is familiar: when should a business pay a key contributor in cash, and when should that person share in the value created? The question arises for senior executives, specialist managers and commercial partners, not just sports personalities.
+
+Equity may conserve cash and encourage commitment, but it can also dilute existing owners, complicate decision-making and create an accounting cost, depending on the arrangement. Bonuses, royalties or profit-sharing may sometimes align interests without transferring ownership.
+
+For an owner or MD of a mid-sized private business in Kenya or elsewhere in East Africa, there is another difficulty: unlisted shares have no continuously quoted market price and may be hard to sell. Valuation, exit provisions and minority-shareholder protections can matter as much as the percentage granted.
+
+Before offering equity, the real test is whether the recipient’s expected contribution justifies the cost and the rights surrendered. What performance is rewarded, when does entitlement vest, what happens when the relationship ends, and how can either party realise fair value?
 
 ## The final advice: turn today’s fame into tomorrow’s value
 
@@ -230,6 +241,8 @@ That does not mean smaller is automatically better. The challenger must still ha
 
 On still has to design excellent football products, manufacture them reliably and earn the trust of players at every level. Mbappé’s name can open the door; it cannot do all the work after that. The deal may succeed brilliantly, or the established brands may prove too difficult to dislodge.
 
-Yet the strategic direction is persuasive. The most valuable person in a campaign need not remain satisfied with a fee for appearing in it. The better ambition is to gain a voice in the product and a stake in the value created.
+Mbappé offers On more than publicity: he can contribute product knowledge, credibility and access to new customers. Whether the arrangement creates lasting value will depend on execution and on contract terms that have not been publicly disclosed.
 
-**Do not merely negotiate a bigger cheque for today—secure a strategic share of tomorrow.**
+The lesson is not that equity always beats a larger fee. A sound partnership matches contribution with reward while protecting both sides against uncertainty.
+
+**A share of tomorrow matters only if the business creates lasting value.**
