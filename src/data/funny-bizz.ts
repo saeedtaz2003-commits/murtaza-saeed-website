@@ -104,6 +104,12 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "sliderCategory": "Featured Article",
   "category": "Business & Finance",
   "title": "From Paper to ERP: Where Can AI Help?",
+  commentaryTitle: "AI in Finance: Which Problems Come First?",
+  commentaryCopyHtml: `Trump’s fictional “AI cancelled, SI adopted” executive order is satire. The business question is whether AI can improve the finance function—or merely add another system to manage.
+
+<strong>Start with the pain point, not the technology.</strong> Unmatched invoices, missing records and unexplained variances are good places to look first. Some can already be handled by accounting software or conventional automation, so buying AI before checking existing capabilities may simply add cost and complexity.
+
+<strong>From paper and Excel to full ERP, the right starting point changes.</strong> Which improvements justify new tools, and which need better processes?`,
   "image": "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg",
   "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
   "copy": "From paper records and Excel to full ERP, AI can reduce manual input, check transactions, reconcile information and highlight exceptions. It can also help managers analyse margins, cash flow and working capital. Start with the business pain point—not the technology.",

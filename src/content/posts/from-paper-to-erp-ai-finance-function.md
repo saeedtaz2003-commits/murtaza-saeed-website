@@ -2,11 +2,13 @@
 title: "From Paper to ERP: Where Can AI Improve Your Finance Function?"
 slug: "from-paper-to-erp-ai-finance-function"
 date: "2026-10-04"
+updated: "2026-11-02"
 category: "Information Systems & Process Improvement"
 summary: "AI or SI — whatever the name, how can it help your business?"
 image: "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg"
 imageAlt: "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP."
 draft: false
+sources: [{"text": "Kenya Revenue Authority — VAT Auto-Populated Return FAQs. Conditions for claiming input VAT and reconciling electronic invoices.", "url": "https://www.kra.go.ke/helping-tax-payers/faqs/the-vat-auto-populated-return"}, {"text": "Kenya Revenue Authority — Validation of Income and Expenses in Income Tax Returns. Public notice covering validation effective 1 January 2026.", "url": "https://www.kra.go.ke/news-center/public-notices/2323-validation-of-income-and-expenses-in-the-income-tax-returns"}, {"text": "Xero — Just Ask Xero (JAX), official product overview. Official product guidance.", "url": "https://www.xero.com/us/ai-in-accounting/jax/"}, {"text": "QuickBooks — Introducing Intuit Intelligence. Official product capabilities and availability information.", "url": "https://quickbooks.intuit.com/learn-support/en-us/help-article/intuit-assist/introducing-intuit-intelligence/L189976Da_US_en_US"}]
 ---
 
 Artificial Intelligence. Super Intelligence. Generative AI. AI agents.
@@ -21,7 +23,7 @@ Where is information still entered manually? Where do errors occur? Which reconc
 
 And, increasingly important:
 
-What can your existing accounting system already do that you may not be using?
+**What can your existing accounting system already do that you may not be using?**
 
 Only then should we ask where AI could improve accuracy, control, productivity or management information.
 
@@ -29,7 +31,7 @@ That applies whether a business still handles much of its paperwork manually, de
 
 AI can potentially help at every stage.
 
-But what it should do is different at each one.
+But what it should do is different at each one. And some improvements may not require AI at all.
 
 ## At a Glance
 
@@ -45,6 +47,8 @@ But what it should do is different at each one.
 | Full ERP | Interpret, prioritise and interrogate | Faster management insight |
 
 </div>
+
+*Some of these opportunities may be addressed through existing software or conventional automation without introducing AI.*
 
 There is another important change across all six stages.
 
@@ -110,9 +114,15 @@ AI may assist with consolidation, reconciliation, classification, identifying mi
 
 It may also help with some compliance-related checking.
 
-For an East African finance team, for example, accounting information may need to be compared with VAT, eTIMS or other statutory records. AI could help identify transactions that do not agree or that require investigation before the finance team completes its review.
+**For a Kenyan finance team, this can have direct financial consequences.**
 
-It would not replace professional tax judgement or statutory responsibility. It could reduce some of the manual checking needed to find the exceptions.
+KRA's VAT return system uses electronic invoice records, and eligible input VAT claims generally depend on valid, transmitted TIMS/eTIMS invoices or other permitted supporting records. Missing or invalid records can delay, or in some cases prevent, VAT recovery.
+
+KRA also validates income and expenses declared in income tax returns against eTIMS, withholding-tax and customs information, subject to applicable exceptions.
+
+Automated checks could help identify purchase invoices with missing or mismatched eTIMS records before returns are filed, giving the finance team an opportunity to investigate and resolve discrepancies.
+
+This would not replace professional tax judgement or statutory responsibility. It could reduce manual checking and identify exceptions earlier.
 
 ### What could you ask?
 
@@ -143,7 +153,7 @@ We eventually moved to Oracle ERP — a major implementation involving considera
 
 With today's technology, I would ask an additional question before assuming that a dependable accounting core needed replacing:
 
-Which problems really require a new accounting system, and which could be solved around the existing one?
+**Which problems really require a new accounting system, and which could be solved around the existing one?**
 
 A company using an older version of QuickBooks, Pastel/Sage or another reliable package might potentially use AI to:
 
@@ -178,15 +188,19 @@ Instead of merely looking at the P&L:
 
 Better management intelligence without automatically discarding a dependable accounting ledger.
 
-The inefficiency may be around the system rather than inside it.
+**The inefficiency may be around the system rather than inside it.**
+
+The same principle is explored in [Don’t Invent It. Technify It.](https://murtazainsights.com/dont-invent-it-technify-it/): sometimes the opportunity lies in applying new technology to an existing business process rather than reinventing the process itself.
 
 ## 4. Modern cloud accounting
 
 Businesses using modern cloud accounting should start with a different question:
 
-## What can the system already do?
+### What can the system already do?
 
 Current accounting products increasingly contain automation and AI of their own.
+
+Xero's *Just Ask Xero (JAX)* and QuickBooks' *Intuit Intelligence* are examples. The capabilities available depend on the product, subscription, market and user permissions.
 
 That matters because the cheapest and least disruptive improvement may already be included in the software licence.
 
@@ -209,7 +223,6 @@ Only after that should management identify the genuine gaps — perhaps deeper a
 - What are the three most important financial changes this month?
 - Which accounts require investigation before month-end?
 - What happens to cash if collections slow by ten days?
-- Which customers generate high revenue but disappointing margins?
 
 ### Possible outcome
 
@@ -217,7 +230,7 @@ More value from technology the business already owns before adding another syste
 
 This should be a fundamental principle:
 
-Before buying more AI, understand the automation and AI already available to you.
+**Before buying more AI, understand the automation and AI already available to you.**
 
 ## 5. Accounting software plus specialist systems
 
@@ -287,7 +300,7 @@ AI can potentially sit above the transactional strength of ERP and help users in
 
 And perhaps eventually the most useful question:
 
-## “What should I be looking at that I haven't asked about?”
+### “What should I be looking at that I haven't asked about?”
 
 That is a very different role for AI.
 
@@ -315,7 +328,7 @@ AI potentially makes that investigation more conversational.
 
 But there is an important limitation.
 
-AI cannot analyse information that the business has never captured properly.
+**AI cannot analyse information that the business has never captured properly.**
 
 If stock movements are missing, documents are incomplete, accounting entries are wrong or controls are routinely bypassed, AI may help expose the weaknesses.
 
@@ -323,13 +336,31 @@ It cannot simply manufacture an accurate history.
 
 Human review also remains essential for payments, accounting adjustments, tax treatment, policy decisions and material business decisions.
 
+Before introducing AI tools, management should also establish what information may be shared externally, particularly supplier banking details, payroll and customer information.
+
+There is an important distinction between **a tool that proposes an accounting entry for approval and one authorised to post it automatically.** Access controls, segregation of duties and audit trails must remain effective. Automation should not weaken accountability.
+
 ## Start with the business problem
 
 There is no single “AI solution for finance”.
 
 A more practical approach is:
 
-Current process → Pain point → Existing capability → AI opportunity → Business benefit → Recommendation
+**Current process → Pain point → Existing capability → AI opportunity → Business benefit → Recommendation**
+
+If I had to identify a starting point, I would generally favour **finding exceptions that can be verified** — unmatched invoices, unreconciled balances, duplicate transactions and unexplained differences.
+
+These are tangible problems whose results can be checked against source documents.
+
+But they do not necessarily require AI. Existing software and conventional rules-based automation may provide a simpler, more reliable and economical answer.
+
+The more ambitious ability to ask complex business questions in natural language could be valuable. Its usefulness, however, depends on the quality, completeness and accessibility of the underlying information.
+
+Before approving an investment, management should establish whether the proposed improvement:
+
+- reduces processing time, errors or repetitive work;
+- strengthens controls, information quality or decision-making;
+- delivers benefits that justify implementation costs, recurring charges and staff training.
 
 And the recommendation does not have to be “buy AI”.
 
@@ -344,7 +375,7 @@ It may be:
 
 The objective is not more AI.
 
-It is a finance function that is more accurate, better controlled, more productive and more useful to management.
+**It is a finance function that is more accurate, better controlled, more productive and more useful to management.**
 
 ## Could your finance function work better?
 
