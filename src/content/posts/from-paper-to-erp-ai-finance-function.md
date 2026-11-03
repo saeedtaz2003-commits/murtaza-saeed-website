@@ -1,5 +1,5 @@
 ---
-title: "From Paper to ERP: Where Can AI Improve Your Finance Function?"
+title: "From Paper to ERP—and Everything in Between: Where Can AI Help?"
 slug: "from-paper-to-erp-ai-finance-function"
 date: "2026-10-04"
 updated: "2026-11-02"

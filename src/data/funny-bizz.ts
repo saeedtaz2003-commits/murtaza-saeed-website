@@ -58,7 +58,46 @@ const mbappeCommentary = `Kylian Mbappé’s move from Nike to Swiss sportswear 
 
 <strong>For athletes and sports personalities:</strong> Equity offers an opportunity to share in the value they help create, beyond endorsement fees — but also brings exposure to business risks.`;
 
+const paperCommentary = `Trump’s fictional “AI cancelled, SI adopted” executive order is satire. The business question is whether AI can improve the finance function—or merely add another system to manage.
+
+<strong>Start with the pain point, not the technology.</strong> Unmatched invoices, missing records and unexplained variances are good places to look first. Some can already be handled by accounting software or conventional automation, so buying AI before checking existing capabilities may simply add cost and complexity.
+
+<strong>From paper to ERP—and everything in between—the right starting point depends on your existing systems.</strong> Which improvements justify new tools, and which need better processes?`;
+
+const kraCommentary = `KRA preparing your tax return sounds convenient. But will it make life easier?
+
+<strong>The upside:</strong> Less paperwork, fewer manual errors and potentially faster filing.
+
+<strong>The downside:</strong> KRA's information may not capture every legitimate expense, allowance or adjustment. Differences with your own records could mean more reconciliation work.
+
+For businesses, the real test is whether their records are accurate, complete and readily accessible.
+
+Good systems make verification easier. Fragmented records, disconnected spreadsheets and weak controls can turn convenience into another headache.
+
+<strong>The bigger question:</strong> Are your business systems ready for increasingly automated tax administration?
+
+<a href="/from-paper-to-erp-ai-finance-function/">Explore how AI can improve the way businesses manage information — starting with what they already have.</a>`;
+
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
+  {
+    id: 'kra-prepopulated-tax-return',
+    publishedAt: '2026-11-03',
+    sliderCategory: 'Funny',
+    category: 'Biz Buzz',
+    title: "KRA's Pre-Filled Returns: Are You Ready?",
+    commentaryTitle: "KRA's Pre-Filled Returns: Are You Ready?",
+    commentaryCopyHtml: kraCommentary,
+    copy: kraCommentary.replace(/<[^>]*>/g, ''),
+    image: '/images/kra-prepopulated-tax-return-blessing-or-headache.jpg',
+    alt: 'Biz Buzz cartoon contrasting two Kenyan business owners reviewing KRA tax returns. One sees READY and celebrates; the other sees MISMATCH and worries about discrepancies.',
+    archiveSummary: "KRA's move towards pre-populated tax returns promises simpler filing, but inaccurate or incomplete information could create headaches. The difference may depend on how well businesses maintain and reconcile their records.",
+    seoTitle: 'KRA Pre-Populated Tax Returns: Blessing or Headache?',
+    metaDescription: 'KRA may prepare your tax return. Could that simplify filing or create more work? Explore the benefits, risks and importance of reliable business records.',
+    sources: [{ label: 'KRA guidance: returns may be pre-populated; taxpayers may confirm or amend', url: 'https://www.kra.go.ke/finance-act-2026-what-it-means-for-you' }],
+    illustrationDisclosure: 'AI-assisted editorial illustration.',
+    destinationUrl: '/from-paper-to-erp-ai-finance-function/',
+    ctaLabel: 'Read the Article'
+  },
   {
     id: 'papss-kenya-nigeria-shortcut',
     publishedAt: '2026-10-30',
@@ -104,15 +143,11 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "sliderCategory": "Featured Article",
   "category": "Business & Finance",
   "title": "From Paper to ERP: Where Can AI Help?",
-  commentaryTitle: "AI in Finance: Which Problems Come First?",
-  commentaryCopyHtml: `Trump’s fictional “AI cancelled, SI adopted” executive order is satire. The business question is whether AI can improve the finance function—or merely add another system to manage.
-
-<strong>Start with the pain point, not the technology.</strong> Unmatched invoices, missing records and unexplained variances are good places to look first. Some can already be handled by accounting software or conventional automation, so buying AI before checking existing capabilities may simply add cost and complexity.
-
-<strong>From paper and Excel to full ERP, the right starting point changes.</strong> Which improvements justify new tools, and which need better processes?`,
+  commentaryTitle: "AI in Finance: What Works at Each Stage?",
+  commentaryCopyHtml: paperCommentary,
   "image": "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg",
   "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
-  "copy": "From paper records and Excel to full ERP, AI can reduce manual input, check transactions, reconcile information and highlight exceptions. It can also help managers analyse margins, cash flow and working capital. Start with the business pain point—not the technology.",
+  copy: paperCommentary.replace(/<[^>]*>/g, ''),
   "destinationUrl": "/from-paper-to-erp-ai-finance-function",
   "ctaLabel": "Read the Article"
 },
