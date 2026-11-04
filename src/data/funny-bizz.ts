@@ -24,6 +24,7 @@ export type FunnyBizzItem = {
   metaDescription?: string;
   sources?: readonly { label: string; url: string }[];
   illustrationDisclosure?: string;
+  hideCommentaryReferences?: boolean;
 };
 
 const lexusCommentary = `Lexus commissioned Brooklyn-based art collective MSCHF to transform two electrified vehicles into extraordinary sculptures for its September 2026 Motomorphosis exhibition in New York.
@@ -93,6 +94,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     archiveSummary: "KRA's move towards pre-populated tax returns promises simpler filing, but inaccurate or incomplete information could create headaches. The difference may depend on how well businesses maintain and reconcile their records.",
     seoTitle: 'KRA Pre-Populated Tax Returns: Blessing or Headache?',
     metaDescription: 'KRA may prepare your tax return. Could that simplify filing or create more work? Explore the benefits, risks and importance of reliable business records.',
+    hideCommentaryReferences: true,
     sources: [{ label: 'KRA guidance: returns may be pre-populated; taxpayers may confirm or amend', url: 'https://www.kra.go.ke/finance-act-2026-what-it-means-for-you' }],
     illustrationDisclosure: 'AI-assisted editorial illustration.',
     destinationUrl: '/from-paper-to-erp-ai-finance-function/',
@@ -145,8 +147,8 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "title": "From Paper to ERP: Where Can AI Help?",
   commentaryTitle: "AI in Finance: What Works at Each Stage?",
   commentaryCopyHtml: paperCommentary,
-  "image": "/images/donald-trump-ai-si-finance-function-paper-to-erp.jpg",
-  "alt": "Donald Trump mock executive order changing AI to SI, introducing how AI can reduce finance workload, improve controls and provide better management insight from paper records to ERP.",
+  "image": "/images/ai-si-satire-business-technology.jpg",
+  "alt": "Satirical AI-generated illustration of an anonymous suited person holding a fictional executive order cancelling AI and adopting SI. The caption asks how it can help your business; the image includes the MI monogram and the disclaimer “Satire. AI-generated image. Not a real order.”",
   copy: paperCommentary.replace(/<[^>]*>/g, ''),
   "destinationUrl": "/from-paper-to-erp-ai-finance-function",
   "ctaLabel": "Read the Article"
