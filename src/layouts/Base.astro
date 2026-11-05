@@ -90,6 +90,9 @@ const socialImageType = socialPath.endsWith('.webp')
     <main id="content"><slot /></main>
     <Footer />
     <script>
+      import '../scripts/analytics-actions';
+    </script>
+    <script>
       document.querySelectorAll('[data-content-share]').forEach((container) => {
         if (!(container instanceof HTMLElement) || container.dataset.shareReady === 'true') return;
         container.dataset.shareReady = 'true';

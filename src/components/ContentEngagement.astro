@@ -4,7 +4,16 @@ import { commentsFormFor } from '../data/comments';
 
 const { title, url, commentTitle = title, showComment = true, articleUrl, articleLabel = 'Read the Article', articleNewTab = false, class: className = '' } = Astro.props;
 const absoluteUrl = new URL(url, Astro.site).toString();
-const encodedUrl = encodeURIComponent(absoluteUrl);
+// Tag only outbound shared links; keep internal navigation and Copy Link canonical.
+const campaign = new URL(absoluteUrl).hash.replace(/^#/, '') || new URL(absoluteUrl).pathname.split('/').filter(Boolean).pop() || 'home';
+const sharedUrl = (source) => {
+  const tagged = new URL(absoluteUrl);
+  tagged.searchParams.set('utm_source', source);
+  tagged.searchParams.set('utm_medium', source === 'email' ? 'email' : source === 'whatsapp' ? 'messaging' : 'social');
+  tagged.searchParams.set('utm_campaign', campaign);
+  tagged.searchParams.set('utm_content', articleUrl || absoluteUrl.includes('/the-lighter-side') ? 'meme_share' : 'article_share');
+  return encodeURIComponent(tagged.toString());
+};
 const encodedTitle = encodeURIComponent(title);
 ---
 <div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl}>
@@ -20,10 +29,10 @@ const encodedTitle = encodeURIComponent(title);
     <span data-share-status aria-live="polite"></span>
   </div>
   <div class="engagement-share-menu" data-share-fallback hidden aria-label="Share options">
-    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer">Facebook</a>
-    <a href={`https://wa.me/?text=${encodedUrl}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`} target="_blank" rel="noopener noreferrer">X</a>
-    <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodedUrl}`}>Email</a>
+    <a href={`https://www.facebook.com/sharer/sharer.php?u=${sharedUrl('facebook')}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href={`https://wa.me/?text=${sharedUrl('whatsapp')}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharedUrl('linkedin')}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${sharedUrl('x')}`} target="_blank" rel="noopener noreferrer">X</a>
+    <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${sharedUrl('email')}`}>Email</a>
   </div>
 </div>

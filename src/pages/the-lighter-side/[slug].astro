@@ -73,7 +73,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
         <MemeReferences item={item} />
       </div>
     ) : <p><BrandText text={item.copy} /></p>}
-    {!isPapss && item.destinationUrl && <p><a class="button" href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
+    {!isPapss && item.destinationUrl && <p><a class="button" data-destination-link data-item-id={item.id} href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
     <div class:list={[(isKra || isMbappe || isPulse || isTechnify || isLexus) && 'funny-action-footer']}>
       <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} />
