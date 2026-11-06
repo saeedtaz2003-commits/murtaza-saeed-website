@@ -22,7 +22,9 @@ const isMbappe = item.id === 'mbappe-endorsement-featured';
 const isPulse = item.id === 'pulse-ring';
 const isTechnify = item.id === 'technify-it-featured';
 const isLexus = item.id === 'lexus-motomorphosis';
-const hasApprovedCopy = isKra || isPaper || isMbappe || isPulse || isTechnify || isLexus || item.id === 'papss-kenya-nigeria-shortcut';
+const isKenyaPower = item.id === 'kenya-power-profit';
+const hasUpdatedCommentary = ['kenya-power-profit', 'ozempic-victorias-secret', 'missed-hole-in-one'].includes(item.id);
+const hasApprovedCopy = hasUpdatedCommentary || isKra || isPaper || isMbappe || isPulse || isTechnify || isLexus || item.id === 'papss-kenya-nigeria-shortcut';
 const isPapss = item.id === 'papss-kenya-nigeria-shortcut';
 const viewerUrl = funnyBizzViewerUrl(item.id);
 const linkedArticle = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying'
@@ -35,8 +37,8 @@ const pageTitle = item.seoTitle ?? `${item.title} | Biz Buzz | Murtaza Insights`
 // Social platforms are more reliable with a lightweight, explicitly-sized image.
 // Keep each permalink item-specific so WhatsApp/Facebook can fetch the correct preview.
 const isCurrentQuickmart = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying';
-const useOriginalSocialImage = isPaper || isKra || isMbappe || isPulse || isTechnify || isLexus || isCurrentQuickmart || item.id === 'papss-kenya-nigeria-shortcut';
-const socialSize = (isKra || isMbappe || isPulse || isTechnify || isLexus) ? 1080 : useOriginalSocialImage ? 1254 : item.id === 'simbisa-customers-spend-less' ? 1080 : 1200;
+const useOriginalSocialImage = isKenyaPower || isPaper || isKra || isMbappe || isPulse || isTechnify || isLexus || isCurrentQuickmart || item.id === 'papss-kenya-nigeria-shortcut';
+const socialSize = (isKenyaPower || isKra || isMbappe || isPulse || isTechnify || isLexus) ? 1080 : useOriginalSocialImage ? 1254 : item.id === 'simbisa-customers-spend-less' ? 1080 : 1200;
 const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item.id}.jpg`;
 ---
 <Base
@@ -53,7 +55,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     '@type': 'CreativeWork',
     '@id': new URL(Astro.url.pathname, Astro.site).toString(),
     url: new URL(Astro.url.pathname, Astro.site).toString(),
-    name: (isKra || isMbappe || isPulse || isTechnify || isLexus) ? item.commentaryTitle ?? item.title : item.title,
+    name: (hasUpdatedCommentary || isKra || isMbappe || isPulse || isTechnify || isLexus) ? item.commentaryTitle ?? item.title : item.title,
     ...(isKra ? { genre: item.category, keywords: ['KRA pre-populated returns', 'Kenya tax returns', 'Finance Act 2026', 'eTIMS reconciliation', 'business records', 'accounting systems'], spatialCoverage: 'Kenya' } : {}),
     ...(isKra ? { citation: item.sources?.map(source => source.url) } : {}),
     ...(isMbappe ? { genre: item.category, keywords: ['sportswear strategy', 'endorsements', 'equity partnerships'], temporalCoverage: '2026-09' } : {}),
@@ -68,7 +70,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     <h1>{hasApprovedCopy ? item.commentaryTitle ?? item.title : item.title}</h1>
     <img src={item.image} alt={item.alt} />
     {hasApprovedCopy ? (
-      <div class:list={["papss-permalink-copy", isLexus && "lexus-detail-copy"]}>
+      <div class:list={["papss-permalink-copy", hasUpdatedCommentary && "november-commentary-copy", isLexus && "lexus-detail-copy"]}>
         {(item.commentaryCopyHtml ?? item.copy).split(/\n\n/).map(paragraph => <p set:html={italicizeBrandHtml(paragraph)} />)}
         <MemeReferences item={item} />
       </div>

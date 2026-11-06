@@ -79,6 +79,24 @@ Good systems make verification easier. Fragmented records, disconnected spreadsh
 
 <a href="/from-paper-to-erp-ai-finance-function/">Explore how AI can improve the way businesses manage information — starting with what they already have.</a>`;
 
+const kenyaPowerCommentary = `Kenya Power reported nearly KSh25 billion in after-tax profit for 2025/26. Yet <a href="https://www.epra.go.ke/statistics-0" target="_blank" rel="noopener noreferrer">EPRA's figures</a> show customers experienced an average of 3.91 power interruptions per month, up from 3.67 the previous year.
+
+<strong>The business insight:</strong> A healthier bottom line does not automatically mean better service. Boards should ask whether financial gains are accompanied by improvements customers can experience — greater reliability, billing accuracy and faster complaint resolution.
+
+<strong>The question for any business:</strong> Does your monthly management pack give customer experience the same attention as profitability?`;
+
+const victoriasSecretCommentary = `<a href="https://www.barrons.com/articles/victorias-secret-stock-glp1-drugs-weight-loss-4cb4b8f1" target="_blank" rel="noopener noreferrer">Wall Street</a> sees a potential opportunity for Victoria's Secret as users of GLP-1 weight-loss drugs replace their wardrobes. But the company's CEO said in June 2026 that these drugs had so far made little difference to sales.
+
+<strong>The business insight:</strong> A plausible growth story can attract investors before the expected sales materialise. Smaller clothing sizes do not necessarily mean greater spending, and replacing a wardrobe may be a one-off purchase rather than sustained demand.
+
+<strong>The bigger question:</strong> When markets anticipate a new growth opportunity, how much is supported by evidence — and how much remains an attractive assumption?`;
+
+const golfScorecardCommentary = `On the golf course, a second stroke cannot turn a missed first attempt into a hole-in-one. Yet in business, a missed sales target can sometimes be presented as a success by highlighting a different, more favourable performance measure.
+
+<strong>The business insight:</strong> There is nothing wrong with reporting additional performance measures. The problem arises when a favourable result is used to distract attention from an unmet target. Management should explain both the original shortfall and any achievements elsewhere, rather than allowing one to obscure the other.
+
+<strong>The question:</strong> Does your management reporting clearly distinguish between meeting agreed targets and achieving other favourable results?`;
+
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
     id: 'kra-prepopulated-tax-return',
@@ -89,7 +107,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     commentaryTitle: "KRA's Pre-Filled Returns: Are You Ready?",
     commentaryCopyHtml: kraCommentary,
     copy: kraCommentary.replace(/<[^>]*>/g, ''),
-    image: '/images/kra-pre-filled-returns-laptops-corrected-v3.jpg',
+    image: '/images/kra-pre-filled-returns-approved-nov2026.jpg',
     alt: 'Editorial illustration contrasting two Kenyan male business professionals and KRA pre-filled tax returns. A relaxed man has a READY status callout; a concerned man checks records beside a MISMATCH callout. Both laptops show their rear lids to the viewer.',
     archiveSummary: "KRA's move towards pre-populated tax returns promises simpler filing, but inaccurate or incomplete information could create headaches. The difference may depend on how well businesses maintain and reconcile their records.",
     seoTitle: 'KRA Pre-Populated Tax Returns: Blessing or Headache?',
@@ -133,7 +151,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     copy: technifyCommentary.replace(/<[^>]*>/g, ''),
     seoTitle: 'Old Wine, New Bottle? How AI Reinvents Business Ideas',
     metaDescription: 'Discover how AI and digital technology can transform familiar business practices, from customer relationships to negotiation and buying clubs.',
-    image: '/images/old-wine-new-bottle-technify-ai-business.jpg',
+    image: '/images/technify-old-wine-new-bottle-approved-nov2026.jpg',
     alt: 'Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI.',
     destinationUrl: '/dont-invent-it-technify-it',
     ctaLabel: 'Read the Article'
@@ -203,9 +221,10 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
     title: "Bright Profits. Dim Customer Experience.",
-    image: '/images/kenya-power-sh25-billion-profit-power-cuts-cartoon.png',
-    alt: 'Kenya Power Sh25 billion profit cartoon contrasting strong financial results with power cuts, higher bills and unreliable electricity supply in Kenya.',
-    copy: 'Investors are delighted by Kenya Power’s profits. Customers are still waiting for the lights to stay on—and for a bill that doesn’t come as a shock.'
+    image: '/images/kenya-power-bright-profits-dim-customer-experience.jpg',
+    alt: 'Kenya Power illustration contrasting a lit office building and a FY2025/26 KSh25 billion profit sign with a man working by lantern light; the caption reads “Bright Profits. Dim Customer Experience.”',
+    commentaryCopyHtml: kenyaPowerCommentary,
+    copy: kenyaPowerCommentary.replace(/<[^>]*>/g, ''),
   },
   {
     id: 'domain-name-mistake',
@@ -241,7 +260,8 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     title: "Smaller Waistlines. Bigger Opportunities?",
     image: '/images/ozempic-victorias-secret-shares-meme.webp',
     alt: 'Satirical cartoon linking the Ozempic weight-loss trend with rising expectations for Victoria’s Secret shares.',
-    copy: 'Could weight-loss drugs provide an unexpected lift for Victoria’s Secret? Slimmer customers may feel more confident, replace clothing that no longer fits and spend more on fashion. Whether that translates into sustained profits remains uncertain—but Wall Street rarely ignores a promising new consumer trend.'
+    commentaryCopyHtml: victoriasSecretCommentary,
+    copy: victoriasSecretCommentary.replace(/<[^>]*>/g, ''),
   },
   {
     id: 'pulse-ring',
@@ -275,9 +295,11 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     sliderCategory: 'Funny',
     category: 'Golf & Management',
     title: "That Counts as a Hole-in-One!",
+    commentaryTitle: 'When the Scorecard Changes',
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
     alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
-    copy: 'In golf—as in business—the temptation to redefine the performance indicator after seeing the result can be irresistible. Unfortunately, neither the scorecard nor the auditor is usually persuaded.'
+    commentaryCopyHtml: golfScorecardCommentary,
+    copy: golfScorecardCommentary.replace(/<[^>]*>/g, ''),
   },
   {
     id: 'quickmart-ipo-ksh7-50-is-it-worth-buying',
