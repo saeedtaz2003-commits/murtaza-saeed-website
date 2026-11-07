@@ -20,9 +20,7 @@ const pageDescription = post.data.metaDescription ?? previewExcerpt(post);
 const isAdvertorial = post.data.advertorial;
 const isMbappeArticle = post.data.slug === 'mbappe-endorsement-to-ownership';
 const documentTitle = `${pageTitle} | ${isMbappeArticle ? 'Murtaza Insights' : 'Murtaza Saeed'}`;
-const assignmentInvitation = isMbappeArticle
-  ? 'Considering performance incentives or strategic-partner arrangements in a private business? An independent business analysis can help assess the commercial trade-offs before ownership is committed.'
-  : 'Need an independent analysis of a business issue or opportunity?';
+const assignmentInvitation = 'Looking for an independent perspective on business performance, strategy or systems improvement?';
 const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/insights';
 const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View Insights';
 const articleSchema = {
