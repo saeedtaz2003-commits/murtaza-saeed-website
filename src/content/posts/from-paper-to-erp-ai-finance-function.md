@@ -377,8 +377,8 @@ The objective is not more AI.
 
 **It is a finance function that is more accurate, better controlled, more productive and more useful to management.**
 
-## Could your finance function work better?
+## Could Your Business Get More from Its Information Systems?
 
-I can help an owner, Managing Director, CEO, CFO or finance manager review existing processes, accounting systems and management information; identify recurring pain points and manual work; examine whether existing capabilities are being underused; and assess opportunities to improve accuracy, control, analysis or productivity.
+An independent review of information systems and business processes can help management identify inefficiencies, improve information flows and assess opportunities to make better use of existing technology. The focus is on improving business operations and management decisions, rather than providing accounting or tax services.
 
-The starting question is: “What would you like your finance function to do better — and what is preventing it from doing so today?”
+The starting question is: “Which information or process problem is most limiting your business decisions today?”
