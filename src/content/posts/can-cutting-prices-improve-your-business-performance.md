@@ -152,7 +152,7 @@ A controlled trial can help establish the answers. Measure incremental contribut
 
 ## Could Targeted Changes Improve Your Performance?
 
-A Business Performance Review can assess pricing, customer demand, capacity utilisation, distribution channels and operating costs together—testing the numbers before committing to significant changes.
+An independent Business Performance Review can examine pricing choices, customer demand, operating capacity and distribution together—helping management evaluate opportunities and trade-offs before making significant changes.
 
 <details class="article-sources" id="sources-references">
 <summary><strong>Source Documents</strong></summary>
