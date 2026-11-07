@@ -18,6 +18,8 @@ const posts = defineCollection({
     toc: z.array(z.object({ label: z.string(), id: z.string() })).optional(),
     image: z.string(),
     imageAlt: z.string(),
+    heroBeforeTitle: z.boolean().default(false),
+    bodyHasInvitation: z.boolean().default(false),
     advertorial: z.boolean().default(false),
     sponsor: z.string().optional(),
     draft: z.boolean().default(false)
