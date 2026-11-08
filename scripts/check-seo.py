@@ -42,7 +42,7 @@ for path in pages:
             # Canonical pages stay put; only fragment-marked sharing URLs enter the slider.
             # Preview crawlers never receive URL fragments, so they parse this page's metadata.
             html=path.read_text()
-            assert "window.location.hash === '#view=slider'" in html and 'window.location.replace(viewerUrl)' in html, path
+            assert "window.location.hash === '#view=slider'" in html and 'window.location.replace(destination.toString())' in html, path
             assert f'/the-lighter-side/?meme={path.parent.name}#funny-slider' in html, path
             assert f'/the-lighter-side/{path.parent.name}/#view=slider' in html, path
             checks+=2

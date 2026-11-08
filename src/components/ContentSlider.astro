@@ -89,7 +89,7 @@ const { homepage = false } = Astro.props;
                 <MemeReferences item={item} showDisclosure={!['lexus-motomorphosis', 'pulse-ring'].includes(item.id)} />
                 </div>
                 <div class="funny-action-footer">
-                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
+                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} shareImage={item.image} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
                   {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
                 </div>
               </div>

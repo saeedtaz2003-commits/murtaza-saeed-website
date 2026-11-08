@@ -2,21 +2,27 @@
 import EngagementIcon from './EngagementIcon.astro';
 import { commentsFormFor } from '../data/comments';
 
-const { title, url, commentTitle = title, showComment = true, articleUrl, articleLabel = 'Read the Article', articleNewTab = false, trackDirectShare = false, class: className = '' } = Astro.props;
+const { title, url, commentTitle = title, showComment = true, articleUrl, articleLabel = 'Read the Article', articleNewTab = false, shareImage, class: className = '' } = Astro.props;
 const absoluteUrl = new URL(url, Astro.site).toString();
 // Tag outbound share destinations, leaving the canonical page URL unchanged.
-const campaign = new URL(absoluteUrl).hash.replace(/^#/, '') || new URL(absoluteUrl).pathname.split('/').filter(Boolean).pop() || 'home';
+const path = new URL(absoluteUrl).pathname.split('/').filter(Boolean);
+const campaign = path.at(-1) || 'home';
+const isMeme = path[0] === 'the-lighter-side' && path.length === 2;
 const sharedUrl = (source) => {
   const tagged = new URL(absoluteUrl);
   tagged.searchParams.set('utm_source', source);
   tagged.searchParams.set('utm_medium', source === 'email' ? 'email' : source === 'whatsapp' ? 'messaging' : ['native_share', 'copy_link'].includes(source) ? 'share' : 'social');
   tagged.searchParams.set('utm_campaign', campaign);
-  tagged.searchParams.set('utm_content', articleUrl || absoluteUrl.includes('/the-lighter-side') ? 'meme_share' : 'article_share');
+  tagged.searchParams.set('utm_content', isMeme ? 'meme_share' : className === 'article-engagement' ? 'article_share' : 'page_share');
   return tagged.toString();
 };
 const encodedTitle = encodeURIComponent(title);
+const pinterest = new URL('https://www.pinterest.com/pin/create/button/');
+pinterest.searchParams.set('url', sharedUrl('pinterest'));
+pinterest.searchParams.set('description', title);
+if (shareImage) pinterest.searchParams.set('media', new URL(shareImage, Astro.site).toString());
 ---
-<div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl} data-native-share-url={trackDirectShare ? sharedUrl('native_share') : undefined} data-copy-share-url={trackDirectShare ? sharedUrl('copy_link') : undefined}>
+<div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl} data-native-share-url={sharedUrl('native_share')} data-copy-share-url={sharedUrl('copy_link')}>
   <div class="engagement-legal-row">
     <p class="engagement-copyright-year">© 2026 <em>Murtaza Insights</em></p>
     <p class="engagement-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
@@ -34,5 +40,6 @@ const encodedTitle = encodeURIComponent(title);
     <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(sharedUrl('linkedin'))}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(sharedUrl('x'))}`} target="_blank" rel="noopener noreferrer">X</a>
     <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodeURIComponent(sharedUrl('email'))}`}>Email</a>
+    <a href={pinterest} target="_blank" rel="noopener noreferrer">Pinterest</a>
   </div>
 </div>

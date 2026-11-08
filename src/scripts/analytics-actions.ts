@@ -15,7 +15,10 @@ function prepareWhatsApp(link: HTMLAnchorElement) {
   const context = contextFor(link);
   const original = link.dataset.miOriginalMessage ?? url.searchParams.get('text') ?? '';
   link.dataset.miOriginalMessage = original;
-  url.searchParams.set('text', `${original}\nI came from: ${context.title}\n${location.origin}${context.path}${context.item.startsWith('/') ? '' : '#' + context.item}`);
+  const panel = link.closest('[data-commentary-panel]');
+  const source = panel?.querySelector<HTMLElement>('[data-content-share]')?.dataset.shareUrl
+    ?? new URL(context.path, location.origin).toString();
+  url.searchParams.set('text', `${original}\nI came from: ${context.title}\n${source}`);
   link.href = url.toString();
 }
 document.querySelectorAll<HTMLAnchorElement>('a[href*="wa.me/254726829626"]').forEach(prepareWhatsApp);

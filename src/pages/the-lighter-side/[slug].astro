@@ -78,7 +78,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     {!isPapss && item.destinationUrl && <p><a class="button" data-destination-link data-item-id={item.id} href={item.destinationUrl}>{item.ctaLabel ?? 'Read the Article'}</a></p>}
     <p><a class="button" href={viewerUrl}>Open in Biz Buzz Slideshow</a></p>
     <div class:list={[(isKra || isMbappe || isPulse || isTechnify || isLexus) && 'funny-action-footer']}>
-      <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} />
+      <ContentEngagement title={item.title} commentTitle={item.title} url={funnyBizzShareUrl(item.id)} shareImage={socialImage} />
       {(isKra || isMbappe || isPulse || isTechnify || isLexus) && <WhatsAppAlerts topic="Biz Buzz" compact />}
     </div>
   </section>
@@ -86,7 +86,12 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     // Keep canonical pages crawlable. Preview crawlers do not receive fragments;
     // visitors following an explicitly shared link enter the selected slideshow.
     if (window.location.hash === '#view=slider') {
-      window.location.replace(viewerUrl);
+      const destination = new URL(viewerUrl, window.location.origin);
+      for (const [key, value] of new URLSearchParams(window.location.search)) {
+        // The permalink, not an incoming query parameter, selects the slide.
+        if (key !== 'meme') destination.searchParams.append(key, value);
+      }
+      window.location.replace(destination.toString());
     }
   </script>
 </Base>

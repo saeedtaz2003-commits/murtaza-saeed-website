@@ -83,7 +83,7 @@ const articleSchema = {
     <div class="article-actions">
       {!post.data.bodyHasInvitation && <p class="assignment-invitation">{assignmentInvitation}</p>}
       <p class="primary-article-action"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
-      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} trackDirectShare={isBudgetArticle} class="article-engagement" />
+      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} shareImage={isBudgetArticle ? '/images/budget-sales-target-share-v1.jpg' : post.data.image} class="article-engagement" />
       <WhatsAppAlerts topic="Updates" />
     </div>
       </div>
