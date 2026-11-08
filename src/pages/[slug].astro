@@ -18,6 +18,7 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const pageTitle = post.data.seoTitle ?? post.data.title;
 const pageDescription = post.data.metaDescription ?? previewExcerpt(post);
 const isAdvertorial = post.data.advertorial;
+const isBudgetArticle = post.data.slug === 'should-your-budget-be-based-on-your-ambitious-sales-target';
 const isMbappeArticle = post.data.slug === 'mbappe-endorsement-to-ownership';
 const documentTitle = `${pageTitle} | ${isMbappeArticle ? 'Murtaza Insights' : 'Murtaza Saeed'}`;
 const assignmentInvitation = 'Looking for an independent perspective on business performance, strategy or systems improvement?';
@@ -52,7 +53,7 @@ const articleSchema = {
   } : undefined
 };
 ---
-<Base title={documentTitle} description={pageDescription} image={post.data.image} imageAlt={post.data.imageAlt} type="article" jsonLd={articleSchema}>
+<Base title={documentTitle} description={pageDescription} image={isBudgetArticle ? '/images/budget-sales-target-share-v1.jpg' : post.data.image} imageAlt={post.data.imageAlt} imageWidth={isBudgetArticle ? 1200 : undefined} imageHeight={isBudgetArticle ? 630 : undefined} type="article" jsonLd={articleSchema}>
   <article class="article wrap">
     {post.data.heroBeforeTitle && <img class="article-hero-first" src={post.data.image} alt={post.data.imageAlt} />}
     <header class="article-header">
@@ -82,7 +83,7 @@ const articleSchema = {
     <div class="article-actions">
       {!post.data.bodyHasInvitation && <p class="assignment-invitation">{assignmentInvitation}</p>}
       <p class="primary-article-action"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
-      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} class="article-engagement" />
+      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} trackDirectShare={isBudgetArticle} class="article-engagement" />
       <WhatsAppAlerts topic="Updates" />
     </div>
       </div>

@@ -294,7 +294,8 @@ The right choice reflects the reliability of the sales assumptions, the reversib
 
 As businesses review their planning approach, that distinction deserves a place in the boardroom.
 
-## SOURCES & REFERENCES
+<details class="article-sources" id="sources--references">
+<summary>Sources &amp; References</summary>
 
 The governance model proposed here is the author’s management recommendation. The sources below support individual points and do not endorse the model as a whole.
 
@@ -306,10 +307,10 @@ The governance model proposed here is the author’s management recommendation. 
 6.  [Microsoft Learn — Create G/L Budgets in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-how-create-budgets) — An example of an ERP supporting multiple budgets, dimensions and Excel integration; capabilities vary by system.
 7.  [ACCA — All About Budgeting, Part 1](https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting1.html) — Cost behaviour and flexible-budget analysis, as used in the flexed-budget note in section 4.
 
+</details>
+
 ## WORK WITH ME
 
 Many boards approve budgets without being clear which number governs spending, which goes to the bank, and which management is held to.
 
 Businesses reviewing their budgeting approach, expenditure controls or board reporting can discuss a scoped remote **Business Analysis & Strategy** assignment with *Murtaza Insights*.
-
-[Discuss a potential advisory assignment](https://murtazainsights.com/work-with-me)

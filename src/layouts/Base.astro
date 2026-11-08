@@ -100,13 +100,12 @@ const socialImageType = socialPath.endsWith('.webp')
         const copyButton = container.querySelector('[data-copy-link]');
         const fallback = container.querySelector('[data-share-fallback]');
         const status = container.querySelector('[data-share-status]');
-        const title = container.dataset.shareTitle || document.title;
         const url = container.dataset.shareUrl || location.href;
 
         shareButton?.addEventListener('click', async () => {
           if (navigator.share) {
             try {
-              await navigator.share({ url });
+              await navigator.share({ url: container.dataset.nativeShareUrl || url });
               return;
             } catch (error) {
               if (error instanceof DOMException && error.name === 'AbortError') return;
@@ -117,7 +116,7 @@ const socialImageType = socialPath.endsWith('.webp')
 
         copyButton?.addEventListener('click', async () => {
           try {
-            await navigator.clipboard.writeText(url);
+            await navigator.clipboard.writeText(container.dataset.copyShareUrl || url);
             if (status) status.textContent = 'Link copied';
             if (copyButton instanceof HTMLButtonElement) {
               const label = copyButton.querySelector('[data-copy-label]') ?? copyButton;
