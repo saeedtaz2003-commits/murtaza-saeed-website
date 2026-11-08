@@ -99,6 +99,22 @@ const golfScorecardCommentary = `On the golf course, a second stroke cannot turn
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
+    id: 'budget-sales-target',
+    sliderCategory: 'Featured Article',
+    category: 'Business Analysis & Strategy',
+    title: 'Should a Sales Target Be Your Budget?',
+    image: '/images/budget-sales-target-boardroom.jpg',
+    alt: 'Two boardroom scenes: the approved budget projects rising sales and expenses; six months later, sales fall while expenses stay flat.',
+    archiveSummary: 'Sales targets and financial budgets serve different purposes. A boardroom illustration shows how a sales shortfall can leave costs committed, with two alternatives for managing spending without giving up growth ambitions.',
+    seoTitle: 'Sales Targets and Financial Budgets | Biz Buzz',
+    metaDescription: 'What happens when an ambitious sales target drives spending? Explore two budget approaches that keep growth ambitions separate from authority to spend.',
+    copy: 'Not always. One option pairs a realistic Base Budget with a separately approved Growth Programme. Another uses two complete financial budgets: Base and Target.\n\nWhen one ambitious budget drives expenditure, a sales shortfall can leave costs committed before the expected revenue arrives. The problem isn’t ambition; it’s treating a sales target as automatic spending authority. Some costs must come early; others can be staged.\n\nMurtaza Insights compares both approaches for boards and senior executives of mid-sized businesses, using an illustrative KSh example to examine profitability, expenditure controls and liquidity.',
+    commentaryCopyHtml: 'Not always. One option pairs a realistic Base Budget with a separately approved Growth Programme. Another uses two complete financial budgets: Base and Target.\n\nWhen one ambitious budget drives expenditure, a sales shortfall can leave costs committed before the expected revenue arrives. <strong>The problem isn’t ambition; it’s treating a sales target as automatic spending authority.</strong> Some costs must come early; others can be staged.\n\nMurtaza Insights compares both approaches for boards and senior executives of mid-sized businesses, using an illustrative KSh example to examine profitability, expenditure controls and liquidity.',
+    destinationUrl: '/should-your-budget-be-based-on-your-ambitious-sales-target/',
+    ctaLabel: 'Read the Article',
+  },
+
+  {
     id: 'kra-prepopulated-tax-return',
     publishedAt: '2026-11-03',
     sliderCategory: 'Funny',
