@@ -9,6 +9,7 @@ imageAlt: "Simbisa Kenya restaurant cartoon asking whether customers can spend l
 draft: false
 
 updated: "2026-10-13"
+articleHero: {"image": "/images/simbisa-pricing-editorial-card.jpg", "alt": "Simbisa Kenya FY2026: average customer spend fell 3% while operating profit rose 16%.", "width": 696, "height": 362}
 ---
 
 <section class="at-a-glance editorial-summary" aria-labelledby="article-at-a-glance"><p class="eyebrow" id="article-at-a-glance">AT A GLANCE</p>
