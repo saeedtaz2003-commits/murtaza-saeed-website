@@ -227,6 +227,12 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     sliderCategory: 'Funny',
     category: 'Trade & Politics',
     title: 'Canada Plays the Swing States',
+    commentaryTitle: "Canada's Tariffs: Political Pressure Points",
+    commentaryCopyHtml: `Canada's September 2026 retaliatory tariffs targeted US products ranging from dairy to steel. <a href="https://www.cbsnews.com/news/canada-retaliatory-tariffs-michigan-indiana-impact/" target="_blank" rel="noopener noreferrer">Canadian officials</a> said the measures were designed partly to exert political pressure on particular US states — not merely to match the economic impact of American tariffs.
+
+<strong>The business insight:</strong> Effective negotiation is not always about the size of your response. Understanding what matters most to the other side can provide greater leverage. But targeted pressure also carries costs and risks.
+
+<strong>The question:</strong> In your next major supplier or customer negotiation, do you know what the other side values most — and how you could use that knowledge to negotiate more effectively?`,
     image: '/images/canada-plays-the-swing-states-tariff-cartoon.png',
     alt: 'Cartoon showing Canada targeting politically sensitive U.S. swing states with retaliatory tariffs, highlighting trade strategy and electoral politics before the midterms.',
     copy: 'This cartoon satirises the idea that retaliatory tariffs can be chosen for political as well as economic impact, with U.S. swing states in the spotlight.'

@@ -25,7 +25,8 @@ const isTechnify = item.id === 'technify-it-featured';
 const isLexus = item.id === 'lexus-motomorphosis';
 const isKenyaPower = item.id === 'kenya-power-profit';
 const hasUpdatedCommentary = ['kenya-power-profit', 'ozempic-victorias-secret', 'missed-hole-in-one'].includes(item.id);
-const hasApprovedCopy = isBudgetMeme || hasUpdatedCommentary || isKra || isPaper || isMbappe || isPulse || isTechnify || isLexus || item.id === 'papss-kenya-nigeria-shortcut';
+const isCanada = item.id === 'canada-swing-states-tariffs';
+const hasApprovedCopy = isCanada || isBudgetMeme || hasUpdatedCommentary || isKra || isPaper || isMbappe || isPulse || isTechnify || isLexus || item.id === 'papss-kenya-nigeria-shortcut';
 const isPapss = item.id === 'papss-kenya-nigeria-shortcut';
 const viewerUrl = funnyBizzViewerUrl(item.id);
 const linkedArticle = item.id === 'quickmart-ipo-ksh7-50-is-it-worth-buying'
@@ -71,7 +72,7 @@ const socialImage = useOriginalSocialImage ? item.image : `/images/social/${item
     <h1>{hasApprovedCopy ? item.commentaryTitle ?? item.title : item.title}</h1>
     <img src={item.image} alt={item.alt} />
     {hasApprovedCopy ? (
-      <div class:list={["papss-permalink-copy", hasUpdatedCommentary && "november-commentary-copy", isLexus && "lexus-detail-copy"]}>
+      <div class:list={["papss-permalink-copy", (hasUpdatedCommentary || isCanada) && "november-commentary-copy", isLexus && "lexus-detail-copy"]}>
         {(item.commentaryCopyHtml ?? item.copy).split(/\n\n/).map(paragraph => <p set:html={italicizeBrandHtml(paragraph)} />)}
         <MemeReferences item={item} />
       </div>
