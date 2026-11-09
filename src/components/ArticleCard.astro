@@ -12,24 +12,24 @@ const contentLabel = post.data.advertorial
 ---
 {compact ? (
   <article class:list={['archive-card', { 'archive-card-advertorial': post.data.advertorial }]}>
-    <a class="archive-thumb" href={`/${post.data.slug}`} aria-label={`Read ${post.data.title}`}>
+    <a class="archive-thumb" href={`/${post.data.slug}/`} aria-label={`Read ${post.data.title}`}>
       <img src={thumbnailImage} alt={thumbnailAlt} loading="lazy" />
     </a>
     <div class="archive-copy">
       <p class="eyebrow">{!hideCategory && <>{contentLabel} · </>}{dateLabel}</p>
-      <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
+      <h2><a href={`/${post.data.slug}/`}>{post.data.title}</a></h2>
       <p class="archive-summary"><BrandText text={previewExcerpt(post)} /></p>
-      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
+      <a class="read" href={`/${post.data.slug}/`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>
 ) : (
   <article class:list={['card', { featured, 'card-advertorial': post.data.advertorial }]}>
-    <a class="card-image" href={`/${post.data.slug}`}><img src={thumbnailImage} alt={thumbnailAlt} loading={featured ? 'eager' : 'lazy'} /></a>
+    <a class="card-image" href={`/${post.data.slug}/`}><img src={thumbnailImage} alt={thumbnailAlt} loading={featured ? 'eager' : 'lazy'} /></a>
     <div class="card-copy">
       <p class="eyebrow">{contentLabel} · {dateLabel}</p>
-      <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
+      <h2><a href={`/${post.data.slug}/`}>{post.data.title}</a></h2>
       <p><BrandText text={previewExcerpt(post)} /></p>
-      <a class="read" href={`/${post.data.slug}`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
+      <a class="read" href={`/${post.data.slug}/`}>{post.data.advertorial ? 'Read Advertorial' : 'Read Article'} </a>
     </div>
   </article>
 )}
