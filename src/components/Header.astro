@@ -2,8 +2,8 @@
 import SiteSearch from './SiteSearch.astro';
 const path = Astro.url.pathname;
 const links = [
-  ['Home', '/'], ['About', '/about'], ['Insights', '/insights'],
-  ['Biz Buzz', '/the-lighter-side'], ['Contact', '/contact'], ['Work With Me', '/work-with-me']
+  ['Home', '/'], ['About', '/about/'], ['Insights', '/insights/'],
+  ['Biz Buzz', '/the-lighter-side/'], ['Contact', '/contact/'], ['Work With Me', '/work-with-me/']
 ];
 ---
 <header class="site-header">
@@ -15,7 +15,7 @@ const links = [
     <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main navigation">
       {links.map(([label, href]) => <a class={path === href || path === `${href}/` ? 'active' : ''} href={href}>{label}</a>)}
-      <a class:list={["nav-search", { active: path.startsWith("/search") }]} href="/search" aria-label="Search" aria-expanded="false" aria-controls="site-search-panel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><span class="search-nav-label">Search</span></a>
+      <a class:list={["nav-search", { active: path.startsWith("/search") }]} href="/search/" aria-label="Search" aria-expanded="false" aria-controls="site-search-panel"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><span class="search-nav-label">Search</span></a>
     </nav>
   </div>
   <section id="site-search-panel" class="inline-search-panel" aria-label="Website search" hidden>
