@@ -3,6 +3,9 @@ import { previewExcerpt } from '../utils/article-preview.mjs';
 import BrandText from './BrandText.astro';
 const { post, featured = false, compact = false, hideCategory = false } = Astro.props;
 const dateLabel = `${post.data.updated ? 'Last updated: ' : 'Published: '}${(post.data.updated ?? post.data.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'UTC' })}`;
+const insightsCardSlugs = new Set(['from-paper-to-erp-ai-finance-function', 'can-cutting-prices-improve-your-business-performance', 'dont-invent-it-technify-it']);
+const thumbnailImage = insightsCardSlugs.has(post.data.slug) && post.data.articleHero?.image ? post.data.articleHero.image : post.data.image;
+const thumbnailAlt = insightsCardSlugs.has(post.data.slug) && post.data.articleHero?.alt ? post.data.articleHero.alt : post.data.imageAlt;
 const contentLabel = post.data.advertorial
   ? `ADVERTORIAL${post.data.sponsor ? ` · Sponsored by ${post.data.sponsor}` : ''}`
   : post.data.category;
@@ -10,7 +13,7 @@ const contentLabel = post.data.advertorial
 {compact ? (
   <article class:list={['archive-card', { 'archive-card-advertorial': post.data.advertorial }]}>
     <a class="archive-thumb" href={`/${post.data.slug}`} aria-label={`Read ${post.data.title}`}>
-      <img src={post.data.image} alt={post.data.imageAlt} loading="lazy" />
+      <img src={thumbnailImage} alt={thumbnailAlt} loading="lazy" />
     </a>
     <div class="archive-copy">
       <p class="eyebrow">{!hideCategory && <>{contentLabel} · </>}{dateLabel}</p>
@@ -21,7 +24,7 @@ const contentLabel = post.data.advertorial
   </article>
 ) : (
   <article class:list={['card', { featured, 'card-advertorial': post.data.advertorial }]}>
-    <a class="card-image" href={`/${post.data.slug}`}><img src={post.data.image} alt={post.data.imageAlt} loading={featured ? 'eager' : 'lazy'} /></a>
+    <a class="card-image" href={`/${post.data.slug}`}><img src={thumbnailImage} alt={thumbnailAlt} loading={featured ? 'eager' : 'lazy'} /></a>
     <div class="card-copy">
       <p class="eyebrow">{contentLabel} · {dateLabel}</p>
       <h2><a href={`/${post.data.slug}`}>{post.data.title}</a></h2>
