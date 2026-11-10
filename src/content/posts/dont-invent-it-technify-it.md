@@ -2,15 +2,16 @@
 title: "Don’t Invent It. Technify It."
 slug: "dont-invent-it-technify-it"
 date: "2026-10-04"
-updated: "2026-10-13"
+updated: "2026-11-10"
 category: "Information Systems & Process Improvement"
 summary: "Why your next AI opportunity may be hiding in a very old business practice"
 image: "/images/technify-old-wine-new-bottle-approved-nov2026.jpg"
 imageAlt: "Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI."
 draft: false
+bodyHasInvitation: true
 takeaways: ["Many supposedly new technology ideas are really old business practices with their limitations removed.", "AI can now provide the intelligence behind an application without the business having to build its own AI model.", "AI coding tools can also help create the software itself, lowering the barrier for entrepreneurs who are not programmers.", "For established businesses, the opportunity may be less about “AI transformation” and more about finding one old process that technology can make faster, cheaper or more scalable."]
 sourcesTitle: "Sources and further reading"
-sources: [{"text": "US Federal Trade Commission, “FTC Seeks Comment on Enforcement Policy Statement Regarding Personalized Pricing,” 19 August 2026. https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-seeks-comment-enforcement-policy-statement-regarding-personalized-pricing", "url": "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-seeks-comment-enforcement-policy-statement-regarding-personalized-pricing"}, {"text": "Nibble, official product information on AI negotiation for procurement. https://nibbletechnology.com/", "url": "https://nibbletechnology.com/"}, {"text": "UK Information Commissioner’s Office, “A guide to lawful basis” (updated 2 April 2026). https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/", "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/"}, {"text": "Kenya Data Protection Act, 2019 (statutory framework; application depends on circumstances)."}]
+sources: [{"text": "US Federal Trade Commission, proposed personalised-pricing statement, 19 August 2026: https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-seeks-comment-enforcement-policy-statement-regarding-personalized-pricing", "url": "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-seeks-comment-enforcement-policy-statement-regarding-personalized-pricing"}, {"text": "deadline extension to 25 September 2026: https://search.ftc.gov/news-events/news/press-releases/2026/09/ftc-extends-public-comment-proposed-policy-statement-regarding-personalized-pricing", "url": "https://search.ftc.gov/news-events/news/press-releases/2026/09/ftc-extends-public-comment-proposed-policy-statement-regarding-personalized-pricing"}, {"text": "Nibble, official information on AI negotiation in procurement: https://nibbletechnology.com/", "url": "https://nibbletechnology.com/"}, {"text": "UK Information Commissioner’s Office, “A guide to lawful basis” (updated 2 April 2026). https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/", "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/a-guide-to-lawful-basis/"}, {"text": "Kenya Data Protection Act, 2019, particularly section 35: https://www.odpc.go.ke/wp-content/uploads/2024/02/TheDataProtectionAct__No24of2019.pdf", "url": "https://www.odpc.go.ke/wp-content/uploads/2024/02/TheDataProtectionAct__No24of2019.pdf"}, {"text": "Safaricom, “How M-PESA Was Created,” 28 February 2025. https://newsroom.safaricom.co.ke/innovation/how-m-pesa-was-created/", "url": "https://newsroom.safaricom.co.ke/innovation/how-m-pesa-was-created/"}, {"text": "OpenAI API: pricing https://developers.openai.com/api/docs/pricing", "url": "https://developers.openai.com/api/docs/pricing"}, {"text": "images and vision https://developers.openai.com/api/docs/guides/images-vision", "url": "https://developers.openai.com/api/docs/guides/images-vision"}, {"text": "code generation https://developers.openai.com/api/docs/guides/code-generation", "url": "https://developers.openai.com/api/docs/guides/code-generation"}]
 articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t invent it. Technify it. Five old practices offer a new opportunity: ask what held them back, what technology can fix, what must be protected and whether it is worth doing.", "width": 685, "height": 360}
 ---
 
@@ -20,13 +21,13 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>The trader looks at you.</p>
 
-<p>He hears your accent. Notices what you are wearing. Perhaps sees the hotel wristband on your arm. He decides how badly you appear to want the item.</p>
+<p>The trader hears your accent, notices what you are wearing and perhaps sees the hotel wristband on your arm. They judge how badly you want the item.</p>
 
-<p>Then he gives you a price.</p>
+<p>Then the trader gives you a price.</p>
 
 <p>A local resident may be quoted something quite different.</p>
 
-<p>There is nothing remotely new about this. Traders have been estimating what individual customers might be willing to pay for centuries.</p>
+<p>There is nothing new about estimating what different customers might be willing to pay, although charging different people different prices can raise questions of fairness.</p>
 
 <p>Now replace the trader’s judgement with software.</p>
 
@@ -36,7 +37,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>personalised pricing.</p>
 
-<p>In August 2026, the US Federal Trade Commission invited public comment on a proposed enforcement policy statement about personalised pricing: using personal data to set prices according to what a business believes an individual customer is willing to pay. The proposal focuses on potentially unfair or deceptive practices, especially insufficient disclosure. It does not impose a blanket ban on personalised pricing.</p>
+<p>In August 2026, the US Federal Trade Commission invited public comment on a proposed enforcement policy statement about personalised pricing: using personal data to estimate what an individual might pay. It focused on potentially unfair or deceptive practices, particularly inadequate disclosure—not a blanket ban. The consultation closed on 25 September 2026; the statement remained a proposal as of 10 November 2026.</p>
 
 <p>Cutting-edge technology?</p>
 
@@ -62,29 +63,15 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>Often the answer is surprisingly mundane.</p>
 
-<ul>
-
-<li>It required too much human time.</li>
-
-<li>It depended on one person’s memory.</li>
-
-<li>It only worked locally.</li>
-
-<li>Finding the right buyer or seller was difficult.</li>
-
-<li>Negotiation took too long.</li>
-
-<li>Records were manual.</li>
-
-<li>Coordination became impossible once too many people were involved.</li>
-
-</ul>
+<ul><li>It required too much human time.</li><li>It depended on one person’s memory.</li><li>It only worked locally.</li><li>Finding the right buyer or seller was difficult.</li><li>Negotiation took too long.</li><li>Records were manual.</li><li>Coordination became impossible once too many people were involved.</li></ul>
 
 <p>Technology may not need to reinvent the underlying idea.</p>
 
 <p>It only needs to remove the constraint.</p>
 
 <p>That distinction matters.</p>
+
+<p>Uber, Airbnb and eBay made familiar activities into digital businesses. What AI changes today is the accessibility of similar process improvements for established companies, without their having to become technology businesses.</p>
 
 ## What does this mean for an established business?
 
@@ -93,6 +80,8 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 <p>Software could bring together past quotations, payment records and product margins to support faster, more consistent decisions. It would not replace the manager’s commercial judgement; it would make the information behind that judgement easier to use.</p>
 
 <p>The opportunity is therefore not to become a technology company. It is to revisit an existing process whose usefulness was constrained by time, memory, access or coordination.</p>
+
+<p>Kenya offers a familiar example. Sending money to family members was not a new need. Although M-PESA began as a pilot involving microfinance repayments, person-to-person transfers helped turn it into a widely used mobile-money service. The need was familiar; technology changed its reach and convenience.</p>
 
 ## Take haggling
 
@@ -124,11 +113,11 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>But automated negotiation is now bringing some of the old behaviour back.</p>
 
-<p>Nibble, for example, offers AI-supported negotiation tools for procurement, including supplier quotations and commercial terms, within controls set by the business. It illustrates the principle of automating negotiations; the terms and results achieved will vary by application.</p>
+<p>Nibble, for example, provides AI-supported procurement negotiation tools, including competitive requests for quotation and supplier price discussions within rules set by a business. It illustrates how technology can handle repeated negotiations; results depend on the circumstances.</p>
 
 <p>So AI did not invent haggling.</p>
 
-<p>It made it possible for a business to haggle with large numbers of customers or suppliers simultaneously.</p>
+<p>It made it possible for businesses to conduct many supplier negotiations in parallel, with software handling routine exchanges.</p>
 
 <p>The bazaar has returned.</p>
 
@@ -142,45 +131,23 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>He knew:</p>
 
-<ul>
+<ul><li>what they normally bought;</li><li>who always paid promptly;</li><li>who could be trusted with a little credit;</li><li>which customer preferred which brand;</li><li>who normally appeared every Friday;</li><li>and who had not been seen for a few weeks.</li></ul>
 
-<li>what they normally bought;</li>
-
-<li>who always paid promptly;</li>
-
-<li>who could be trusted with a little credit;</li>
-
-<li>which customer preferred which brand;</li>
-
-<li>who normally appeared every Friday;</li>
-
-<li>and who had not been seen for a few weeks.</li>
-
-</ul>
-
-<p>He did not call it customer relationship management.</p>
-
-<p>He did not have a dashboard.</p>
-
-<p>He simply remembered.</p>
+<p>The shopkeeper needed no CRM system or dashboard; the information lived in memory.</p>
 
 <p>His problem was scale.</p>
 
-<p>One person may know a few hundred customers exceptionally well.</p>
-
-<p>Software can potentially analyse millions of interactions.</p>
+<p>One person may know a few hundred customers well; software can potentially analyse far larger numbers of interactions.</p>
 
 <p>Modern CRM systems, recommendation engines and AI can therefore do something surprisingly familiar:</p>
 
 <p>they help organise and apply some of the information that a very good shopkeeper once carried in memory.</p>
 
-<p>The concept is ancient.</p>
-
-<p>The processing power is new.</p>
+<p>The principle is old; the processing power is new.</p>
 
 ## Consider the buying club
 
-<p>Neighbours and businesses have pooled their purchasing power for generations.</p>
+<p>Neighbours and businesses have pooled their purchasing power for generations. In Kenya, chamas show how familiar collective organisation is, although many chamas focus on saving and investment rather than bulk buying.</p>
 
 <p>One family buying ten litres of cooking oil has limited bargaining power.</p>
 
@@ -190,23 +157,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>The problem has always been administration.</p>
 
-<ul>
-
-<li>Someone must gather the orders.</li>
-
-<li>Collect the money.</li>
-
-<li>Confirm quantities.</li>
-
-<li>Find suppliers.</li>
-
-<li>Negotiate.</li>
-
-<li>Distribute the goods.</li>
-
-<li>Keep records.</li>
-
-</ul>
+<p>Someone must gather orders, collect payments, confirm quantities, find suppliers, negotiate, distribute goods and keep records.</p>
 
 <p>Technology can automate much of that coordination.</p>
 
@@ -234,15 +185,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>Perhaps:</p>
 
-<ul>
-
-<li>I want what Amina has.</li>
-
-<li>Amina wants what Peter has.</li>
-
-<li>Peter wants what I have.</li>
-
-</ul>
+<ul><li>I want what Amina has.</li><li>Amina wants what Peter has.</li><li>Peter wants what I have.</li></ul>
 
 <p>The idea of exchanging goods is ancient.</p>
 
@@ -254,17 +197,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>A traditional pawnbroker could inspect a watch, piece of jewellery, television or tool and quickly estimate:</p>
 
-<ul>
-
-<li>what it was;</li>
-
-<li>its likely condition;</li>
-
-<li>what someone else might pay for it;</li>
-
-<li>and therefore how much could safely be lent against it.</li>
-
-</ul>
+<ul><li>what it was;</li><li>its likely condition;</li><li>what someone else might pay for it;</li><li>and therefore how much could safely be lent against it.</li></ul>
 
 <p>That judgement came from experience.</p>
 
@@ -316,7 +249,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>The developer pays for the AI that is used.</p>
 
-<p>OpenAI, for example, provides models through its developer platform with usage-based pricing rather than requiring each company to build its own model infrastructure. Image inputs can similarly be analysed through vision-capable models and charged according to usage.</p>
+<p>Providers such as OpenAI, Anthropic and Google offer AI services through APIs, allowing developers to pay according to usage rather than build their own large models. Some services can also analyse image inputs, with charges and conditions depending on the provider and model.</p>
 
 <p>Put more simply:</p>
 
@@ -330,7 +263,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>AI can increasingly help build the application that will itself use AI.</p>
 
-<p>Modern coding agents can generate, review, modify and debug software. OpenAI, for example, describes code generation and software-engineering assistance as core uses of its coding systems.</p>
+<p>Modern coding agents can assist with generating, reviewing, modifying and debugging software. This is a documented use of AI development tools, though their outputs still require human review.</p>
 
 <p>That does not mean professional programmers have become unnecessary.</p>
 
@@ -368,31 +301,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>Perhaps it is:</p>
 
-<ul>
-
-<li>quotations;</li>
-
-<li>supplier negotiation;</li>
-
-<li>stock clearance;</li>
-
-<li>customer follow-up;</li>
-
-<li>credit assessment;</li>
-
-<li>appointment scheduling;</li>
-
-<li>purchasing;</li>
-
-<li>document review;</li>
-
-<li>matching buyers with sellers;</li>
-
-<li>answering repetitive customer questions;</li>
-
-<li>or analysing information that presently sits in several different systems.</li>
-
-</ul>
+<ul><li>quotations;</li><li>supplier negotiation;</li><li>stock clearance;</li><li>customer follow-up;</li><li>credit assessment;</li><li>appointment scheduling;</li><li>purchasing;</li><li>document review;</li><li>matching buyers with sellers;</li><li>answering repetitive customer questions;</li><li>or analysing information that presently sits in several different systems.</li></ul>
 
 <p>These are not glamorous problems.</p>
 
@@ -466,7 +375,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>There is another risk: some traditional practices work precisely because they are personal. The neighbourhood shopkeeper did more than remember transactions; he built trust. Technology should preserve what customers value, not merely remove what appears inefficient.</p>
 
-<p>Processes using personal data also need appropriate legal and privacy safeguards. Kenya’s Data Protection Act and the UK GDPR require lawful processing where applicable; consent is not the only possible lawful basis. Credit decisions and lending may introduce further regulatory responsibilities.</p>
+<p>Processes using personal data need legal and privacy safeguards. Kenya’s Data Protection Act requires lawful processing and, under section 35, provides protections for people affected by decisions based solely on automated processing that produce legal or similarly significant effects, subject to statutory exceptions and safeguards. Credit assessment and lending may bring additional duties. Businesses processing UK personal data may also need to consider the UK GDPR where it applies; consent is not the only possible lawful basis.</p>
 
 ## Look backwards before looking forwards
 
@@ -474,21 +383,7 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>It may still depend on:</p>
 
-<ul>
-
-<li>memory.</li>
-
-<li>judgement.</li>
-
-<li>matching.</li>
-
-<li>negotiation.</li>
-
-<li>coordination.</li>
-
-<li>repetition.</li>
-
-</ul>
+<ul><li>memory.</li><li>judgement.</li><li>matching.</li><li>negotiation.</li><li>coordination.</li><li>repetition.</li></ul>
 
 <p>Those happen to be areas where software and AI can increasingly provide leverage.</p>
 
@@ -504,21 +399,11 @@ articleHero: {"image": "/images/technify-editorial-card.jpg", "alt": "Don’t in
 
 <p>Technify it.</p>
 
-## Five questions before you technify
+<p>Technology may also encounter resistance from employees who fear job losses or being blamed when new systems fail. Involve the people who run the current process: they often know where it breaks down and what a workable improvement requires.</p>
 
-<ol>
+## Six questions before you technify
 
-<li>Does the process happen often enough for improvement to matter?</li>
-
-<li>What does it currently cost in time, errors, delay or lost opportunities?</li>
-
-<li>Are the relevant records and decision rules available and sufficiently reliable?</li>
-
-<li>What might go wrong — including lost trust, privacy, compliance or expensive errors?</li>
-
-<li>Would the likely benefit justify implementation and ongoing costs?</li>
-
-</ol>
+<ol><li>Does the process happen often enough for improvement to matter?</li><li>What does it currently cost in time, errors, delay or lost opportunities?</li><li>Are the relevant records and decision rules available and sufficiently reliable?</li><li>What might go wrong — including lost trust, privacy, compliance or expensive errors?</li><li>Would the likely benefit justify implementation and ongoing costs?</li><li>Who will be affected by the change, and have they been involved in designing it?</li></ol>
 
 <p>Start with one small, measurable test. Compare the new approach with the existing process before expanding it.</p>
 
