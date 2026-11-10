@@ -25,7 +25,7 @@ if (shareImage) pinterest.searchParams.set('media', new URL(shareImage, Astro.si
 <div class:list={['content-engagement', className]} data-content-share data-share-title={title} data-share-url={absoluteUrl} data-native-share-url={sharedUrl('native_share')} data-copy-share-url={sharedUrl('copy_link')}>
   <div class="engagement-legal-row">
     <p class="engagement-copyright-year">© 2026 <em>Murtaza Insights</em></p>
-    <p class="engagement-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
+    <p class="engagement-policy"><a href="/copyright-sharing/">Copyright &amp; Sharing Policy</a></p>
   </div>
   <div class="engagement-share-row" aria-label="Share this content">
     {articleUrl && <a class="engagement-article" href={articleUrl} target={articleNewTab ? '_blank' : undefined} rel={articleNewTab ? 'noopener noreferrer' : undefined}><EngagementIcon name="link" />{articleLabel}</a>}

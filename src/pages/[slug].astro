@@ -24,7 +24,7 @@ const isBudgetArticle = post.data.slug === 'should-your-budget-be-based-on-your-
 const isMbappeArticle = post.data.slug === 'mbappe-endorsement-to-ownership';
 const documentTitle = `${pageTitle} | ${isMbappeArticle ? 'Murtaza Insights' : 'Murtaza Saeed'}`;
 const assignmentInvitation = 'Looking for an independent perspective on business performance, strategy or systems improvement?';
-const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/insights';
+const archiveHref = isAdvertorial ? '/advertorials#published-advertorials' : '/insights/';
 const archiveLabel = isAdvertorial ? 'View All Advertorials' : 'View Insights';
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -60,7 +60,7 @@ const articleSchema = {
     {heroBeforeTitle && <img class="article-hero-first" src={articleHero?.image ?? post.data.image} alt={articleHero?.alt ?? post.data.imageAlt} width={articleHero?.width} height={articleHero?.height} />}
     <header class="article-header">
       <p class="eyebrow">
-        {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights">{post.data.category}</a>}
+        {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights/">{post.data.category}</a>}
         {' · '}{post.data.updated ? 'Last updated: ' : 'Published: '}{(post.data.updated ?? post.data.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'UTC' })}
       </p>
       <h1>{post.data.title}</h1><p class="dek"><BrandText text={post.data.summary} /></p>

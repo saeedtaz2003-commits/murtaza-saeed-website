@@ -1,7 +1,7 @@
 ---
 const { inputId = "search-query", page = false } = Astro.props;
 ---
-  <div data-site-search data-search-page={page}><form class="search-form" action="/search" role="search">
+  <div data-site-search data-search-page={page}><form class="search-form" action="/search/" role="search">
    <label class="sr-only" for={inputId}>Search the website</label>
    <input id={inputId} name="q" type="search" placeholder="Search articles and memes" required />
    <button class="button" type="submit">Search</button>
@@ -40,7 +40,7 @@ const { inputId = "search-query", page = false } = Astro.props;
     }
    } catch { searchIndex = undefined; status.textContent = 'Search is temporarily unavailable. Please try again.'; }
   }
-  form?.addEventListener('submit',event => {event.preventDefault(); if (!input) return; if (root.dataset.searchPage === 'true') history.replaceState(null,'',`/search?q=${encodeURIComponent(input.value)}`); void search(input.value);});
+  form?.addEventListener('submit',event => {event.preventDefault(); if (!input) return; if (root.dataset.searchPage === 'true') history.replaceState(null,'',`/search/?q=${encodeURIComponent(input.value)}`); void search(input.value);});
   const query = new URLSearchParams(location.search).get('q');
   if (root.dataset.searchPage === 'true' && query && input) {input.value=query;void search(query);}
   });
