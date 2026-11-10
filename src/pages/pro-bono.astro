@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import PageShare from '../components/PageShare.astro';
+---
+<Base title="Pro Bono Business Advisory | Murtaza Insights" description="Voluntary practical business advisory support for selected existing micro and small businesses across Kenya. Learn who can apply and request assistance.">
+<section class="page-head wrap"><p class="eyebrow">Giving back to the business community</p><h1>Pro Bono Business Advisory</h1><h2>Helping small businesses move forward</h2><p>Practical business guidance, offered voluntarily to selected existing micro and small businesses across Kenya.</p></section>
+<section class="section wrap content-page"><div class="prose">
+<p>After more than 35 years working across business management, operations, finance and information systems, I would like to make a modest contribution by sharing my experience with small business owners who may otherwise find professional advisory support financially out of reach.</p>
+<p>This is a voluntary initiative, separate from my commercial advisory work. The aim is to help owners think through specific business challenges and identify realistic improvements.</p>
+<h2>Where I May Be Able to Help</h2>
+<ul><li><strong>Business performance:</strong> understanding sales, costs, profitability and management information.</li><li><strong>Business analysis and strategy:</strong> assessing options, challenges and growth opportunities.</li><li><strong>Systems and processes:</strong> improving day-to-day operations, reporting and workflows.</li><li><strong>Specific business problems:</strong> bringing an independent perspective to a practical management issue.</li></ul>
+<h2>Who Can Apply?</h2>
+<p>Applications are welcome from <strong>existing, operating micro and small businesses anywhere in Kenya</strong>, particularly independently owned or owner-managed businesses for which professional advisory fees would be a significant obstacle.</p>
+<p>There are no fixed turnover or employee thresholds. Priority will be given to applicants with a clearly defined challenge and a willingness to consider practical changes. This initiative is not currently intended for businesses that have yet to start operating.</p>
+<h2>How It Works</h2>
+<ol><li>Complete the short application below.</li><li>I will review the business challenge and whether it fits my experience and availability.</li><li>Shortlisted applicants may be invited to an introductory conversation.</li><li>Where assistance is offered, we will agree on a focused scope and reasonable timeframe.</li></ol>
+<p><strong>There are no professional fees for accepted pro bono assignments.</strong> Assistance is selective, voluntary and subject to availability. Applying does not guarantee acceptance. The initiative does not include regulated accounting, audit, tax or legal services.</p>
+<h2 id="apply">Request Pro Bono Assistance</h2>
+<p>Please provide enough information for an initial assessment. Do not include passwords, customer records, bank account details or other confidential documents.</p>
+<form id="pro-bono-form" class="pro-bono-form">
+<label>Full name *<input name="name" autocomplete="name" required maxlength="120" /></label>
+<label>Business name *<input name="business" required maxlength="160" /></label>
+<label>Town / County *<input name="location" required maxlength="120" /></label>
+<label>Email address *<input type="email" name="email" autocomplete="email" required maxlength="180" /></label>
+<label>WhatsApp number (including country code) *<input type="tel" name="whatsapp" autocomplete="tel" required pattern="[+0-9 ()-]{9,22}" placeholder="+254 7XX XXX XXX" /></label>
+<label>Type of business *<select name="sector" required><option value="">Select a sector</option><option>Retail / Trading</option><option>Manufacturing / Processing</option><option>Hospitality / Services</option><option>Other</option></select></label>
+<label>How long has the business operated? *<select name="age" required><option value="">Select</option><option>Under 1 year</option><option>1–3 years</option><option>Over 3 years</option></select></label>
+<label>Main challenge and what you hope to improve *<textarea name="challenge" rows="5" maxlength="2500" required></textarea></label>
+<fieldset><legend>Would the cost of professional advisory services be a significant obstacle? *</legend><label><input type="radio" name="cost" value="Yes" required /> Yes</label><label><input type="radio" name="cost" value="Possibly" /> Possibly</label><label><input type="radio" name="cost" value="No" /> No</label></fieldset>
+<label class="pro-bono-consent"><input type="checkbox" name="consent" required /> I understand that applying does not guarantee assistance and agree to be contacted by email or WhatsApp about this application.</label>
+<p class="fine">Privacy: Your application details will be used to assess and respond to your request, not published or used for marketing. This form opens your email application so you can review and send your request directly to Murtaza Insights. No details are transmitted by this website itself.</p>
+<button type="submit" class="button">Prepare Email Application</button>
+<p id="pro-bono-status" role="status" aria-live="polite"></p>
+</form>
+<p>If your email application does not open, please send the details to <a href="mailto:murtaza.insights@gmail.com">murtaza.insights@gmail.com</a>.</p>
+<PageShare label="Share This Page" title="Pro Bono Business Advisory — Murtaza Insights" />
+</div></section>
+</Base>
+<style>
+.pro-bono-form{display:grid;gap:1rem;max-width:720px;padding:1.5rem;border:1px solid #ddd7eb;border-radius:12px;background:#faf9fd}
+.pro-bono-form>label{display:grid;gap:.4rem;font-weight:600}
+.pro-bono-form input:not([type=radio]):not([type=checkbox]),.pro-bono-form select,.pro-bono-form textarea{width:100%;padding:.75rem;border:1px solid #9e9aaa;border-radius:6px;font:inherit;background:white;color:#202033}
+.pro-bono-form fieldset{border:1px solid #ddd7eb;border-radius:8px;padding:.8rem}
+.pro-bono-form fieldset label{display:inline-flex;gap:.4rem;align-items:center;margin:.4rem 1.2rem .4rem 0}
+.pro-bono-consent{display:flex!important;flex-direction:row;align-items:flex-start;gap:.6rem;font-weight:400!important}
+.pro-bono-form .button{justify-self:start;cursor:pointer}
+</style>
+<script>
+const form=document.querySelector<HTMLFormElement>('#pro-bono-form');
+form?.addEventListener('submit',event=>{
+ event.preventDefault();
+ if(!form.reportValidity())return;
+ const data=new FormData(form);
+ const fields=[['Applicant', 'name'],['Business','business'],['Town / County','location'],['Email','email'],['WhatsApp','whatsapp'],['Sector','sector'],['Operating for','age'],['Cost obstacle','cost'],['Business challenge','challenge']];
+ const body=fields.map(([label,key])=>label+': '+String(data.get(key)||'')).join('\n\n');
+ const subject='Pro Bono Business Advisory Application — '+String(data.get('business')||'');
+ const mailto='mailto:murtaza.insights@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ const status=document.querySelector('#pro-bono-status');
+ if(status)status.textContent='Your email application should open now. Please press Send in your email application to submit it.';
+ window.location.href=mailto;
+});
+</script>
