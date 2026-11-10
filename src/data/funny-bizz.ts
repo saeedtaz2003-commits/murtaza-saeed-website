@@ -169,7 +169,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     metaDescription: 'Discover how AI and digital technology can transform familiar business practices, from customer relationships to negotiation and buying clubs.',
     image: '/images/technify-old-wine-new-bottle-approved-nov2026.jpg',
     alt: 'Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI.',
-    destinationUrl: '/dont-invent-it-technify-it',
+    destinationUrl: '/dont-invent-it-technify-it/',
     ctaLabel: 'Read the Article'
   },
   {
@@ -184,7 +184,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "image": "/images/ai-si-satire-business-technology.jpg",
   "alt": "Satirical AI-generated illustration of an anonymous suited person holding a fictional executive order cancelling AI and adopting SI. The caption asks how it can help your business; the image includes the MI monogram and the disclaimer “Satire. AI-generated image. Not a real order.”",
   copy: paperCommentary.replace(/<[^>]*>/g, ''),
-  "destinationUrl": "/from-paper-to-erp-ai-finance-function",
+  "destinationUrl": "/from-paper-to-erp-ai-finance-function/",
   "ctaLabel": "Read the Article"
 },
   {
@@ -217,7 +217,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     image: '/images/can-customers-spend-less-make-more-money.jpg',
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
-    destinationUrl: '/can-cutting-prices-improve-your-business-performance',
+    destinationUrl: '/can-cutting-prices-improve-your-business-performance/',
     ctaLabel: 'Read the Article'
   },
 
@@ -341,7 +341,7 @@ My independent assessment examines the valuation, prospective dividend yield, sh
     image: '/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png',
     alt: "Quickmart IPO graphic showing a supermarket aisle and a price tag reading ‘KSh7.50 per share—Is it worth buying?’, with the Murtaza Insights monogram.",
     copy: "Quickmart is growing, profitable and attracting major investors. But does that make KSh7.50 an attractive price?\n\nA good company is not automatically a good investment at any price.\n\nRead the article for my assessment.",
-    destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying',
+    destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying/',
     ctaLabel: 'Read the Article'
   },
   {
