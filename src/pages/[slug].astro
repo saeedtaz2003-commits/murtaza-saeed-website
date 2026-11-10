@@ -12,15 +12,19 @@ export async function getStaticPaths() {
   return posts.filter(p => !p.data.draft).map(post => ({ params: { slug: post.data.slug }, props: { post } }));
 }
 const { post } = Astro.props;
-const { articleHero } = post.data;
-const heroBeforeTitle = Boolean(articleHero) || post.data.heroBeforeTitle;
+const heroBeforeTitle = Boolean(post.data.articleHero) || post.data.heroBeforeTitle;
+const articleImage = {
+  src: post.data.articleHero?.image ?? post.data.image,
+  alt: post.data.articleHero?.alt ?? post.data.imageAlt,
+  width: post.data.articleHero?.width,
+  height: post.data.articleHero?.height,
+};
 const { Content, headings } = await render(post);
 const toc = post.data.toc ?? headings.filter(heading => heading.depth === 2).map(heading => ({ id: heading.slug, label: heading.text }));
 const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const pageTitle = post.data.seoTitle ?? post.data.title;
 const pageDescription = post.data.metaDescription ?? previewExcerpt(post);
 const isAdvertorial = post.data.advertorial;
-const isBudgetArticle = post.data.slug === 'should-your-budget-be-based-on-your-ambitious-sales-target';
 const isMbappeArticle = post.data.slug === 'mbappe-endorsement-to-ownership';
 const documentTitle = `${pageTitle} | ${isMbappeArticle ? 'Murtaza Insights' : 'Murtaza Saeed'}`;
 const assignmentInvitation = 'Looking for an independent perspective on business performance, strategy or systems improvement?';
@@ -35,7 +39,7 @@ const articleSchema = {
   datePublished: post.data.date.toISOString(),
   dateModified: (post.data.updated ?? post.data.date).toISOString(),
   mainEntityOfPage: pageUrl,
-  image: new URL(post.data.image, Astro.site).toString(),
+  image: new URL(articleImage.src, Astro.site).toString(),
   author: {
     '@type': 'Person',
     '@id': new URL('/about/#person', Astro.site).toString(),
@@ -55,9 +59,9 @@ const articleSchema = {
   } : undefined
 };
 ---
-<Base title={documentTitle} description={pageDescription} image={isBudgetArticle ? '/images/budget-sales-target-share-v1.jpg' : post.data.image} imageAlt={post.data.imageAlt} imageWidth={isBudgetArticle ? 1200 : undefined} imageHeight={isBudgetArticle ? 630 : undefined} type="article" jsonLd={articleSchema}>
+<Base title={documentTitle} description={pageDescription} image={articleImage.src} imageAlt={articleImage.alt} imageWidth={articleImage.width} imageHeight={articleImage.height} type="article" jsonLd={articleSchema}>
   <article class="article wrap">
-    {heroBeforeTitle && <img class="article-hero-first" src={articleHero?.image ?? post.data.image} alt={articleHero?.alt ?? post.data.imageAlt} width={articleHero?.width} height={articleHero?.height} />}
+    {heroBeforeTitle && <img class="article-hero-first" src={articleImage.src} alt={articleImage.alt} width={articleImage.width} height={articleImage.height} />}
     <header class="article-header">
       <p class="eyebrow">
         {isAdvertorial ? <><a href="/editorials">ADVERTORIAL</a> · {post.data.category}</> : <a href="/insights">{post.data.category}</a>}
@@ -74,7 +78,7 @@ const articleSchema = {
         </p>
       </aside>
     )}
-    {!heroBeforeTitle && <img class="article-image" src={post.data.image} alt={post.data.imageAlt} />}
+    {!heroBeforeTitle && <img class="article-image" src={articleImage.src} alt={articleImage.alt} />}
     {post.data.takeaways && <section class="at-a-glance" aria-labelledby="glance-title"><p class="eyebrow" id="glance-title">At a glance</p><ul>{post.data.takeaways.map(item => <li><BrandText text={item} /></li>)}</ul></section>}
     <div class="article-reading">
     {toc.length > 0 && <details class="mobile-toc contents-nav"><summary>In this article</summary><nav aria-label="Article contents">{toc.map(item => <a href={`#${item.id}`}>{item.label}</a>)}</nav></details>}
@@ -85,7 +89,7 @@ const articleSchema = {
     <div class="article-actions">
       {!post.data.bodyHasInvitation && <p class="assignment-invitation">{assignmentInvitation}</p>}
       <p class="primary-article-action"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></p>
-      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} shareImage={isBudgetArticle ? '/images/budget-sales-target-share-v1.jpg' : post.data.image} class="article-engagement" />
+      <ContentEngagement title={post.data.title} commentTitle={post.data.title} url={pageUrl} shareImage={articleImage.src} class="article-engagement" />
       <WhatsAppAlerts topic="Updates" />
     </div>
       </div>
