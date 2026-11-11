@@ -20,6 +20,7 @@ const posts = defineCollection({
     imageAlt: z.string(),
     articleHero: z.object({ image: z.string(), alt: z.string(), width: z.number().int().positive(), height: z.number().int().positive() }).optional(),
     heroBeforeTitle: z.boolean().default(false),
+    assignmentUrl: z.literal('/work-with-me/').optional(),
     bodyHasInvitation: z.boolean().default(false),
     advertorial: z.boolean().default(false),
     sponsor: z.string().optional(),
