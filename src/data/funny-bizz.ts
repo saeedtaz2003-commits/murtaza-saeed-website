@@ -97,7 +97,31 @@ const golfScorecardCommentary = `On the golf course, a second stroke cannot turn
 
 <strong>The question:</strong> Does your management reporting clearly distinguish between meeting agreed targets and achieving other favourable results?`;
 
+const executiveCheckUpCommentary = `An annual report can show higher sales, improved profits and stronger cash flow. All are encouraging. But profits may include valuation gains, cash flow may benefit from working-capital movements, and returns on capital may still be disappointing.
+
+The results of Tesco, Sainsbury's, Kakuzi and Sasini illustrate why headline figures rarely tell the whole story. Our five-dimension Business Improvement Scorecard examines earnings quality, capital productivity, cash generation, competitive strength and future capability, including what published accounts cannot establish.
+
+For owners and CEOs, the real value of an annual review lies in the decisions it changes before the next business plan.
+
+Read the full article.`;
+
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
+  {
+    id: 'executive-business-check-up',
+    publishedAt: '2026-11-11',
+    sliderCategory: 'Featured Article',
+    category: 'Business Performance Reviews',
+    title: 'What an Annual Report Can Reveal',
+    image: '/images/executive-business-check-up-annual-report.jpg',
+    alt: 'Microscope examining a glass slide beside an open annual business report with rising performance charts, illustrating a deeper business check-up.',
+    copy: executiveCheckUpCommentary,
+    archiveSummary: 'An annual report can look healthy while concealing weak capital returns or fragile cash generation. A business improvement scorecard, illustrated by four companies, identifies what owners and CEOs should examine more closely.',
+    seoTitle: 'Executive Business Check-Up | Annual Report Analysis | Murtaza Insights',
+    metaDescription: 'A stronger annual report does not always mean a stronger business. Examine earnings quality, capital productivity and cash flow through real company examples.',
+    illustrationDisclosure: 'Conceptual illustration.',
+    destinationUrl: '/your-sales-grew-but-did-your-business-actually-improve/',
+    ctaLabel: 'Read the Article'
+  },
   {
     id: 'budget-sales-target',
     sliderCategory: 'Featured Article',

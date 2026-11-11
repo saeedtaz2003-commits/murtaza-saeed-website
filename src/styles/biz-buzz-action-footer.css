@@ -143,3 +143,5 @@
 #content .funny-commentary-panel:is([data-commentary-id="kenya-power-profit"],[data-commentary-id="ozempic-victorias-secret"],[data-commentary-id="missed-hole-in-one"],[data-commentary-id="canada-swing-states-tariffs"]) .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
 #content .funny-commentary-panel:is([data-commentary-id="kenya-power-profit"],[data-commentary-id="ozempic-victorias-secret"],[data-commentary-id="canada-swing-states-tariffs"]) .funny-commentary-text a,
 #content .november-commentary-copy a { font:inherit; color:var(--purple,#7447d7); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em; }
+
+#content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }

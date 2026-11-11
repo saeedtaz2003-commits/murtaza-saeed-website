@@ -5,8 +5,8 @@ date: "2026-11-11"
 category: "Business Performance Reviews"
 summary: "What Tesco, Sainsbury's and two Kenyan companies reveal about measuring genuine business improvement—and turning annual reviews into effective action plans."
 image: "/images/business-improvement-scorecard.jpg"
-imageAlt: "Murtaza Insights editorial card for the Business Improvement Scorecard article."
-articleHero: {"image": "/images/business-improvement-scorecard.jpg", "alt": "Murtaza Insights editorial card for the Business Improvement Scorecard article.", "width": 1041, "height": 548}
+imageAlt: "Purple editorial card asking “Your sales grew. Did your business improve?” and introducing a five-dimension Business Improvement Scorecard from Murtaza Insights."
+articleHero: {"image": "/images/business-improvement-scorecard.jpg", "alt": "Purple editorial card asking “Your sales grew. Did your business improve?” and introducing a five-dimension Business Improvement Scorecard from Murtaza Insights.", "width": 1041, "height": 548}
 bodyHasInvitation: true
 assignmentUrl: "/work-with-me/"
 ---
