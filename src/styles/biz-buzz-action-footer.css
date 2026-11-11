@@ -145,3 +145,16 @@
 #content .november-commentary-copy a { font:inherit; color:var(--purple,#7447d7); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em; }
 
 #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
+
+/* At narrow widths the three share actions cannot fit on one row. */
+@media(max-width:430px) {
+ #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .content-engagement:has(.engagement-article) {
+  grid-template-columns:repeat(2,minmax(0,1fr)); justify-items:center;
+ }
+ #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .engagement-share-row > .engagement-comment {
+  grid-column:1 / -1;
+ }
+ #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .engagement-share-row > button {
+  grid-row:4;
+ }
+}
