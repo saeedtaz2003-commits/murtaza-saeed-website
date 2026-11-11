@@ -99,11 +99,9 @@ const golfScorecardCommentary = `On the golf course, a second stroke cannot turn
 
 const executiveCheckUpCommentary = `An annual report can show higher sales, improved profits and stronger cash flow. All are encouraging. But profits may include valuation gains, cash flow may benefit from working-capital movements, and returns on capital may still be disappointing.
 
-The results of Tesco, Sainsbury's, Kakuzi and Sasini illustrate why headline figures rarely tell the whole story. Our five-dimension Business Improvement Scorecard examines earnings quality, capital productivity, cash generation, competitive strength and future capability, including what published accounts cannot establish.
+The results of Tesco, Sainsbury's, Kakuzi and Sasini illustrate why <strong>headline figures rarely tell the whole story</strong>. Our <strong>five-dimension Business Improvement Scorecard</strong> examines earnings quality, capital productivity, cash generation, competitive strength and future capability, including what published accounts cannot establish.
 
-For owners and CEOs, the real value of an annual review lies in the decisions it changes before the next business plan.
-
-Read the full article.`;
+For owners and CEOs, the real value of an annual review lies in <strong>the decisions it changes</strong> before the next business plan.`;
 
 export const funnyBizzItems: readonly FunnyBizzItem[] = [
   {
@@ -114,7 +112,8 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     title: 'What an Annual Report Can Reveal',
     image: '/images/executive-business-check-up-annual-report.jpg',
     alt: 'Microscope examining a glass slide beside an open annual business report with rising performance charts, illustrating a deeper business check-up.',
-    copy: executiveCheckUpCommentary,
+    commentaryCopyHtml: executiveCheckUpCommentary,
+    copy: executiveCheckUpCommentary.replace(/<[^>]*>/g, ''),
     archiveSummary: 'An annual report can look healthy while concealing weak capital returns or fragile cash generation. A business improvement scorecard, illustrated by four companies, identifies what owners and CEOs should examine more closely.',
     seoTitle: 'Executive Business Check-Up | Annual Report Analysis | Murtaza Insights',
     metaDescription: 'A stronger annual report does not always mean a stronger business. Examine earnings quality, capital productivity and cash flow through real company examples.',
