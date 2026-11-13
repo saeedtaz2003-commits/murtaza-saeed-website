@@ -3,314 +3,257 @@ title: "Should Your Budget Be Based on Your Ambitious Sales Target?"
 slug: "should-your-budget-be-based-on-your-ambitious-sales-target"
 date: 2026-11-07
 category: "Business Analysis & Strategy"
-summary: "How boards can preserve ambitious growth targets without compromising financial discipline, accountability or liquidity."
+summary: "Keep ambitious sales targets without automatically committing the spending needed to achieve them."
 metaDescription: "Should an ambitious sales target determine the financial budget? Compare two approaches to managing growth expenditure, board accountability and liquidity."
 image: "/images/budget-sales-target-editorial-card.jpg"
 imageAlt: "Murtaza Insights card: Your sales target shouldn’t spend your cash. Keep ambition, likely performance, spending authority and the financing plan distinct."
 heroBeforeTitle: true
 bodyHasInvitation: true
+updated: 2026-11-13
+assignmentUrl: "/work-with-me/"
 ---
 
-## AT A GLANCE
+## At a Glance
 
-A company approves an ambitious sales budget, together with the additional marketing, distribution and other expenditure needed to achieve it.
+A company approves an ambitious sales budget, along with the extra marketing, distribution and other spending needed to reach it. Six months in, sales are falling short, but most of the money has already been spent or committed.
 
-Six months later, sales are falling short. But much of the expenditure has already been incurred or committed.
+Should the company have kept a realistic financial budget separate from the stretch target?
 
-**Should the company have separated its realistic financial budget from its more ambitious sales target?**
+It is a useful question to consider while next year's budget is being prepared. This article examines two alternatives and the circumstances in which a single ambitious budget may still be appropriate.
 
-As businesses review their annual plans, this question deserves boardroom attention.
+## Where I First Met This Problem
 
-Traditionally, the sales target becomes part of the approved financial budget. That provides a common performance commitment, aligns departmental plans and establishes accountability. But it carries a risk: the additional revenue may not materialise, while the expenditure approved to achieve it has already been incurred.
+At E.A. Match, we had no electronic spreadsheets until Lotus 1-2-3 became available to us in the late 1980s. Producing one budget was effort enough, and a second one wasn't a luxury we had.
 
-This article considers two alternatives:
+At Pwani Oil Products, we deliberately adopted ambitious sales targets. The thinking was that a stretch target would put pressure on management to push harder to achieve it. That approach reflected a management philosophy: setting higher expectations was intended to encourage greater effort and stronger performance.
 
-**Option A: a Base Budget with a separate Growth Programme.** Suited to growth that comes from distinct initiatives whose sales and costs can be identified and monitored.
+The difficulty arises on the spending side. Campaigns, additional salespeople and inventory may be committed before the expected sales arrive. If those sales fall short, some of the expenditure cannot easily be reversed.
 
-**Option B: two complete financial budgets.** A realistic Base Budget and a more ambitious Target Budget, each with its own income statement, balance sheet and cash-flow projections. One set of actual results is compared against both.
+What has changed is the technology. With Oracle ERP subsequently installed at Pwani, maintaining more than one budget version may now be practical, depending on the system's planning capabilities and configuration.
 
-Neither option asks the board to abandon its ambition. Both require a clear distinction between routine operating expenditure and material additional commitments to pursue the target. The latter may be authorised in advance or in stages, subject to evidence, timing and financing.
+So the question is worth reopening.
 
-**The objective is to stop one number from having to represent ambition, likely performance, spending authority and financing capacity all at once.**
+## Why the Target Usually Becomes the Budget
 
-## WORTH EXPLORING
+Annual budgeting starts with expected sales. Production, purchasing, staffing, marketing, working capital and financing are then built around that number. When management adopts a stretch target, the financial budget often carries both the ambitious revenue and the spending needed to achieve it.
 
-- Can a business budget realistically without reducing management’s ambition?
-- Should growth expenditure be approved unconditionally, or released against agreed milestones?
-- Can two financial budgets improve board oversight without complicating accounting or weakening accountability?
+There are good reasons for this. Departments work to one integrated plan, management sees its financial consequences, and results are measured against an approved benchmark.
 
-## ANALYSIS
+The difficulty arises when the additional sales are uncertain but the expenditure required to pursue them is substantial. Owners and management then need to decide how much spending is justified by realistic expectations and how much depends on achieving the stretch.
 
-### 1. Why sales targets usually become financial budgets
+### An Illustration
 
-Annual budgeting generally begins with expected sales. Production, purchasing, staffing, marketing, distribution, working capital and financing plans are then built around those figures. When management adopts an ambitious target, the budget typically includes both the revenue and the resources needed to achieve it.
+Consider a manufacturer preparing its annual plan. All figures are illustrative.
 
-There are good reasons for this. Departments work towards a common objective. Management receives one integrated plan. Actual performance can be measured against an approved budget and deviations investigated.
+| Sales planning measure | KSh million |
+|---|---:|
+| Realistic Base sales expectation | 540 |
+| Additional growth ambition | 60 |
+| **Strategic sales target** | **600** |
 
-The weakness is a mismatch between the certainty of expenditure and the uncertainty of revenue. A company may approve extra marketing campaigns, recruit salespeople, build inventory or expand distribution capacity in anticipation of higher sales. Much of that must be committed well before the revenue arrives. If sales disappoint, the expenditure may already be unavoidable.
+Management believes KSh 540 million is realistic, given existing customers, demand, pricing, capacity and market conditions. It aims for KSh 600 million through more marketing, wider distribution and customer development.
 
-The board must therefore distinguish between expenditure justified by reasonable operating expectations and additional commitments made in pursuit of more ambitious growth.
+The conventional approach puts KSh 600 million into one budget, together with the expenditure needed to pursue it.
 
-This does not mean the conventional single budget is wrong. It means its limitations should be understood, and alternatives considered where the growth is uncertain and the spending material.
+Two alternatives deserve consideration.
 
-### 2. The starting point: a realistic base and a strategic target
+## Option A: A Base Budget Plus a Separate Growth Programme
 
-Consider an illustrative manufacturing business preparing its annual plan. All figures are illustrative.
+This suits growth expected from identifiable initiatives, such as a new product, geographical expansion, additional distributors or a new sales channel.
 
-| **Sales planning measure**       | **KSh million** |
-|----------------------------------|-----------------|
-| Realistic base sales expectation | 540             |
-| Additional growth ambition       | 60              |
-| **Strategic sales target**       | **600**         |
+The **Base Financial Budget** is a complete plan built on realistic sales expectations. A separate **Strategic Growth Programme** aims to generate the additional KSh 60 million.
 
-Management believes KSh 540 million is reasonable, given existing customers, demand, pricing, capacity and market conditions. It aims for KSh 600 million through additional marketing, wider distribution and customer development.
+The programme identifies the initiatives, expected contribution, additional costs and investment, accountable managers, milestones, working-capital requirements and financing needs.
 
-One possibility is to put the full KSh 600 million into a single budget, together with all the expenditure needed to achieve it. The alternatives below retain the ambition while separating it from the assumptions used for financial planning and the authority to make material additional commitments.
+Suppose it requires KSh 8 million of additional marketing. Owners and management can approve the overall programme while separating immediate commitments from expenditure that can be delayed.
 
-### 3. Option A: a Base Budget with a separate Growth Programme
+| Expenditure | KSh million | Treatment |
+|---|---:|---|
+| Initial phase | 3 | Approved for immediate commitment |
+| Second phase | 3 | Released when agreed milestones are met |
+| Further expansion | 2 | Requires fresh commercial justification |
+| **Total** | **8** | **Not all unconditionally authorised** |
 
-This option suits growth from identifiable initiatives: a new product, a new geographical market, additional distributors or a new sales channel.
+Some costs must be incurred before revenue can be generated. Others can be staged or cancelled as circumstances change.
 
-The board approves two connected components.
+Monthly reporting would show the Base Budget alongside the Growth Programme's expenditure, commercial milestones and additional sales. The overall KSh 600 million target remains visible, so satisfactory Base Budget performance cannot conceal a poorly performing growth initiative.
 
-**The Base Financial Budget** is a complete operating and financial plan built on realistic sales, covering normal expenditure, profitability, working capital, financing and cash flow.
+### The Attribution Problem
 
-**The Strategic Growth Programme** is a separately approved programme designed to generate the additional KSh 60 million. It specifies:
+Revenue associated with a campaign is not necessarily revenue caused by it. Some sales might have occurred anyway.
 
-- the commercial initiatives and expected incremental contribution;
-- additional operating expenditure and any capital investment;
-- accountable managers and implementation milestones;
-- working-capital and financing requirements;
-- the conditions for committing or releasing further expenditure.
+When existing and new business share marketing, salespeople, production and distribution resources, separating incremental revenue and costs becomes subjective. Forced allocations can distort the assessment of profitability.
 
-Suppose the programme needs KSh 8 million of additional marketing. The board might approve the programme as a whole while distinguishing what must be committed now from what can wait:
+Where growth cannot be reliably attributed to specific initiatives, Option B may be more useful.
 
-| **Expenditure**   | **KSh million** | **Treatment**                           |
-|-------------------|-----------------|-----------------------------------------|
-| Initial phase     | 3               | Approved for immediate commitment       |
-| Second phase      | 3               | Released when agreed milestones are met |
-| Further expansion | 2               | Requires fresh commercial justification |
-| **Total**         | **8**           | **Not all unconditionally authorised**  |
+## Option B: Two Complete Budgets
 
-Not all costs behave alike. Some must precede revenue. Others can be staged, reduced or cancelled if circumstances change.
+Management prepares a **Base Budget** reflecting realistic expectations and a **Target Budget** reflecting a more ambitious but achievable outcome.
 
-The full programme must nevertheless remain inside the company’s integrated financial planning. Commitments and their expected cash flows cannot be left out merely because the growth initiative has its own budget.
+Each contains projected income statements, balance sheets and cash flows.
 
-Under Option A, the board report shows the Base Budget alongside the programme’s own scorecard: spend released against spend committed, leading indicators against milestones, and identifiable incremental sales against the KSh 60 million ambition. The overall sales target still appears in the same pack, so satisfactory base performance cannot mask a stalled programme.
+The company maintains one set of actual accounting records. The same actual results are compared with both approved budgets, without artificially dividing revenue or shared costs between Base and Target.
 
-**Can the additional revenue and expenditure actually be identified?**
+### How This Appears in a Management Report
 
-Where initiatives involve distinct products, customer groups or markets, project codes, cost centres or analytical reporting may track the relevant sales and costs.
+The example assumes a 40% contribution margin on additional sales, after volume-related variable costs and before additional marketing expenditure. Other operating costs remain unchanged.
 
-Even then, revenue associated with a campaign is not necessarily revenue caused by it. Some sales would have occurred anyway. Where marketing also supports existing products, salespeople serve old and new customers alike, or production and distribution resources are shared, separating incremental revenue and cost becomes increasingly subjective. Artificial allocations can produce misleading conclusions about a programme’s profitability.
+Financing requirements are illustrative assumptions, rather than outputs from a detailed cash-flow model.
 
-Where attribution rests on too many assumptions, separating growth revenue from common expenditure may create more problems than it solves. That is when the second option becomes attractive.
+| Measure (KSh million) | Base Budget | Target Budget | Latest Forecast |
+|---|---:|---:|---:|
+| Sales revenue | 540 | 600 | 555 |
+| Marketing expenditure | 20 | 28 | 26 |
+| Operating profit | 54 | 70 | 54 |
+| Illustrative peak financing requirement | 70 | 95 | 82 |
 
-### 4. Option B: two complete financial budgets
+The latest sales forecast is KSh 15 million above the Base but KSh 45 million below the Target. Marketing expenditure, meanwhile, is KSh 6 million above the Base and only KSh 2 million below the Target.
 
-Instead of isolating the additional revenue and costs, management prepares two complete budgets:
+At the assumed 40% contribution margin, the additional KSh 15 million of sales produces KSh 6 million of contribution. The additional marketing absorbs the entire amount. Operating profit remains at KSh 54 million, equal to the Base Budget and KSh 16 million below the Target.
 
-**The Base Budget:** a realistic plan based on reasonable business expectations.
+The assumed peak financing requirement is also KSh 12 million above the Base.
 
-**The Target Budget:** a more ambitious but achievable plan, with the higher sales, the associated expenditure, profitability, working capital and financing requirements.
+This comparison exposes the position while management can still reconsider expenditure and sales initiatives.
 
-Both use consistent accounting classifications and reporting periods. Importantly, the company keeps only one set of actual accounting records. Actual sales are not divided into “base sales” and “target sales”, and common costs are not allocated arbitrarily between them. Actual results are simply compared against both approved budgets.
+It does not establish whether the additional marketing caused the increase in sales. That requires commercial evidence, including customer activity, conversion rates and contribution analysis.
 
-Option B resembles approaches in which a realistic planning case is monitored alongside a stretch or aspiration case. Here, both cases are complete financial plans, while authority for material incremental commitments is defined separately.
+### Reporting Discipline
 
-**How would this appear in a board report?**
+Compare activity-related costs against budgets adjusted for actual volumes, and prepare forecast costs using projected activity levels.
 
-Assume the following illustrative full-year position. The profit example assumes a 40% contribution margin on additional sales *after sales-volume-related variable costs but before additional marketing*, with other operating costs unchanged. Financing requirements are illustrative assumptions, not outputs of a constructed cash-flow model.
+Monthly reports should show year-to-date actual results against phased budgets and the latest full-year forecast against both original plans. Preserve the approved versions when forecasts change.
 
-| **Measure (KSh million)**               | **Base Budget** | **Target Budget** | **Latest Forecast** |
-|-----------------------------------------|-----------------|-------------------|---------------------|
-| Sales revenue                           | 540             | 600               | 555                 |
-| Marketing expenditure                   | 20              | 28                | 26                  |
-| Operating profit                        | 54              | 70                | 54                  |
-| Illustrative peak financing requirement | 70              | 95                | 82                  |
+Two budgets require clear accountability. Otherwise, the Base can become an undemanding benchmark and the Target an excuse for overspending.
 
-The board can read four things at once.
+## Keeping the Base Budget Honest
 
-- **Sales:** the forecast is KSh 15 million above the Base Budget but KSh 45 million below the Target.
-- **Marketing:** spending is KSh 6 million above the Base and KSh 2 million below the Target. Most of the extra marketing is being incurred.
-- **Profit:** the extra contribution from additional sales (KSh 6 million) is fully absorbed by the additional marketing (KSh 6 million), so operating profit is no better than the Base and KSh 16 million below the Target.
-- **Financing:** the assumed peak requirement is KSh 12 million above the Base. The illustration shows how the business might need more funding without a corresponding increase in forecast operating profit; the amount would need to be modelled before use in a real board decision.
+The first objection I would expect from a finance director or managing director is that management might make the Base deliberately easy to achieve.
 
-This is the position the article warns about, and the board sees it before the year ends. The report does not prove that the marketing caused the extra sales. Whether the spending was commercially effective remains a management question requiring commercial evidence, contribution analysis and judgement.
+That risk is real.
 
-**A note on method.** For year-to-date results, costs that move directly with activity—such as distribution costs or sales commissions—should also be compared with a budget flexed to the *actual* sales volume or other relevant cost driver. Forecast variable costs should separately be reassessed at projected future activity levels. This distinguishes activity-driven cost changes from genuine overspending without confusing actual variances with forward-looking forecasts.
+The Base should be tested against historical forecasting errors, customer demand, the sales pipeline, capacity, market conditions and reliable external benchmarks. Finance, sales and operations should challenge one another's assumptions before approval.
 
-The monthly pack should show year-to-date actuals against the phased budgets, alongside the latest full-year forecast against both original annual budgets. A forecast is not an actual result, and forecast revisions must never overwrite the approved benchmarks.
+Management remains accountable for delivering the Base, pursuing the Target, observing expenditure limits and protecting liquidity.
 
-**Advantages and risks**
+At Pwani, the pressure came from the ambitious target itself. Under either alternative, that target remains visible in management reports and performance discussions.
 
-- The board sees both reasonable expectation and strategic ambition.
-- Actual results are compared against both without artificial allocation of transactions.
-- Growth-related expenditure is reflected in a complete Target Budget.
-- The approach accommodates growth spread across existing products, customers and operations.
-- Both budgets can be supported by integrated financing projections.
+## Who Authorises the Spending?
 
-The principal cost is added planning and reporting discipline. Two budgets must not become two alternative explanations that management chooses between whenever performance disappoints. Both must be approved, consistently reported and used for their intended purposes.
+Approval of an ambitious sales target should not automatically authorise all the expenditure associated with achieving it.
 
-### 5. Preventing an easy Base Budget, and keeping management accountable
+The Base Budget can govern routine operating expenditure within delegated limits. Ordinary variable costs can rise with actual business activity. Material additional commitments, such as campaigns, recruitment or capacity expansion, require separate approval.
 
-This is the first objection most CFOs and MDs will raise, and it applies to both options. If management is judged mainly against the Base Budget, there is a temptation to understate revenue or overstate costs. A realistic budget must not become a deliberately undemanding one.
+Some commitments are unavoidable once undertaken. Others can be released in stages or cancelled.
 
-Evidence, not negotiation, should set the Base Budget. Useful safeguards include:
+For staged expenditure, management needs observable evidence of progress: qualified sales pipeline, conversion rates, orders secured, distributor activity or sales against the phased Base Budget.
 
-- comparing prior-year forecasts with actual results, and reporting the forecasting error;
-- independent review of the sales pipeline, customer demand and capacity assumptions;
-- cross-functional challenge, with finance, sales and operations testing one another’s assumptions;
-- external benchmarks, where reliable ones exist;
-- preserving the original approved budgets, so later forecast revisions never overwrite them.
+A release condition might read:
 
-Accountability also needs to be explicit. Management remains accountable for delivering the Base Budget, making progress towards the Target, and exercising spending discipline within approved authority while managing working capital and liquidity. Achieving the Base should not be confused with fulfilling the strategic ambition.
+> Release the second KSh 3 million marketing phase when the qualified pipeline reaches KSh 40 million and at least six of the ten planned distributors are placing orders.
 
-### 6. Authorising additional expenditure
+These thresholds are illustrative. Each business would need to establish whether its chosen milestones provide sufficient evidence of commercial progress.
 
-Whichever option is chosen, a basic question remains: does approving the higher sales target automatically authorise all the expenditure associated with it?
+Inventory, hiring and capacity expansion may require different conditions because their lead times and reversibility differ.
 
-It need not, and the board should say so explicitly.
+**Budget approval, spending authority and financing availability are three separate decisions.**
 
-**The Base Budget should normally anchor routine expenditure and financial commitments.** Ordinary variable costs may rise appropriately with actual sales under established limits and delegated authority. Material additional commitments to pursue the Target Budget—such as new campaigns, recruitment or capacity expansion—should be separately authorised, either upfront where justified or in stages against agreed conditions.
+## Working Capital and Financing
 
-The two budgets then serve different purposes:
+Additional sales often require inventory, production capacity and customer credit before cash is collected. Growth can increase financing requirements even when profitability improves.
 
-| **Purpose**                                                       | **Governing plan or authority**                                                               |
-|-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Routine spending, procurement and activity-related variable costs | Approved operating budget, relevant activity levels and delegated authority                   |
-| Facility sizing, lender negotiations and covenant testing         | Integrated Base, Target and downside cash-flow scenarios                                      |
-| Management’s strategic objective                                  | Target Budget                                                                                 |
-| Material incremental spending to pursue the Target                | Specific approvals and conditions, including advance commitments where commercially necessary |
+If sales disappoint while inventory remains high and collections slow, liquidity may come under greater pressure than expected.
 
-Because the Target Budget is a complete financial plan, it shows what the business would need to spend and finance to reach its ambition. It does not, by itself, provide unconditional authority for material incremental spending.
+Under either budgeting approach, management should prepare integrated profit, balance-sheet and cash-flow projections and examine a downside scenario.
 
-The gap between the Base and Target Budgets should not be treated as uniformly discretionary. A useful classification is:
+Assume the company has KSh 120 million of committed financing capacity, subject to facility terms and covenants.
 
-| **Category**  | **Characteristics**                    | **Board consideration**                           |
-|---------------|----------------------------------------|---------------------------------------------------|
-| Committed     | Contractual or practically unavoidable | Must be reflected in cash and financing forecasts |
-| Staged        | Released after agreed milestones       | Progress and funding reviewed before release      |
-| Discretionary | Can be delayed, reduced or cancelled   | Subject to continuing commercial justification    |
+| Measure | Downside | Base | Target |
+|---|---:|---:|---:|
+| Annual sales (KSh million) | 486 | 540 | 600 |
+| Illustrative peak financing requirement (KSh million) | 105 | 70 | 95 |
+| **Illustrative minimum undrawn headroom (KSh million)** | **15** | **50** | **25** |
 
-Inventory, hiring and capacity expansion may need different criteria from marketing, because their lead times and reversibility differ. The board should approve clear spending limits and delegations of authority for material incremental commitments.
+The downside assumes inventory and expenditure have been committed at Target levels, sales reach only 90% of the Base, customer collections are 15 days slower, and some commitments cannot be reversed.
 
-**What should trigger a release?**
+**These figures are illustrative assumptions, not outputs of an actual cash-flow model.** Headroom is calculated as KSh 120 million less the assumed peak requirement.
 
-Releasing additional staged expenditure requires evidence that proceeding remains justified. Option B avoids forcing a precise attribution of revenue to individual initiatives, so triggers can rely on observable progress and leading indicators rather than artificial allocations:
+The downside leaves only KSh 15 million of financing headroom, compared with KSh 25 million under the Target scenario. Higher planned sales therefore do not necessarily produce the greatest liquidity risk.
 
-- qualified pipeline value and conversion rates;
-- orders secured or confirmed for later delivery;
-- distributors appointed and actively ordering;
-- new customers acquired against plan;
-- sales run-rate against the phased Base Budget.
+Before committing additional expenditure, management can consider tighter release conditions, phased inventory purchases, additional financing capacity or changes to the growth programme.
 
-An illustrative trigger might read: “Release the second KSh 3 million marketing phase when the qualified pipeline reaches KSh 40 million and at least six of ten planned distributors are placing orders.” The board is then judging observable progress, not an allocation of shared revenue that nobody can verify.
+Lender covenants should also be tested against the downside.
 
-This prevents the original danger: expenditure proceeding simply because it appears in an ambitious annual budget, after the assumptions behind it have changed. Budget approval, expenditure authority and financing availability are related, but separate, decisions.
+Available financing should never, by itself, justify additional spending.
 
-### 7. Working capital and financing
+## What Your Information Systems Need to Do
 
-A budget cannot be judged by its income statement alone. Additional sales may require more inventory, production capacity and customer credit before cash is collected, so successful growth can increase financing needs even as profit improves. Conversely, disappointing sales create liquidity pressure if customers pay slowly while inventory and committed expenses remain high.
+The accounting system does not need separate actual records. It needs to support distinct planning versions and comparisons with the same actual results.
 
-Under either option, the company should prepare integrated projections covering profitability, balance-sheet movements and cash flow, and should examine a downside scenario.
+Depending on its modules and configuration, an ERP or integrated planning system may support multiple budgets, updated forecasts, departmental and project analysis, and commitment controls.
 
-**Illustrative financing sensitivity**
+Under Option A, project or campaign reporting can help identify growth-related expenditure. Under Option B, the system maintains Base and Target versions and compares actual performance with each.
 
-Assume the company has KSh 120 million of committed financing capacity for the requirements being modelled, subject to facility terms and covenants.
+These capabilities need to be verified in the specific implementation. Installing an ERP system does not automatically make every budgeting or commitment-control feature available.
 
-| **Measure**                                     | **Downside** | **Base** | **Target** |
-|-------------------------------------------------|--------------|----------|------------|
-| Annual sales (KSh m)                            | 486          | 540      | 600        |
-| Illustrative peak financing requirement (KSh m) | 105          | 70       | 95         |
-| Illustrative minimum undrawn headroom (KSh m)   | 15           | 50       | 25         |
+Sage, QuickBooks and similar packages also vary by edition. Some already support budgeting and budget-versus-actual reporting.
 
-The downside case is designed to reflect the article’s central risk. It assumes that inventory and expenditure have been committed at Target Budget levels, but sales reach only 90% of the Base Budget, collections take an additional 15 days, and some commitments cannot be reversed. Those conditions could produce a higher peak financing requirement than in the Target case, as the hypothetical figures illustrate.
+Where existing software falls short, a controlled Excel workbook may be sufficient. It can maintain the two approved budgets, import actual results, calculate variances and support rolling forecasts and financing scenarios. The original versions must be preserved, assumptions documented, imported figures reconciled and changes controlled.
 
-**These financing requirements are illustrative assumptions, not calculated outputs from an actual integrated cash-flow model.** In a real business, the model would need to show the timing of inventory purchases, customer collections, supplier payments, expenditure and borrowing. Headroom in the table is KSh 120 million less the assumed peak requirement in each scenario.
+A well-designed workbook can now do much of what was impractical at E.A. Match before Lotus 1-2-3.
 
-The highest-sales scenario does not necessarily carry the greatest liquidity risk. Two features of the table deserve the board’s attention: the downside leaves only KSh 15 million of assumed undrawn headroom, and the Target case only KSh 25 million. Before commitments are made, the board should consider arranging additional facility capacity, tightening the triggers for releasing expenditure, or phasing inventory purchases against confirmed orders. Lender covenants should be tested against the downside, not just the Base.
+I would examine the existing system's capabilities before considering additional software.
 
-The key questions are:
+## Which Approach Should You Choose?
 
-- What is the maximum cash requirement during the year, not merely at year-end?
-- How much financing is needed before additional sales are collected?
-- What happens if demand falls short or receivables take longer to collect?
-- Are facilities sufficient and actually available under their contractual terms?
-- What corrective actions remain possible if the forecast changes?
+**Option A**, a Base Budget with a separate Growth Programme, is more suitable when growth comes from identifiable initiatives and their incremental contribution can be reasonably tracked.
 
-Under Option A, the growth programme’s financing needs must be consolidated with the Base Budget. Under Option B, both budgets carry their own working-capital and financing projections. Arranging additional borrowing capacity in advance may be prudent, but available financing should never by itself authorise additional expenditure.
+**Option B**, two complete budgets, may be preferable when growth is expected across existing products, customers and operations, making separate attribution unreliable.
 
-### 8. What the accounting system needs to do
+The approaches can be combined. A business might maintain two budgets for its overall operations while applying separate programme controls to a new distribution channel or product launch.
 
-The accounting system does not need to keep separate actual financial records. The reporting structure needs to distinguish actual results from the approved planning alternatives.
+A single ambitious budget can also remain appropriate where the assumptions are well supported, financing is adequate, and additional spending is proportionate and reversible.
 
-**Businesses with ERP systems.** Depending on the product and its configuration, an ERP or integrated planning application may support multiple budget versions for the same period, budget-to-actual comparison for each version, analytical dimensions by department, product or project, updated forecasts, and expenditure commitments and controls. For Option A, project or campaign dimensions may help identify growth-related spend. For Option B, the system can hold Base and Target versions and compare the same actuals against both. These capabilities should be verified in the specific implementation, as some systems need additional configuration or planning software.
+These are management alternatives, not accounting or governance standards.
 
-**Businesses using other accounting packages.** Sage, QuickBooks and similar products vary by edition and configuration; some already offer budgets and budget-versus-actual reports. The first step is to check the system’s existing capabilities. Where it cannot maintain or compare the required planning versions, a controlled Excel model may be the simplest supplement. The accounting system continues to record actuals, while the workbook holds the Base and Target Budgets, imports actual results, calculates variances against both, and carries rolling forecasts and financing scenarios. A properly designed workbook preserves original budget versions, documents assumptions, reconciles imported actuals and restricts unauthorised changes.
+## Conclusion
 
-The priority is sound management reporting, not sophisticated software for its own sake. Excel may be sufficient for the missing comparisons; a change of accounting system or additional ERP planning functionality should be justified by the business’s actual requirements.
+I still see merit in ambitious sales targets. They challenge management to achieve more, and I would retain them regardless of the budgeting structure adopted.
 
-### 9. Which approach should a business choose?
+The choice between a single budget, a Base Budget with a Growth Programme, or two complete budgets depends on the nature of the growth being pursued and the commitments required to achieve it.
 
-There is no universally superior structure. The choice depends on the nature of the planned growth and the company’s reporting capability.
+For owners and management, three safeguards matter: a credible Base Budget, explicit authority for additional expenditure, and sufficient liquidity under a realistic downside scenario.
 
-| **Consideration**            | **Option A: Separate Growth Programme**               | **Option B: Two Complete Budgets**             |
-|------------------------------|-------------------------------------------------------|------------------------------------------------|
-| Nature of growth             | Distinct initiatives, products, markets or channels   | Growth spread across existing operations       |
-| Tracking incremental revenue | Feasible where initiatives are distinct and separable | Not required for variance reporting            |
-| Tracking expenditure         | By identifiable programme or project                  | By comparing actual costs with both budgets    |
-| Financial planning           | Base Budget plus consolidated growth assumptions      | Complete Base and Target scenarios             |
-| Board reporting              | Base performance and programme progress               | Actuals and forecast against both budgets      |
-| Main difficulty              | Attribution of shared revenue and costs               | Managing two benchmarks and spending authority |
+The original approved plans and latest forecast should remain visible in management reporting.
 
-Where growth initiatives are clearly identifiable, Option A may give better insight into their performance and return. Where additional growth is expected across established products, customers and operations, Option B may offer greater simplicity and transparency.
+A stretch target is meant to push people, and it should.
 
-The options can also be combined. A company may run Option B for the business as a whole while applying Option A’s programme controls to one clearly identifiable initiative, such as a new distribution channel.
+**Your sales target shouldn't spend your cash.**
 
-Some companies will reasonably keep a single ambitious budget, supported by stretch targets, rolling forecasts and conditional expenditure controls. That may be entirely appropriate where sales assumptions are well supported, financing is adequate and the associated expenditure is proportionate and reversible.
+---
 
-These alternatives are management options, not prescribed accounting or governance standards. Their purpose is to improve decisions, not to increase the volume of reporting.
+## Work With Me
 
-## CONCLUSION
+Owners and management teams sometimes use one sales figure to set performance expectations, authorise expenditure and estimate financing requirements. Reviewing how these decisions connect can improve both planning and management control.
 
-Must a company’s sales target become its financial budget?
+I undertake selected remote **Business Analysis & Strategy** assignments through *Murtaza Insights*, including reviews of budgeting approaches, decision-making processes and management reporting.
 
-**Not necessarily.**
-
-The single-budget approach has real advantages: it coordinates departmental plans, establishes commitments and provides a common benchmark. But where additional growth is uncertain and requires material expenditure, boards should consider distinguishing ambition from financial expectation more explicitly.
-
-A simple decision guide can help. Where growth comes from distinct initiatives that can be tracked, **consider** a Base Budget with a separate Growth Programme. Where growth is spread across existing products, customers and operations, **consider** two complete budgets. Where assumptions are strong, expenditure risks are manageable and financing is adequate, a single ambitious budget may still be the right answer.
-
-Whichever structure is chosen, three safeguards are useful:
-
-1.  Routine spending follows the approved operating plan and delegated authority; material additional commitments made in pursuit of the target require explicit approval and suitable conditions, including upfront approval when necessary.
-2.  A downside liquidity test is performed before material growth commitments are made, including a stress case with Target-level commitments and Base-or-lower sales where relevant.
-3.  The strategic target stays visible in every board pack, together with the original approved financial benchmark(s) and the latest forecast.
-
-The right choice reflects the reliability of the sales assumptions, the reversibility of spending and the strength of financing headroom.
-
-**The objective is not to produce more budgets. It is to prevent ambition, expected performance, spending authority and financing capacity from becoming indistinguishable.**
-
-As businesses review their planning approach, that distinction deserves a place in the boardroom.
-
-<details class="article-sources" id="sources--references">
+<details class="article-sources" id="sources-references">
 <summary>Sources &amp; References</summary>
 
-The governance model proposed here is the author’s management recommendation. The sources below support individual points and do not endorse the model as a whole.
+The governance model proposed here is the author's management recommendation. The sources below support individual points and do not endorse the model as a whole.
 
-1.  [ICAEW — Business Performance Management: Working with Tensions (2018)](https://www.icaew.com/-/media/corporate/files/technical/bpm/bpm2-working-with-tensions.ashx) — Planning and forecasting tensions, budgetary slack, performance targets, scenario analysis and management accountability.
-2.  [ICAEW — Assessing the Reliability of a Forecast (2023)](https://www.icaew.com/technical/audit-and-assurance/faculty-resources/audit-and-beyond/2023/articles/assessing-the-reliability-of-a-forecast) — Evidence-based forecasts and uncertainty. Some content requires member access.
-3.  [ICAEW — Cash Flow Forecasts and Inventory](https://www.icaew.com/technical/corporate-finance/business-finance-guide/more-information/managing-your-cashflow/cash-flow-forecasts-and-inventory) — Inventory, receivables, expenditure commitments and cash-flow forecasting.
-4.  [ICAEW — Nine Principles for Finance Professionals](https://www.icaew.com/technical/business/financial-management/treasury-and-cash-flow-management/nine-principles-for-finance-professionals) — Cash forecasting, scenario analysis, financing headroom and reporting controls.
-5.  [AICPA & CIMA — Rolling Plans and Forecasts](https://www.aicpa-cima.com/resources/article/rolling-plans-and-forecasts) — The role of rolling forecasts in keeping an updated view of expected performance.
-6.  [Microsoft Learn — Create G/L Budgets in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-how-create-budgets) — An example of an ERP supporting multiple budgets, dimensions and Excel integration; capabilities vary by system.
-7.  [ACCA — All About Budgeting, Part 1](https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting1.html) — Cost behaviour and flexible-budget analysis, as used in the flexed-budget note in section 4.
+1. [ICAEW — Business Performance Management: Working with Tensions (2018)](https://www.icaew.com/-/media/corporate/files/technical/bpm/bpm2-working-with-tensions.ashx): Planning tensions, budgetary slack, targets, scenario analysis and accountability.
+
+2. [ICAEW — Assessing the Reliability of a Forecast (2023)](https://www.icaew.com/technical/audit-and-assurance/faculty-resources/audit-and-beyond/2023/articles/assessing-the-reliability-of-a-forecast): Evidence-based forecasts and uncertainty. Some content requires member access.
+
+3. [ICAEW — Cash Flow Forecasts and Inventory](https://www.icaew.com/technical/corporate-finance/business-finance-guide/more-information/managing-your-cashflow/cash-flow-forecasts-and-inventory): Inventory, receivables, commitments and cash-flow forecasting.
+
+4. [ICAEW — Nine Principles for Finance Professionals](https://www.icaew.com/technical/business/financial-management/treasury-and-cash-flow-management/nine-principles-for-finance-professionals): Cash forecasting, scenario analysis, financing headroom and reporting controls.
+
+5. [AICPA & CIMA — Rolling Plans and Forecasts](https://www.aicpa-cima.com/resources/article/rolling-plans-and-forecasts): The role of rolling forecasts.
+
+6. [Microsoft Learn — Create G/L Budgets in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-how-create-budgets): An example of an ERP supporting multiple budgets and dimensions; capabilities vary by system.
+
+7. [ACCA — All About Budgeting, Part 1](https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting1.html): Cost behaviour and flexible-budget analysis.
 
 </details>
-
-## WORK WITH ME
-
-Many boards approve budgets without being clear which number governs spending, which goes to the bank, and which management is held to.
-
-Businesses reviewing their budgeting approach, expenditure controls or board reporting can discuss a scoped remote **Business Analysis & Strategy** assignment with *Murtaza Insights*.
