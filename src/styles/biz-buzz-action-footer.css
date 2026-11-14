@@ -171,3 +171,19 @@
     font-size:12px!important;
   }
 }
+
+/* Match the article CTA text to Send a Comment, Share and Copy Link. */
+#content .funny-action-footer .engagement-share-row > :is(.engagement-article,.engagement-comment,button),
+#content .funny-action-footer .engagement-share-row > :is(.engagement-article,.engagement-comment,button) :is([data-article-label],[data-copy-label]) {
+  font-family:Inter,system-ui,sans-serif!important;
+  font-size:15px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:normal!important;
+}
+@media(max-width:760px) {
+  #content .funny-action-footer .engagement-share-row > :is(.engagement-article,.engagement-comment,button),
+  #content .funny-action-footer .engagement-share-row > :is(.engagement-article,.engagement-comment,button) :is([data-article-label],[data-copy-label]) {
+    font-size:12px!important;
+  }
+}
