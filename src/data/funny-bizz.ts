@@ -229,13 +229,12 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     publishedAt: '2026-10-04',
     sliderCategory: 'Featured Article',
     category: 'Business Performance Reviews',
-    title: "Can Customers Spend Less — and Make You More?",
+    title: "Spend Fell 3%. Profit Rose 16%.",
+    commentaryTitle: "Spend Fell 3%. Profit Rose 16%.",
     image: '/images/can-customers-spend-less-make-more-money.jpg',
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
-    commentaryCopyHtml: `Spend Fell 3%. Profit Rose 16%.
-
-At Simbisa Kenya, customers spent <strong>3% less</strong> on average in FY2026. Yet customer volumes rose <strong>14%</strong> and operating profit <strong>16%</strong>.
+    commentaryCopyHtml: `At Simbisa Kenya, customers spent <strong>3% less</strong> on average in FY2026. Yet customer volumes rose <strong>14%</strong> and operating profit <strong>16%</strong>.
 
 <strong>The business insight:</strong> A lower sale value can produce more profit, but only if the extra customers add more contribution than the margin given up, and can be served economically.
 
