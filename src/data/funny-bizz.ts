@@ -233,6 +233,15 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     image: '/images/can-customers-spend-less-make-more-money.jpg',
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
+    commentaryCopyHtml: `Spend Fell 3%. Profit Rose 16%.
+
+At Simbisa Kenya, customers spent <strong>3% less</strong> on average in FY2026. Yet customer volumes rose <strong>14%</strong> and operating profit <strong>16%</strong>.
+
+<strong>The business insight:</strong> A lower sale value can produce more profit, but only if the extra customers add more contribution than the margin given up, and can be served economically.
+
+<strong>The question:</strong> Before cutting a price, do you know how much extra volume you need? On an illustrative 30% margin, a 3% cut needs about <strong>11% more volume</strong>.
+
+<strong>Why did profit grow faster than revenue?</strong> The article shows what to check before you try it.`,
     destinationUrl: '/can-cutting-prices-improve-your-business-performance/',
     ctaLabel: 'Read the Article'
   },
