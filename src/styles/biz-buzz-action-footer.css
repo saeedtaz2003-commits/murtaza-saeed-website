@@ -150,3 +150,24 @@
  #content .funny-action-footer .engagement-share-row .engagement-article { width:min(210px,100%); }
  #content .funny-action-footer .biz-buzz-cta { white-space:normal; height:auto!important; min-height:44px!important; text-align:center; }
 }
+
+/* All Biz Buzz article CTAs use the same typography as adjacent actions,
+   regardless of the per-slide label (including KRA's uppercase label). */
+#content .funny-action-footer .engagement-share-row .engagement-article,
+#content .funny-action-footer .engagement-share-row .engagement-article [data-article-label] {
+  font-family:Inter,system-ui,sans-serif!important;
+  font-size:13px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:normal!important;
+  text-transform:none!important;
+}
+#content .funny-action-footer .engagement-share-row .engagement-article .engagement-icon {
+  width:16px!important; height:16px!important; flex:0 0 16px;
+}
+@media(max-width:760px) {
+  #content .funny-action-footer .engagement-share-row .engagement-article,
+  #content .funny-action-footer .engagement-share-row .engagement-article [data-article-label] {
+    font-size:12px!important;
+  }
+}
