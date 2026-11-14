@@ -1,6 +1,9 @@
 /* Shared active-slider footer. Archive cards and non-slider controls are unchanged. */
 #content .funny-commentary-text { min-height:0; }
 #content .funny-action-footer { flex:0 0 auto; margin-top:auto; padding-top:8px; }
+#content .funny-commentary-viewport { display:flex; flex-direction:column; }
+#content .funny-commentary-viewport .funny-commentary-panel.active { flex:1 1 auto; min-height:0; }
+#content .funny-commentary-viewport > .funny-action-footer { width:100%; box-sizing:border-box; padding:5px .8rem .6rem; }
 #content .funny-action-footer .content-engagement { display:flex; flex-direction:column; gap:5px; margin:0; padding:0; border:0; }
 #content .funny-action-footer .engagement-legal-row { margin:0; gap:4px 12px; justify-content:center; }
 #content .funny-action-footer .engagement-legal-row p { margin:0!important; font-size:13px!important; line-height:1.3; }
@@ -32,6 +35,8 @@
  #content .funny-action-footer .engagement-share-row :is(a,button) { padding:0 6px; font-size:12px!important; }
  #content .funny-action-footer .biz-buzz-cta { font-size:12px!important; padding:0 5px!important; }
 }
+
+#content .funny-archive-date { display:block; margin:.2rem 0 .35rem; color:var(--muted); font:500 .78rem/1.35 Inter,system-ui,sans-serif; }
 
 /* Keep the shortened desktop heading at its existing type size. */
 @media(min-width:1200px) {

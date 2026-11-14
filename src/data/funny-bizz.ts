@@ -43,13 +43,11 @@ For business owners, the opportunity may be hiding in a familiar process that on
 
 Our article, <em>Don't Invent It. Technify It.</em>, explores the possibilities.`;
 
-const pulseCommentary = `The <strong>Pulse Ring</strong> takes an unusual approach to wearable technology. Priced from <strong>US$229</strong>, it doesn't measure heart rate, sleep or steps. Instead, it vibrates gently to remind its wearer to pause, breathe and refocus.
+const pulseCommentary = `The maker describes the <strong>Pulse Ring</strong>, priced from <strong>US$229</strong>, as a wearable with no sensors, biometrics or tracking. It uses tactile reminders to prompt a pause.
 
-While competing smart rings offer increasingly sophisticated health tracking, Pulse is selling something different: <strong>freedom from constant measurement</strong>.
+That positions Pulse against smart rings built around continuous measurement. The offer is simplicity and privacy rather than more data.
 
-The business question is intriguing. Are consumers beginning to value simplicity over additional features? And can a product command a premium precisely because it does less?
-
-Pulse illustrates a clever differentiation strategy: <strong>doing less can sometimes create more value</strong>. In markets crowded with increasingly complex products, simplicity itself can become a compelling selling point — and potentially command a premium.`;
+<strong>The business lesson:</strong> removing features can sharpen a proposition when the remaining benefit matters to a defined customer. Pulse is testing whether less technology can command a premium in a crowded wearable market.`;
 
 const mbappeCommentary = `Kylian Mbappé’s move from Nike to Swiss sportswear brand On involves more than a new endorsement. According to <a href="https://www.reuters.com/sports/swiss-sportswear-brand-signs-french-footballer-mbapp-nike-2026-09-18/" target="_blank" rel="noopener noreferrer">Reuters</a>, the agreement combines <strong>cash and an equity component</strong>, although its size and conditions have not been disclosed.
 
@@ -91,11 +89,11 @@ const victoriasSecretCommentary = `<a href="https://www.barrons.com/articles/vic
 
 <strong>The bigger question:</strong> When markets anticipate a new growth opportunity, how much is supported by evidence — and how much remains an attractive assumption?`;
 
-const golfScorecardCommentary = `On the golf course, a second stroke cannot turn a missed first attempt into a hole-in-one. Yet in business, a missed sales target can sometimes be presented as a success by highlighting a different, more favourable performance measure.
+const golfScorecardCommentary = `On the golf course, a second stroke cannot turn a missed first attempt into a hole-in-one. In business, however, a missed target can be presented as success by highlighting a different measure.
 
-<strong>The business insight:</strong> There is nothing wrong with reporting additional performance measures. The problem arises when a favourable result is used to distract attention from an unmet target. Management should explain both the original shortfall and any achievements elsewhere, rather than allowing one to obscure the other.
+<strong>The business insight:</strong> Additional measures can add context, but they should not distract from an unmet target. Management should explain the shortfall and any achievements elsewhere.
 
-<strong>The question:</strong> Does your management reporting clearly distinguish between meeting agreed targets and achieving other favourable results?`;
+Good reporting distinguishes between meeting the agreed scorecard and changing it after the result.`;
 
 const executiveCheckUpCommentary = `An annual report can show higher sales, improved profits and stronger cash flow. All are encouraging. But profits may include valuation gains, cash flow may benefit from working-capital movements, and returns on capital may still be disappointing.
 
@@ -123,6 +121,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
   },
   {
     id: 'budget-sales-target',
+    publishedAt: '2026-11-08',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
     title: 'Should a Sales Target Be Your Budget?',
@@ -192,7 +191,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     metaDescription: 'Discover how AI and digital technology can transform familiar business practices, from customer relationships to negotiation and buying clubs.',
     image: '/images/technify-old-wine-new-bottle-approved-nov2026.jpg',
     alt: 'Traditional wine merchant saying he knows his customers beside a futuristic robot describing the same idea as predictive analytics, illustrating old business practices and modern AI.',
-    destinationUrl: '/dont-invent-it-technify-it',
+    destinationUrl: '/dont-invent-it-technify-it/',
     ctaLabel: 'Read the Article'
   },
   {
@@ -207,7 +206,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "image": "/images/ai-si-satire-business-technology.jpg",
   "alt": "Satirical AI-generated illustration of an anonymous suited person holding a fictional executive order cancelling AI and adopting SI. The caption asks how it can help your business; the image includes the MI monogram and the disclaimer “Satire. AI-generated image. Not a real order.”",
   copy: paperCommentary.replace(/<[^>]*>/g, ''),
-  "destinationUrl": "/from-paper-to-erp-ai-finance-function",
+  "destinationUrl": "/from-paper-to-erp-ai-finance-function/",
   "ctaLabel": "Read the Article"
 },
   {
@@ -233,35 +232,37 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   {
     id: 'simbisa-customers-spend-less',
     archiveSummary: "Can lower customer spending produce a better business result? The answer depends on what else changes. Explore the conditions behind improved business performance in the linked article, without giving away the story here.",
-    publishedAt: '2026-10-03',
+    publishedAt: '2026-10-04',
     sliderCategory: 'Featured Article',
     category: 'Business Performance Reviews',
     title: "Can Customers Spend Less — and Make You More?",
     image: '/images/can-customers-spend-less-make-more-money.jpg',
     alt: 'Simbisa Kenya restaurant cartoon asking whether customers can spend less while the business makes more money, with a KES receipt and falling average-spend arrow.',
     copy: 'It sounds unlikely. But under the right circumstances, it can happen. So what has to change for lower customer spending to produce a better overall result?',
-    destinationUrl: '/can-cutting-prices-improve-your-business-performance',
+    destinationUrl: '/can-cutting-prices-improve-your-business-performance/',
     ctaLabel: 'Read the Article'
   },
 
   {
     id: 'canada-swing-states-tariffs',
+    publishedAt: '2026-09-26',
     archiveSummary: "Retaliatory tariffs can carry political as well as economic messages. Canada’s focus on U.S. swing states raises a strategic question: can trade measures influence electoral pressure as well as commercial behaviour?",
     sliderCategory: 'Funny',
     category: 'Trade & Politics',
     title: 'Canada Plays the Swing States',
     commentaryTitle: "Canada's Tariffs: Political Pressure Points",
-    commentaryCopyHtml: `Canada's September 2026 retaliatory tariffs targeted US products ranging from dairy to steel. <a href="https://www.cbsnews.com/news/canada-retaliatory-tariffs-michigan-indiana-impact/" target="_blank" rel="noopener noreferrer">Canadian officials</a> said the measures were designed partly to exert political pressure on particular US states — not merely to match the economic impact of American tariffs.
+    commentaryCopyHtml: `Canada's September 2026 retaliatory tariffs covered US products ranging from dairy to steel. <a href="https://www.cbsnews.com/news/canada-retaliatory-tariffs-michigan-indiana-impact/" target="_blank" rel="noopener noreferrer">Canada's industry minister</a> said products were selected to put political pressure on particular states. Economists identified likely effects across both Republican- and Democratic-leaning states.
 
-<strong>The business insight:</strong> Effective negotiation is not always about the size of your response. Understanding what matters most to the other side can provide greater leverage. But targeted pressure also carries costs and risks.
+<strong>The business insight:</strong> Negotiating leverage depends on understanding what matters to the other side, not merely matching the size of its action. Targeted pressure can be effective, but it also carries costs and risks.
 
-<strong>The question:</strong> In your next major supplier or customer negotiation, do you know what the other side values most — and how you could use that knowledge to negotiate more effectively?`,
+Before a major negotiation, identify where the other side is most exposed.`,
     image: '/images/canada-plays-the-swing-states-tariff-cartoon.png',
-    alt: 'Cartoon showing Canada targeting politically sensitive U.S. swing states with retaliatory tariffs, highlighting trade strategy and electoral politics before the midterms.',
+    alt: 'Cartoon showing Canada targeting politically sensitive U.S. states with retaliatory tariffs, highlighting trade strategy and electoral politics.',
     copy: 'This cartoon satirises the idea that retaliatory tariffs can be chosen for political as well as economic impact, with U.S. swing states in the spotlight.'
   },
   {
     id: 'kenya-power-profit',
+    publishedAt: '2026-09-25',
     archiveSummary: "Strong profits and unreliable service make an uncomfortable pairing. Kenya Power’s results contrast with customers’ concerns about power cuts and bills, raising a familiar question about how business success is measured.",
     sliderCategory: 'Funny',
     category: 'Business & Everyday Life',
@@ -273,6 +274,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   },
   {
     id: 'domain-name-mistake',
+    publishedAt: '2026-09-25',
     hidden: true,
     archiveSummary: "A website name can tell an unintended story when spaces disappear. Murtaza’s near miss introduces ten unfortunate domain examples and a simple branding lesson: check the lowercase name before registering it.",
     sliderCategory: 'Funny',
@@ -299,6 +301,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   },
   {
     id: 'ozempic-victorias-secret',
+    publishedAt: '2026-09-25',
     archiveSummary: "Weight-loss trends can create unexpected consumer-market opportunities. Could changing waistlines, confidence and wardrobes benefit Victoria’s Secret? A promising market narrative may attract attention, but sustained business profits remain a separate question.",
     sliderCategory: 'Funny',
     category: 'Markets & Consumers',
@@ -310,6 +313,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   },
   {
     id: 'pulse-ring',
+    publishedAt: '2026-09-25',
     archiveSummary: 'The Pulse Ring takes a different approach to wearable technology, replacing health tracking with gentle reminders to pause. Can simplicity become a premium selling point in a market increasingly dominated by data and features?',
     sliderCategory: 'Funny',
     category: 'Business Analysis & Strategy',
@@ -326,6 +330,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   },
   {
     id: 'chasing-wifey-hole-in-one',
+    publishedAt: '2026-09-25',
     archiveSummary: "A personal golfing pursuit at Nyali Golf & Country Club becomes a retirement joke. After his wife’s hole-in-one, the Goofing Golfer keeps playing, hoping more rounds will finally improve his chances.",
     sliderCategory: 'Funny',
     category: 'Golf & Marriage',
@@ -336,6 +341,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   },
   {
     id: 'missed-hole-in-one',
+    publishedAt: '2026-09-25',
     archiveSummary: "A narrowly missed golf shot invites a convenient change of rules. Golf’s scorecard and business performance indicators share a lesson: redefining success after seeing the result rarely persuades an independent observer.",
     sliderCategory: 'Funny',
     category: 'Golf & Management',
@@ -349,14 +355,12 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   {
     id: 'quickmart-ipo-ksh7-50-is-it-worth-buying',
     commentaryTitle: 'A Good Business. But at What Price?',
-    commentaryCopyHtml: `Quickmart’s growth, profitability and major investors make its IPO an attention-grabbing proposition. But a familiar brand and a growing business are only part of an investment decision.
+    commentaryCopyHtml: `Quickmart's IPO attracted applications for about <strong>2.45 billion shares against 2 billion offered</strong>, and trading began on 12 November 2026. That confirms demand; it does not settle whether KSh7.50 represented attractive value.
 
-<strong>The price matters as much as the business.</strong> What return might shareholders receive at KSh7.50, and how does that compare with the risks and alternative investments?
+My assessment examined the offer-price valuation, prospective dividend yield, shareholder lock-ups and potential selling pressure. The market price after listing is a separate outcome.
 
-My independent assessment examines the valuation, prospective dividend yield, shareholder lock-up arrangements and potential selling pressure. It also considers what the offer could mean for business owners and suppliers.
-
-<strong>Read the full article for the analysis—and my conclusion.</strong>`,
-    archiveSummary: "Quickmart’s IPO raises a straightforward question: is KSh7.50 worth paying? Growth and major investors provide context, while the linked independent assessment examines whether the offer price makes sense. The conclusion stays in the article.",
+<strong>Read the full article for the IPO-era analysis—and my conclusion.</strong>`,
+    archiveSummary: "Quickmart's IPO drew applications for about 2.45 billion shares against 2 billion offered before trading began on 12 November 2026. I examine the KSh7.50 offer-price valuation, prospective returns, lock-ups and risks; the article preserves my IPO-era conclusion.",
     publishedAt: '2026-10-10',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
@@ -364,11 +368,12 @@ My independent assessment examines the valuation, prospective dividend yield, sh
     image: '/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png',
     alt: "Quickmart IPO graphic showing a supermarket aisle and a price tag reading ‘KSh7.50 per share—Is it worth buying?’, with the Murtaza Insights monogram.",
     copy: "Quickmart is growing, profitable and attracting major investors. But does that make KSh7.50 an attractive price?\n\nA good company is not automatically a good investment at any price.\n\nRead the article for my assessment.",
-    destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying',
+    destinationUrl: '/quickmart-ipo-ksh7-50-is-it-worth-buying/',
     ctaLabel: 'Read the Article'
   },
   {
     id: 'mbappe-endorsement-featured',
+    publishedAt: '2026-09-25',
     archiveSummary: 'Kylian Mbappé’s move from Nike to Swiss sportswear brand On includes cash and equity, giving the partnership a different commercial structure. What does it reveal about ownership, incentives and On’s football ambitions?',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',

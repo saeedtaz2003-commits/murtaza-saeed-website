@@ -31,18 +31,18 @@ if (shareImage) pinterest.searchParams.set('media', new URL(shareImage, Astro.si
     <p class="engagement-policy"><a href="/copyright-sharing">Copyright &amp; Sharing Policy</a></p>
   </div>
   <div class="engagement-share-row" aria-label="Share this content">
-    {articleUrl && <a class="engagement-article" href={articleUrl} target={articleNewTab ? '_blank' : undefined} rel={articleNewTab ? 'noopener noreferrer' : undefined}><EngagementIcon name="link" />{articleLabel}</a>}
+    {articleUrl && <a class="engagement-article" href={articleUrl} target={articleNewTab ? '_blank' : undefined} rel={articleNewTab ? 'noopener noreferrer' : undefined}><EngagementIcon name="link" /><span data-article-label>{articleLabel}</span></a>}
     {showComment && !commentBeforeLegal && <a class="engagement-comment" href={commentsFormFor(commentTitle)} target="_blank" rel="noopener noreferrer"><EngagementIcon name="message" />Send a Comment</a>}
     <button type="button" data-share-trigger><EngagementIcon name="share" />Share</button>
     <button type="button" data-copy-link><EngagementIcon name="link" /><span data-copy-label>Copy Link</span></button>
     <span data-share-status aria-live="polite"></span>
   </div>
   <div class="engagement-share-menu" data-share-fallback hidden aria-label="Share options">
-    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(sharedUrl('facebook'))}`} target="_blank" rel="noopener noreferrer">Facebook</a>
-    <a href={`https://wa.me/?text=${encodeURIComponent(sharedUrl('whatsapp'))}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(sharedUrl('linkedin'))}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(sharedUrl('x'))}`} target="_blank" rel="noopener noreferrer">X</a>
-    <a href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodeURIComponent(sharedUrl('email'))}`}>Email</a>
-    <a href={pinterest} target="_blank" rel="noopener noreferrer">Pinterest</a>
+    <a data-share-channel="facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(sharedUrl('facebook'))}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a data-share-channel="whatsapp" href={`https://wa.me/?text=${encodeURIComponent(sharedUrl('whatsapp'))}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a data-share-channel="linkedin" href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(sharedUrl('linkedin'))}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a data-share-channel="x" href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(sharedUrl('x'))}`} target="_blank" rel="noopener noreferrer">X</a>
+    <a data-share-channel="email" href={`mailto:?subject=${encodedTitle}&body=${encodedTitle}%0A${encodeURIComponent(sharedUrl('email'))}`}>Email</a>
+    <a data-share-channel="pinterest" href={pinterest} target="_blank" rel="noopener noreferrer">Pinterest</a>
   </div>
 </div>

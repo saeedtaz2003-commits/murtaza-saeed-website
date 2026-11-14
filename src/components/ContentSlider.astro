@@ -4,10 +4,46 @@ import MemeReferences from './MemeReferences.astro';
 import ContentEngagement from './ContentEngagement.astro';
 import { italicizeBrandHtml } from '../utils/brand-format.mjs';
 import WhatsAppAlerts from './WhatsAppAlerts.astro';
+import { commentsFormFor } from '../data/comments';
 const newest = [...items].sort((a,b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))[0];
 const openingId = newest?.id;
 const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
+const shareState = (item: typeof items[number]) => {
+  const title = item.commentaryTitle ?? item.title;
+  const absoluteUrl = new URL(funnyBizzShareUrl(item.id), Astro.site).toString();
+  const tagged = (source: string) => {
+    const url = new URL(absoluteUrl);
+    url.searchParams.set('utm_source', source);
+    url.searchParams.set('utm_medium', source === 'email' ? 'email' : source === 'whatsapp' ? 'messaging' : ['native_share', 'copy_link'].includes(source) ? 'share' : 'social');
+    url.searchParams.set('utm_campaign', item.id);
+    url.searchParams.set('utm_content', 'meme_share');
+    return url.toString();
+  };
+  const pinterest = new URL('https://www.pinterest.com/pin/create/button/');
+  pinterest.searchParams.set('url', tagged('pinterest'));
+  pinterest.searchParams.set('description', title);
+  pinterest.searchParams.set('media', new URL(item.image, Astro.site).toString());
+  return {
+    title,
+    url: absoluteUrl,
+    native: tagged('native_share'),
+    copy: tagged('copy_link'),
+    comment: commentsFormFor(title),
+    article: item.id === 'papss-kenya-nigeria-shortcut' ? '' : item.destinationUrl ?? '',
+    articleLabel: item.ctaLabel ?? 'Read the Article',
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(tagged('facebook'))}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(tagged('whatsapp'))}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(tagged('linkedin'))}`,
+    x: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(tagged('x'))}`,
+    email: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(title)}%0A${encodeURIComponent(tagged('email'))}`,
+    pinterest: pinterest.toString()
+  };
+};
+const initialItem = orderedItems[0];
+const formatPosted = (date?: string) => date
+  ? new Date(`${date}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+  : '';
 ---
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Biz Buzz slideshow"}>
     <div class="funny-carousel" data-carousel data-default-meme={openingId} data-homepage={homepage ? "true" : "false"}>
@@ -69,7 +105,7 @@ const { homepage = false } = Astro.props;
 
         <div class="funny-commentary-viewport" aria-live="polite">
           {orderedItems.map((item, index) => (
-            <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel data-commentary-id={item.id} aria-hidden={index === 0 ? 'false' : 'true'}>
+            <article class:list={['funny-commentary-panel', index === 0 && 'active']} data-commentary-panel data-commentary-id={item.id} data-action-state={JSON.stringify(shareState(item))} aria-hidden={index === 0 ? 'false' : 'true'}>
               <div class="lighter-copy">
                 {'advertiser' in item && item.advertiser && <p class="funny-advertiser">Sponsored by {item.advertiser}</p>}
                 <h2 set:html={item.commentaryTitle ?? item.titleHtml ?? item.title} />
@@ -88,13 +124,13 @@ const { homepage = false } = Astro.props;
                 {'closing' in item && item.closing && <p>{item.closing}</p>}
                 <MemeReferences item={item} showDisclosure={!['lexus-motomorphosis', 'pulse-ring'].includes(item.id)} />
                 </div>
-                <div class="funny-action-footer">
-                  <ContentEngagement title={item.commentaryTitle ?? item.title} commentTitle={item.commentaryTitle ?? item.title} url={funnyBizzShareUrl(item.id)} shareImage={item.image} class="funny-engagement" articleUrl={item.id === 'papss-kenya-nigeria-shortcut' ? undefined : item.destinationUrl} articleLabel={item.ctaLabel ?? 'Read the Article'} />
-                  {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
-                </div>
               </div>
             </article>
           ))}
+          {initialItem && <div class="funny-action-footer" data-shared-action-footer>
+            <ContentEngagement title={initialItem.commentaryTitle ?? initialItem.title} commentTitle={initialItem.commentaryTitle ?? initialItem.title} url={funnyBizzShareUrl(initialItem.id)} shareImage={initialItem.image} class="funny-engagement" articleUrl={initialItem.id === 'papss-kenya-nigeria-shortcut' ? undefined : initialItem.destinationUrl} articleLabel={initialItem.ctaLabel ?? 'Read the Article'} />
+            {!homepage && <WhatsAppAlerts topic="Biz Buzz" compact />}
+          </div>}
         </div>
       </div>
     </div>
@@ -119,6 +155,7 @@ const { homepage = false } = Astro.props;
           <img class="funny-archive-summary-thumb" src={item.image} alt="" loading="lazy" />
           <span class="funny-archive-summary-text">
             <span class="funny-archive-title" set:html={item.titleHtml ?? item.title} />
+            {item.publishedAt && <time class="funny-archive-date" datetime={item.publishedAt}>Posted {formatPosted(item.publishedAt)}</time>}
             <span class="funny-archive-description">{item.archiveSummary}</span>
           </span>
           <span class="funny-archive-open" aria-hidden="true">↗</span>
@@ -139,6 +176,7 @@ const { homepage = false } = Astro.props;
       const panels = Array.from(carousel.querySelectorAll('[data-commentary-panel]'));
       const archiveButtons = Array.from(document.querySelectorAll('[data-archive-index]'));
       const commentaryViewport = carousel.querySelector('.funny-commentary-viewport');
+      const sharedFooter = carousel.querySelector('[data-shared-action-footer]');
       const screen = carousel.querySelector('.funny-screen-frame');
       const dotsContainer = carousel.querySelector('[data-dots]');
       let sequence = [];
@@ -216,6 +254,34 @@ const { homepage = false } = Astro.props;
         window.scrollTo({ top: Math.max(0, window.scrollY + rect.top - visibleTop), behavior: 'smooth' });
       };
 
+      const updateSharedFooter = () => {
+        if (!(sharedFooter instanceof HTMLElement)) return;
+        const raw = panels[current]?.getAttribute('data-action-state');
+        if (!raw) return;
+        const state = JSON.parse(raw);
+        const engagement = sharedFooter.querySelector('[data-content-share]');
+        if (!(engagement instanceof HTMLElement)) return;
+        engagement.dataset.shareTitle = state.title;
+        engagement.dataset.shareUrl = state.url;
+        engagement.dataset.nativeShareUrl = state.native;
+        engagement.dataset.copyShareUrl = state.copy;
+        const comment = engagement.querySelector('.engagement-comment');
+        if (comment instanceof HTMLAnchorElement) comment.href = state.comment;
+        const article = engagement.querySelector('.engagement-article');
+        if (article instanceof HTMLAnchorElement) {
+          article.hidden = !state.article;
+          if (state.article) article.href = state.article;
+          const label = article.querySelector('[data-article-label]');
+          if (label) label.textContent = state.articleLabel;
+        }
+        for (const channel of ['facebook', 'whatsapp', 'linkedin', 'x', 'email', 'pinterest']) {
+          const link = engagement.querySelector(`[data-share-channel="${channel}"]`);
+          if (link instanceof HTMLAnchorElement) link.href = state[channel];
+        }
+        const fallback = engagement.querySelector('[data-share-fallback]');
+        if (fallback instanceof HTMLElement) fallback.hidden = true;
+      };
+
       const show = (index, reveal = true) => {
         if (!slides.length || index < 0 || index >= slides.length) return;
         current = index;
@@ -240,6 +306,7 @@ const { homepage = false } = Astro.props;
           button.setAttribute('aria-current', active ? 'true' : 'false');
         });
 
+        updateSharedFooter();
 
         window.cancelAnimationFrame(revealFrame);
         if (reveal) revealFrame = window.requestAnimationFrame(revealCommentary);
