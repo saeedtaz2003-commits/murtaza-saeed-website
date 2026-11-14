@@ -154,7 +154,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     sources: [{ label: 'KRA guidance: returns may be pre-populated; taxpayers may confirm or amend', url: 'https://www.kra.go.ke/finance-act-2026-what-it-means-for-you' }],
     illustrationDisclosure: 'AI-assisted editorial illustration.',
     destinationUrl: '/from-paper-to-erp-ai-finance-function/',
-    ctaLabel: 'READ: FROM PAPER TO ERP'
+    ctaLabel: 'Read the Article'
   },
   {
     id: 'papss-kenya-nigeria-shortcut',
