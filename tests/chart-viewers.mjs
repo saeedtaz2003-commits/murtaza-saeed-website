@@ -16,6 +16,6 @@ for(const [src,chart] of Object.entries(mobileCharts)) {
  if(src.includes('price-cut')){assert.equal(find(root,n=>n.name==='polyline').length,2);assert(text(blocks[0]).includes('3% price cut'));assert(text(blocks[0]).includes('5% price cut'));checks+=3;}
 }
 const home=parse(await readFile('dist/index.html','utf8'));
-const nav=find(home,n=>n.name==='nav'&&n.attributes.id==='nav')[0];assert.deepEqual(find(nav,n=>n.name==='a').map(text),['Home','About','Insights','Biz Buzz','Contact','Work With Me','Search']);checks++;
-const footer=find(home,n=>cls(n,'footer-menu'))[0];assert.deepEqual(find(footer,n=>n.name==='a').map(text),['Home','About','Insights','Biz Buzz','Contact','Work With Me','Comments & Feedback']);checks++;
+const nav=find(home,n=>n.name==='nav'&&n.attributes.id==='nav')[0];assert.deepEqual(find(nav,n=>n.name==='a').map(text),['Home','About','Insights','Biz Buzz','Pro Bono','Contact','Work With Me','Search']);checks++;
+const footer=find(home,n=>cls(n,'footer-menu'))[0];assert.deepEqual(find(footer,n=>n.name==='a').map(text),['Home','About','Insights','Biz Buzz','Pro Bono','Contact','Work With Me','Comments & Feedback']);checks++;
 console.log(JSON.stringify({checks,failed:0}));

@@ -5,7 +5,7 @@ const { post, featured = false, compact = false, hideCategory = false, trailingS
 const articleHref = `/${post.data.slug}${trailingSlash ? '/' : ''}`;
 const dateLabel = `${post.data.updated ? 'Last updated: ' : 'Published: '}${(post.data.updated ?? post.data.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'UTC' })}`;
 const insightsCardSlugs = new Set(['from-paper-to-erp-ai-finance-function', 'can-cutting-prices-improve-your-business-performance', 'dont-invent-it-technify-it']);
-const thumbnailImage = insightsCardSlugs.has(post.data.slug) && post.data.articleHero?.image ? post.data.articleHero.image : post.data.image;
+const thumbnailImage = post.data.slug === 'from-paper-to-erp-ai-finance-function' ? '/images/erp-ai-editorial-card.jpg' : insightsCardSlugs.has(post.data.slug) && post.data.articleHero?.image ? post.data.articleHero.image : post.data.image;
 const thumbnailAlt = insightsCardSlugs.has(post.data.slug) && post.data.articleHero?.alt ? post.data.articleHero.alt : post.data.imageAlt;
 const contentLabel = post.data.advertorial
   ? `ADVERTORIAL${post.data.sponsor ? ` · Sponsored by ${post.data.sponsor}` : ''}`
