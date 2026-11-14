@@ -66,3 +66,9 @@ const links = [
 .search-nav-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 @media (max-width: 900px) { .search-nav-label { position: static; width: auto; height: auto; clip-path: none; } }
 </style>
+
+<style>
+  @media (max-width: 900px) {
+    .topbar nav.open .nav-search { align-self: flex-start; width: min(150px, 100%); min-height: 44px; box-sizing: border-box; justify-content: center; }
+  }
+</style>

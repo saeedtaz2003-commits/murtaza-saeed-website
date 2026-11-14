@@ -14,14 +14,14 @@ import Base from '../layouts/Base.astro';
 <a href="/work-with-me/"><h3>Information Systems &amp; Process Improvement</h3><p>Trace why stock figures differ across departments or why month-end reporting depends on manual reconciliations.</p></a>
 </div><div class="actions"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></div></div></section>
 <section class="section wrap listing archive-list"><h2>Latest Insights</h2><p>I publish independent business analysis on <em>Murtaza Insights</em>. These articles give you a sense of how I approach business problems and weigh the options.</p>{recent.map(post => <ArticleCard post={post} compact trailingSlash />)}<p class="view-all-insights"><a class="read" href="/insights/">View all Insights</a></p></section>
-<section class="section wrap about-strip"><h2>About Murtaza</h2><p>Read about my work in manufacturing operations, management reporting and business systems.</p><p class="home-follow-up"><a href="/in-depth-profile/">Read my full profile</a></p></section>
-<section class="section wrap about-strip"><h2>Pro Bono Business Advisory</h2><p>I offer pro bono business advice to selected micro and small businesses already operating in Kenya.</p><p class="home-follow-up"><a href="/pro-bono/">Learn about pro bono assistance</a></p></section>
-<section class="section wrap about-strip"><h2>Biz Buzz</h2><p>Short observations on business, technology and the occasional round of golf.</p><p class="home-follow-up"><a href="/the-lighter-side/">Browse Biz Buzz</a></p></section>
+<section class="section wrap about-strip"><h2>About Murtaza</h2><div class="home-strip-copy"><p>Read about my work in manufacturing operations, management reporting and business systems.</p><p class="home-follow-up"><a href="/in-depth-profile/">Read my full profile</a></p></div></section>
+<section class="section wrap about-strip"><h2>Pro Bono Business Advisory</h2><div class="home-strip-copy"><p>I offer pro bono business advice to selected micro and small businesses already operating in Kenya.</p><p class="home-follow-up"><a href="/pro-bono/">Learn about pro bono assistance</a></p></div></section>
+<section class="section wrap about-strip"><h2>Biz Buzz</h2><div class="home-strip-copy"><p>Short observations on business, technology and the occasional round of golf.</p><p class="home-follow-up"><a href="/the-lighter-side/">Browse Biz Buzz</a></p></div></section>
 <div class="section wrap actions"><a class="button" href="https://forms.gle/AWvix79y4bZUg7rQ6" target="_blank" rel="noopener noreferrer">Discuss an Assignment</a></div>
 </Base>
 
 <style>
   .view-all-insights { text-align: center; margin-block: .75rem; }
-  .about-strip > p:not(.home-follow-up) { margin-bottom: 0; }
-  .home-follow-up { margin-top: .35rem; }
+  #content .home-strip-copy > p:first-child { margin-bottom: 0; }
+  #content .home-strip-copy > .home-follow-up { margin-top: .35rem; }
 </style>

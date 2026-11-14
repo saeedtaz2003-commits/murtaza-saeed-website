@@ -107,22 +107,6 @@
 #content .funny-commentary-panel[data-commentary-id="pulse-ring"] .meme-references { font-size:12px; line-height:1.35; }
 #content .funny-commentary-panel[data-commentary-id="pulse-ring"] .lighter-copy > h2 { overflow-wrap:break-word; }
 
-/* Mobile Biz Buzz: the article follows the commentary, ahead of legal/share controls. */
-@media (max-width:760px) {
- #content .funny-action-footer .content-engagement:has(.engagement-article) {
-  display:grid; grid-template-columns:auto auto auto; justify-content:center;
-  align-items:center; gap:5px;
- }
- #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row { display:contents; }
- #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-article {
-  grid-column:1 / -1; grid-row:1; justify-self:center; max-width:100%;
- }
- #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-legal-row {
-  grid-column:1 / -1; grid-row:2;
- }
- #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row > :is(.engagement-comment,button) { grid-row:3; }
-}
-
 /* Mbappé's approved four-paragraph commentary shares the compact Biz Buzz treatment. */
 #content .funny-commentary-panel[data-commentary-id="mbappe-endorsement-featured"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
 #content .funny-commentary-panel[data-commentary-id="mbappe-endorsement-featured"] .funny-commentary-text a { font:inherit; color:var(--purple,#7447d7); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em; }
@@ -146,15 +130,16 @@
 
 #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .funny-commentary-text > p { font-size:17px; line-height:1.35; margin:0 0 8px; }
 
-/* At narrow widths the three share actions cannot fit on one row. */
-@media(max-width:430px) {
- #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .content-engagement:has(.engagement-article) {
-  grid-template-columns:repeat(2,minmax(0,1fr)); justify-items:center;
+
+/* Let actions flow at narrow widths without changing desktop order. */
+@media (max-width:760px) {
+ #content .funny-action-footer .content-engagement:has(.engagement-article) {
+  display:flex; flex-flow:row wrap; align-items:center; justify-content:center;
  }
- #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .engagement-share-row > .engagement-comment {
-  grid-column:1 / -1;
- }
- #content .funny-commentary-panel[data-commentary-id="executive-business-check-up"] .engagement-share-row > button {
-  grid-row:4;
- }
+ #content .funny-action-footer .content-engagement:has(.engagement-article) .engagement-share-row { display:contents; }
+ #content .funny-action-footer .engagement-article { order:-2; margin-inline:max(0px,calc((100% - 210px)/2)); width:min(210px,100%); }
+ #content .funny-action-footer .engagement-legal-row { order:-1; width:100%; flex-wrap:wrap; text-align:center; }
+ #content .funny-action-footer .engagement-share-row :is(a,button) { white-space:nowrap; width:auto; max-width:100%; min-height:44px; height:auto; padding:.4rem .65rem; }
+ #content .funny-action-footer .engagement-share-row .engagement-article { width:min(210px,100%); }
+ #content .funny-action-footer .biz-buzz-cta { white-space:normal; height:auto!important; min-height:44px!important; text-align:center; }
 }

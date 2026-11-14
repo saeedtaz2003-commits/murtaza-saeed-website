@@ -114,7 +114,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     alt: 'Microscope examining a glass slide beside an open annual business report with rising performance charts, illustrating a deeper business check-up.',
     commentaryCopyHtml: executiveCheckUpCommentary,
     copy: executiveCheckUpCommentary.replace(/<[^>]*>/g, ''),
-    archiveSummary: 'An annual report can look healthy while concealing weak capital returns or fragile cash generation. A business improvement scorecard, illustrated by four companies, identifies what owners and CEOs should examine more closely.',
+    archiveSummary: 'Rising sales and profits can still hide weak capital returns. My five-dimension scorecard shows owners and CEOs what to examine more closely.',
     seoTitle: 'Executive Business Check-Up | Annual Report Analysis | Murtaza Insights',
     metaDescription: 'A stronger annual report does not always mean a stronger business. Examine earnings quality, capital productivity and cash flow through real company examples.',
     illustrationDisclosure: 'Conceptual illustration.',
@@ -155,7 +155,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     sources: [{ label: 'KRA guidance: returns may be pre-populated; taxpayers may confirm or amend', url: 'https://www.kra.go.ke/finance-act-2026-what-it-means-for-you' }],
     illustrationDisclosure: 'AI-assisted editorial illustration.',
     destinationUrl: '/from-paper-to-erp-ai-finance-function/',
-    ctaLabel: 'Read the Article'
+    ctaLabel: 'READ: FROM PAPER TO ERP'
   },
   {
     id: 'papss-kenya-nigeria-shortcut',
@@ -201,7 +201,7 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
   "publishedAt": "2026-10-04",
   "sliderCategory": "Featured Article",
   "category": "Business & Finance",
-  "title": "From Paper to ERP: Where Can AI Help?",
+  "title": "AI in Finance: What Works at Each Stage?",
   commentaryTitle: "AI in Finance: What Works at Each Stage?",
   commentaryCopyHtml: paperCommentary,
   "image": "/images/ai-si-satire-business-technology.jpg",
@@ -332,14 +332,14 @@ Its June 2026 report lists <strong>31 reachable countries and over 440 financial
     title: "She Did It in One. I’m Still Trying.",
     image: '/images/nyali-golf-club-chasing-wifey-hole-in-one.webp',
     alt: 'Goofing Golfer cartoon set at Nyali Golf & Country Club, showing a husband pursuing his first hole-in-one after his wife achieved hers.',
-    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged by the mathematical certainty that every additional round gives me another opportunity. Retirement, fortunately, provides time for extensive fieldwork.'
+    copy: 'My wife has already achieved golf’s ultimate prize—a hole-in-one. I remain in pursuit, encouraged that every additional round gives me another chance. Semi-retirement, fortunately, provides time for extensive fieldwork.'
   },
   {
     id: 'missed-hole-in-one',
     archiveSummary: "A narrowly missed golf shot invites a convenient change of rules. Golf’s scorecard and business performance indicators share a lesson: redefining success after seeing the result rarely persuades an independent observer.",
     sliderCategory: 'Funny',
     category: 'Golf & Management',
-    title: "That Counts as a Hole-in-One!",
+    title: "When the Scorecard Changes",
     commentaryTitle: 'When the Scorecard Changes',
     image: '/images/nyali-golf-club-missed-hole-in-one-meme.webp',
     alt: 'Golf cartoon set at Nyali Golf & Country Club, showing a ball narrowly missing the hole while a crowned lemur humorously declares that it counts as a hole-in-one.',
@@ -360,7 +360,7 @@ My independent assessment examines the valuation, prospective dividend yield, sh
     publishedAt: '2026-10-10',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
-    title: "Quickmart IPO at KSh7.50: Is It Worth Buying?",
+    title: "A Good Business. But at What Price?",
     image: '/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png',
     alt: "Quickmart IPO graphic showing a supermarket aisle and a price tag reading ‘KSh7.50 per share—Is it worth buying?’, with the Murtaza Insights monogram.",
     copy: "Quickmart is growing, profitable and attracting major investors. But does that make KSh7.50 an attractive price?\n\nA good company is not automatically a good investment at any price.\n\nRead the article for my assessment.",
@@ -372,8 +372,8 @@ My independent assessment examines the valuation, prospective dividend yield, sh
     archiveSummary: 'Kylian Mbappé’s move from Nike to Swiss sportswear brand On includes cash and equity, giving the partnership a different commercial structure. What does it reveal about ownership, incentives and On’s football ambitions?',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
-    title: 'A Win-Win for Mbappé and ON?',
-    commentaryTitle: 'A Win-Win for Mbappé and ON?',
+    title: 'A Win-Win for Mbappé and On?',
+    commentaryTitle: 'A Win-Win for Mbappé and On?',
     image: '/images/mbappe-approved-monogram-biz-buzz.jpg',
     alt: 'AI-assisted illustration of Kylian Mbappé seated between a Nike sign with a red cross and an On sign with a green tick. The headline reads “MBAPPÉ LEAVES NIKE FOR ON” and the bottom caption asks “WHAT IS THE REASON?”',
     commentaryCopyHtml: mbappeCommentary,

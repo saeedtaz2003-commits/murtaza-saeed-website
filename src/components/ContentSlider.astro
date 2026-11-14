@@ -12,7 +12,7 @@ const { homepage = false } = Astro.props;
   <section id="funny-slider" class="section wrap funny-carousel-section" aria-label={homepage ? "Articles, cartoons and offers slideshow" : "Biz Buzz slideshow"}>
     <div class="funny-carousel" data-carousel data-default-meme={openingId} data-homepage={homepage ? "true" : "false"}>
       <p class="funny-slider-note">
-        <strong>{homepage ? "Articles, Cartoons & Offers" : "Biz Buzz Slideshow"}</strong> — swipe or use the arrows to browse. Tap an article or offer to open it.
+        <strong>{homepage ? "Articles, Cartoons & Offers" : "Biz Buzz Slideshow"}</strong> — {homepage ? "Swipe or use the arrows to browse. Tap an article or offer to open it." : "Tap an item to open it."}
       </p>
 
       <div class="funny-viewer-grid">
