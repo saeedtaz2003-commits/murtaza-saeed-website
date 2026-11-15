@@ -6,7 +6,8 @@ import { italicizeBrandHtml } from '../utils/brand-format.mjs';
 import WhatsAppAlerts from './WhatsAppAlerts.astro';
 import { commentsFormFor } from '../data/comments';
 const newest = [...items].sort((a,b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''))[0];
-const openingId = newest?.id;
+const featuredId = 'quickmart-ipo-ksh7-50-is-it-worth-buying';
+const openingId = items.find(item => item.id === featuredId)?.id ?? newest?.id;
 const orderedItems = [...items].sort((a,b) => Number(b.id === openingId) - Number(a.id === openingId));
 const { homepage = false } = Astro.props;
 const shareState = (item: typeof items[number]) => {
