@@ -344,6 +344,6 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 <p>That question applies far beyond supermarkets.</p>
 
-<p><strong>Disclosure (October 2026):</strong> When this article was first published, I did not hold Quickmart shares and did not apply for shares in its IPO. My current shareholding position has not yet been reconfirmed for this update.</p>
+<p><strong>Disclosure:</strong> I do not hold shares in Quickmart and did not apply for shares in its IPO.</p>
 
 <p><strong>Disclaimer:</strong> This article is business analysis and commentary for general information. It is not personal investment advice.</p>
