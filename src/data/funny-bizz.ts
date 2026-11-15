@@ -356,7 +356,7 @@ export const funnyBizzItems: readonly FunnyBizzItem[] = [
     commentaryCopyHtml: "When MPs questioned Quickmart’s IPO and called for a special audit, I briefly wondered whether my earlier reservations were justified. <strong>“I told you so!”</strong>\n\nThen the share price rose above the KSh7.50 IPO price. My confidence wavered. <strong>“Did I get it wrong?”</strong>\n\nOf course, neither development proves anything about my original valuation. Parliamentary concerns are not findings of wrongdoing, and a higher market price doesn't necessarily mean I was wrong.\n\n<strong>My investment conclusion remains unchanged.</strong> I've added brief updates covering both developments to the original article.",
     metaDescription: "My reaction to the call for a Quickmart IPO audit and to the share price rising above the offer price.",
     archiveSummary: "I revisit my reaction to the call for an IPO audit and to the share price rising above the offer price. My investment conclusion remains unchanged.",
-    publishedAt: '2026-10-10',
+    publishedAt: '2026-11-15',
     sliderCategory: 'Featured Article',
     category: 'Business Analysis & Strategy',
     title: "Quickmart IPO: My Mixed Emotions",
