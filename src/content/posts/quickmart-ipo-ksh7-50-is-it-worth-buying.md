@@ -6,8 +6,8 @@ category: "Business Analysis & Strategy"
 summary: "Quickmart is growing, profitable and attracting major investors. But at KSh7.50, does the potential return justify the risks? A closer look at the valuation, dividends, growth plans and IPO structure."
 seoTitle: "Quickmart IPO: Valuation, Returns and Investment Risks"
 metaDescription: "Quickmart is growing, profitable and attracting major investors. But at KSh7.50, does the potential return justify the risks? A closer look at the valuation, dividends, growth plans and IPO structure."
-image: "/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png"
-imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
+image: "/images/quickmart-ipo-share-sale-no-fresh-capital-card.jpg"
+imageAlt: "Quickmart editorial card contrasting a KSh15 billion IPO share sale with zero fresh capital for the company, and asking what the deal means for investors."
 
 updated: "2026-11-15"
 sourcesTitle: "Source Documents"
@@ -23,40 +23,18 @@ sources: [{"text":"Quickmart IPO Information Memorandum — financial results, f
 <p><strong>So, does Quickmart’s IPO at KSh7.50 offer investors an attractive return for the risks involved?</strong></p>
 
 <section aria-labelledby="quickmart-update-nov2026">
-<h2 id="quickmart-update-nov2026">UPDATE — 15 November 2026</h2>
-<h3>Quickmart Lists After Parliament Calls for Special Audit</h3>
+<h2 id="quickmart-update-nov2026">Update — 15 November 2026</h2>
+<p><strong>Quickmart Lists Amid Parliamentary Scrutiny</strong></p>
 
-<p>Quickmart’s KSh15 billion IPO attracted applications worth KSh18.41 billion, exceeding the amount offered by 22.7%. Trading began on the Nairobi Securities Exchange on 12 November 2026.</p>
+<p>Quickmart's KSh15 billion IPO was subscribed 122.7%. Shares closed at KSh8.26 on 13 November, 10.1% above the IPO price.</p>
 
-<p>Ahead of the listing, the National Assembly’s Public Investments Committee on Commercial Affairs and Energy, chaired by David Pkosing, questioned the Capital Markets Authority (CMA) over its approval of the share sale.</p>
+<p><a href="https://murtazainsights.com/quickmart-ipo-ksh7-50-is-it-worth-buying/#1-the-dividend-does-not-compensate-me-sufficiently">The higher share price reduces the prospective dividend yield</a>.</p>
 
-<h4>What Parliament wants examined</h4>
+<p>MPs have called for a special audit of the IPO, raising questions about <a href="https://murtazainsights.com/quickmart-ipo-ksh7-50-is-it-worth-buying/#what-quickmarts-ipo-tells-business-owners-and-suppliers">cash flows and supplier obligations</a>. No wrongdoing has been established.</p>
 
-<p>MPs called for a special audit covering the ownership and financial arrangements behind the transaction, the circumstances of the existing investors’ partial exit, and the CMA’s approval process.</p>
+<p>Quickmart has also reaffirmed plans to expand from 72 to 125 stores by 2030, primarily through internally generated cash. <a href="https://murtazainsights.com/quickmart-ipo-ksh7-50-is-it-worth-buying/#4-i-am-uncomfortable-with-the-combination-of-expansion-and-very-high-dividends">My concerns about financing expansion alongside very high dividends remain</a>.</p>
 
-<p>They also questioned whether the regulator had adequately assessed Quickmart’s financial position, operating cash flows and supplier obligations.</p>
-
-<p>At this stage, a special audit has been demanded but not confirmed as formally commissioned. No wrongdoing has been established.</p>
-
-<p>The CMA defended its approval, saying the offer had met the required regulatory thresholds and that Quickmart is not heavily reliant on debt.</p>
-
-<h4>What this means for investors</h4>
-
-<p>The IPO was a sale of two billion existing shares by Sokoni Retail Kenya. The gross proceeds go to the selling shareholder, not to Quickmart.</p>
-
-<p>There is nothing inherently objectionable about shareholders selling part of their investment. But Quickmart receives no fresh equity to finance its expansion, so questions about cash generation, supplier credit and how future growth will be funded remain relevant.</p>
-
-<h4>What has changed since my October assessment?</h4>
-
-<p>Quickmart shares closed at KSh8.90 on the first trading day and KSh8.26 on 13 November, which is <strong>10.1% above the KSh7.50 IPO price</strong>. Investors who subscribed at the IPO price and still hold their shares therefore have a paper gain.</p>
-
-<p>At KSh8.26, the targeted FY2026 dividend of about KSh0.50 per share, assuming it is declared, would give a prospective <strong>net yield of about 5.8%</strong> for a qualifying resident investor, after 5% withholding tax. That compares with 6.3% at the IPO price and the 7.7% net yield on the 364-day Treasury bill referenced in my October analysis. The higher share price has widened the income gap.</p>
-
-<p>My decision not to apply at KSh7.50 was based on the return I required for the risks involved. It was not a prediction that the share price would fall after listing.</p>
-
-<p>The positive market response does not invalidate that assessment. Equally, Parliament’s concerns do not show that Quickmart is financially unsound.</p>
-
-<p><strong>My October investment assessment remains unchanged.</strong> What matters is still whether Quickmart can deliver its forecast earnings, sustain its intended dividends and finance expansion without weakening its financial position.</p>
+<p><a href="https://murtazainsights.com/quickmart-ipo-ksh7-50-is-it-worth-buying/#my-decision"><strong>My original investment conclusion remains unchanged.</strong></a></p>
 </section>
 
 <section class="at-a-glance editorial-summary" aria-labelledby="article-at-a-glance"><p class="eyebrow" id="article-at-a-glance">AT A GLANCE</p><ul>
