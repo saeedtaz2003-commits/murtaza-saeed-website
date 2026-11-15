@@ -9,10 +9,12 @@ metaDescription: "Quickmart is growing, profitable and attracting major investor
 image: "/images/quickmart-ipo-ksh7-50-is-it-worth-buying.png"
 imageAlt: "Quickmart IPO KSh7.50 per share – Is it worth buying?"
 
-updated: "2026-10-13"
+updated: "2026-11-15"
 sourcesTitle: "Source Documents"
-sources: [{"text": "Quickmart IPO Information Memorandum — financial results, forecasts, dividend policy, offer structure and lock-up terms (official IPO website: https://ipo.quickmart.co.ke/).", "url": "https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/QUICKMART-PLC-INFORMATION-MEMORANDUM_OCT2026_FINAL.pdf"}, {"text": "Quickmart Offer Price Valuation Parameters (Stanbic, October 2026): https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/Quick-Mart-PLC-Offer-Price-Valuation-Parameters_2026.10.04_vCirc.pdf", "url": "https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/Quick-Mart-PLC-Offer-Price-Valuation-Parameters_2026.10.04_vCirc.pdf"}, {"text": "Central Bank of Kenya — 364-day Treasury Bill Auction Results, 8 October 2026: https://www.centralbank.go.ke/", "url": "https://www.centralbank.go.ke/bills-bonds/treasury-bills-average-rates/"}, {"text": "Central Bank of Kenya — August 2026 Infrastructure Bond Auction Results: https://www.centralbank.go.ke/", "url": "https://www.centralbank.go.ke/uploads/historical_treasury_bond_results/1214594764_RESULTS%20IFB1-2019-016%20IFB1-2021-018%20AND%20IFB1-2021-021%20DATED%2017-08-2026.pdf"}, {"text": "Quickmart FY2025/H1 2026 financial information: FY2025 revenue KSh50.43bn; reported PAT KSh1.51bn; adjusted PAT KSh1.71bn; June 2026 borrowings KSh6.8m; structurally negative working capital about KSh4bn.", "url": "https://ipo.quickmart.co.ke/"}]
+sources: [{"text":"Quickmart IPO Information Memorandum — financial results, forecasts, dividend policy, offer structure and lock-up terms (official IPO website: https://ipo.quickmart.co.ke/).","url":"https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/QUICKMART-PLC-INFORMATION-MEMORANDUM_OCT2026_FINAL.pdf"},{"text":"Quickmart Offer Price Valuation Parameters (Stanbic, October 2026): https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/Quick-Mart-PLC-Offer-Price-Valuation-Parameters_2026.10.04_vCirc.pdf","url":"https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/Quick-Mart-PLC-Offer-Price-Valuation-Parameters_2026.10.04_vCirc.pdf"},{"text":"Central Bank of Kenya — 364-day Treasury Bill Auction Results, 8 October 2026: https://www.centralbank.go.ke/","url":"https://www.centralbank.go.ke/bills-bonds/treasury-bills-average-rates/"},{"text":"Central Bank of Kenya — August 2026 Infrastructure Bond Auction Results: https://www.centralbank.go.ke/","url":"https://www.centralbank.go.ke/uploads/historical_treasury_bond_results/1214594764_RESULTS%20IFB1-2019-016%20IFB1-2021-018%20AND%20IFB1-2021-021%20DATED%2017-08-2026.pdf"},{"text":"Quickmart FY2025/H1 2026 financial information: FY2025 revenue KSh50.43bn; reported PAT KSh1.51bn; adjusted PAT KSh1.71bn; June 2026 borrowings KSh6.8m; structurally negative working capital about KSh4bn.","url":"https://ipo.quickmart.co.ke/"},{"text":"Capital FM — MPs demand special audit of Quickmart share sale (11 November 2026)","url":"https://capitalfm.africa/mps-demand-special-audit-of-quickmart-share-sale-over-investor-fears/"},{"text":"Capital FM — Investor-protection concerns as Parliament questions CMA (11 November 2026)","url":"https://capitalfm.africa/quickmart-sh15bn-share-sale-raises-investor-protection-concerns-as-parliament-questions-cma/"},{"text":"The Standard — Parliament calls for special audit (12 November 2026)","url":"https://www.standardmedia.co.ke/business/article/2001562074/parliament-calls-for-special-audit-into-quickmart-share-sale"},{"text":"Business Daily — Quickmart first trading day (12 November 2026)","url":"https://www.businessdailyafrica.com/bd/markets/capital-markets/quickmart-investors-gain-sh5-6bn-on-first-day-of-trading-5668900"},{"text":"Business Daily — Quickmart second trading day (14 November 2026)","url":"https://www.businessdailyafrica.com/bd/markets/capital-markets/quickmart-shares-second-day-5670342"},{"text":"Quickmart — Official IPO results and final allocation (6 November 2026)","url":"https://corporate.quickmart.co.ke/2026/11/06/quickmart-announces-share-allocation-following-oversubscribed-kes-15-billion-ipo/"},{"text":"Quickmart — Supplementary Information Memorandum (23 October 2026)","url":"https://ipo.quickmart.co.ke/wp-content/uploads/2026/10/QUICK_MART_PLC-SUPPLEMENTARY-INFORMATION-MEMORANDUM.pdf"}]
 ---
+
+<p><strong>Editor’s note (15 November 2026):</strong> This article was first published on 7 October 2026 and revised on 13 October, before the IPO closed. The 15 November update records subsequent events; references affected by completion of the offer have been updated. The original October valuation analysis and investment judgement are preserved.</p>
 
 <p>Quickmart is one of Kenya’s largest supermarket businesses. It has scale, growing profits and ambitious expansion plans.</p>
 
@@ -20,14 +22,51 @@ sources: [{"text": "Quickmart IPO Information Memorandum — financial results, 
 
 <p><strong>So, does Quickmart’s IPO at KSh7.50 offer investors an attractive return for the risks involved?</strong></p>
 
+<section aria-labelledby="quickmart-update-nov2026">
+<h2 id="quickmart-update-nov2026">UPDATE — 15 November 2026</h2>
+<h3>Quickmart Lists After Parliament Calls for Special Audit</h3>
+
+<p>Quickmart’s KSh15 billion IPO attracted applications worth KSh18.41 billion, exceeding the amount offered by 22.7%. Trading began on the Nairobi Securities Exchange on 12 November 2026.</p>
+
+<p>Ahead of the listing, the National Assembly’s Public Investments Committee on Commercial Affairs and Energy, chaired by David Pkosing, questioned the Capital Markets Authority (CMA) over its approval of the share sale.</p>
+
+<h4>What Parliament wants examined</h4>
+
+<p>MPs called for a special audit covering the ownership and financial arrangements behind the transaction, the circumstances of the existing investors’ partial exit, and the CMA’s approval process.</p>
+
+<p>They also questioned whether the regulator had adequately assessed Quickmart’s financial position, operating cash flows and supplier obligations.</p>
+
+<p>At this stage, a special audit has been demanded but not confirmed as formally commissioned. No wrongdoing has been established.</p>
+
+<p>The CMA defended its approval, saying the offer had met the required regulatory thresholds and that Quickmart is not heavily reliant on debt.</p>
+
+<h4>What this means for investors</h4>
+
+<p>The IPO was a sale of two billion existing shares by Sokoni Retail Kenya. The gross proceeds go to the selling shareholder, not to Quickmart.</p>
+
+<p>There is nothing inherently objectionable about shareholders selling part of their investment. But Quickmart receives no fresh equity to finance its expansion, so questions about cash generation, supplier credit and how future growth will be funded remain relevant.</p>
+
+<h4>What has changed since my October assessment?</h4>
+
+<p>Quickmart shares closed at KSh8.90 on the first trading day and KSh8.26 on 13 November, which is <strong>10.1% above the KSh7.50 IPO price</strong>. Investors who subscribed at the IPO price and still hold their shares therefore have a paper gain.</p>
+
+<p>At KSh8.26, the targeted FY2026 dividend of about KSh0.50 per share, assuming it is declared, would give a prospective <strong>net yield of about 5.8%</strong> for a qualifying resident investor, after 5% withholding tax. That compares with 6.3% at the IPO price and the 7.7% net yield on the 364-day Treasury bill referenced in my October analysis. The higher share price has widened the income gap.</p>
+
+<p>My decision not to apply at KSh7.50 was based on the return I required for the risks involved. It was not a prediction that the share price would fall after listing.</p>
+
+<p>The positive market response does not invalidate that assessment. Equally, Parliament’s concerns do not show that Quickmart is financially unsound.</p>
+
+<p><strong>My October investment assessment remains unchanged.</strong> What matters is still whether Quickmart can deliver its forecast earnings, sustain its intended dividends and finance expansion without weakening its financial position.</p>
+</section>
+
 <section class="at-a-glance editorial-summary" aria-labelledby="article-at-a-glance"><p class="eyebrow" id="article-at-a-glance">AT A GLANCE</p><ul>
 <li><strong>The business:</strong> Quickmart has grown to 72 stores, with annual revenue exceeding KSh50 billion and rising profits. But supermarket margins remain thin.</li>
 <li><strong>The valuation:</strong> KSh7.50 values Quickmart at KSh30 billion — approximately 20 times reported FY2025 earnings, or 17.6 times adjusted earnings. On management&#x27;s FY2026 profit forecast, the reported-earnings multiple falls to about 14.3 times, below the 17.2 times average for selected international grocery retailers. But the forecast requires approximately 39% profit growth.</li>
-<li><strong>The dividend:</strong> The targeted FY2026 dividend of approximately KSh0.50 per share produces an estimated net yield of 6.3% for a qualifying resident investor, below the referenced 364-day Treasury bill yield of approximately 7.7% net.</li>
+<li><strong>The dividend:</strong> At the October 2026 IPO price of KSh7.50, the targeted FY2026 dividend of approximately KSh0.50 per share, assuming it is declared, implied an estimated net yield of 6.3% for a qualifying resident investor, below the approximately 7.7% net Treasury bill yield referenced in my original October analysis.</li>
 <li><strong>The growth requirement:</strong> The lower initial income yield could be offset by dividend and share-price growth. But Quickmart must deliver substantial improvements in profitability to support that prospect.</li>
 <li><strong>The cash question:</strong> Quickmart plans further expansion while targeting very high dividend distributions. Dividends, new stores and working-capital requirements all compete for cash.</li>
-<li><strong>The IPO structure:</strong> Investors are buying existing shares. The IPO proceeds go to the selling shareholder, not into Quickmart to fund expansion.</li>
-<li><strong>The additional selling risk:</strong> Following a fully subscribed IPO, 800 million retained shares — representing 20% of Quickmart — would be outside the 24-month lock-up, potentially creating additional market supply.</li>
+<li><strong>The IPO structure:</strong> Investors bought existing shares. Gross IPO proceeds went to the selling shareholder, not into Quickmart to fund expansion.</li>
+<li><strong>The additional selling risk:</strong> Following completion, 800 million retained shares — representing 20% of Quickmart — are outside the 24-month lock-up, potentially creating additional market supply.</li>
 </ul><p class="editorial-bottom-line"><strong>BOTTOM LINE</strong><br />
 Quickmart may be a good business. But at KSh7.50, I do not think the prospective return adequately compensates me for the risks I would be taking.</p></section>
 
@@ -39,7 +78,7 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 <p>That is not unattractive in isolation. But investments do not exist in isolation.</p>
 
-<p>The referenced 364-day Kenya Treasury bill offers approximately 7.7% net. So I would be accepting the risks of an equity investment while initially receiving less income than from a government security.</p>
+<p>At the time of my October analysis, the referenced 364-day Kenya Treasury bill offered approximately 7.7% net. So I would be accepting the risks of an equity investment while initially receiving less income than from a government security.</p>
 
 ### Figure 1. Indicative Annual Income Yields
 
@@ -155,37 +194,39 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 <p>At KSh7.50, I do not think I am being given enough margin for that uncertainty.</p>
 
-## 5. None of my KSh7.50 goes into Quickmart
+## 5. None of my KSh7.50 went into Quickmart
 
-<p>This IPO does not raise new equity capital for Quickmart.</p>
+<p>The completed IPO did not raise new equity capital for Quickmart.</p>
 
-<p>The two billion shares being offered already exist.</p>
+<p>The two billion shares sold were existing shares.</p>
 
-<p>If fully sold at KSh7.50, gross proceeds would be KSh15 billion, with estimated net proceeds of approximately KSh14.4 billion going to Sokoni Retail Kenya, the selling shareholder.</p>
+<p>At KSh7.50 per share, the sale generated gross proceeds of KSh15 billion. The offer documents estimated net proceeds of approximately KSh14.4 billion, accruing to Sokoni Retail Kenya, the selling shareholder. That net figure is an offer-document estimate, not a subsequently verified settlement amount.</p>
 
 <p>There is nothing inherently wrong with an existing shareholder realising part of its investment.</p>
 
 <p>But it changes how I view the proposition.</p>
 
-<p>My investment would buy an interest in the existing business. It would not inject fresh capital into Quickmart to finance the expansion on which part of my prospective return depends.</p>
+<p>My investment would have bought an interest in the existing business. It would not have injected fresh capital into Quickmart to finance the expansion on which part of my prospective return depended.</p>
 
-<p>Future growth therefore has to be financed principally through Quickmart&#x27;s own cash generation and other available funding.</p>
+<p>Future growth therefore has to be financed principally through Quickmart's own cash generation and other available funding.</p>
 
 <p>That makes the previous question about dividends, working capital and expansion even more relevant.</p>
 
-## 6. IFC's investment is reassuring — but it doesn't change my price
+## 6. Cornerstone investors are reassuring — but they don't change my price
 
-<p>IFC has conditionally agreed to invest approximately KSh1.94 billion, potentially acquiring around 6.45% of Quickmart at the same KSh7.50 price.</p>
+<p>The completed IPO confirms the participation of four cornerstone investors: the International Finance Corporation (IFC), 337 Frontier Capital, RWC Asset Management and the UK Government-backed MOBILIST programme. Together they were allocated approximately 864.2 million shares, representing 21.6% of Quickmart's issued share capital.</p>
 
-<p>I regard that as positive.</p>
+<p>IFC received 258 million shares at KSh7.50 each, an investment of <strong>approximately KSh1.9 billion</strong> and 6.45% of Quickmart's issued share capital.</p>
 
-<p>IFC has resources and due-diligence capabilities far beyond those of an individual retail investor.</p>
+<p>Separately, MOBILIST received approximately 173.3 million shares, worth <strong>approximately KSh1.3 billion</strong> and representing 4.33% of Quickmart. It had applied for 259.8 million shares but accepted a reduced allocation to accommodate other investors.</p>
 
-<p>But IFC and I do not necessarily have the same investment objectives, time horizon, portfolio or appetite for risk.</p>
+<p>The other two cornerstone investors were 337 Frontier Capital, allocated 259.7 million shares, and RWC Asset Management, allocated 173.15 million shares.</p>
 
-<p>Its participation gives me greater confidence in the company and the transaction.</p>
+<p>I regard these institutional investments as positive. They bring investment assessment capabilities and resources beyond those available to most individual shareholders.</p>
 
-<p>It does not establish that KSh7.50 offers the return I require.</p>
+<p>However, institutional investors and I may have different investment objectives, time horizons and required returns.</p>
+
+<p><strong>Their participation provides reassurance. It does not establish that KSh7.50 offers the return I require.</strong></p>
 
 ## 7. Kenya's supermarket history makes me cautious about cash
 
@@ -201,15 +242,13 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 ## 8. Could another 800 million shares come onto the market?
 
-<p>There is another reason for my caution: the possibility of additional shares being sold after listing.</p>
+<p>Following completion of the IPO, Sokoni Retail Kenya retained two billion shares, representing 50% of Quickmart's issued share capital.</p>
 
-<p>If the IPO is fully subscribed, Sokoni Retail Kenya will retain two billion shares.</p>
+<p>Of those shares, 1.2 billion are subject to a 24-month lock-up, subject to the stated exceptions.</p>
 
-<p>Only 60% of that remaining holding — 1.2 billion shares — is subject to a 24-month lock-up, subject to the stated exceptions.</p>
+<p>The remaining 800 million shares, equivalent to 20% of Quickmart's issued share capital, are outside that lock-up.</p>
 
-<p>The remaining 800 million shares, equivalent to 20% of Quickmart&#x27;s issued share capital, would therefore be outside that lock-up.</p>
-
-<p>At the IPO price of KSh7.50, they have an indicative value of KSh6 billion.</p>
+<p>At the IPO price of KSh7.50, they had an indicative value of KSh6 billion.</p>
 
 <p>No additional sale has been announced. The absence of a lock-up does not mean the shares will be sold.</p>
 
@@ -217,15 +256,15 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 <p>It could also improve trading liquidity. Because these are existing shares, such a sale would not dilute shareholders.</p>
 
-<p>At KSh7.50, that potential selling overhang is another risk I must weigh against the prospective return.</p>
+<p>At the IPO price, this potential selling overhang was another risk I weighed against the prospective return.</p>
 
-## So why am I not buying?
+## Why I did not apply
 
 <p>It is not because I think Quickmart is a bad company.</p>
 
 <p>Quite the opposite.</p>
 
-<p>It is already a substantial Kenyan consumer business, with more than KSh50 billion in annual sales, growing profits, little conventional borrowing, expansion potential and the reassurance of IFC&#x27;s proposed investment.</p>
+<p>It is already a substantial Kenyan consumer business, with more than KSh50 billion in annual sales, growing profits, little conventional borrowing, expansion potential and the reassurance of confirmed institutional investment.</p>
 
 <p>Its forward earnings valuation also compares reasonably with selected international supermarket peers.</p>
 
@@ -241,11 +280,13 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 ## My decision
 
-<p><strong>I am not applying for Quickmart shares at KSh7.50.</strong></p>
+<p><strong>When I assessed the IPO in October 2026, I decided not to apply for Quickmart shares at KSh7.50.</strong></p>
 
 <p>That is a decision about price and the return I require — not a prediction that Quickmart will perform badly or that its share price will fall after listing.</p>
 
 ### What would change my mind?
+
+<p>The November update above explains how the income comparison changes at the post-listing price of KSh8.26; KSh6.20 remains my original October reference price.</p>
 
 <p>At a prospective dividend of KSh0.50 per share, the net dividend after 5% withholding tax would be approximately KSh0.475.</p>
 
@@ -303,6 +344,6 @@ Quickmart may be a good business. But at KSh7.50, I do not think the prospective
 
 <p>That question applies far beyond supermarkets.</p>
 
-<p><strong>Disclosure:</strong> I do not hold shares in Quickmart and am not applying for shares in its IPO.</p>
+<p><strong>Disclosure (October 2026):</strong> When this article was first published, I did not hold Quickmart shares and did not apply for shares in its IPO. My current shareholding position has not yet been reconfirmed for this update.</p>
 
 <p><strong>Disclaimer:</strong> This article is business analysis and commentary for general information. It is not personal investment advice.</p>
